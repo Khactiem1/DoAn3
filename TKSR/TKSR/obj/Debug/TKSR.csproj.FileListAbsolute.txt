@@ -1,0 +1,570 @@
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\TKSR.dll.config
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\TKSR.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\TKSR.pdb
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\csc.exe
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\csc.exe.config
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\csc.rsp
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\csi.exe
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\csi.exe.config
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\csi.rsp
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\System.AppContext.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\System.Console.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\System.IO.Compression.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\System.Net.Http.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\System.ValueTuple.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\vbc.exe
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\vbc.exe.config
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\vbc.rsp
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\VBCSCompiler.exe
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\Antlr3.Runtime.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\DAL.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\DTO.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\EntityFramework.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\EntityFramework.SqlServer.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\Newtonsoft.Json.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\System.Net.Http.Formatting.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\System.Web.Helpers.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\System.Web.Http.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\System.Web.Http.WebHost.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\System.Web.Mvc.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\System.Web.Optimization.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\System.Web.Razor.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\System.Web.WebPages.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\System.Web.WebPages.Razor.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\WebGrease.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\DAL.pdb
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\DAL.dll.config
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\DTO.pdb
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\DTO.dll.config
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\EntityFramework.xml
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\EntityFramework.SqlServer.xml
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\System.Web.Helpers.xml
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\System.Web.Mvc.xml
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\System.Web.Optimization.xml
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\System.Web.Razor.xml
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\System.Web.WebPages.xml
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\System.Web.WebPages.Razor.xml
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\Newtonsoft.Json.xml
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\Antlr3.Runtime.pdb
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\System.Net.Http.Formatting.xml
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\System.Web.Http.xml
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\System.Web.Http.WebHost.xml
+C:\Users\Admin\Desktop\TKSR\TKSR\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Admin\Desktop\TKSR\TKSR\obj\Debug\TKSR.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\TKSR\TKSR\obj\Debug\TKSR.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\TKSR\TKSR\obj\Debug\TKSR.csproj.CopyComplete
+C:\Users\Admin\Desktop\TKSR\TKSR\obj\Debug\TKSR.dll
+C:\Users\Admin\Desktop\TKSR\TKSR\obj\Debug\TKSR.pdb
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\TKSR.dll.config
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\TKSR.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\TKSR.pdb
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\csc.exe
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\csc.exe.config
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\csc.rsp
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\csi.exe
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\csi.exe.config
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\csi.rsp
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\System.AppContext.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\System.Console.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\System.IO.Compression.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\System.Net.Http.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\System.ValueTuple.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\vbc.exe
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\vbc.exe.config
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\vbc.rsp
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\VBCSCompiler.exe
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\Antlr3.Runtime.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\DAL.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\DTO.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\EntityFramework.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\EntityFramework.SqlServer.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\Newtonsoft.Json.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\System.Net.Http.Formatting.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\System.Web.Helpers.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\System.Web.Http.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\System.Web.Http.WebHost.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\System.Web.Mvc.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\System.Web.Optimization.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\System.Web.Razor.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\System.Web.WebPages.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\System.Web.WebPages.Razor.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\WebGrease.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\DAL.pdb
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\DAL.dll.config
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\DTO.pdb
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\DTO.dll.config
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\EntityFramework.xml
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\EntityFramework.SqlServer.xml
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\System.Web.Helpers.xml
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\System.Web.Mvc.xml
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\System.Web.Optimization.xml
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\System.Web.Razor.xml
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\System.Web.WebPages.xml
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\System.Web.WebPages.Razor.xml
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\Newtonsoft.Json.xml
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\Antlr3.Runtime.pdb
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\System.Net.Http.Formatting.xml
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\System.Web.Http.xml
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\System.Web.Http.WebHost.xml
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\obj\Debug\TKSR.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\obj\Debug\TKSR.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\obj\Debug\TKSR.csproj.CopyComplete
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\obj\Debug\TKSR.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\TKSR\obj\Debug\TKSR.pdb
+F:\DoAn3\TKSR\TKSR\bin\TKSR.dll.config
+F:\DoAn3\TKSR\TKSR\bin\TKSR.dll
+F:\DoAn3\TKSR\TKSR\bin\TKSR.pdb
+F:\DoAn3\TKSR\TKSR\bin\roslyn\csc.exe
+F:\DoAn3\TKSR\TKSR\bin\roslyn\csc.exe.config
+F:\DoAn3\TKSR\TKSR\bin\roslyn\csc.rsp
+F:\DoAn3\TKSR\TKSR\bin\roslyn\csi.exe
+F:\DoAn3\TKSR\TKSR\bin\roslyn\csi.exe.config
+F:\DoAn3\TKSR\TKSR\bin\roslyn\csi.rsp
+F:\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+F:\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+F:\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+F:\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+F:\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.Managed.Core.targets
+F:\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.Win32.Primitives.dll
+F:\DoAn3\TKSR\TKSR\bin\roslyn\System.AppContext.dll
+F:\DoAn3\TKSR\TKSR\bin\roslyn\System.Collections.Immutable.dll
+F:\DoAn3\TKSR\TKSR\bin\roslyn\System.Console.dll
+F:\DoAn3\TKSR\TKSR\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+F:\DoAn3\TKSR\TKSR\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+F:\DoAn3\TKSR\TKSR\bin\roslyn\System.Diagnostics.StackTrace.dll
+F:\DoAn3\TKSR\TKSR\bin\roslyn\System.Globalization.Calendars.dll
+F:\DoAn3\TKSR\TKSR\bin\roslyn\System.IO.Compression.dll
+F:\DoAn3\TKSR\TKSR\bin\roslyn\System.IO.Compression.ZipFile.dll
+F:\DoAn3\TKSR\TKSR\bin\roslyn\System.IO.FileSystem.dll
+F:\DoAn3\TKSR\TKSR\bin\roslyn\System.IO.FileSystem.Primitives.dll
+F:\DoAn3\TKSR\TKSR\bin\roslyn\System.Net.Http.dll
+F:\DoAn3\TKSR\TKSR\bin\roslyn\System.Net.Sockets.dll
+F:\DoAn3\TKSR\TKSR\bin\roslyn\System.Reflection.Metadata.dll
+F:\DoAn3\TKSR\TKSR\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+F:\DoAn3\TKSR\TKSR\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+F:\DoAn3\TKSR\TKSR\bin\roslyn\System.Security.Cryptography.Encoding.dll
+F:\DoAn3\TKSR\TKSR\bin\roslyn\System.Security.Cryptography.Primitives.dll
+F:\DoAn3\TKSR\TKSR\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+F:\DoAn3\TKSR\TKSR\bin\roslyn\System.Text.Encoding.CodePages.dll
+F:\DoAn3\TKSR\TKSR\bin\roslyn\System.Threading.Tasks.Extensions.dll
+F:\DoAn3\TKSR\TKSR\bin\roslyn\System.ValueTuple.dll
+F:\DoAn3\TKSR\TKSR\bin\roslyn\System.Xml.ReaderWriter.dll
+F:\DoAn3\TKSR\TKSR\bin\roslyn\System.Xml.XmlDocument.dll
+F:\DoAn3\TKSR\TKSR\bin\roslyn\System.Xml.XPath.dll
+F:\DoAn3\TKSR\TKSR\bin\roslyn\System.Xml.XPath.XDocument.dll
+F:\DoAn3\TKSR\TKSR\bin\roslyn\vbc.exe
+F:\DoAn3\TKSR\TKSR\bin\roslyn\vbc.exe.config
+F:\DoAn3\TKSR\TKSR\bin\roslyn\vbc.rsp
+F:\DoAn3\TKSR\TKSR\bin\roslyn\VBCSCompiler.exe
+F:\DoAn3\TKSR\TKSR\bin\roslyn\VBCSCompiler.exe.config
+F:\DoAn3\TKSR\TKSR\bin\Antlr3.Runtime.dll
+F:\DoAn3\TKSR\TKSR\bin\DAL.dll
+F:\DoAn3\TKSR\TKSR\bin\DTO.dll
+F:\DoAn3\TKSR\TKSR\bin\EntityFramework.dll
+F:\DoAn3\TKSR\TKSR\bin\EntityFramework.SqlServer.dll
+F:\DoAn3\TKSR\TKSR\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\DoAn3\TKSR\TKSR\bin\Microsoft.Web.Infrastructure.dll
+F:\DoAn3\TKSR\TKSR\bin\Newtonsoft.Json.dll
+F:\DoAn3\TKSR\TKSR\bin\System.Net.Http.Formatting.dll
+F:\DoAn3\TKSR\TKSR\bin\System.Web.Helpers.dll
+F:\DoAn3\TKSR\TKSR\bin\System.Web.Http.dll
+F:\DoAn3\TKSR\TKSR\bin\System.Web.Http.WebHost.dll
+F:\DoAn3\TKSR\TKSR\bin\System.Web.Mvc.dll
+F:\DoAn3\TKSR\TKSR\bin\System.Web.Optimization.dll
+F:\DoAn3\TKSR\TKSR\bin\System.Web.Razor.dll
+F:\DoAn3\TKSR\TKSR\bin\System.Web.WebPages.Deployment.dll
+F:\DoAn3\TKSR\TKSR\bin\System.Web.WebPages.dll
+F:\DoAn3\TKSR\TKSR\bin\System.Web.WebPages.Razor.dll
+F:\DoAn3\TKSR\TKSR\bin\WebGrease.dll
+F:\DoAn3\TKSR\TKSR\bin\DAL.pdb
+F:\DoAn3\TKSR\TKSR\bin\DAL.dll.config
+F:\DoAn3\TKSR\TKSR\bin\DTO.pdb
+F:\DoAn3\TKSR\TKSR\bin\DTO.dll.config
+F:\DoAn3\TKSR\TKSR\bin\EntityFramework.xml
+F:\DoAn3\TKSR\TKSR\bin\EntityFramework.SqlServer.xml
+F:\DoAn3\TKSR\TKSR\bin\System.Web.Helpers.xml
+F:\DoAn3\TKSR\TKSR\bin\System.Web.Mvc.xml
+F:\DoAn3\TKSR\TKSR\bin\System.Web.Optimization.xml
+F:\DoAn3\TKSR\TKSR\bin\System.Web.Razor.xml
+F:\DoAn3\TKSR\TKSR\bin\System.Web.WebPages.xml
+F:\DoAn3\TKSR\TKSR\bin\System.Web.WebPages.Deployment.xml
+F:\DoAn3\TKSR\TKSR\bin\System.Web.WebPages.Razor.xml
+F:\DoAn3\TKSR\TKSR\bin\Newtonsoft.Json.xml
+F:\DoAn3\TKSR\TKSR\bin\Antlr3.Runtime.pdb
+F:\DoAn3\TKSR\TKSR\bin\System.Net.Http.Formatting.xml
+F:\DoAn3\TKSR\TKSR\bin\System.Web.Http.xml
+F:\DoAn3\TKSR\TKSR\bin\System.Web.Http.WebHost.xml
+F:\DoAn3\TKSR\TKSR\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\DoAn3\TKSR\TKSR\obj\Debug\TKSR.csproj.AssemblyReference.cache
+F:\DoAn3\TKSR\TKSR\obj\Debug\TKSR.csproj.CoreCompileInputs.cache
+F:\DoAn3\TKSR\TKSR\obj\Debug\TKSR.csproj.CopyComplete
+F:\DoAn3\TKSR\TKSR\obj\Debug\TKSR.dll
+F:\DoAn3\TKSR\TKSR\obj\Debug\TKSR.pdb
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\TKSR.dll.config
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\TKSR.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\TKSR.pdb
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\csc.exe
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\csc.exe.config
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\csc.rsp
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\csi.exe
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\csi.exe.config
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\csi.rsp
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.Managed.Core.targets
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.AppContext.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Collections.Immutable.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Console.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Globalization.Calendars.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.IO.Compression.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.IO.FileSystem.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Net.Http.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Net.Sockets.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Reflection.Metadata.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.ValueTuple.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Xml.XmlDocument.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Xml.XPath.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\vbc.exe
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\vbc.exe.config
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\vbc.rsp
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\VBCSCompiler.exe
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\VBCSCompiler.exe.config
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\Antlr3.Runtime.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\DAL.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\DTO.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\EntityFramework.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\EntityFramework.SqlServer.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\Microsoft.Web.Infrastructure.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\Newtonsoft.Json.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Net.Http.Formatting.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.Helpers.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.Http.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.Http.WebHost.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.Mvc.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.Optimization.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.Razor.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.WebPages.Deployment.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.WebPages.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.WebPages.Razor.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\WebGrease.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\DAL.pdb
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\DAL.dll.config
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\DTO.pdb
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\DTO.dll.config
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\EntityFramework.xml
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\EntityFramework.SqlServer.xml
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.Helpers.xml
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.Mvc.xml
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.Optimization.xml
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.Razor.xml
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.WebPages.xml
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.WebPages.Deployment.xml
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.WebPages.Razor.xml
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\Newtonsoft.Json.xml
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\Antlr3.Runtime.pdb
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Net.Http.Formatting.xml
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.Http.xml
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.Http.WebHost.xml
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\obj\Debug\TKSR.csproj.AssemblyReference.cache
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\obj\Debug\TKSR.csproj.CoreCompileInputs.cache
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\obj\Debug\TKSR.csproj.CopyComplete
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\obj\Debug\TKSR.dll
+D:\isRunning DoAn3\DoAn3\TKSR\TKSR\obj\Debug\TKSR.pdb
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\TKSR.dll.config
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\TKSR.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\TKSR.pdb
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\csc.exe
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\csc.exe.config
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\csc.rsp
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\csi.exe
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\csi.exe.config
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\csi.rsp
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.AppContext.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Console.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.IO.Compression.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Net.Http.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.ValueTuple.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\vbc.exe
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\vbc.exe.config
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\vbc.rsp
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\VBCSCompiler.exe
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\Antlr3.Runtime.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\DAL.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\DTO.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\EntityFramework.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\EntityFramework.SqlServer.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\Newtonsoft.Json.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Net.Http.Formatting.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.Helpers.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.Http.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.Http.WebHost.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.Mvc.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.Optimization.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.Razor.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.WebPages.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.WebPages.Razor.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\WebGrease.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\DAL.pdb
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\DAL.dll.config
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\DTO.pdb
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\DTO.dll.config
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\EntityFramework.xml
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\EntityFramework.SqlServer.xml
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.Helpers.xml
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.Mvc.xml
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.Optimization.xml
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.Razor.xml
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.WebPages.xml
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.WebPages.Razor.xml
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\Newtonsoft.Json.xml
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\Antlr3.Runtime.pdb
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Net.Http.Formatting.xml
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.Http.xml
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.Http.WebHost.xml
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\obj\Debug\TKSR.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\obj\Debug\TKSR.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\obj\Debug\TKSR.csproj.CopyComplete
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\obj\Debug\TKSR.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\DoAn3\TKSR\TKSR\obj\Debug\TKSR.pdb
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\TKSR.dll.config
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\TKSR.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\TKSR.pdb
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\csc.exe
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\csc.exe.config
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\csc.rsp
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\csi.exe
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\csi.exe.config
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\csi.rsp
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.AppContext.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Console.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.IO.Compression.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Net.Http.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.ValueTuple.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\vbc.exe
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\vbc.exe.config
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\vbc.rsp
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\VBCSCompiler.exe
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\Antlr3.Runtime.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\DAL.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\DTO.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\EntityFramework.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\EntityFramework.SqlServer.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\Newtonsoft.Json.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Net.Http.Formatting.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.Helpers.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.Http.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.Http.WebHost.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.Mvc.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.Optimization.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.Razor.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.WebPages.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.WebPages.Razor.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\WebGrease.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\DAL.pdb
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\DAL.dll.config
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\DTO.pdb
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\DTO.dll.config
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\EntityFramework.xml
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\EntityFramework.SqlServer.xml
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.Helpers.xml
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.Mvc.xml
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.Optimization.xml
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.Razor.xml
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.WebPages.xml
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.WebPages.Razor.xml
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\Newtonsoft.Json.xml
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\Antlr3.Runtime.pdb
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Net.Http.Formatting.xml
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.Http.xml
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\System.Web.Http.WebHost.xml
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\obj\Debug\TKSR.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\obj\Debug\TKSR.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\obj\Debug\TKSR.csproj.CopyComplete
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\obj\Debug\TKSR.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\TKSR\obj\Debug\TKSR.pdb

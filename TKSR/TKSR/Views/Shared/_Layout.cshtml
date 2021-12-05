@@ -1,0 +1,1231 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ví Điện Tử TKSR - Siêu ví Thanh Toán số 1 Việt Nam</title>
+    <link rel="icon" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/logo.jpg">
+    <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/grids.css">
+    <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/bases.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/font.css">
+    <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/nav.css">
+    <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/footer.css">
+    <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/style.css">
+    <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/responsive.css">
+</head>
+<body>
+    <div class="loader">
+        <span class="fas fa-spinner xoay__icon"></span>
+    </div>
+    <div class="content__notification">
+    </div>
+    <div class="app">
+        <header class="header">
+            <nav class="navbar">
+                <div class="grid wide header__navbar">
+                    <a href="@Request.Url.Scheme://@Request.Url.Authority" class="navbar__link">
+                        <img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/logo.jpg" alt="" class="navbar__logo">
+                    </a>
+                    <div class="header__content">
+                        <ul class="navbar__list">
+                            <li class="navbar__list-item">
+                                <span>Dịch vụ</span>
+                                <i class="fas fa-angle-down"></i>
+                                <div class="grid navbar__list-menu menu-xl">
+                                    <ul class="row no-gutters list-nav__menu ">
+                                        <li class="col l-4 list-nav__item">
+                                            <a class="navbar__list-link @ViewBag.Message">
+                                                <div class="navbar__list-menu-icon"><img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo__tienich/icon5.svg" alt=""></div>
+                                                <div class="navbar__list-menu-text">
+                                                    <span class="nav__menu-text-up">Mua thẻ điện thoại</span>
+                                                    <span class="nav__menu-text-down">
+                                                        Top up - Mã thẻ cào - Data 3G/4G
+                                                    </span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="col l-4 list-nav__item">
+                                            <a class="navbar__list-link @ViewBag.Message">
+                                                <div class="navbar__list-menu-icon"><img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo__tienich/icon6.svg" alt=""></div>
+                                                <div class="navbar__list-menu-text">
+                                                    <span class="nav__menu-text-up">Thanh toán hoá đơn</span>
+                                                    <span class="nav__menu-text-down">Điện - Nước - Internet - Chung cư</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="col l-4 list-nav__item">
+                                            <a class="navbar__list-link @ViewBag.Message">
+                                                <div class="navbar__list-menu-icon"><img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo__tienich/icon7.svg" alt=""></div>
+                                                <div class="navbar__list-menu-text">
+                                                    <span class="nav__menu-text-up">Nạp tiền vào ví</span>
+                                                    <span class="nav__menu-text-down">
+                                                        Nạp tiền thẻ cào - thẻ ATM
+                                                    </span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="col l-4 list-nav__item">
+                                            <a class="navbar__list-link @ViewBag.Message">
+                                                <div class="navbar__list-menu-icon"><img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo__tienich/icon4.svg" alt=""></div>
+                                                <div class="navbar__list-menu-text">
+                                                    <span class="nav__menu-text-up">Rút tiền</span>
+                                                    <span class="nav__menu-text-down">Miễn phí, bảo mật, rút trong 1s</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="col l-4 list-nav__item">
+                                            <a class="navbar__list-link @ViewBag.Message">
+                                                <div class="navbar__list-menu-icon"><img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo__tienich/icon10.svg" alt=""></div>
+                                                <div class="navbar__list-menu-text">
+                                                    <span class="nav__menu-text-up">Liên kết thẻ ATM</span>
+                                                    <span class="nav__menu-text-down">
+                                                        Liên kết để giao dịch mọi nơi
+                                                    </span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="col l-4 list-nav__item">
+                                            <a class="navbar__list-link @ViewBag.Message">
+                                                <div class="navbar__list-menu-icon"><img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo__tienich/icon4.svg" alt=""></div>
+                                                <div class="navbar__list-menu-text">
+                                                    <span class="nav__menu-text-up">Chuyển tiền cá nhân</span>
+                                                    <span class="nav__menu-text-down">Miễn phí, bảo mật, chuyển trong 1s</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="col l-4 list-nav__item">
+                                            <a class="navbar__list-link @ViewBag.Message">
+                                                <div class="navbar__list-menu-icon"><img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo__tienich/icon3.svg" alt=""></div>
+                                                <div class="navbar__list-menu-text">
+                                                    <span class="nav__menu-text-up">Du lịch - Đi lại</span>
+                                                    <span class="nav__menu-text-down">
+                                                        Vé máy bay - Tàu/Xe - Đặt khách sạn
+                                                    </span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="col l-4 list-nav__item">
+                                            <a class="navbar__list-link @ViewBag.Message">
+                                                <div class="navbar__list-menu-icon"><img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo__tienich/icon1.svg" alt=""></div>
+                                                <div class="navbar__list-menu-text">
+                                                    <span class="nav__menu-text-up">Giải trí</span>
+                                                    <span class="nav__menu-text-down">
+                                                        Mua vé xem phim - Vé số - Karaoke
+                                                    </span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="col l-4 list-nav__item">
+                                            <a class="navbar__list-link @ViewBag.Message">
+                                                <div class="navbar__list-menu-icon"><img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo__tienich/icon8.svg" alt=""></div>
+                                                <div class="navbar__list-menu-text">
+                                                    <span class="nav__menu-text-up">Mua sắm trực tuyến</span>
+                                                    <span class="nav__menu-text-down">
+                                                        Thương mại điện tử - Đi chợ online
+                                                    </span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="col l-4 list-nav__item">
+                                            <a class="navbar__list-link @ViewBag.Message">
+                                                <div class="navbar__list-menu-icon"><img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo__tienich/icon2.svg" alt=""></div>
+                                                <div class="navbar__list-menu-text">
+                                                    <span class="nav__menu-text-up">Hoạt động cộng đồng</span>
+                                                    <span class="nav__menu-text-down">
+                                                        Trái Tim TKSR - Heo Đất TKSR
+                                                    </span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="navbar__list-item">
+                                <span>Chúng tôi</span>
+                                <i class="fas fa-angle-down"></i>
+                                <div class="grid navbar__list-menu ">
+                                    <ul class="row no-gutters list-nav__menu ">
+                                        <li class="col l-12 list-nav__item">
+                                            <a class="navbar__list-link @ViewBag.Message">
+                                                <div class="navbar__list-menu-icon"><img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/logo.jpg" alt=""></div>
+                                                <div class="navbar__list-menu-text">
+                                                    <span class="nav__menu-text-up">Giới thiệu</span>
+                                                    <span class="nav__menu-text-down">
+                                                        Hành trình trở thành Ví Điện Tử Số 1 Việt Nam
+                                                    </span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="col l-12 list-nav__item">
+                                            <a class="navbar__list-link @ViewBag.Message">
+                                                <div class="navbar__list-menu-icon"><img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/hotro.jpg" alt=""></div>
+                                                <div class="navbar__list-menu-text">
+                                                    <span class="nav__menu-text-up">Hỗ trợ</span>
+                                                    <span class="nav__menu-text-down">
+                                                        Luôn hỗ trợ bạn giải quyết mọi vấn đề
+                                                    </span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="col l-12 list-nav__item">
+                                            <a class="navbar__list-link @ViewBag.Message">
+                                                <div class="navbar__list-menu-icon"><img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/lienhe.jpg" alt=""></div>
+                                                <div class="navbar__list-menu-text">
+                                                    <span class="nav__menu-text-up">Liên hệ</span>
+                                                    <span class="nav__menu-text-down">
+                                                        Hãy liên hệ với chúng tôi khi bạn cần
+                                                    </span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="navbar__list-item">
+                                <span>Tin tức</span>
+                                <i class="fas fa-angle-down"></i>
+                                <div class="grid navbar__list-menu">
+                                    <ul class="row no-gutters list-nav__menu ">
+                                        <li class="col l-12 list-nav__item">
+                                            <a class="navbar__list-link @ViewBag.Message">
+                                                <div class="navbar__list-menu-icon"><img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/tintuc.jpg" alt=""></div>
+                                                <div class="navbar__list-menu-text">
+                                                    <span class="nav__menu-text-up">Tin tức</span>
+                                                    <span class="nav__menu-text-down">
+                                                        Chuyên trang cập nhật thông tin mới nhất
+                                                    </span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="col l-12 list-nav__item">
+                                            <a class="navbar__list-link @ViewBag.Message">
+                                                <div class="navbar__list-menu-icon"><img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/khuyenmai.jpg" alt=""></div>
+                                                <div class="navbar__list-menu-text">
+                                                    <span class="nav__menu-text-up">Khuyến mại</span>
+                                                    <span class="nav__menu-text-down">
+                                                        Cung cấp thông tin hữu ích đa dạng mọi lĩnh vực mà bạn cần tìm
+                                                    </span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="navbar__list-item">
+                                <span>Trợ giúp</span>
+                                <i class="fas fa-angle-down"></i>
+                                <div class="grid navbar__list-menu">
+                                    <ul class="row no-gutters list-nav__menu ">
+                                        <li class="col l-12 list-nav__item">
+                                            <a class="navbar__list-link @ViewBag.Message">
+                                                <div class="navbar__list-menu-icon"><img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/hoidap.jpg" alt=""></div>
+                                                <div class="navbar__list-menu-text">
+                                                    <span class="nav__menu-text-up">Hỏi đáp</span>
+                                                    <span class="nav__menu-text-down">
+                                                        Giải đáp cụ thể những thắc mắc của người dùng
+                                                    </span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="col l-12 list-nav__item">
+                                            <a class="navbar__list-link @ViewBag.Message">
+                                                <div class="navbar__list-menu-icon"><img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/huongdan.jpg" alt=""></div>
+                                                <div class="navbar__list-menu-text">
+                                                    <span class="nav__menu-text-up">Hướng dẫn</span>
+                                                    <span class="nav__menu-text-down">
+                                                        Các bước sử dụng Ví TKSR được minh họa chi tiết, rõ ràng
+                                                    </span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="navbar__list-item">
+                                <span>Đối tác</span>
+                                <i class="fas fa-angle-down "></i>
+                                <div class="grid navbar__list-menu">
+                                    <ul class="row no-gutters list-nav__menu ">
+                                        <li class="col l-12 list-nav__item">
+                                            <a class="navbar__list-link @ViewBag.Message">
+                                                <div class="navbar__list-menu-icon"><img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/diadiem.jpg" alt=""></div>
+                                                <div class="navbar__list-menu-text">
+                                                    <span class="nav__menu-text-up">Địa điểm thanh toán</span>
+                                                    <span class="nav__menu-text-down">Cửa hàng chấp nhận thanh toán TKSR</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="col l-12 list-nav__item">
+                                            <a class="navbar__list-link @ViewBag.Message">
+                                                <div class="navbar__list-menu-icon"><img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/diadiem2.svg" alt=""></div>
+                                                <div class="navbar__list-menu-text">
+                                                    <span class="nav__menu-text-up">Địa điểm nạp rút</span>
+                                                    <span class="nav__menu-text-down">Các địa điểm giao dịch Nạp/Rút TKSR</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="navbar__search-login">
+                            <div class="search-input">
+                                <input class="navbar__search-input" type="text" placeholder="Bạn tìm gì...">
+                                <i class="fas fa-search navbar__icon-seacrh"></i>
+                                <ul class="search__suggestions ">
+                                    <li class="search__suggestions-item">
+                                        <a href="#" class="search__suggestions-link">
+                                            <span>
+                                                Vui tháng 12, nhận ngay Hoàn Tiền 1.21  1.212.000đ khi thanh toán khoản vay trên Ví TKSR
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="search__suggestions-item">
+                                        <a href="#" class="search__suggestions-link">
+                                            <span>
+                                                Data Mua 1 tặng 1, lại được hoàn tiền, ưu đãi độc quyền, chỉ có trên TKSR
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="search__suggestions-item">
+                                        <a href="#" class="search__suggestions-link">
+                                            <span>
+                                                Top siêu thị bán lẻ hoàn tiền "khủng" nhất
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="search__suggestions-item">
+                                        <a href="#" class="search__suggestions-link">
+                                            <span>
+                                                hoàn tiền tiết kiệm là gì?
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="search__suggestions-item">
+                                        <a href="#" class="search__suggestions-link">
+                                            <span>
+                                                hoàn tiền là gì?
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="search__suggestions-item">
+                                        <a href="#" class="search__suggestions-link">
+                                            <span>
+                                                Hướng dẫn sử dụng tính năng hoàn tiền - hoàn tiền Tiết Kiệm
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="search__suggestions-item">
+                                        <a href="#" class="search__suggestions-link">
+                                            <span>
+                                                hoàn tiền 8% khi đặt vé máy bay trên Ví TKSR
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="search__suggestions-item">
+                                        <a href="#" class="search__suggestions-link">
+                                            <span>
+                                                hoàn tiền mua sắm, ăn uống và đi lại cực ưu đãi tại Ví TKSR
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="search__suggestions-item">
+                                        <a href="#" class="search__suggestions-link">
+                                            <span>
+                                                Vui tháng 12, nhận ngay Hoàn Tiền 1.21  1.212.000đ khi thanh toán khoản vay trên Ví TKSR
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="search__suggestions-item">
+                                        <a href="#" class="search__suggestions-link">
+                                            <span>
+                                                hoàn tiền 8% khi đặt vé máy bay trên Ví TKSR
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <i class="fas fa-user navbar__login"></i>
+                            <i class="fas fa-bars navbar__bar"></i>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        @RenderBody()
+        <footer class="footer">
+            <div class="grid wide container footer__container">
+                <div class="row footer__list">
+                    <div class="col l-3 m-6 c-12 footer__item">
+                        <div class="logo__footer">
+                            <img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/logo.jpg" alt="" class="logo__footer-img">
+                            <div class="footer__text-head">
+                                Công ty cổ phần dịch vụ trực tuyến Trường Đại Học Sư Phạm Kỹ Thuật Hưng Yên
+                            </div>
+                            <div class="footer__text-care-txt">
+                                Trường Đại Học Sư Phạm Kỹ Thuật Hưng Yên cơ sở 2 Mỹ hào
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-3 m-6 c-0 footer__item">
+                        <div class="footer__care">
+                            <a href="#" class="footer__care-link">
+                                Về chúng tôi
+                            </a>
+                        </div>
+                        <div class="footer__care">
+                            <a href="#" class="footer__care-link">
+                                Blog
+                            </a>
+                        </div>
+                        <div class="footer__care">
+                            <a href="#" class="footer__care-link">
+                                Liên hệ
+                            </a>
+                        </div>
+                        <div class="footer__care">
+                            <a href="#" class="footer__care-link">
+                                Tuyển dụng
+                            </a>
+                        </div>
+                        <div class="footer__care">
+                            <a href="#" class="footer__care-link">
+                                Điều khoản điều lệ
+                            </a>
+                        </div>
+                        <div class="footer__care">
+                            <a href="#" class="footer__care-link">
+                                Chính sách quyền riêng tư
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col l-3 m-6 c-12 footer__item">
+                        <div class="footer__item-header">
+                            chăm sóc khách hàng
+                        </div>
+                        <div class="footer__item-content">
+                            Hotline: <span><a href="tel:1900 5454 41" target="_self" title="Gọi">1900 5454 41</a> (1000 đ/phút)</span>
+                        </div>
+                        <div class="footer__item-content">
+                            Email: <span>KhacTiem@gmail.com</span>
+                        </div>
+                        <div class="footer__item-content">
+                            Chúng tôi gọi đi: <span>
+                                <a href="tel:036.233.5462" target="_self" title="Gọi">036.233.5462</a>
+                                -
+                                <a href="tel:012.345.6789" target="_self" title="Gọi">012.345.6789</a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col l-3 m-6 c-12 footer__item">
+                        <div class="footer__item-header">
+                            Hợp tác doanh nghiệp
+                        </div>
+                        <div class="footer__item-content">
+                            Hotline: <span>
+                                <a href="tel:(028) 710 22 222" target="_self" title="Gọi">(028) 710 22 222</a> (ext:5000)
+                            </span>
+                        </div>
+                        <div class="footer__item-content">
+                            Email: <span>hotro.sme@mservice.com.vn</span>
+                        </div>
+                        <div class="footer__item-content">
+                            Website: <span>business.tksr.vn</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row footer__download">
+                    <div class="app__download">
+                        <a href="#" class="footer__download-link">
+                            <img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/tai-appstore.jpg" alt="" class="footer__download-img">
+                        </a>
+                    </div>
+                    <div class="app__download">
+                        <a href="#" class="footer__download-link">
+                            <img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/tai-google-play.jpg" alt="" class="footer__download-img">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Messenger Plugin chat Code -->
+        <div id="fb-root"></div>
+
+        <!-- Your Plugin chat code -->
+        <div id="fb-customer-chat" class="fb-customerchat">
+        </div>
+
+        <script>
+            var chatbox = document.getElementById('fb-customer-chat');
+            chatbox.setAttribute("page_id", "107898294844218");
+            chatbox.setAttribute("attribution", "biz_inbox");
+
+            window.fbAsyncInit = function () {
+                FB.init({
+                    xfbml: true,
+                    version: 'v12.0'
+                });
+            };
+
+            (function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+    </div>
+    <div class="modal">
+        <div class="modal__overlay"></div>
+        <div class="modal__body">
+            <!-- form login -->
+            <div class="auth-form auth-form__login">
+                <div class="auth-form__header">
+                    <span>Đăng nhập TKSR</span>
+                    <i class="fas fa-times auth-form__icon"></i>
+                </div>
+                <form id="form-1" class="auth-form__form">
+                    <div class="form-group">
+                        <svg class="Input_icon__3bJ0I" width="16" height="16" viewBox="0 0 16 16"><path d="M0 0h16v16H0V0z" fill="none"></path><path d="M15.2 13.1L8.6 1.6c-.2-.4-.9-.4-1.2 0L.8 13.1c-.1.2-.1.5 0 .7.1.2.3.3.6.3h13.3c.2 0 .5-.1.6-.3.1-.2.1-.5-.1-.7zM8.7 12H7.3v-1.3h1.3V12zm0-2.7H7.3v-4h1.3v4z" fill="currentColor"></path></svg>
+                        <input id="fullname" name="fullname" type="text" class="auth-form__input" placeholder="Tên đăng nhập">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <svg class="PasswordField_iconButton__1LFBr view__active" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M6.629 12.957c.346.056.692.112 1.067.112h.517c3.579 0 5.812-2.426 7.181-4.251a1.128 1.128 0 0 0 0-1.357 12.035 12.035 0 0 0-1.662-1.784L11.25 8.222l.002.019c0 1.866-1.476 3.379-3.297 3.379l-.018-.003-1.308 1.339zm3.619-7.138l-1.17 1.199a1.613 1.613 0 0 0-1.124-.466c-.909 0-1.649.758-1.649 1.69 0 .447.178.849.456 1.151l-1.17 1.199a3.405 3.405 0 0 1-.935-2.35c0-1.866 1.476-3.379 3.297-3.379.893 0 1.701.367 2.294.957zm5.231-3.995c.184-.188.184-.494 0-.683s-.482-.188-.666 0l-3.056 3.132a7.743 7.743 0 0 0-3.543-.859h-.517c-2.804 0-5.219 1.324-7.181 3.938a1.098 1.098 0 0 0 0 1.372c.115.154.246.316.373.476v.007h.005c.81 1.019 1.874 2.121 3.229 2.891l-2.027 2.078a.492.492 0 0 0 0 .683.462.462 0 0 0 .667 0l2.269-2.325.011.004 1.323-1.355-.011-.005 1.282-1.313a.05.05 0 0 1 .012.002l1.895-1.942-.003-.013 1.281-1.313.005.011 1.789-1.834-.008-.007 2.874-2.946z"></path></svg>
+                        <svg class="PasswordField_iconButton__1LFBr" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M11.448 8A3.449 3.449 0 1 1 4.55 8a3.449 3.449 0 0 1 6.898 0zm4.333-.796c-2.108-2.742-4.635-4.131-7.511-4.131h-.541c-2.932 0-5.46 1.352-7.511 4.019-.29.394-.29 1.009 0 1.401.121.157.257.322.391.486v.007h.005c1.482 1.82 3.744 3.942 7.115 3.942h.541c3.744 0 6.079-2.477 7.511-4.339a1.201 1.201 0 0 0 0-1.385z"></path><path fill="currentColor" d="M9.724 8c0-.951-.774-1.725-1.725-1.725S6.275 7.049 6.275 8c0 .951.773 1.725 1.724 1.725S9.724 8.951 9.724 8z"></path></svg>
+                        <input id="password" name="password" type="password" class="auth-form__input" placeholder="Mật khẩu">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="auth-form__forgot">
+                        <a style="cursor: pointer" class="auth-form__forgot-link">Quên mật khẩu</a>
+                    </div>
+                    <p class="mess__login">
+                    </p>
+                    <button type="button" class="auth-form__submit auth-form__submit-login">
+                        đăng nhập
+                    </button>
+                    <div class="auth-form__go-register">
+                        <span class="form__text">
+                            Bạn chưa là thành viên?
+                        </span>
+                        <div class="form__go-register">
+                            đăng ký ngay
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- form register -->
+            <div class="auth-form auth-form__register">
+                <div class="auth-form__header">
+                    <span>Đăng ký TKSR</span>
+                    <i class="fas fa-times auth-form__icon"></i>
+                </div>
+                <form id="form-2" class="auth-form__form">
+                    <div class="form-group">
+                        <svg class="Input_icon__3bJ0I" width="16" height="16" viewBox="0 0 16 16"><path d="M0 0h16v16H0V0z" fill="none"></path><path d="M15.2 13.1L8.6 1.6c-.2-.4-.9-.4-1.2 0L.8 13.1c-.1.2-.1.5 0 .7.1.2.3.3.6.3h13.3c.2 0 .5-.1.6-.3.1-.2.1-.5-.1-.7zM8.7 12H7.3v-1.3h1.3V12zm0-2.7H7.3v-4h1.3v4z" fill="currentColor"></path></svg>
+                        <input maxlength="20" id="fullname__register" name="fullname" type="text" class="auth-form__input" placeholder="Tên đăng nhập">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <svg class="Input_icon__3bJ0I" width="16" height="16" viewBox="0 0 16 16"><path d="M0 0h16v16H0V0z" fill="none"></path><path d="M15.2 13.1L8.6 1.6c-.2-.4-.9-.4-1.2 0L.8 13.1c-.1.2-.1.5 0 .7.1.2.3.3.6.3h13.3c.2 0 .5-.1.6-.3.1-.2.1-.5-.1-.7zM8.7 12H7.3v-1.3h1.3V12zm0-2.7H7.3v-4h1.3v4z" fill="currentColor"></path></svg>
+                        <input id="sdt" type="text" name="sdt" class="auth-form__input" placeholder="Email">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="contai__number">
+                        <div class="form-group form-group__number">
+                            <svg class="Input_icon__3bJ0I" width="16" height="16" viewBox="0 0 16 16"><path d="M0 0h16v16H0V0z" fill="none"></path><path d="M15.2 13.1L8.6 1.6c-.2-.4-.9-.4-1.2 0L.8 13.1c-.1.2-.1.5 0 .7.1.2.3.3.6.3h13.3c.2 0 .5-.1.6-.3.1-.2.1-.5-.1-.7zM8.7 12H7.3v-1.3h1.3V12zm0-2.7H7.3v-4h1.3v4z" fill="currentColor"></path></svg>
+                            <input maxlength="4" id="password__register" name='maxacthuc' type="text" class="auth-form__input" placeholder="Mã xác minh">
+                            <span class="form-message"></span>
+                        </div>
+                        <button type="button" class="auth-form__submit auth-form__submit-number auth-form__request">Gửi mã</button>
+                    </div>
+                    <p class="mess__login mess__login-Register"></p>
+                    <div class="auth-form__rules">
+                        <span class="auth-form__rules-text">bằng việc đăng ký, bạn đã đồng ý với TKSR về </span>
+                        <a href="#" class="auth-form__rules-link">
+                            Điều khoản dịch vụ
+                        </a>
+                        &
+                        <a href="#" class="auth-form__rules-link">Chính sách bảo mật</a><span class="auth-form__rules-text">, Hãy vào eamil của bạn để nhận mật khẩu</span>
+                    </div>
+                    <button type="button" class="auth-form__submit auth-form__submit-register">
+                        đăng ký
+                    </button>
+                    <div class="auth-form__go-register">
+                        <span class="form__text">
+                            Bạn đã có tài khoản?
+                        </span>
+                        <div class="form__go-register">
+                            đăng nhập
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- form forgotPass -->
+            <div class="auth-form auth-form__forgotPass">
+                <div class="auth-form__header">
+                    <span>Quên mật khẩu TKSR</span>
+                    <i class="fas fa-times auth-form__icon"></i>
+                </div>
+                <form class="auth-form__form">
+                    <div class="form-group">
+                        <svg class="Input_icon__3bJ0I" width="16" height="16" viewBox="0 0 16 16"><path d="M0 0h16v16H0V0z" fill="none"></path><path d="M15.2 13.1L8.6 1.6c-.2-.4-.9-.4-1.2 0L.8 13.1c-.1.2-.1.5 0 .7.1.2.3.3.6.3h13.3c.2 0 .5-.1.6-.3.1-.2.1-.5-.1-.7zM8.7 12H7.3v-1.3h1.3V12zm0-2.7H7.3v-4h1.3v4z" fill="currentColor"></path></svg>
+                        <input type="text" name="email" class="auth-form__input" placeholder="Email">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="auth-form__rules">
+                        <span class="auth-form__rules-text">Hãy nhập Email đăng ký tài khoản của bạn gửi chúng tôi, chúng tôi sẽ gửi lại mật khẩu về Email của bạn</span>
+                    </div>
+                    <button type="button" class="auth-form__submit auth-form__submit-forgotPass">
+                        Lấy mật khẩu
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="nav-modal__mobile">
+        <div class="modal__overlay-mobile"></div>
+        <div class="modal__body-mobile">
+            <div class="nav__mobile-container">
+                <div class="nav__mobile-header">
+                    <img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/logo.jpg" alt="" class="navbar__logo-mobile">
+                    <span>TKSR.COM</span>
+                    <i class="fas fa-times auth-form__icon-mobile"></i>
+                </div>
+                <ul class="nav__mobile-list">
+                    <li class="nav__mobile-item mobile-login__register login">
+                        <span>Đăng nhập</span>
+                    </li>
+                    <li class="nav__mobile-item mobile-login__register register">
+                        <span>Đăng ký</span>
+                    </li>
+                    <li class="nav__mobile-item">
+                        <div class="nav__m-item__top">
+                            <span>Dịch vụ</span>
+                            <i class="fas fa-angle-down m-item__icon-mobile"></i>
+                        </div>
+                        <div class="grid nav__m-item__menu">
+                            <ul class="row m-item__menu-list">
+                                <li class="clo l-6 m-6 c-6 m-item__menu-item">
+                                    <a class="m-item__menu-link @ViewBag.Message">
+                                        <img class="m-item__menu-logo" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo__tienich/icon5.svg" alt="">
+                                        <span class="nav__mobile-menu-text">Mua thẻ điện thoại</span>
+                                    </a>
+                                </li>
+                                <li class="clo l-6 m-6 c-6 m-item__menu-item">
+                                    <a class="m-item__menu-link @ViewBag.Message">
+                                        <img class="m-item__menu-logo" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo__tienich/icon6.svg" alt="">
+                                        <span class="nav__mobile-menu-text">Thanh toán hoá đơn</span>
+                                    </a>
+                                </li>
+                                <li class="clo l-6 m-6 c-6 m-item__menu-item">
+                                    <a class="m-item__menu-link @ViewBag.Message">
+                                        <img class="m-item__menu-logo" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo__tienich/icon7.svg" alt="">
+                                        <span class="nav__mobile-menu-text">Nạp tiền vào ví</span>
+                                    </a>
+                                </li>
+                                <li class="clo l-6 m-6 c-6 m-item__menu-item">
+                                    <a class="m-item__menu-link @ViewBag.Message">
+                                        <img class="m-item__menu-logo" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo__tienich/icon4.svg" alt="">
+                                        <span class="nav__mobile-menu-text">Rút tiền</span>
+                                    </a>
+                                </li>
+                                <li class="clo l-6 m-6 c-6 m-item__menu-item">
+                                    <a class="m-item__menu-link @ViewBag.Message">
+                                        <img class="m-item__menu-logo" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo__tienich/icon10.svg" alt="">
+                                        <span class="nav__mobile-menu-text">Liên kết thẻ ATM</span>
+                                    </a>
+                                </li>
+                                <li class="clo l-6 m-6 c-6 m-item__menu-item">
+                                    <a class="m-item__menu-link @ViewBag.Message">
+                                        <img class="m-item__menu-logo" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo__tienich/icon4.svg" alt="">
+                                        <span class="nav__mobile-menu-text">Chuyển tiền cá nhân</span>
+                                    </a>
+                                </li>
+                                <li class="clo l-6 m-6 c-6 m-item__menu-item">
+                                    <a class="m-item__menu-link @ViewBag.Message">
+                                        <img class="m-item__menu-logo" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo__tienich/icon3.svg" alt="">
+                                        <span class="nav__mobile-menu-text">Du lịch - Đi lại</span>
+                                    </a>
+                                </li>
+                                <li class="clo l-6 m-6 c-6 m-item__menu-item">
+                                    <a class="m-item__menu-link @ViewBag.Message">
+                                        <img class="m-item__menu-logo" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo__tienich/icon1.svg" alt="">
+                                        <span class="nav__mobile-menu-text">Giải trí</span>
+                                    </a>
+                                </li>
+                                <li class="clo l-6 m-6 c-6 m-item__menu-item">
+                                    <a class="m-item__menu-link @ViewBag.Message">
+                                        <img class="m-item__menu-logo" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo__tienich/icon8.svg" alt="">
+                                        <span class="nav__mobile-menu-text">Mua sắm trực tuyến</span>
+                                    </a>
+                                </li>
+                                <li class="clo l-6 m-6 c-6 m-item__menu-item">
+                                    <a class="m-item__menu-link @ViewBag.Message">
+                                        <img class="m-item__menu-logo" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo__tienich/icon2.svg" alt="">
+                                        <span class="nav__mobile-menu-text">Hoạt động cộng đồng</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav__mobile-item">
+                        <div class="nav__m-item__top">
+                            <span>Chúng tôi</span>
+                            <i class="fas fa-angle-down m-item__icon-mobile"></i>
+                        </div>
+                        <div class="grid nav__m-item__menu">
+                            <ul class="row m-item__menu-list">
+                                <li class="clo l-6 m-6 c-6 m-item__menu-item">
+                                    <a class="m-item__menu-link @ViewBag.Message">
+                                        <img class="m-item__menu-logo" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/logo.jpg" alt="">
+                                        <span class="nav__mobile-menu-text">Giới thiệu</span>
+                                    </a>
+                                </li>
+                                <li class="clo l-6 m-6 c-6 m-item__menu-item">
+                                    <a class="m-item__menu-link @ViewBag.Message">
+                                        <img class="m-item__menu-logo" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/hotro.jpg" alt="">
+                                        <span class="nav__mobile-menu-text">Hỗ trợ</span>
+                                    </a>
+                                </li>
+                                <li class="clo l-6 m-6 c-6 m-item__menu-item">
+                                    <a class="m-item__menu-link @ViewBag.Message">
+                                        <img class="m-item__menu-logo" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/lienhe.jpg" alt="">
+                                        <span class="nav__mobile-menu-text">Liên hệ</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav__mobile-item">
+                        <div class="nav__m-item__top">
+                            <span>Tin tức</span>
+                            <i class="fas fa-angle-down m-item__icon-mobile"></i>
+                        </div>
+                        <div class="grid nav__m-item__menu">
+                            <ul class="row m-item__menu-list">
+                                <li class="clo l-6 m-6 c-6 m-item__menu-item">
+                                    <a class="m-item__menu-link @ViewBag.Message">
+                                        <img class="m-item__menu-logo" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/tintuc.jpg" alt="">
+                                        <span class="nav__mobile-menu-text">Tin tức</span>
+                                    </a>
+                                </li>
+                                <li class="clo l-6 m-6 c-6 m-item__menu-item">
+                                    <a class="m-item__menu-link @ViewBag.Message">
+                                        <img class="m-item__menu-logo" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/khuyenmai.jpg" alt="">
+                                        <span class="nav__mobile-menu-text">Khuyến mại</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav__mobile-item">
+                        <div class="nav__m-item__top">
+                            <span>Trợ giúp</span>
+                            <i class="fas fa-angle-down m-item__icon-mobile"></i>
+                        </div>
+                        <div class="grid nav__m-item__menu">
+                            <ul class="row m-item__menu-list">
+                                <li class="clo l-6 m-6 c-6 m-item__menu-item">
+                                    <a class="m-item__menu-link @ViewBag.Message">
+                                        <img class="m-item__menu-logo" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/hoidap.jpg" alt="">
+                                        <span class="nav__mobile-menu-text">Hỏi đáp</span>
+                                    </a>
+                                </li>
+                                <li class="clo l-6 m-6 c-6 m-item__menu-item">
+                                    <a class="m-item__menu-link @ViewBag.Message">
+                                        <img class="m-item__menu-logo" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/huongdan.jpg" alt="">
+                                        <span class="nav__mobile-menu-text">Hướng dẫn</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav__mobile-item">
+                        <div class="nav__m-item__top">
+                            <span>Đối tác</span>
+                            <i class="fas fa-angle-down m-item__icon-mobile"></i>
+                        </div>
+                        <div class="grid nav__m-item__menu">
+                            <ul class="row m-item__menu-list">
+                                <li class="clo l-6 m-6 c-6 m-item__menu-item">
+                                    <a class="m-item__menu-link @ViewBag.Message">
+                                        <img class="m-item__menu-logo" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/diadiem.jpg" alt="">
+                                        <span class="nav__mobile-menu-text">Địa điểm thanh toán</span>
+                                    </a>
+                                </li>
+                                <li class="clo l-6 m-6 c-6 m-item__menu-item">
+                                    <a class="m-item__menu-link @ViewBag.Message">
+                                        <img class="m-item__menu-logo" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/diadiem2.svg" alt="">
+                                        <span class="nav__mobile-menu-text">Địa điểm nạp rút</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="scroll">
+        <a href="#">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </div>
+    <script type="text/javascript" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/js/Jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/js/view__password.js"></script>
+    <script type="text/javascript" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/js/active.js"></script>
+    @*<script type="text/javascript" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/js/validators.js"></script>*@
+    <script type="text/javascript" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/js/Jquery/Loading.js"></script>
+    <script type="text/javascript" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/js/Jquery/message.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const forgotPass = document.querySelector('.auth-form__forgot-link');
+            const form__forgotPass = document.querySelector('.auth-form__forgotPass');
+            forgotPass.onclick = function () {
+                const tab__close = document.querySelector('.auth-form.auth-form__active');
+                tab__close.classList.remove('auth-form__active');
+                form__forgotPass.classList.add('auth-form__active');
+            }
+        }, false)
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        var domain = '@Request.Url.Scheme://@Request.Url.Authority';
+        const input = document.querySelectorAll('.auth-form__input');
+        const messLogin = document.querySelector(".mess__login");
+        function remove_oninput(element) {
+            var message = element.querySelector('.form-message');
+            message.innerText = '';
+            element.classList.remove('invalid');
+            messLogin.innerHTML = "";
+        }
+        function add__blur(element, messages) {
+            var message = element.querySelector('.form-message');
+            message.innerText = messages;
+            element.classList.add('invalid');
+        }
+        function clickEnter(element, stt){
+            element.addEventListener("keyup", function (event) {
+                if (event.keyCode == 13 && stt < 2) {
+                    loginClick();
+                }
+                else if (event.keyCode == 13 && stt > 1) {
+                    registerClick();
+                }
+            });
+        }
+        function CheckID(element, event) {
+            $.ajax({
+                url: "/GetCheckTaiKhoan?id=" + element.value.trim(),
+                method: "GET",
+                data: "",
+                contentType: "application/json",
+                dataType: ""
+            }).done(function (response) {
+                event(response)
+            }).fail(function (response) {
+                console.log("erro");
+            })
+        }function CheckEmail(element, event) {
+            $.ajax({
+                url: "/GetCheckEmail?id=" + element.value,
+                method: "GET",
+                data: "",
+                contentType: "application/json",
+                dataType: ""
+            }).done(function (response) {
+                event(response)
+            }).fail(function (response) {
+                console.log("erro");
+            })
+        }
+        clickEnter(input[0],0);
+        clickEnter(input[1],1);
+        clickEnter(input[2],2);
+        clickEnter(input[3],3);
+        clickEnter(input[4],4);
+        var isFormValidLogin = true;
+        var isFormValidRegister = true;
+        var isFormValidNumber = true;
+        input.forEach((blurs, index) => {
+            blurs.onblur = function () {
+                if (index == 0) {
+                    function tests() {
+                        return input[0].value.length >= 5 ? undefined : `Vui lòng nhập tối thiểu 5 kí tự`;
+                    }
+                    if (tests() == null) {
+                    }
+                    else {
+                        var mess = tests();
+                        add__blur(input[0].parentElement, mess);
+                    }
+                }
+                else if (index == 1) {
+                    function tests() {
+                        return input[1].value.length > 0 ? undefined : `Vui lòng không bỏ trống trường này`;
+                    }
+                    if (tests() == null) {
+                    }
+                    else {
+                        var mess = tests();
+                        add__blur(input[1].parentElement, mess);
+                    }
+                }
+                else if (index == 2) {
+                    function tests() {
+                        return input[2].value.length >= 5 ? undefined : `Vui lòng nhập tối thiểu 5 kí tự`;
+                    }
+                    if (tests() == null) {
+                        CheckID(input[2], function (res) {
+                            if (res == false || res == "False") {
+                                add__blur(input[2].parentElement, "Tên đăng nhập đã tồn tại");
+                            }
+                        });
+                    }
+                    else {
+                        var mess = tests();
+                        add__blur(input[2].parentElement, mess);
+                    }
+                }
+                else if (index == 3) {
+                    function tests() {
+                        return validateEmail(input[3].value) ? undefined : `Trường này phải là email`;
+                    }
+                    if (tests() == null) {
+                        CheckEmail(input[3], function (res) {
+                            if (res == false || res == "False") {
+                                add__blur(input[3].parentElement, "Email này đã được đăng ký");
+                            }
+                        });
+                    }
+                    else {
+                        var mess = tests();
+                        add__blur(input[3].parentElement, mess);
+                    }
+                }
+                else if (index == 4) {
+                    function tests() {
+                        return input[4].value.length >= 4 ? undefined : `Hãy nhập mã gồm 4 ký tự`;
+                    }
+                    if (tests() == null) {
+                    }
+                    else {
+                        var mess = tests();
+                        add__blur(input[4].parentElement, mess);
+                    }
+                }
+                else if (index == 5) {
+                    function tests() {
+                        return validateEmail(input[5].value) ? undefined : `Trường này phải là email`;
+                    }
+                    if (tests() == null) {
+                        CheckEmail(input[5], function (res) {
+                            if (res == true || res == "True") {
+                                add__blur(input[5].parentElement, "Email của bạn chưa được đăng ký");
+                            }
+                        });
+                    }
+                    else {
+                        var mess = tests();
+                        add__blur(input[5].parentElement, mess);
+                    }
+                }
+            }
+            blurs.oninput = function () {
+                if (index == 0) {
+                    remove_oninput(input[0].parentElement);
+                    isFormValidLogin = true;
+                }
+                if (index == 1) {
+                    remove_oninput(input[1].parentElement);
+                    isFormValidLogin = true;
+                }
+                if (index == 2) {
+                    remove_oninput(input[2].parentElement);
+                    isFormValidRegister = true;
+                    isFormValidNumber = true;
+                }
+                if (index == 3) {
+                    remove_oninput(input[3].parentElement);
+                    isFormValidRegister = true;
+                    isFormValidNumber = true;
+                }
+                if (index == 4) {
+                    remove_oninput(input[4].parentElement);
+                    isFormValidRegister = true;
+                }
+                if (index == 5) {
+                    remove_oninput(input[5].parentElement);
+                }
+            }
+        })
+        const login = document.querySelector('.auth-form__submit-login');
+        const register = document.querySelector('.auth-form__submit-register');
+        const number = document.querySelector('.auth-form__submit-number');
+        const pass = document.querySelector('.auth-form__submit-forgotPass');
+        pass.onclick = function () {
+            function tests() {
+                return validateEmail(input[5].value) ? undefined : `Trường này phải là email`;
+            }
+            if (tests() == null) {
+                CheckEmail(input[5], function (res) {
+                    if (res == true || res == "True") {
+                        add__blur(input[5].parentElement, "Email của bạn chưa được đăng ký");
+                    }
+                    else if (res == false || res == "False") {
+                        active__Loading(true);
+                        var form = new FormData();
+                        form.append("email", input[5].value)
+                        var xhr = new XMLHttpRequest();
+                        xhr.open("POST", '/Home/ForgotPass', true);
+                        xhr.onreadystatechange = function () {
+                            if (xhr.readyState == 4 && xhr.status == 200) {
+                                active__Loading(false);
+                                active__messageNotification('Đã gửi mật khẩu về Email', true);
+                            }
+                        }
+                        xhr.send(form);
+                    }
+                });
+            }
+            else {
+                var mess = tests();
+                add__blur(input[5].parentElement, mess);
+                EmailOK = false;
+            }
+        }
+        number.onclick = function () {
+            for (var i = 0; i < input.length; i++) {
+                if (i == 2) {
+                    function tests() {
+                        return input[2].value.length >= 5 ? undefined : `Vui lòng nhập tối thiểu 5 kí tự`;
+                    }
+                    if (tests() == null) {
+                    }
+                    else {
+                        var mess = tests();
+                        add__blur(input[2].parentElement, mess);
+                        isFormValidNumber = false;
+                    }
+                }
+                else if (i == 3) {
+                    function tests() {
+                        return validateEmail(input[3].value) ? undefined : `Trường này phải là email`;
+                    }
+                    if (tests() == null) {
+                    }
+                    else {
+                        var mess = tests();
+                        add__blur(input[3].parentElement, mess);
+                        isFormValidNumber = false;
+                    }
+                }
+            }
+            if (isFormValidNumber == true) {
+                CheckID(input[2], function (res) {
+                    if (res == false || res == "False") {
+                        add__blur(input[2].parentElement, "Tên đăng nhập đã tồn tại");
+                        isFormValidNumber = false;
+                    }
+                    else if (res == true || res == "True") {
+                        CheckEmail(input[3], function (res) {
+                            if (res == false || res == "False") {
+                                add__blur(input[3].parentElement, "Email này đã được đăng ký");
+                            }
+                            else if (res == true || res == "True"){
+                                active__Loading(true);
+                                var form = new FormData();
+                                form.append("uid", input[2].value.replace(/ /g, ''))
+                                form.append("email", input[3].value)
+                                var xhr = new XMLHttpRequest();
+                                xhr.open("POST", '/Home/Register', true);
+                                xhr.onreadystatechange = function () {
+                                    if (xhr.readyState == 4 && xhr.status == 200) {
+                                        active__Loading(false);
+                                        active__messageNotification('Đã gửi mã về Email bạn', true);
+                                    }
+                                }
+                                xhr.send(form);
+                            }
+                        });
+                    }
+                });
+            }
+        }
+        var isRunningRegister = false;
+        function registerClick(){
+            if (!isRunningRegister) {
+                isRunningRegister = true;
+                for (var i = 0; i < input.length; i++) {
+                    if (i == 2) {
+                        function tests() {
+                            return input[2].value.length >= 5 ? undefined : `Vui lòng nhập tối thiểu 5 kí tự`;
+                        }
+                        if (tests() == null) {
+                        }
+                        else {
+                            var mess = tests();
+                            add__blur(input[2].parentElement, mess);
+                            isFormValidRegister = false;
+                        }
+                    }
+                    else if (i == 3) {
+                        function tests() {
+                            return validateEmail(input[3].value) ? undefined : `Trường này phải là email`;
+                        }
+                        if (tests() == null) {
+                        }
+                        else {
+                            var mess = tests();
+                            add__blur(input[3].parentElement, mess);
+                            isFormValidRegister = false;
+                        }
+                    }
+                    else if (i == 4) {
+                        function tests() {
+                            return input[4].value.length >= 4 ? undefined : `Hãy nhập mã gồm 4 ký tự`;
+                        }
+                        if (tests() == null) {
+                        }
+                        else {
+                            var mess = tests();
+                            add__blur(input[4].parentElement, mess);
+                            isFormValidRegister = false;
+                        }
+                    }
+                }
+                if (isFormValidRegister == true) {
+                    CheckID(input[2], function (res) {
+                        if (res == false || res == "False") {
+                            add__blur(input[2].parentElement, "Tên đăng nhập đã tồn tại");
+                            isRunningRegister = false;
+                            isFormValidNumber = false;
+                        }
+                        else if (res == true || res == "True") {
+                            CheckEmail(input[3], function (res) {
+                                if (res == false || res == "False") {
+                                    isRunningRegister = false;
+                                    add__blur(input[3].parentElement, "Email này đã được đăng ký");
+                                }
+                                else if (res == true || res == "True") {
+                                    active__Loading(true);
+                                    var form = new FormData();
+                                    form.append("uid", input[2].value.replace(/ /g, ''))
+                                    form.append("email", input[3].value)
+                                    form.append("confirm", input[4].value.replace(/ /g, ''))
+                                    var xhr = new XMLHttpRequest();
+                                    xhr.open("POST", '/Home/RegisterConfirm', true);
+                                    xhr.timeout = 30000;
+                                    xhr.ontimeout = function () {
+                                        active__Loading(false);
+                                        active__messageNotification('Lỗi mạng, hãy thử lại', false);
+                                        isRunningRegister = false;
+                                    }
+                                    xhr.onreadystatechange = function () {
+                                        if (xhr.readyState == 4 && xhr.status == 200) {
+                                            active__Loading(false);
+                                            var r = xhr.responseText;
+                                            var j = JSON.parse(r);
+                                            if (j.Data.status == "OK") {
+                                                window.location = '';
+                                            }
+                                            else {
+                                                active__messageNotification('Mã đã hết hạn, thử lại sau', false);
+                                            }
+                                            isRunningRegister = false;
+                                        }
+                                    }
+                                    xhr.send(form);
+                                }
+                            });
+                        }
+                    });
+                }
+                else {
+                    isRunningRegister = false;
+                }
+            }
+        }
+        register.onclick = function () {
+            registerClick();
+        }
+        var isRunning = false;
+        function loginClick() {
+            if (!isRunning) {
+                isRunning = true;
+                for (var i = 0; i < input.length; i++) {
+                    if (i == 0) {
+                        function tests() {
+                            return input[0].value.length >= 5 ? undefined : `Vui lòng nhập tối thiểu 5 kí tự`;
+                        }
+                        if (tests() == null) {
+                        }
+                        else {
+                            var mess = tests();
+                            add__blur(input[0].parentElement, mess);
+                            isFormValidLogin = false;
+                        }
+                    }
+                    else if (i == 1) {
+                        function tests() {
+                            return input[1].value.length > 0 ? undefined : `Vui lòng không bỏ trống trường này`;
+                        }
+                        if (tests() == null) {
+                        }
+                        else {
+                            var mess = tests();
+                            add__blur(input[1].parentElement, mess);
+                            isFormValidLogin = false;
+                        }
+                    }
+                }
+                if (isFormValidLogin == true) {
+                    active__Loading(true);
+                    var form = new FormData();
+                    form.append("uid", input[0].value)
+                    form.append("pass", input[1].value)
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("POST", '/Home/CheckLogin', true);
+                    xhr.timeout = 30000;
+                    xhr.ontimeout = function () {
+                        active__Loading(false);
+                        messLogin.innerHTML = "Có lỗi xảy ra thử lại sau vài phút"
+                        isRunning = false;
+                    }
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState == 4 && xhr.status == 200) {
+                            active__Loading(false);
+                            var r = xhr.responseText;
+                            var j = JSON.parse(r);
+                            if (j.Data.status == "OK") {
+                                window.location = '';
+                            }
+                            else {
+                                messLogin.innerHTML = "thông tin tài khoản hoặc mật khẩu không chính xác"
+                            }
+                            isRunning = false;
+                        }
+                    }
+                    xhr.send(form);
+                }
+                else {
+                    isRunning = false;
+                }
+            }
+        }
+        login.onclick = function (evt) {
+            loginClick();
+        }
+        function validateEmail(email) {
+            var regex = /^\w+([\.-]?\w+)*@@\w+([\.-]?\w+)*(\.\w{2,3})+$/; ///Thừa 1 dấu @@
+            return regex.test(email);
+        }
+    }, false)
+    </script>
+</body>
+</html>

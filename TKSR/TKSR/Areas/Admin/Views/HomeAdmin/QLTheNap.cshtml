@@ -1,0 +1,750 @@
+﻿@model List<DTO.TheNap>
+@{
+    ViewBag.Title = "Quản lý thẻ nạp";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="info__bug">
+    <div class="form__update-the">
+        <div class="form info__thenap">
+            <h3 class="bar__titel title__info">
+                Thêm thẻ nạp
+            </h3>
+            <div class="form__container noauto">
+                <form class="form__info">
+                    <div class="row rechargecard__history-select">
+                        <div class="col l-3 m-12 c-12 rechargecard__history-item">
+                            <svg class="Input_icon__3bJ0I" width="16" height="16" viewBox="0 0 16 16"><path d="M0 0h16v16H0V0z" fill="none"></path><path d="M15.2 13.1L8.6 1.6c-.2-.4-.9-.4-1.2 0L.8 13.1c-.1.2-.1.5 0 .7.1.2.3.3.6.3h13.3c.2 0 .5-.1.6-.3.1-.2.1-.5-.1-.7zM8.7 12H7.3v-1.3h1.3V12zm0-2.7H7.3v-4h1.3v4z" fill="currentColor"></path></svg>
+                            <input maxlength="13" type="text" placeholder="Mã thẻ" class="select__input form__update-the idCard">
+                            <span class="form-message"></span>
+                        </div>
+                        <div class="col l-3 m-12 c-12 rechargecard__history-item">
+                            <svg class="Input_icon__3bJ0I" width="16" height="16" viewBox="0 0 16 16"><path d="M0 0h16v16H0V0z" fill="none"></path><path d="M15.2 13.1L8.6 1.6c-.2-.4-.9-.4-1.2 0L.8 13.1c-.1.2-.1.5 0 .7.1.2.3.3.6.3h13.3c.2 0 .5-.1.6-.3.1-.2.1-.5-.1-.7zM8.7 12H7.3v-1.3h1.3V12zm0-2.7H7.3v-4h1.3v4z" fill="currentColor"></path></svg>
+                            <input maxlength="13" type="text" placeholder="Số Seri" class="select__input form__update-the seriCard">
+                            <span class="form-message"></span>
+                        </div>
+                        <div class="col l-3 m-12 c-12 rechargecard__history-item">
+                            <select class="select__input form__update-the">
+                                <option value="">Mệnh giá</option>
+                                <option value="10000">Thẻ 10k</option>
+                                <option value="20000">Thẻ 20k</option>
+                                <option value="30000">Thẻ 30k</option>
+                                <option value="50000">Thẻ 50k</option>
+                                <option value="100000">Thẻ 100k</option>
+                                <option value="200000">Thẻ 200k</option>
+                                <option value="300000">Thẻ 300k</option>
+                                <option value="500000">Thẻ 500k</option>
+                                <option value="1000000">Thẻ 1 triệu</option>
+                            </select>
+                            <span class="form-message"></span>
+                        </div>
+                        <div class="col l-3 m-12 c-12 rechargecard__history-item">
+                            <select class="select__input form__update-the">
+                                <option value="">Nhà mạng</option>
+                                <option>Viettel</option>
+                                <option>Vinaphone</option>
+                                <option>Mobifone</option>
+                                <option>vietnamobile</option>
+                                <option>Gmobile</option>
+                            </select>
+                            <span class="form-message"></span>
+                        </div>
+                        <div class="btn__update">
+                            <div class="btn__items">
+                                <button type="button" class="btn__search-history btn__full themSanPham">
+                                    Thêm
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="form">
+        <h3 class="bar__title title__info">
+            Kho thẻ
+        </h3>
+        <form action="" class="history__search">
+            <div class="row rechargecard__history-select">
+                <div class="col l-3 m-12 c-12 rechargecard__history-item">
+                    <input type="text" placeholder="Mã thẻ" class="select__input searchMaThe">
+                </div>
+                <div class="col l-3 m-12 c-12 rechargecard__history-item">
+                    <input type="text" placeholder="Số Seri" class="select__input searchSeri">
+                </div>
+                <div class="col l-3 m-12 c-12 rechargecard__history-item">
+                    <select class="select__input select__MenhGia">
+                        <option value="">Mệnh giá</option>
+                        <option value="10000">Thẻ 10k</option>
+                        <option value="20000">Thẻ 20k</option>
+                        <option value="30000">Thẻ 30k</option>
+                        <option value="50000">Thẻ 50k</option>
+                        <option value="100000">Thẻ 100k</option>
+                        <option value="200000">Thẻ 200k</option>
+                        <option value="300000">Thẻ 300k</option>
+                        <option value="500000">Thẻ 500k</option>
+                        <option value="1000000">Thẻ 1 triệu</option>
+                    </select>
+                </div>
+                <div class="col l-3 m-12 c-12 rechargecard__history-item">
+                    <select class="select__input select__NhaMang">
+                        <option value="">Nhà mạng</option>
+                        <option>Viettel</option>
+                        <option>Vinaphone</option>
+                        <option>Mobilefone</option>
+                        <option>vietnamobile</option>
+                        <option>Gmobile</option>
+                    </select>
+                </div>
+                <div class="col l-4 m-12 c-12 rechargecard__history-item">
+                    <select class="select__recort">
+                        <option>5</option>
+                        <option selected>10</option>
+                        <option>15</option>
+                        <option>20</option>
+                        <option>25</option>
+                        <option>30</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+        <div class="form__container container">
+            <div class="form__history">
+                <div class="table__history">
+                    <div class="table__history-item">
+                        <span>STT</span>
+                    </div>
+                    <div class="table__history-item">
+                        <span>Mã thẻ</span>
+                    </div>
+                    <div class="table__history-item">
+                        <span>Số Seri</span>
+                    </div>
+                    <div class="table__history-item">
+                        <span>Mệnh giá</span>
+                    </div>
+                    <div class="table__history-item item-end">
+                        <span>Nhà mạng</span>
+                    </div>
+                </div>
+                <div class="card__content">
+                    @{
+                        int number = 1;
+                        foreach (var item in Model)
+                        {
+                            <div class="table__history table-@number">
+                                <div class="table__history-item">
+                                    <span>@number</span>
+                                </div>
+                                <div class="table__history-item">
+                                    <svg class="icon__update-invalid" width="16" height="16" viewBox="0 0 16 16"><path d="M0 0h16v16H0V0z" fill="none"></path><path d="M15.2 13.1L8.6 1.6c-.2-.4-.9-.4-1.2 0L.8 13.1c-.1.2-.1.5 0 .7.1.2.3.3.6.3h13.3c.2 0 .5-.1.6-.3.1-.2.1-.5-.1-.7zM8.7 12H7.3v-1.3h1.3V12zm0-2.7H7.3v-4h1.3v4z" fill="currentColor"></path></svg>
+                                    <input value="@item.MaThe" disabled="" type="text" class="input__update">
+                                </div>
+                                <div class="table__history-item">
+                                    <svg class="icon__update-invalid" width="16" height="16" viewBox="0 0 16 16"><path d="M0 0h16v16H0V0z" fill="none"></path><path d="M15.2 13.1L8.6 1.6c-.2-.4-.9-.4-1.2 0L.8 13.1c-.1.2-.1.5 0 .7.1.2.3.3.6.3h13.3c.2 0 .5-.1.6-.3.1-.2.1-.5-.1-.7zM8.7 12H7.3v-1.3h1.3V12zm0-2.7H7.3v-4h1.3v4z" fill="currentColor"></path></svg>
+                                    <input maxlength="13" value="@item.Seri" disabled="" type="text" class="input__update">
+                                </div>
+                                <div class="table__history-item">
+                                    <select disabled="" class="input__update">
+                                        @{
+                                            int[] a = new int[] { 10000, 20000, 30000, 50000, 100000, 200000,300000,500000,1000000 };
+                                            for (int i = 0; i < 9; i++)
+                                            {
+                                                if (a[i] != int.Parse(item.MenhGia))
+                                                {
+                                                    string str = "";
+                                                    if(a[i] == 10000) { str = "Thẻ 10k"; }
+                                                    else if (a[i] == 20000) { str = "Thẻ 20k"; }
+                                                    else if (a[i] == 30000) { str = "Thẻ 30k"; }
+                                                    else if (a[i] == 50000) { str = "Thẻ 50k"; }
+                                                    else if (a[i] == 100000) { str = "Thẻ 100k"; }
+                                                    else if (a[i] == 200000) { str = "Thẻ 200k"; }
+                                                    else if (a[i] == 300000) { str = "Thẻ 300k"; }
+                                                    else if (a[i] == 500000) { str = "Thẻ 500k"; }
+                                                    else if (a[i] == 1000000) { str = "Thẻ 1 triệu"; }
+                                                    <option value="@a[i]">@str</option>
+                                                }
+                                                else if (a[i] == int.Parse(item.MenhGia))
+                                                {
+                                                    string str = "";
+                                                    if (a[i] == 10000) { str = "Thẻ 10k"; }
+                                                    else if (a[i] == 20000) { str = "Thẻ 20k"; }
+                                                    else if (a[i] == 30000) { str = "Thẻ 30k"; }
+                                                    else if (a[i] == 50000) { str = "Thẻ 50k"; }
+                                                    else if (a[i] == 100000) { str = "Thẻ 100k"; }
+                                                    else if (a[i] == 200000) { str = "Thẻ 200k"; }
+                                                    else if (a[i] == 300000) { str = "Thẻ 300k"; }
+                                                    else if (a[i] == 500000) { str = "Thẻ 500k"; }
+                                                    else if (a[i] == 1000000) { str = "Thẻ 1 triệu"; }
+                                                    <option value="@a[i]" selected="selected">@str</option>
+                                                }
+                                            }
+                                        }
+                                    </select>
+                                </div>
+                                <div class="table__history-item item-end">
+                                    <select disabled="" class="input__update">
+                                        @{
+                                            string[] arr = new string[] { "Viettel", "Vinaphone", "Mobifone", "vietnamobile", "Gmobile"};
+                                            for (int i = 0; i < 5; i++)
+                                            {
+                                                if (arr[i] != item.NhaMang)
+                                                {
+                                                    <option>@arr[i]</option>
+                                                }
+                                                else if (arr[i] == item.NhaMang)
+                                                {
+                                                    <option selected="selected">@arr[i]</option>
+                                                }
+                                            }
+                                        }
+                                    </select>
+                                    <i onclick="UpdateSP('table-@number')" class="far fa-edit edit__info update"></i>
+                                    <i onclick="DoneSP('table-@number')" class="far fa-check-circle edit__info done none"></i>
+                                    <i onclick="DeleteSP('table-@number', '@item.MaThe')" class="far fa-trash-alt edit__info delete"></i>
+                                </div>
+                            </div>
+                            number++;
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+        <p class="message__notification"></p>
+        <form class="btn__n container">
+            <div class="btn__next">
+                <button type="button" class="btn__next-item btn__next-down"><i class="fas fa-chevron-left"></i></button>
+                <span class="slide__number">@ViewBag.Number</span>
+                <button type="button" class="btn__next-item btn__next-up"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </form>
+    </div>
+    <div class="waning">
+        <i>
+            * Nỗ lực tiêu chí tăng số lượng khách hàng trong năm tới mục tiêu trên 1000 lượt thanh toán mỗi tháng, bán được 100 thẻ nạp mỗi tuần
+        </i>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var recort = document.querySelector('.select__recort');
+        var IDCard = document.querySelector(".idCard");
+        var SeriCard = document.querySelector(".seriCard");
+        // Restrict input to digits and '.' by using a regular expression filter.
+        setInputFilter(IDCard, function (value) {
+            return /^\d*$/.test(value)
+        });
+        setInputFilter(SeriCard, function (value) {
+            return /^\d*$/.test(value)
+        });
+        /* Validate */
+        (function () {
+            const input = document.querySelectorAll('.select__input');
+            function remove_oninput(element) {
+                var message = element.querySelector('.form-message');
+                message.innerText = '';
+                element.classList.remove('invalid');
+            }
+
+            function add__blur(element, messages) {
+                var message = element.querySelector('.form-message');
+                message.innerText = messages;
+                element.classList.add('invalid');
+            }
+            function CheckID(element, event) {
+                $.ajax({
+                    url: "/SearchOneThe?id=" + element.value.trim(),
+                    method: "GET",
+                    data: "",
+                    contentType: "application/json",
+                    dataType: ""
+                }).done(function (response) {
+                    event(response)
+                }).fail(function (response) {
+                    console.log("erro");
+                })
+            }
+            var check__them = true;
+            input.forEach((blurs, index) => {
+                blurs.onblur = function () {
+                    if (index == 0) {
+                        function tests() {
+                            return input[0].value.trim().length == 13 ? undefined : `Nhập mã thẻ 13 ký tự`;
+                        }
+                        if (tests() == null) {
+                            CheckID(input[0], function (res) {
+                                if (res == false || res == "False") {
+                                    add__blur(input[0].parentElement, "Mã thẻ này đã tồn tại");
+                                }
+                            });
+                        } else {
+                            var mess = tests();
+                            add__blur(input[0].parentElement, mess);
+                        }
+                    } else if (index == 1) {
+                        function tests() {
+                            return input[1].value.trim().length >= 10 && input[1].value.trim().length <= 13 ? undefined : `Nhập Seri 10 - 13 ký tự`;
+                        }
+                        if (tests() == null) { } else {
+                            var mess = tests();
+                            add__blur(input[1].parentElement, mess);
+                        }
+                    } else if (index == 2) {
+                        function tests() {
+                            return input[2].value != '' ? undefined : `Hãy chọn mệnh giá`;
+                        }
+                        if (tests() == null) { } else {
+                            var mess = tests();
+                            add__blur(input[2].parentElement, mess);
+                        }
+                    } else if (index == 3) {
+                        function tests() {
+                            return input[3].value != '' ? undefined : `Hãy chọn nhà mạng`;
+                        }
+                        if (tests() == null) { } else {
+                            var mess = tests();
+                            add__blur(input[3].parentElement, mess);
+                        }
+                    }
+                }
+                blurs.oninput = function () {
+                    if (index == 0) {
+                        remove_oninput(input[0].parentElement);
+                        check__them = true;
+                    }
+                    if (index == 1) {
+                        remove_oninput(input[1].parentElement);
+                        check__them = true;
+                    }
+                    if (index == 2) {
+                        remove_oninput(input[2].parentElement);
+                        check__them = true;
+                    }
+                    if (index == 3) {
+                        remove_oninput(input[3].parentElement);
+                        check__them = true;
+                    }
+                }
+            })
+            const Them = document.querySelector('.themSanPham');
+            function ThemSP() {
+                for (var i = 0; i < input.length; i++) {
+                    if (i == 0) {
+                        function tests() {
+                            return input[0].value.trim().length == 13 ? undefined : `Nhập mã thẻ 13 ký tự`;
+                        }
+                        if (tests() == null) {
+                        }
+                        else {
+                            var mess = tests();
+                            add__blur(input[0].parentElement, mess);
+                            check__them = false;
+                        }
+                    } else if (i == 1) {
+                        function tests() {
+                            return input[1].value.trim().length >= 10 && input[1].value.trim().length <= 13 ? undefined : `Nhập Seri 10 - 13 ký tự`;
+                        }
+                        if (tests() == null) { } else {
+                            var mess = tests();
+                            add__blur(input[1].parentElement, mess);
+                            check__them = false;
+                        }
+                    } else if (i == 2) {
+                        function tests() {
+                            return input[2].value != '' ? undefined : `Hãy chọn mệnh giá`;
+                        }
+                        if (tests() == null) { } else {
+                            var mess = tests();
+                            add__blur(input[2].parentElement, mess);
+                            check__them = false;
+                        }
+                    }else if (i == 3) {
+                        function tests() {
+                            return input[3].value != '' ? undefined : `Hãy chọn nhà mạng`;
+                        }
+                        if (tests() == null) { } else {
+                            var mess = tests();
+                            add__blur(input[3].parentElement, mess);
+                            check__them = false;
+                        }
+                    }
+                }
+                if (check__them == true) {
+                    CheckID(input[0], function (res) {
+                        if (res == false || res == "False") {
+                            add__blur(input[0].parentElement, "Mã thẻ này đã tồn tại");
+                            check__them = false;
+                        }
+                        else if (res == true || res == "True") {
+                            var isRunning = false;
+                            if (!isRunning) {
+                                isRunning = true;
+                                var SP = {};
+                                SP.MaThe = input[0].value;
+                                SP.Seri = input[1].value;
+                                SP.MenhGia = input[2].value;
+                                SP.NhaMang = input[3].value;
+                                SP.NgayThem = new Date();
+                                active__Loading(true);
+                                $.ajax({
+                                    url: "/PostOneTheNap",
+                                    method: "POST",
+                                    data: JSON.stringify(SP),
+                                    contentType: "application/json",
+                                    dataType: "json"
+                                }).done(function (response) {
+                                    active__Loading(false);
+                                    if (response == true) {
+                                        LoadData(0, '', '', '', '', true, recort.value);
+                                        input[0].value = "";
+                                        input[1].value = "";
+                                        active__messageNotification('Thêm thành công', true);
+                                    }
+                                    else {
+                                        active__messageNotification("Có lỗi xảy ra, thử lại sau", false);
+                                    }
+                                }).fail(function (response) {
+                                    active__Loading(false);
+                                    active__messageNotification("Có lỗi xảy ra, thử lại sau", false);
+                                })
+                            }
+                        }
+                    });
+                }
+            }
+            Them.onclick = function () {
+                ThemSP();
+            }
+            function clickEnter(element, stt) {
+                element.addEventListener("keyup", function (event) {
+                    if (event.keyCode == 13 && stt < 5) {
+                        ThemSP();
+                    }
+                });
+            }
+            clickEnter(input[0], 0);
+            clickEnter(input[1], 1);
+            clickEnter(input[2], 2);
+            clickEnter(input[3], 3);
+            document.querySelector('.btn__next-up').onclick = function () {
+                var Edit = document.querySelectorAll(".table__history-item span");
+                var EditDelete = Edit[Edit.length - 1].innerText;
+                var numb = document.querySelector('.slide__number').innerText;
+                LoadData(numb, input[4].value, input[5].value, input[6].value, input[7].value, true, EditDelete);
+            }
+            document.querySelector('.btn__next-down').onclick = function () {
+                var numb = document.querySelector('.slide__number').innerText;
+                LoadData(numb, input[4].value, input[5].value, input[6].value, input[7].value, false, recort.value);
+            }
+            document.querySelector('.searchMaThe').oninput = function () {
+                setTimeout(function () {
+                    $('.card__content').empty();
+                    LoadData(0, input[4].value, input[5].value, input[6].value, input[7].value, true, recort.value);
+                }, 100)
+            }
+            document.querySelector('.searchSeri').oninput = function () {
+                setTimeout(function () {
+                    $('.card__content').empty();
+                    LoadData(0, input[4].value, input[5].value, input[6].value, input[7].value, true, recort.value);
+                }, 100)
+            }
+            $('.select__MenhGia').change(function () {
+                $('.card__content').empty();
+                LoadData(0, input[4].value, input[5].value, input[6].value, input[7].value, true, recort.value);
+            })
+            $('.select__NhaMang').change(function () {
+                $('.card__content').empty();
+                LoadData(0, input[4].value, input[5].value, input[6].value, input[7].value, true, recort.value);
+            })
+            $('.select__recort').change(function () {
+                LoadData(0, '', '', '', '', true, recort.value);
+            })
+            function LoadData(trang, ma, seri, menhgia, nhamang, trangthai, EditDelete) {
+                if (trangthai == false) {
+                    document.querySelector('.message__notification').innerText = "";
+                }
+                if (trangthai == false && trang == 1) {
+                    return;
+                }
+                active__Loading(true);
+                $.ajax({
+                    url: "/GetAllTheNap?id=" + trang + "*" + ma + "*" + seri + "*" + menhgia + "*" + nhamang + "*" + trangthai + "*" + EditDelete + "*" + recort.value,
+                    method: "GET",
+                    data: "",
+                    contentType: "application/json",
+                    dataType: ""
+                }).done(function (response) {
+                    active__Loading(false);
+                    if (response.length == 0) {
+                        if (document.querySelector('.message__notification').innerText == '') {
+                            document.querySelector('.message__notification').innerText = "Danh sách tìm trống";
+                        }
+                        return;
+                    }
+                    if (trangthai == true) {
+                        trang++;
+                    }
+                    else {
+                        trang--;
+                    }
+                    if (response.length != 0) {
+                        if (document.querySelector('.message__notification').innerText == 'Danh sách tìm trống') {
+                            document.querySelector('.message__notification').innerText = '';
+                        }
+                    }
+                    $('.card__content').empty();
+                    $('.slide__number').empty();
+                    $('.slide__number').append(trang);
+                    var number = 0;
+                    $.each(response, function (index, item) {
+                        number++;
+                        var MenhGia = [10000,20000 , 30000, 50000,100000, 200000,300000,500000,1000000];
+                        var htmlMenhGia = ``;
+                        for (var i = 0; i < MenhGia.length; i++) {
+                            if (MenhGia[i] != item.MenhGia) {
+                                var str = "";
+                                if (MenhGia[i] == 10000) { str = "Thẻ 10k"; }
+                                else if (MenhGia[i] == 20000) { str = "Thẻ 20k"; }
+                                else if (MenhGia[i] == 30000) { str = "Thẻ 30k"; }
+                                else if (MenhGia[i] == 50000) { str = "Thẻ 50k"; }
+                                else if (MenhGia[i] == 100000) { str = "Thẻ 100k"; }
+                                else if (MenhGia[i] == 200000) { str = "Thẻ 200k"; }
+                                else if (MenhGia[i] == 300000) { str = "Thẻ 300k"; }
+                                else if (MenhGia[i] == 500000) { str = "Thẻ 500k"; }
+                                else if (MenhGia[i] == 1000000) { str = "Thẻ 1 triệu"; }
+                                htmlMenhGia = htmlMenhGia + `<option value="${MenhGia[i]}">${str}</option >`
+                            }
+                            else if (MenhGia[i] == item.MenhGia) {
+                                var str = "";
+                                if (MenhGia[i] == 10000) { str = "Thẻ 10k"; }
+                                else if (MenhGia[i] == 20000) { str = "Thẻ 20k"; }
+                                else if (MenhGia[i] == 30000) { str = "Thẻ 30k"; }
+                                else if (MenhGia[i] == 50000) { str = "Thẻ 50k"; }
+                                else if (MenhGia[i] == 100000) { str = "Thẻ 100k"; }
+                                else if (MenhGia[i] == 200000) { str = "Thẻ 200k"; }
+                                else if (MenhGia[i] == 300000) { str = "Thẻ 300k"; }
+                                else if (MenhGia[i] == 500000) { str = "Thẻ 500k"; }
+                                else if (MenhGia[i] == 1000000) { str = "Thẻ 1 triệu"; }
+                                htmlMenhGia = htmlMenhGia + `<option value="${MenhGia[i]}" selected="selected">${str}</option>`
+                            }
+                        }
+                        var NhaMang = ["Viettel", "Vinaphone", "Mobifone", "vietnamobile", "Gmobile"];
+                        var htmlNhaMang = ``;
+                        for (var i = 0; i < NhaMang.length; i++) {
+                            if (NhaMang[i] != item.NhaMang) {
+                                htmlNhaMang = htmlNhaMang + `<option>${NhaMang[i]}</option >`
+                            }
+                            else if (NhaMang[i] == item.NhaMang) {
+                                htmlNhaMang = htmlNhaMang + `<option selected="selected">${NhaMang[i]}</option>`
+                            }
+                        }
+                        var html = `<div class="table__history table-${number}">
+                                <div class="table__history-item">
+                                    <span>${number}</span>
+                                </div>
+                                <div class="table__history-item" title="0977263104">
+                                    <svg class="icon__update-invalid" width="16" height="16" viewBox="0 0 16 16"><path d="M0 0h16v16H0V0z" fill="none"></path><path d="M15.2 13.1L8.6 1.6c-.2-.4-.9-.4-1.2 0L.8 13.1c-.1.2-.1.5 0 .7.1.2.3.3.6.3h13.3c.2 0 .5-.1.6-.3.1-.2.1-.5-.1-.7zM8.7 12H7.3v-1.3h1.3V12zm0-2.7H7.3v-4h1.3v4z" fill="currentColor"></path></svg>
+                                    <input value="${item.MaThe}" disabled="" type="text" class="input__update">
+                                </div>
+                                <div class="table__history-item">
+                                    <svg class="icon__update-invalid" width="16" height="16" viewBox="0 0 16 16"><path d="M0 0h16v16H0V0z" fill="none"></path><path d="M15.2 13.1L8.6 1.6c-.2-.4-.9-.4-1.2 0L.8 13.1c-.1.2-.1.5 0 .7.1.2.3.3.6.3h13.3c.2 0 .5-.1.6-.3.1-.2.1-.5-.1-.7zM8.7 12H7.3v-1.3h1.3V12zm0-2.7H7.3v-4h1.3v4z" fill="currentColor"></path></svg>
+                                    <input maxlength="13" value="${item.Seri}" disabled="" type="text" class="input__update">
+                                </div>
+                                <div class="table__history-item">
+                                    <select disabled="" class="input__update">
+                                        ${htmlMenhGia}
+                                    </select>
+                                </div>
+                                <div class="table__history-item item-end">
+                                    <select disabled="" class="input__update">
+                                        ${htmlNhaMang}
+                                    </select>
+                                    <i onclick="UpdateSP('table-${number}')" class="far fa-edit edit__info update"></i>
+                                    <i onclick="DoneSP('table-${number}')" class="far fa-check-circle edit__info done none"></i>
+                                    <i onclick="DeleteSP('table-${number}', '${item.MaThe}')" class="far fa-trash-alt edit__info delete"></i>
+                                </div>
+                            </div>`;
+                        $('.card__content').append(html);
+                    })
+                }).fail(function (response) {
+                    active__Loading(false);
+                    active__messageNotification("Có lỗi xảy ra, thử lại sau", false);
+                })
+            }
+        })();
+    }, false)
+
+
+
+    function setInputFilter(textbox, inputFilter) {
+        ["input", "keydown", "keyup", "mousedown", "mouseup", "select", "contextmenu", "drop"].forEach(function (event) {
+            textbox.addEventListener(event, function () {
+                if (inputFilter(this.value)) {
+                    this.oldValue = this.value;
+                    this.oldSelectionStart = this.selectionStart;
+                    this.oldSelectionEnd = this.selectionEnd;
+                } else if (this.hasOwnProperty("oldValue")) {
+                    this.value = this.oldValue;
+                    this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+                }
+            });
+        });
+    }
+    function UpdateSP(ClassElement) {
+        var element = document.querySelector("." + ClassElement);
+        ActiveUpdate(element);
+    }
+    function DoneSP(ClassElement) {
+        var element = document.querySelector("." + ClassElement);
+        DoneElement(element);
+    }
+    function DeleteSP(ClassElement, id) {
+        const modal = document.querySelector('.modal');
+        const form = document.querySelector('.modal .auth-form');
+        modal.classList.add('modal__active');
+        form.classList.add('auth-form__active');
+        const close = document.querySelector('.modal__overlay');
+        const closeIcon = document.querySelector('.auth-form__icon');
+        close.onclick = function () {
+            modal.classList.remove('modal__active');
+            form.classList.remove('auth-form__active');
+        }
+        closeIcon.onclick = function () {
+            modal.classList.remove('modal__active');
+            form.classList.remove('auth-form__active');
+        }
+        const mess = document.querySelector('.message__delete');
+        mess.innerText = 'Bạn có chắc muốn xoá thẻ "' + id + '" ?';
+        const button = document.querySelector('.auth-form__submit');
+        button.onclick = function () {
+            var isRunning = false;
+            if (!isRunning) {
+                isRunning = true;
+                modal.classList.remove('modal__active');
+                form.classList.remove('auth-form__active');
+                active__Loading(true);
+                $.ajax({
+                    url: "/RemoveTheNap?id=" + id,
+                    method: "POST",
+                    data: "",
+                    contentType: "application/json",
+                    dataType: ""
+                }).done(function (response) {
+                    active__Loading(false);
+                    if (response == true || response == "True") {
+                        active__messageNotification('Xoá thành công', true);
+                        $('.' + ClassElement).remove();
+                        var STTEdit = document.querySelectorAll(".table__history-item span");
+                        STTEdit.forEach((item, index) => {
+                            if (index > 4) {
+                                item.innerHTML = index - 4;
+                            }
+                        })
+                    }
+                    else if (response == false || response == "False") {
+                        active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+                    }
+                }).fail(function (response) {
+                    active__Loading(false);
+                    active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+                })
+            }
+        }
+    }
+    function DoneElement(element) {
+        var check = true;
+        var items = element.querySelectorAll(".table__history-item");
+        items.forEach((item, index) => {
+            if (index != 0 && index != 1) {
+                var input = item.querySelector('.input__update');
+                if (index == 2) {
+                    function tests() {
+                        return input.value.trim().length >= 10 && input.value.trim().length <= 13 ? undefined : `Nhập tên từ 10 - 13 ký tự`;
+                    }
+                    if (tests() == null) { } else {
+                        add_oninputIcon(item)
+                        check = false;
+                    }
+                }
+
+            }
+        })
+        if (check == true) {
+            var SP = {};
+            SP.MaThe = items[1].querySelector(".input__update").value;
+            SP.Seri = items[2].querySelector(".input__update").value;
+            SP.MenhGia = items[3].querySelector(".input__update").value;
+            SP.NhaMang = items[4].querySelector(".input__update").value;
+            active__Loading(true);
+            $.ajax({
+                url: "/PostEditTheNap",
+                method: "POST",
+                data: JSON.stringify(SP),
+                contentType: "application/json",
+                dataType: "json"
+            }).done(function (response) {
+                active__Loading(false);
+                if (response == true || response == "True") {
+                    active__messageNotification('sửa thành công', true);
+                    items.forEach((item, index) => {
+                        if (index != 0) {
+                            var input = item.querySelector('.input__update');
+                            input.disabled = true;
+                            item.classList.remove("input__update-active");
+                        }
+                    })
+                    element.querySelector('.done').classList.add('none');
+                    element.querySelector('.update').classList.remove('none');
+                }
+                else if (response == false || response == "False") {
+                    active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+                }
+            }).fail(function (response) {
+                active__Loading(false);
+                active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+            })
+        }
+    }
+    function ActiveUpdate(element) {
+        var items = element.querySelectorAll(".table__history-item");
+        element.querySelector('.done').classList.remove('none');
+        element.querySelector('.update').classList.add('none');
+        items.forEach((item, index) => {
+            if (index != 0 && index != 1) {
+                var input = item.querySelector('.input__update');
+                input.disabled = false;
+                item.classList.add("input__update-active");
+                if (index == 2) {
+                    setInputFilter(input, function (value) {
+                        return /^\d*$/.test(value)
+                    });
+                }
+                input.oninput = function () {
+                    if (index == 2) {
+                        remove_oninputIcon(item)
+                    }
+                }
+                input.onblur = function () {
+                    if (index == 2) {
+                        function tests() {
+                            return input.value.trim().length >= 10 && input.value.trim().length <= 13 ? undefined : `Nhập tên từ 10 - 13 ký tự`;
+                        }
+                        if (tests() == null) { } else {
+                            add_oninputIcon(item)
+                        }
+                    }
+                }
+            }
+        })
+    }
+    function remove_oninputIcon(element) {
+        var icon = element.querySelector('.icon__update-invalid');
+        icon.classList.remove('icon__update-invalid__active');
+    }
+    function add_oninputIcon(element) {
+        var icon = element.querySelector('.icon__update-invalid');
+        icon.classList.add('icon__update-invalid__active');
+    }
+</script>

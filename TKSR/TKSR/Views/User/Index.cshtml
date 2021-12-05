@@ -1,0 +1,544 @@
+﻿@model TKSR.Models.ClassModels
+@{
+    ViewBag.Title = Model.user.tenTK;
+    Layout = "~/Views/Shared/_LayoutLogOn.cshtml";
+}
+
+<nav class="oriented">
+    <div class="grid wide">
+        <ul class="oriented__list">
+            <li class="oriented-item">
+                <a href="@Request.Url.Scheme://@Request.Url.Authority" class="oriented-item oriented-item__link">Trang chủ</a>
+            </li>
+            <li class="oriented-item">Thông tin ví</li>
+        </ul>
+    </div>
+</nav>
+<section class="info">
+    <div class="grid wide info__container">
+        <div class="side__bar">
+            <div class="side__bar-content">
+                <div class="side__bar-item">
+                    <h3 class="bar__title">
+                        Tuỳ chỉnh
+                    </h3>
+                    <ul class="bar__list">
+                        <li class="bar__list-item">
+                            <a href="@Request.Url.Scheme://@Request.Url.Authority/User/Index" class="bar__list-text @ViewBag.Index">
+                                <span>
+                                    Thông tin ví
+                                </span>
+                            </a>
+                        </li>
+                        <li class="bar__list-item">
+                            <a href="./history.html" class="bar__list-text">
+                                <span>
+                                    Lịch sử giao dịch
+                                </span>
+                            </a>
+                        </li>
+                        <li class="bar__list-item">
+                            <a href="@Request.Url.Scheme://@Request.Url.Authority/Home/Logout" class="bar__list-text">
+                                <span>
+                                    Đăng xuất
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="info__bug">
+            <div class="form">
+                <h3 class="bar__title title__info">
+                    Thông tin tài khoản
+                </h3>
+                <div class="form__container">
+                    <div class="form__info">
+                        <ul class="table__category">
+                            <li class="table__category-item">
+                                <span>Tên đăng nhập:</span>
+                            </li>
+                            <li class="table__category-item">
+                                <span>Số dư ví:</span>
+                            </li>
+                            <li class="table__category-item">
+                                <span>Email:</span>
+                            </li>
+                            <li class="table__category-item">
+                                <span>Ngày tham gia:</span>
+                            </li>
+                            <li class="table__category-item">
+                                <span>Số Mobile:</span>
+                            </li>
+                            <li class="table__category-item">
+                                <span>Mật khẩu cũ:</span>
+                            </li>
+                            <li class="table__category-item">
+                                <span>Mật khẩu mới:</span>
+                            </li>
+                            <li class="table__category-item">
+                                <span>Nhập lại mật khẩu:</span>
+                            </li>
+                            <li class="table__category-item">
+                                <span>Mật khẩu cấp 2 cũ:</span>
+                            </li>
+                            <li class="table__category-item">
+                                <span>Mật khẩu cấp 2 mới:</span>
+                            </li>
+                            <li class="table__category-item">
+                                <span>Nhập lại mật khẩu cấp 2 mới:</span>
+                            </li>
+                        </ul>
+                        <ul class="table__category">
+                            <li class="table__category-item">
+                                <span>@Model.user.tenTK</span>
+                            </li>
+                            <li class="table__category-item">
+                                <span>@String.Format("{0:#,##0.##}", Model.user.SoDu) VNĐ</span>
+                            </li>
+                            <li class="table__category-item">
+                                <span>@Model.user.Email</span>
+                            </li>
+                            <li class="table__category-item">
+                                <span>@Model.user.ngayLap.ToString("dd/MM/yyyy HH:mm:ss")</span>
+                            </li>
+                            <li class="table__category-item table__Update">
+                                <input value="@Model.user.sdt" maxlength="20" type="text" class="change" placeholder="Nhập số điện thoại">
+                                <span class="none">Nhập đúng số điện thoại</span>
+                            </li>
+                            <li class="table__category-item table__Update">
+                                <input maxlength="20" type="password" class="change" placeholder="Nhập mật khẩu cũ">
+                                <span class="none">Mật khẩu sai</span>
+                            </li>
+                            <li class="table__category-item table__Update">
+                                <input maxlength="20" type="password" class="change" placeholder="Nhập mật khẩu mới">
+                                <span class="none">Cần có chữ hoa, thường ,số</span>
+                            </li>
+                            <li class="table__category-item table__Update">
+                                <input maxlength="20" type="password" class="change" placeholder="Nhập lại mật khẩu mới">
+                                <span class="none">Mật khẩu không khớp</span>
+                            </li>
+                            <li class="table__category-item table__Update">
+                                <input maxlength="20" type="password" class="change" placeholder="Nhập mật khẩu 2 cũ">
+                                <span class="none">Mật khẩu sai</span>
+                            </li>
+                            <li class="table__category-item table__Update">
+                                <input maxlength="20" type="password" class="change" placeholder="Nhập mật khẩu 2 mới">
+                                <span class="none">Cần có chữ hoa, thường, số</span>
+                            </li>
+                            <li class="table__category-item table__Update">
+                                <input maxlength="20" type="password" class="change" placeholder="Nhập lại mật khẩu 2 mới">
+                                <span class="none">Mật khẩu không khớp</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="confirm__change">
+                        <a class="confirm">Cập nhật</a>
+                    </div>
+                </div>
+            </div>
+            <div class="waning">
+                <i>
+                    * Để đảm bảo an toàn cho tài khoản khách hàng.Khách hàng chú ý tuyệt đối không cung cấp mật khẩu cho bất kỳ ai kể cả admin
+                </i>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        function remove_oninput(element) {
+            var message = element.querySelector('span');
+            message.classList.add('none');
+        }
+        function add__blur(element) {
+            var message = element.querySelector('span');
+            message.classList.remove('none');
+        }
+        function CheckPass1(element, event) {
+            $.ajax({
+                url: "/User/GetCheckPass1?id=" + element.value,
+                method: "GET",
+                data: "",
+                contentType: "application/json",
+                dataType: ""
+            }).done(function (response) {
+                event(response)
+            }).fail(function (response) {
+                active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+            })
+        }
+        function CheckPass2(element, event) {
+            $.ajax({
+                url: "/User/GetCheckPass2?id=" + element.value,
+                method: "GET",
+                data: "",
+                contentType: "application/json",
+                dataType: ""
+            }).done(function (response) {
+                event(response)
+            }).fail(function (response) {
+                active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+            })
+        }
+        function CheckSecurity(element, event) {
+            $.ajax({
+                url: "/User/GetCheckSecurity?id=" + element.value,
+                method: "GET",
+                data: "",
+                contentType: "application/json",
+                dataType: ""
+            }).done(function (response) {
+                event(response)
+            }).fail(function (response) {
+                active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+            })
+        }
+        const input = document.querySelectorAll('.change');
+        input.forEach((blurs, index) => {
+            blurs.onblur = function () {
+                if (index == 0) {
+                    function tests() {
+                        return sdt(input[0].value) ? undefined : `gg`;
+                    }
+                    if (tests() == null) {
+                    }
+                    else {
+                        add__blur(input[0].parentElement);
+                    }
+                }
+                else if (index == 1) {///sssssssssssssssssssssssssssss
+                    function tests() {
+                        return input[1].value.length > 0 ? undefined : `gg`;
+                    }
+                    if (tests() == null) {
+                        CheckPass1(input[1], function (res) {
+                            if (res == false || res == "False") {
+                                add__blur(input[1].parentElement);
+                            }
+                        });
+                    }
+                    else {
+                        add__blur(input[1].parentElement);
+                    }
+                }
+                else if (index == 2) {
+                    function tests() {
+                        return input[2].value.length >= 6 ? undefined : `gg`;
+                    }
+                    if (tests() == null) {
+                        CheckSecurity(input[2], function (res) {
+                            if (res == false || res == "False") {
+                                add__blur(input[2].parentElement);
+                            }
+                            if (input[3].value != input[2].value && input[3].value.length != 0) {
+                                add__blur(input[3].parentElement);
+                            }
+                        });
+                    }
+                    else {
+                        add__blur(input[2].parentElement);
+                    }
+                }
+                else if (index == 3) {
+                    function tests() {
+                        return input[3].value == input[2].value ? undefined : `gg`;
+                    }
+                    if (tests() == null) {
+                    }
+                    else {
+                        add__blur(input[3].parentElement);
+                    }
+                }
+                else if (index == 4) {///ssssssssssssssssssssssssssss
+                    function tests() {
+                        return input[4].value.length > 0 ? undefined : `gg`;
+                    }
+                    if (tests() == null) {
+                        CheckPass2(input[4], function (res) {
+                            if (res == false || res == "False") {
+                                add__blur(input[4].parentElement);
+                            }
+                        });
+                    }
+                    else {
+                        add__blur(input[4].parentElement);
+                    }
+                }
+                else if (index == 5) {
+                    function tests() {
+                        return input[5].value.length >= 6 ? undefined : `gg`;
+                    }
+                    if (tests() == null) {
+                        CheckSecurity(input[5], function (res) {
+                            if (res == false || res == "False") {
+                                add__blur(input[5].parentElement);
+                            }
+                            if (input[6].value != input[5].value && input[6].value.length != 0) {
+                                add__blur(input[6].parentElement);
+                            }
+                        });
+                    }
+                    else {
+                        add__blur(input[5].parentElement);
+                    }
+                }
+                else if (index == 6) {
+                    function tests() {
+                        return input[6].value == input[5].value ? undefined : `gg`;
+                    }
+                    if (tests() == null) {
+                    }
+                    else {
+                        add__blur(input[6].parentElement);
+                    }
+                }
+            }
+            blurs.oninput = function () {
+                if (index == 0) {
+                    remove_oninput(input[0].parentElement);
+                }
+                if (index == 1) {
+                    remove_oninput(input[1].parentElement);
+                }
+                if (index == 2) {
+                    remove_oninput(input[2].parentElement);
+                    if (input[2].value == input[3].value) {
+                        remove_oninput(input[3].parentElement);
+                    }
+                }
+                if (index == 3) {
+                    remove_oninput(input[3].parentElement);
+                }
+                if (index == 4) {
+                    remove_oninput(input[4].parentElement);
+                }
+                if (index == 5) {
+                    remove_oninput(input[5].parentElement);
+                    if (input[5].value == input[6].value) {
+                        remove_oninput(input[6].parentElement);
+                    }
+                }
+                if (index == 6) {
+                    remove_oninput(input[6].parentElement);
+                }
+            }
+        })
+        var time = 200;
+        const btnUpdate = document.querySelector('.confirm');
+        btnUpdate.onclick = function () {
+            if (input[1].value == "" && input[4].value == "" && input[0].value == "") {
+                add__blur(input[0].parentElement);
+                add__blur(input[1].parentElement);
+                add__blur(input[4].parentElement);
+            }
+            else if (input[1].value == "" && input[4].value == "") {
+                upDateSDT()
+            }
+            else if (input[0].value == "" && input[4].value == "") {
+                upDatePass1()
+            }
+            else if (input[0].value == "" && input[1].value == "") {
+                upDatePass2()
+            }
+            else if (input[0].value == "") {
+                if (input[2].value != input[5].value) {
+                    upDatePass1();
+                    setTimeout(function () {
+                        upDatePass2();
+                    }, time)
+                }
+                else {
+                    active__messageNotification('Mật khẩu đăng nhập và mật khẩu cấp 2 không được trùng nhau', false);
+                }
+            }
+            else if (input[1].value == "") {
+                upDateSDT();
+                setTimeout(function () {
+                    upDatePass2();
+                }, time)
+            }
+            else if (input[4].value == "") {
+                upDateSDT();
+                setTimeout(function () {
+                    upDatePass1();
+                }, time)
+            }
+            else if (input[1].value != "" && input[4].value != "" && input[0].value != "") {
+                upDateSDT();
+                if (input[2].value != input[5].value) {
+                    setTimeout(function () {
+                        upDatePass1();
+                    }, time)
+                    setTimeout(function () {
+                        upDatePass2();
+                    }, time * 2)
+                }
+                else {
+                    active__messageNotification('Mật khẩu đăng nhập và mật khẩu cấp 2 không được trùng nhau', false);
+                }
+            }
+        }
+        function upDateSDT() {
+            function tests() {
+                return sdt(input[0].value) ? undefined : `gg`;
+            }
+            if (tests() == null) {
+                active__Loading(true);
+                $.ajax({
+                    url: "/User/PostEditSDT?id=" + input[0].value,
+                    method: "POST",
+                    data: "",
+                    contentType: "application/json",
+                    dataType: ""
+                }).done(function (response) {
+                    active__Loading(false);
+                    if (response == true || response == "True") {
+                        active__messageNotification('Đã thay đổi SDT', true);
+                    }
+                }).fail(function (response) {
+                    active__Loading(false);
+                    active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+                })
+            }
+            else {
+                add__blur(input[0].parentElement);
+            }
+        }
+        function upDatePass1() {
+            function tests() {
+                return input[1].value.length > 0 ? undefined : `gg`;
+            }
+            if (tests() == null) {
+                CheckPass1(input[1], function (res) {
+                    if (res == false || res == "False") {
+                        add__blur(input[1].parentElement);
+                    }
+                    else if (res == true || res == "True") {
+                        function tests() {
+                            return input[2].value.length >= 6 ? undefined : `gg`;
+                        }
+                        if (tests() == null) {
+                            CheckSecurity(input[2], function (res) {
+                                if (res == false || res == "False") {
+                                    add__blur(input[2].parentElement);
+                                }
+                                else if (res == true || res == "True") {
+                                    function tests() {
+                                        return input[3].value == input[2].value ? undefined : `gg`;
+                                    }
+                                    if (tests() == null) {
+                                        if (input[2].value != input[5].value) {
+                                            active__Loading(true);
+                                            var form = new FormData();
+                                            form.append("pass", input[1].value)
+                                            form.append("newPass", input[2].value)
+                                            var xhr = new XMLHttpRequest();
+                                            xhr.open("POST", '/User/PostEditPass1', true);
+                                            xhr.onreadystatechange = function () {
+                                                if (xhr.readyState == 4 && xhr.status == 200) {
+                                                    active__Loading(false);
+                                                    var r = xhr.responseText;
+                                                    var j = JSON.parse(r);
+                                                    if (j.Data.status == "OK") {
+                                                        active__messageNotification('Đã thay đổi Mật khẩu', true);
+                                                        input[1].value = "";
+                                                        input[2].value = "";
+                                                        input[3].value = "";
+                                                    }
+                                                    else {
+                                                        active__messageNotification('Mật khẩu đăng nhập và mật khẩu cấp 2 không được trùng nhau', false);
+                                                    }
+                                                }
+                                            }
+                                            xhr.send(form);
+                                        }
+                                    }
+                                    else {
+                                        add__blur(input[3].parentElement);
+                                    }
+                                }
+                            });
+                        }
+                        else {
+                            add__blur(input[2].parentElement);
+                        }
+                    }
+                });
+            }
+            else {
+                add__blur(input[1].parentElement);
+            }
+        }
+        function upDatePass2() {
+            function tests() {
+                return input[4].value.length > 0 ? undefined : `gg`;
+            }
+            if (tests() == null) {
+                CheckPass2(input[4], function (res) {
+                    if (res == false || res == "False") {
+                        add__blur(input[4].parentElement);
+                    }
+                    else if (res == true || res == "True") {
+                        function tests() {
+                            return input[5].value.length >= 6 ? undefined : `gg`;
+                        }
+                        if (tests() == null) {
+                            CheckSecurity(input[5], function (res) {
+                                if (res == false || res == "False") {
+                                    add__blur(input[5].parentElement);
+                                }
+                                else if (res == true || res == "True") {
+                                    function tests() {
+                                        return input[6].value == input[5].value ? undefined : `gg`;
+                                    }
+                                    if (tests() == null) {
+                                        if (input[2].value != input[5].value) {
+                                            active__Loading(true);
+                                            var form = new FormData();
+                                            form.append("pass", input[4].value)
+                                            form.append("newPass", input[5].value)
+                                            var xhr = new XMLHttpRequest();
+                                            xhr.open("POST", '/User/PostEditPass2', true);
+                                            xhr.onreadystatechange = function () {
+                                                if (xhr.readyState == 4 && xhr.status == 200) {
+                                                    active__Loading(false);
+                                                    var r = xhr.responseText;
+                                                    var j = JSON.parse(r);
+                                                    if (j.Data.status == "OK") {
+                                                        active__messageNotification('Đã thay đổi Mật khẩu 2', true);
+                                                        input[4].value = "";
+                                                        input[5].value = "";
+                                                        input[6].value = "";
+                                                    }
+                                                    else {
+                                                        active__messageNotification('Mật khẩu đăng nhập và mật khẩu cấp 2 không được trùng nhau', false);
+                                                    }
+                                                }
+                                            }
+                                            xhr.send(form);
+                                        }
+                                    }
+                                    else {
+                                        add__blur(input[6].parentElement);
+                                    }
+                                }
+                            });
+                        }
+                        else {
+                            add__blur(input[5].parentElement);
+                        }
+                    }
+                });
+            }
+            else {
+                add__blur(input[4].parentElement);
+            }
+        }
+        function sdt(sdt) {
+            var regex = /(03|05|07|08|09|01[2|6|8|9])+([0-9]{8})\b/;
+            return regex.test(sdt);
+        }
+    }, false)
+</script>

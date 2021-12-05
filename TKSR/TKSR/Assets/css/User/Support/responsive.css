@@ -1,0 +1,41 @@
+/* <= 380px  */
+@media (max-width:  23.75em){
+    
+}
+/* <= 739px */
+@media (max-width: 46.1875em){
+    .help__intro-text{
+        font-size: 1.4rem !important;
+    }
+    .list__help{
+        justify-content: flex-start;
+        width: fit-content;
+        margin: 0 auto;
+    }
+    .list__help-item{
+        font-size: 15px;
+    }
+    .card__header{
+        font-size: 15px;
+    }
+    .card__content{
+        font-size: 0.9rem;
+    }
+}
+/* >= 740px and < 1024px*/
+@media (min-width: 46.25em) and (max-width: 63.9375em){
+
+}
+/* >= 1024px */
+@media (min-width: 64em){
+    
+}
+@media (min-width: 1024px) and (max-width: 1239px) {
+
+}
+/* < 1024px */
+@media (max-width: 63.9375em){
+    .help__intro-text{
+        font-size: 1.9rem;
+    }
+}

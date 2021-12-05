@@ -1,0 +1,45 @@
+/* <= 380px  */
+@media (max-width:  23.75em){
+}
+/* <= 739px */
+@media (max-width: 46.1875em){
+    .select__input{
+
+    }
+    .send__code{
+        margin-bottom: 10px;
+    }
+    .mess__code {
+        position: relative !important;
+        left: unset !important;
+        top: unset !important;
+    }
+}
+/* >= 740px and < 1024px*/
+@media (min-width: 46.25em) and (max-width: 63.9375em){
+    .mess__code{
+        position: relative;
+        left: unset;
+        top: unset;
+    }
+    .list__input-items{
+        position: relative;
+    }
+}
+/* >= 1024px */
+@media (min-width: 64em){
+    .mess__code{
+        position: relative !important;
+        left: unset !important;
+        top: unset !important;
+    }
+    .list__input-items{
+        position: relative;
+    }
+    
+}
+@media (min-width: 1024px) and (max-width: 1239px) {
+}
+/* < 1024px */
+@media (max-width: 63.9375em){
+}

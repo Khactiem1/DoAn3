@@ -1,0 +1,272 @@
+﻿@model List<DTO.TaiKhoan>
+@{
+    ViewBag.Title = "Quản lý tài khoản";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="info__bug">
+    <div class="form">
+        <h3 class="bar__title title__info">
+            Danh sách tài khoản
+        </h3>
+        <form action="" class="history__search">
+            <div class="row rechargecard__history-select">
+                <div class="col l-4 m-12 c-12 rechargecard__history-item">
+                    <input class="none">
+                    <input type="text" placeholder="Tên tài khoản" class="select__input search__account">
+                </div>
+                <div class="col l-4 m-12 c-12 rechargecard__history-item">
+                    <input type="date" class="select__input select__date">
+                </div>
+                <div class="col l-4 m-12 c-12 rechargecard__history-item">
+                    <select class="select__input select__account">
+                        <option value="">Tài khoản</option>
+                        <option value="user">Tài khoản user</option>
+                        <option value="admin">Tài khoản admin</option>
+                    </select>
+                </div>
+                <div class="col l-4 m-12 c-12 rechargecard__history-item">
+                    <select class="select__recort">
+                        <option>5</option>
+                        <option>10</option>
+                        <option selected>15</option>
+                        <option>20</option>
+                        <option>25</option>
+                        <option>30</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+        <div class="form__container container">
+            <div class="form__history">
+                <div class="table__history">
+                    <div class="table__history-item">
+                        <span>STT</span>
+                    </div>
+                    <div class="table__history-item">
+                        <span>Tên tài khoản</span>
+                    </div>
+                    <div class="table__history-item">
+                        <span>Số điện thoại</span>
+                    </div>
+                    <div class="table__history-item">
+                        <span>Email</span>
+                    </div>
+                    <div class="table__history-item">
+                        <span>Số dư hiện tại</span>
+                    </div>
+                    <div class="table__history-item">
+                        <span>Ngày đăng ký</span>
+                    </div>
+                </div>
+                <div class="form__content">
+                    @{
+                        int number = 1;
+                        foreach (var item in Model)
+                        {
+                            <div class="table__history">
+                                <div class="table__history-item table__index">
+                                    <span>@number</span>
+                                </div>
+                                <div class="table__history-item" @*title="0977263104"*@>
+                                    <span>@item.tenTK</span>
+                                </div>
+                                <div class="table__history-item">
+                                    <span>@item.sdt</span>
+                                </div>
+                                <div class="table__history-item">
+                                    <input value="@item.Email" disabled="" type="text" class="input__update">
+                                </div>
+                                <div class="table__history-item">
+                                    <span>@String.Format("{0:#,##0.##}", item.SoDu) Đ</span>
+                                </div>
+                                <div class="table__history-item">
+                                    <span>@item.ngayLap.ToString("dd/MM/yyyy HH:mm:ss")</span>
+                                </div>
+                            </div>
+                            number++;
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+        <p class="message__notification"></p>
+        <form class="btn__n container">
+            <div class="btn__next">
+                <button type="button" class="btn__next-item btn__next-down"><i class="fas fa-chevron-left"></i></button>
+                <span class="slide__number">@ViewBag.Number</span>
+                <button type="button" class="btn__next-item btn__next-up"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </form>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var nameSearch = document.querySelector('.search__account');
+                var select = "";
+                var isRunning = false;
+                var DateSearch = "";
+                var urlRoute = "";
+                function LoadData(num, Selection) {
+                    if (!isRunning) {
+                        isRunning = true;
+                        var recort = document.querySelector('.select__recort');
+                        if (Selection == false) {
+                            document.querySelector('.message__notification').innerText = "";
+                        }
+                        if (Selection == false && num == 1) {
+                            isRunning = false;
+                            return;
+                        }
+                        var url = ""
+                        if (urlRoute == "") {
+                            url = "/GetDSTaiKhoan?id=" + num + "z" + Selection + "z" + select + "z" + DateSearch + "z" + recort.value;
+                        }
+                        else {
+                            url = urlRoute;
+                        }
+                        active__Loading(true);
+                        $.ajax({
+                            url: url,
+                            method: "GET",
+                            data: "",
+                            contentType: "application/json",
+                            dataType: ""
+                        }).done(function (response) {
+                            active__Loading(false);
+                            isRunning = false;
+                            if (response.length == 0) {
+                                if (document.querySelector('.message__notification').innerText == '') {
+                                    document.querySelector('.message__notification').innerText = "Danh sách tìm trống";
+                                }
+                                return;
+                            }
+                            if (Selection == true) {
+                                num++;
+                            }
+                            else {
+                                num--;
+                            }
+                            $('.form__content').empty();
+                            $('.slide__number').empty();
+                            $('.slide__number').append(num);
+                            var number = 0;
+                            $.each(response, function (index, item) {
+                                number++;
+                                var DateIN = new Date(item.ngayLap)
+                                var month = DateIN.getMonth();
+                                month++;
+                                var strDate = DateIN.getDate() + "/" + month + "/" + DateIN.getFullYear() + " " + DateIN.getHours() + ":" + DateIN.getMinutes() + ":" + DateIN.getSeconds();
+                                var html = $(`
+                                                <div class="table__history">
+                                                <div class="table__history-item table__index">
+                                                    <span>${number}</span>
+                                                </div>
+                                                <div class="table__history-item">
+                                                    <span>${item.tenTK}</span>
+                                                </div>
+                                                <div class="table__history-item">
+                                                    <span>${item.sdt}</span>
+                                                </div>
+                                                <div class="table__history-item">
+                                                    <input value="${item.Email}" disabled="" type="text" class="input__update">
+                                                </div>
+                                                <div class="table__history-item">
+                                                    <span>${item.SoDu.toLocaleString("en")} Đ</span>
+                                                </div>
+                                                <div class="table__history-item">
+                                                    <span>${strDate}</span>
+                                                </div>
+                                            </div>
+                                            `)
+                                $('.form__content').append(html);
+                            })
+                        }).fail(function (response) {
+                            active__Loading(false);
+                            isRunning = false;
+                            active__messageNotification("Có lỗi xảy ra, thử lại sau",false);
+                        })
+                    }
+                }
+                var num = document.querySelector('.slide__number');
+                document.querySelector('.btn__next-up').onclick = function () {
+                    if (nameSearch.value == "") {
+                        LoadData(num.innerText, true);
+                    }
+                }
+                document.querySelector('.btn__next-down').onclick = function () {
+                    if (nameSearch.value == "") {
+                        LoadData(num.innerText, false);
+                    }
+                }
+                $('.select__recort').change(function () {
+                    if (nameSearch.value == "") {
+                        LoadData(0, true);
+                    }
+                })
+                $('.select__account').change(function () {
+                    if (nameSearch.value == "") {
+                        select = this.value;
+                        document.querySelector('.message__notification').innerText = "";
+                        LoadData(0, true);
+                    }
+                })
+                $('.select__date').change(function () {
+                    if (nameSearch.value == "") {
+                        DateSearch = "";
+                        var date = new Date(this.value);
+                        var month = date.getMonth();
+                        month++;
+                        DateSearch = date.getDate() + "-" + month + "-" + date.getFullYear();
+                        if (DateSearch == "NaN-NaN-NaN") {
+                            DateSearch = "";
+                        }
+                        document.querySelector('.message__notification').innerText = "";
+                        $('.form__content').empty();
+                        LoadData(0, true);
+                    }
+                })
+                function enterSearchAccount() {
+                    document.querySelector('.message__notification').innerText = "";
+                    $('.form__content').empty();
+                    setTimeout(function () {
+                        if (nameSearch.value == "") {
+                            var inputSearchAccount = document.querySelector('.select__account');
+                            select = inputSearchAccount.value;
+                            var inputSearch = document.querySelector('.select__date');
+                            DateSearch = "";
+                            var date = new Date(inputSearch.value);
+                            var month = date.getMonth();
+                            month++;
+                            DateSearch = date.getDate() + "-" + month + "-" + date.getFullYear();
+                            if (DateSearch == "NaN-NaN-NaN") {
+                                DateSearch = "";
+                            }
+                            urlRoute = "";
+                        }
+                        else {
+                            urlRoute = "/Search?Name=" + nameSearch.value;
+                        }
+                        LoadData(0, true);
+                    }, 100)
+                }
+                nameSearch.oninput = function () {
+                    enterSearchAccount()
+                }
+                nameSearch.addEventListener("keyup", function (event) {
+                    if (event.keyCode == 13) {
+                        enterSearchAccount()
+                    }
+                });
+            }, false)
+        </script>
+    </div>
+    <div class="waning">
+        <i>
+            * Nỗ lực tiêu chí tăng số lượng khách hàng trong năm tới mục tiêu trên 1000 lượt thanh toán mỗi tháng, bán được 100 thẻ nạp mỗi tuần
+        </i>
+    </div>
+</div>
+
+
+
+
+

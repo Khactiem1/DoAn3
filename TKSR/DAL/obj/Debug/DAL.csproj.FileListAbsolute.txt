@@ -1,0 +1,60 @@
+C:\Users\Admin\Desktop\TKSR\DAL\bin\Debug\DAL.dll.config
+C:\Users\Admin\Desktop\TKSR\DAL\bin\Debug\DAL.dll
+C:\Users\Admin\Desktop\TKSR\DAL\bin\Debug\DAL.pdb
+C:\Users\Admin\Desktop\TKSR\DAL\bin\Debug\DTO.dll
+C:\Users\Admin\Desktop\TKSR\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Desktop\TKSR\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\Desktop\TKSR\DAL\bin\Debug\DTO.pdb
+C:\Users\Admin\Desktop\TKSR\DAL\bin\Debug\DTO.dll.config
+C:\Users\Admin\Desktop\TKSR\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Admin\Desktop\TKSR\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\Desktop\TKSR\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\TKSR\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\TKSR\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\Admin\Desktop\TKSR\DAL\obj\Debug\DAL.dll
+C:\Users\Admin\Desktop\TKSR\DAL\obj\Debug\DAL.pdb
+C:\Users\Admin\Desktop\DoAn3\TKSR\DAL\bin\Debug\DAL.dll.config
+C:\Users\Admin\Desktop\DoAn3\TKSR\DAL\bin\Debug\DAL.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\DAL\bin\Debug\DAL.pdb
+C:\Users\Admin\Desktop\DoAn3\TKSR\DAL\bin\Debug\DTO.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\DAL\bin\Debug\DTO.pdb
+C:\Users\Admin\Desktop\DoAn3\TKSR\DAL\bin\Debug\DTO.dll.config
+C:\Users\Admin\Desktop\DoAn3\TKSR\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Admin\Desktop\DoAn3\TKSR\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\Desktop\DoAn3\TKSR\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\DoAn3\TKSR\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\DoAn3\TKSR\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\Admin\Desktop\DoAn3\TKSR\DAL\obj\Debug\DAL.dll
+C:\Users\Admin\Desktop\DoAn3\TKSR\DAL\obj\Debug\DAL.pdb
+D:\isRunning DoAn3\DoAn3\TKSR\DAL\bin\Debug\DAL.dll.config
+D:\isRunning DoAn3\DoAn3\TKSR\DAL\bin\Debug\DAL.dll
+D:\isRunning DoAn3\DoAn3\TKSR\DAL\bin\Debug\DAL.pdb
+D:\isRunning DoAn3\DoAn3\TKSR\DAL\bin\Debug\DTO.dll
+D:\isRunning DoAn3\DoAn3\TKSR\DAL\bin\Debug\EntityFramework.dll
+D:\isRunning DoAn3\DoAn3\TKSR\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\isRunning DoAn3\DoAn3\TKSR\DAL\bin\Debug\DTO.pdb
+D:\isRunning DoAn3\DoAn3\TKSR\DAL\bin\Debug\DTO.dll.config
+D:\isRunning DoAn3\DoAn3\TKSR\DAL\bin\Debug\EntityFramework.xml
+D:\isRunning DoAn3\DoAn3\TKSR\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\isRunning DoAn3\DoAn3\TKSR\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\isRunning DoAn3\DoAn3\TKSR\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\isRunning DoAn3\DoAn3\TKSR\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\isRunning DoAn3\DoAn3\TKSR\DAL\obj\Debug\DAL.dll
+D:\isRunning DoAn3\DoAn3\TKSR\DAL\obj\Debug\DAL.pdb
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\DAL\bin\Debug\DAL.dll.config
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\DAL\bin\Debug\DAL.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\DAL\bin\Debug\DAL.pdb
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\DAL\bin\Debug\DTO.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\DAL\bin\Debug\DTO.pdb
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\DAL\bin\Debug\DTO.dll.config
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\DAL\obj\Debug\DAL.dll
+C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\DAL\obj\Debug\DAL.pdb

@@ -1,0 +1,271 @@
+/* <= 380px  */
+@media (max-width:  23.75em){
+    .m-item__menu-logo{
+        display: none;
+    }
+    .m-item__menu-link{
+        padding: 10px ;
+    }
+    .tutorial__list{
+        left: 0 !important;
+        transform: translateX(0%) !important;
+    }
+    .process__body {
+        max-width: 200px !important;
+    }
+    .scroll{
+        left: 84% !important;
+    }
+    .chat__container.chat__container-active{
+        --width: 290px !important;
+    }
+}
+
+/* <= 739px */
+@media (max-width: 46.1875em){
+    .chat{
+        left: 5% !important;
+    }
+    .scroll{
+        left: 86%;
+    }
+    .container{
+        padding: 0 13px;
+    }
+    .slide__btn-icon{
+        max-width: 540px !important;
+    }
+    .header__navbar{
+        display: flex;
+        max-width: 540px !important;
+        padding: 0 16px;
+    }
+    .slide__tablet{
+        display: none;    
+    }
+    .slide__mobile{
+        display: flex;
+    }
+    .search-input{
+        margin: 0 15px;
+    }
+    .navbar__search-login{
+        width: 100%;
+    }
+    .search-input{
+        width: 100% !important;
+    }
+    .nav__mobile-active {
+        left: 0 !important; 
+        width: 100% !important;
+    }
+    .intro__content-item__between{
+        display: none;
+    }
+    .intro__item{
+        flex-direction: column;
+        width: 100%;
+    }
+    .intro__content-item{
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
+    .intro__item-text{
+        width: 100%;
+        max-width: 140px;
+    }
+    .intro__content{
+        justify-content: space-around;
+    }
+    .intro__content-item__right .intro__item{
+        flex-direction: column-reverse;
+    }
+    .tienich__box{
+        background-color: var(--while_color);
+        padding: 0 13px;
+    }
+    .tienich__box-content{
+        flex-direction: column-reverse;
+        max-width: 514px;
+        margin: auto;
+    }
+    .tienich__box-item__left{
+        width: 100% !important;
+        max-width: 100%;
+    }
+    .tienich__box-item__text{
+        margin-top: 10px;
+        text-align: center;
+    }
+    .btn-merchant{
+        margin: 1.5rem auto 0 auto;
+    }
+    .tienich__box-item__text{
+        font-size: 1.3rem;
+    }
+    .uudai__card{
+        padding: 0 13px;
+        max-width: 540px;
+        margin: 0 auto 30px auto;
+    }
+    .uudai__container{
+        padding: 17px 0px 20px 0px;
+    }
+    .margin__title{
+        margin-bottom: 20px;
+    }
+    .tutorial__content-btn{
+        flex-direction: column;
+    }
+    .tutorial__btn-item + .tutorial__btn-item{
+        margin-top: 10px;
+    }
+    .tutorial__btn{
+        overflow: hidden;
+        margin-left: 6px;
+        justify-content: space-between;
+    }
+    .tutorial__btn i{
+        display: block;
+        transform: rotate(180deg);
+        transition: all 0.3s ease-in-out;
+    }
+    .tutorial__btn span{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .tutorial__btn-active i{
+        transform: rotate(360deg);
+    }
+    .tutorial__container{
+        padding: 0 16px;
+    }
+    .process__body {
+        max-width: 250px;
+    }
+    .tutorial__list{
+        position: relative;
+        left: 50%;
+        transform: translateX(-35%);
+    }
+    .footer__tutorial{
+        display: none;
+    }
+    .security{
+        padding: 30px 0;
+    }
+    .security__nav-header{
+        margin-bottom: 1.5rem;
+        margin-top: 20px !important;
+    }
+    .security__content-img-item{
+        max-width: 514px;
+    }
+    .slide__btn-icon img{
+        width: 30px !important;
+    }
+}
+/* >= 740px and < 1024px*/
+@media (min-width: 46.25em) and (max-width: 63.9375em){
+    .intro__item-text{
+        width: 130px;
+    }
+    .wide.tienich__patch-container{
+        width: 100%;
+        padding: 15px 20px 40px 20px ;
+    }
+    .tutorial__btn{
+        width: 190px;
+    }
+    .process__body {
+        max-width: 580px;
+    }
+    .security{
+        padding: 48px 0;
+    }
+    .scroll{
+        left: 90%;
+    }
+}
+/* >= 1024px */
+@media (min-width: 64em){
+    .navbar__bar{
+        display: none;
+    }
+    
+}
+@media (min-width: 1024px) and (max-width: 1239px) {
+    .slide__btn-icon{
+        max-width: 984px;
+    }
+}
+/* < 1024px */
+@media (max-width: 63.9375em){
+    .slide__btn-icon{
+        max-width: 644px;
+    }
+    .navbar__list{
+        display: none;
+    }
+    .navbar__search-login{
+        margin-left: auto;
+    }
+    .search-input{
+        width: 539px;
+    }
+    .search__suggestions{
+        width: 100%;
+    }
+    .navbar__login{
+        display: none;
+    }
+    .navbar__bar{
+        color: var(--text_color-menu);
+        font-size: 1.6rem;
+        transition: 0.2s;
+    }
+    .navbar__bar:hover{
+        color: var(--text_color);
+    }
+    .section__title{
+        padding: 13px 0px 0px 0px;
+    }
+    .intro__content-img{
+        width: 227px;
+    }
+    .intro__content{
+        margin: 0;
+    }
+    .intro__content-item__right{
+        padding-right: 50px;
+    }
+    .intro__content-item__left{
+        padding-left: 50px;
+    }
+    .section__title-text{
+        font-size: calc(1.325rem + .84375vw);
+    }
+    .tutorial__list{
+        min-height: 390px;
+    }
+    .tutorial__btn-item + .tutorial__btn-item {
+        margin-left: 0px;
+    }
+    .user__info{
+        display: none;
+    }
+    .chat{
+        left: 5%;
+    }
+}
+/* <= 500px */
+@media (max-width: 31.25em){
+    .chat{
+        left: 5% !important;
+    }   
+    .chat__container.chat__container-active{
+        --width: 350px;
+    }
+}

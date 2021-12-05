@@ -1,0 +1,1039 @@
+﻿
+@{
+    ViewBag.Title = "Trung tâm hỏi đáp TKSR";
+    Layout = "~/Views/Shared/_LayoutLogOn.cshtml";
+}
+
+<nav class="oriented">
+    <div class="grid wide">
+        <ul class="oriented__list">
+            <li class="oriented-item">
+                <a href="@Request.Url.Scheme://@Request.Url.Authority" class="oriented-item oriented-item__link">Trang chủ</a>
+            </li>
+            <li class="oriented-item">Hỏi đáp</li>
+        </ul>
+    </div>
+</nav>
+<div class="help__intro">
+    <div class="help__intro-title">
+        <h1 class="help__intro-text">
+            Trung tâm trợ giúp
+        </h1>
+    </div>
+</div>
+<section class="help">
+    <h3 class="help__content-title">
+        câu hỏi thường gặp
+    </h3>
+    <div class="grid wide help__container container">
+        <div class="list">
+            <ul class="list__help">
+                <li class="list__help-item help__item-active">
+                    Tổng quan
+                </li>
+                <li class="list__help-item">
+                    Tài khoản
+                </li>
+                <li class="list__help-item">
+                    Nạp/Rút tiền
+                </li>
+                <li class="list__help-item">
+                    Thanh toán
+                </li>
+                <li class="list__help-item">
+                    Khuyến mãi
+                </li>
+                <li class="list__help-item">
+                    Bảo mật
+                </li>
+            </ul>
+        </div>
+        <div class="help__content">
+            <div class="help__content-item help__content-item__active">
+                <div class="card card__active">
+                    <div class="card__header">
+                        <span class="card__header-text">
+                            Cách liên hệ với TKSR
+                        </span>
+                        <i class="fas fa-angle-down help__icon"></i>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__bug">
+                            Bạn có thể liên lạc với bộ phận Chăm Sóc Khách Hàng (CSKH) qua một trong các kênh sau:
+                            <br>
+                            1. Gửi yêu cầu hỗ trợ trên mục Trợ giúp của ứng dụng TKSR (Đề xuất)
+                            <div class="help__more">
+                                <a href="#" class="help__link">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__header">
+                        <span class="card__header-text">
+                            Thanh toán bằng Ví TKSR có được chiết khấu không?
+                        </span>
+                        <i class="fas fa-angle-down help__icon"></i>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__bug">
+                            Nạp tiền điện thoại và mua mã thẻ di động trên TKSR luôn được chiết khấu trên giá trị giao dịch là 3% với nhà mạng Viettel và 5% với các nhà mạng Mobifone, Vinaphone, Vietnammobile, Gmobile.
+                            <br>
+                            <br>
+                            Thanh toán các dịch vụ khác trên TKSR có thể có hoặc không có chiết khấu tùy vào nhà cung cấp dịch vụ và tùy từng thời điểm.
+                            <div class="help__more">
+                                <a href="#" class="help__link">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__header">
+                        <span class="card__header-text">
+                            Hạn mức giao dịch mỗi ngày?
+                        </span>
+                        <i class="fas fa-angle-down help__icon"></i>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__bug">
+                            Hạn mức giao dịch của tài khoản TKSR tùy thuộc vào tình trạng tài khoản đã được xác thực bằng thẻ/tài khoản ngân hàng hay chưa.
+                            <div class="help__more">
+                                <a href="#" class="help__link">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__header">
+                        <span class="card__header-text">
+                            TKSR là gì?
+                        </span>
+                        <i class="fas fa-angle-down help__icon"></i>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__bug">
+                            Ứng dụng Ví điện tử TKSR là sản phẩm của Công ty Cổ phần Dịch vụ Di động Trực tuyến (M_Service). Ứng dụng cho phép bạn tạo và nạp tiền vào tài khoản TKSR để thanh toán cho hơn 200 dịch vụ như nạp tiền điện thoại, thanh toán điện nước, thanh toán vay tiêu dùng, v.v..
+                            <div class="help__more">
+                                <a href="#" class="help__link">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__header">
+                        <span class="card__header-text">
+                            Tiền trong tài khoản TKSR có phải là tiền thật?
+                        </span>
+                        <i class="fas fa-angle-down help__icon"></i>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__bug">
+                            Tiền trong tài khoản TKSR có giá trị như tiền mặt và được bảo chứng 100% bởi các Ngân Hàng đang hợp tác với Ví TKSR. Bạn hoàn toàn có thể nạp/ rút tiền dễ dàng qua tài khoản của các ngân hàng liên kết, hoặc đổi thành tiền mặt tại các Điểm Nạp/rút của TKSR.
+                            <div class="help__more">
+                                <a href="#" class="help__link">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__header">
+                        <span class="card__header-text">
+                            Sử dụng TKSR có mất phí không?
+                        </span>
+                        <i class="fas fa-angle-down help__icon"></i>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__bug">
+                            TKSR không yêu cầu số dư tối thiểu trong tài khoản, không thu phí khởi tạo, phí sử dụng hay bất kỳ khoản phí bất thường nào.
+                            <div class="help__more">
+                                <a href="#" class="help__link">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="help__content-item">
+                <div class="card">
+                    <div class="card__header">
+                        <span class="card__header-text">
+                            Khi gỡ bỏ ứng dụng trên điện thoại thì tiền trong tài khoản TKSR và thông tin giao dịch có bị mất hay không?
+                        </span>
+                        <i class="fas fa-angle-down help__icon"></i>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__bug">
+                            Việc gỡ bỏ ứng dụng không ảnh hưởng đến tài khoản Ví TKSR và các thông tin giao dịch khác, vì toàn bộ dữ liệu đã được ghi nhận và lưu trữ trên hệ thống máy chủ tại trung tâm.
+                            <br>
+                            <br>
+                            Ngay khi bạn cài đặt lại ứng dụng, các thông tin trong tài khoản sẽ được phục hồi như cũ.
+                            <div class="help__more">
+                                <a href="#" class="help__link">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__header">
+                        <span class="card__header-text">
+                            Cách đăng nhập vào tài khoản TKSR khác
+                        </span>
+                        <i class="fas fa-angle-down help__icon"></i>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__bug">
+                            Bước 1: Tại màn hình đăng nhập, chọn "Đổi SĐT".
+                            <br>
+                            Bước 2: Nhập số điện thoại rồi chọn "Tiếp tục"
+                            <br>
+                            Bước 3: Nhập mã OTP (mã xác thực được gửi qua tin nhắn đến số điện thoại bạn nhập)
+                            <br>
+                            Bước 4: Nhập mật khẩu đăng nhập
+                            <div class="help__more">
+                                <a href="#" class="help__link">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__header">
+                        <span class="card__header-text">
+                            Tôi có thể đổi số điện thoại đăng ký tài khoản TKSR của tôi được không?
+                        </span>
+                        <i class="fas fa-angle-down help__icon"></i>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__bug">
+                            Hiện tại TKSR không hỗ trợ chuyển tài khoản TKSR từ số điện thoại này sang một số điện thoại khác. Nếu có nhu cầu thay đổi số điện thoại, bạn có thể tạo tài khoản TKSR mới với số điện thoại mới, và chuyển tiền từ tài khoản TKSR cũ sang tài khoản TKSR mới. Sau đó, bạn có thể hủy tài khoản TKSR cũ theo hướng dẫn
+                            <div class="help__more">
+                                <a href="#" class="help__link">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__header">
+                        <span class="card__header-text">
+                            Tôi muốn khóa tài khoản TKSR
+                        </span>
+                        <i class="fas fa-angle-down help__icon"></i>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__bug">
+                            Trong trường hợp bạn muốn tạm khóa tài khoản TKSR, vui lòng liên hệ CSKH và cung cấp các thông tin sau:
+                            <br>
+                            <br>
+                            - Số tài khoản TKSR <br>
+                            - Họ tên chủ tài khoản <br>
+                            - Số CMND <br>
+                            - Số dư tài khoản TKSR <br>
+                            - Tài khoản ngân hàng đang liên kết (nếu có) <br>
+                            - Email <br>
+                            - Địa chỉ
+                            <br>
+                            <br>
+                            Sau khi nhận được thông tin, TKSR sẽ chủ động xác minh và hỗ trợ khóa tài khoản.
+                            <br>
+                            <br>
+                            Lưu ý: tài khoản bị khóa vẫn có thể mở lại để sử dụng. Khi bạn có nhu cầu mở khóa, vui lòng liên hệ trực tiếp với CSKH qua chính số điện thoại đăng ký tài khoản TKSR bị khóa.
+                            <div class="help__more">
+                                <a href="#" class="help__link">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__header">
+                        <span class="card__header-text">
+                            Tôi muốn hủy tài khoản TKSR
+                        </span>
+                        <i class="fas fa-angle-down help__icon"></i>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__bug">
+                            Trong trường hợp bạn muốn hủy tài khoản TKSR, vui lòng liên hệ trực tiếp đến CSKH của TKSR và cung cấp các thông tin sau: <br>
+                            - Họ tên chủ tài khoản <br>
+                            - Số CMND <br>
+                            - Số dư tài khoản TKSR <br>
+                            - Tài khoản ngân hàng đang liên kết (nếu có) <br>
+                            - Email <br>
+                            - Địa chỉ <br>
+                            Sau khi nhận được thông tin từ bạn, TKSR sẽ chủ động xác minh và hỗ trợ hủy tài khoản. <br> <br>
+
+                            Lưu ý: <br>
+                            Trước khi bạn gửi thông tin yêu cầu hủy tài khoản, vui lòng hủy liên kết giữa tài khoản TKSR và tài khoản ngân hàng. <br> <br>
+
+                            Trong trường hợp tài khoản TKSR của bạn vẫn còn số dư, khi TKSR tiến hành hủy tài khoản, số dư trong tài khoản sẽ bị mất. Tài khoản TKSR đã hủy sẽ không thể khôi phục lại.
+                            <div class="help__more">
+                                <a href="#" class="help__link">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__header">
+                        <span class="card__header-text">
+                            Tài khoản TKSR đã hủy có khôi phục được không?
+                        </span>
+                        <i class="fas fa-angle-down help__icon"></i>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__bug">
+                            Rất tiếc nếu như tài khoản TKSR đã được huỷ thì không thể khôi phục lại được.
+                            <div class="help__more">
+                                <a href="#" class="help__link">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__header">
+                        <span class="card__header-text">
+                            Tôi không nhận được mã OTP
+                        </span>
+                        <i class="fas fa-angle-down help__icon"></i>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__bug">
+                            Trong trường hợp bạn không nhận được mã OTP trong vòng 30 giây, bạn có thể nhấn vào "Gửi lại" để hệ thống gửi lại một mã OTP khác cho bạn. <br>
+                            <br>
+                            Trường hợp vẫn không nhận được mã OTP, có thể do lỗi kết nối mạng. Vui lòng thử lại sau một lúc, hoặc liên hệ với bộ phận CSKH qua số 1900 54 54 41 hoặc 028 399 17 199 để được hỗ trợ.
+                            <div class="help__more">
+                                <a href="#" class="help__link">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__header">
+                        <span class="card__header-text">
+                            Cách xác thực tài khoản
+                        </span>
+                        <i class="fas fa-angle-down help__icon"></i>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__bug">
+                            Để xác thực tài khoản TKSR, bạn vui lòng thực hiện theo các bước sau: <br>
+                            Bước 1: Từ màn hình chính của ứng dụng, chọn "Ví của tôi" <br>
+                            Bước 2: Chọn nút Xác thực trong phần “Theo quy định của pháp luật, Quý khách vui lòng xác thực tài khoản để đảm bảo quyền sở hữu của mình cho tài khoản này.” <br>
+                            Bước 3: Điền đầy đủ các thông tin bao gồm Họ và tên, Ngày/tháng/năm sinh, Số CMND/CCCD, Ngày cấp và cung cấp ảnh chụp 2 mặt CMND/CCCD. <br>
+                            Bước 4: Chọn nút Xác thực và TKSR sẽ kiểm duyệt thông tin bạn đã cung cấp.
+                            <div class="help__more">
+                                <a href="#" class="help__link">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="help__content-item">
+                <div class="card">
+                    <div class="card__header">
+                        <span class="card__header-text">
+                            Một tài khoản TKSR có thể liên kết với bao nhiêu tài khoản/ thẻ ngân hàng?
+                        </span>
+                        <i class="fas fa-angle-down help__icon"></i>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__bug">
+                            Ở một thời điểm, một tài khoản TKSR chỉ có thể kết nối với duy nhất một tài khoản ngân hàng (Vietcombank, VPBank, TPBank, OCB, ACB, Eximbank, BIDV, VIB, Shinhan Bank) và một thẻ ngân hàng (Sacombank, Vietinbank).
+                            <div class="help__more">
+                                <a href="#" class="help__link">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__header">
+                        <span class="card__header-text">
+                            Lợi ích khi liên kết TKSR với tài khoản ngân hàng
+                        </span>
+                        <i class="fas fa-angle-down help__icon"></i>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__bug">
+                            Liên kết TKSR với tài khoản ngân hàng để: <br> <br>
+
+                            1. Xác thực tài khoản TKSR và nâng hạn mức thanh toán hoặc rút tiền lên 20.000.000đ mỗi ngày. <br> <br>
+
+                            2. Không cần phải nhập lại thông tin tài khoản ngân hàng mỗi lần giao dịch. <br> <br>
+
+                            3. Nạp tiền vào TKSR từ tài khoản ngân hàng hoàn toàn miễn phí. <br> <br>
+
+                            4. Rút tiền từ TKSR về tài khoản ngân hàng dễ dàng, ngay lập tức. <br> <br>
+
+                            5. Nhận ngay quà tặng 100.000đ để trải nghiệm các dịch vụ trên TKSR
+                            <div class="help__more">
+                                <a href="#" class="help__link">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__header">
+                        <span class="card__header-text">
+                            Cách nạp tiền vào TKSR từ tài khoản ngân hàng đã liên kết
+                        </span>
+                        <i class="fas fa-angle-down help__icon"></i>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__bug">
+                            Sau khi đã liên kết TKSR với tài khoản ngân hàng, bạn có thể thực hiện nạp tiền trên TKSR như sau.
+                            <div class="help__more">
+                                <a href="#" class="help__link">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__header">
+                        <span class="card__header-text">
+                            Cách nạp tiền từ thẻ ATM
+                        </span>
+                        <i class="fas fa-angle-down help__icon"></i>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__bug">
+                            Để thực hiện nạp tiền, bạn cần đăng ký sử dụng dịch vụ Internet Banking với ngân hàng.
+                            <br> <br>
+                            Bước 1: Từ màn hình chính của ứng dụng, chọn "Nạp tiền vào Ví" -> “NGÂN HÀNG CHỈ HỖ TRỢ NẠP TIỀN” =>> chọn logo <br>
+                            Bước 2: Nhập số tiền cần nạp <br>
+                            Bước 3: Kiểm tra thông tin nạp tiền và chọn "Xác nhận" <br>
+                            Bước 4: Nhập thông tin thẻ ATM <br>
+                            Bước 5: Nhập mã xác nhận OTP để hoàn tất <br>
+                            <br>
+                            <i>Lưu ý: Nạp tiền từ thẻ ATM vào TKSR hoàn toàn miễn phí.</i>
+                            <div class="help__more">
+                                <a href="#" class="help__link">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__header">
+                        <span class="card__header-text">
+                            Cách tìm Điểm Nạp/rút TKSR gần nhất?
+                        </span>
+                        <i class="fas fa-angle-down help__icon"></i>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__bug">
+                            Đăng nhập Ví TKSR, vào mục Điểm Nạp/Rút từ màn hình chính (hoặc gõ chữ Điểm nạp/rút tại ô tìm kiếm): bật cho phép ứng dụng lấy thông tin vị trí của bạn để đề xuất những Điểm Nạp/rút gần nhất; hoặc bạn nhập vị trí bạn muốn tìm Điểm Nạp/rút tại ô tìm kiếm.
+                            <div class="help__more">
+                                <a href="#" class="help__link">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__header">
+                        <span class="card__header-text">
+                            Cách nạp tiền vào TKSR
+                        </span>
+                        <i class="fas fa-angle-down help__icon"></i>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__bug">
+                            Bạn có thể nạp tiền vào tài khoản TKSR thông qua các hình thức sau:
+                            <div class="help__more">
+                                <a href="#" class="help__link">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__header">
+                        <span class="card__header-text">
+                            Cách rút tiền ra khỏi TKSR
+                        </span>
+                        <i class="fas fa-angle-down help__icon"></i>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__bug">
+                            Bạn có thể rút tiền ra khỏi tài khoản TKSR thông qua các hình thức sau
+                            <div class="help__more">
+                                <a href="#" class="help__link">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="help__content-item">
+                <div class="card">
+                    <div class="card__header">
+                        <span class="card__header-text">
+                            Cách mua mã thẻ di động
+                        </span>
+                        <i class="fas fa-angle-down help__icon"></i>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__bug">
+                            Bước 1: Từ màn hình chính của ứng dụng chọn tính năng "Mua mã thẻ di động"
+                            <div class="help__more">
+                                <a href="#" class="help__link">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__header">
+                        <span class="card__header-text">
+                            Thanh toán 1 chạm là gì?
+                        </span>
+                        <i class="fas fa-angle-down help__icon"></i>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__bug">
+                            Thanh toán 1 chạm hay còn được gọi là One Touch Payment là một cơ chế thông minh của TKSR tự động gợi ý các giao dịch thanh toán mà bạn hay thực hiện.
+                            <div class="help__more">
+                                <a href="#" class="help__link">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__header">
+                        <span class="card__header-text">
+                            Cách nhận vé xem phim tại rạp
+                        </span>
+                        <i class="fas fa-angle-down help__icon"></i>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__bug">
+                            Bạn có thể nhận vé tại rạp bằng một trong 2 cách sau: <br>
+
+                            * Cung cấp mã lấy vé tại quầy mua vé online tại rạp <br>
+                            * Đọc cho nhân viên số điện thoại dùng để đăng ký khi mua vé và nhận vé
+                            <div class="help__more">
+                                <a href="#" class="help__link">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__header">
+                        <span class="card__header-text">
+                            Thanh toán 1 chạm có rủi ro gì không?
+                        </span>
+                        <i class="fas fa-angle-down help__icon"></i>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__bug">
+                            Bạn có thể hoàn toàn yên tâm vì giao dịch chỉ được thực hiện sau khi bạn xác thực mật khẩu Ví. Tuy nhiên, giao dịch đã thực hiện sẽ không thể hoàn lại, do đó bạn cần kiểm tra kỹ thông tin trước khi xác nhận giao dịch.
+                            <div class="help__more">
+                                <a href="#" class="help__link">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__header">
+                        <span class="card__header-text">
+                            Mã QR là gì? Sử dụng mã QR như thế nào?
+                        </span>
+                        <i class="fas fa-angle-down help__icon"></i>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__bug">
+                            <div class="help__more">
+                                <a href="#" class="help__link">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__header">
+                        <span class="card__header-text">
+                            Tìm điểm chấp nhận thanh toán như thế nào?
+                        </span>
+                        <i class="fas fa-angle-down help__icon"></i>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__bug">
+                            Hướng dẫn tìm điểm thanh toán TKSR
+                            <div class="help__more">
+                                <a href="#" class="help__link">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="help__content-item">
+                <div class="card">
+                    <div class="card__header">
+                        <span class="card__header-text">
+                            Kiểm tra thẻ quà tặng như thế nào?
+                        </span>
+                        <i class="fas fa-angle-down help__icon"></i>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__bug">
+                            Bước 1: Từ màn hình chính của ứng dụng chọn "Ưu đãi" để xem toàn bộ thẻ quà tặng mà bạn đang có trong mục "Quà của tôi". Các thẻ có chữ "Sử dụng" là các thẻ mà bạn đang sở hữu.
+                            <br> <br>
+                            Bước 2: Bấm vào "Thẻ quà tặng" bạn muốn xem chi tiết. Bạn sẽ đọc được các thông tin về điều kiện sử dụng, dịch vụ áp dụng và thời hạn thẻ quà tặng.
+                            <div class="help__more">
+                                <a href="#" class="help__link">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__header">
+                        <span class="card__header-text">
+                            Thể lệ chương trình "Tích điểm đổi quà"
+                        </span>
+                        <i class="fas fa-angle-down help__icon"></i>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__bug">
+                            Bạn vui lòng xem thể lệ chương trình Tích điểm đổi quà của Ví TKSR để cập nhật các chương trình tích điểm vô cùng hấp dẫn này nhé.
+                            <div class="help__more">
+                                <a href="#" class="help__link">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__header">
+                        <span class="card__header-text">
+                            Các chương trình khuyến mãi của TKSR
+                        </span>
+                        <i class="fas fa-angle-down help__icon"></i>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__bug">
+                            Để xem các chương trình khuyến mãi của Ví TKSR hiện có gồm các chương trình gì, bạn có thể truy cập tại Khuyến Mãi TKSR
+                            <div class="help__more">
+                                <a href="#" class="help__link">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="help__content-item">
+                <div class="card">
+                    <div class="card__header">
+                        <span class="card__header-text">
+                            Liên kết tài khoản ngân hàng của tôi với TKSR có an toàn không?
+                        </span>
+                        <i class="fas fa-angle-down help__icon"></i>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__bug">
+                            Bạn hoàn toàn an tâm khi liên kết tài khoản ngân hàng của bạn với tài khoản TKSR.
+                            <br> <br>
+                            Trước hết, để liên kết, bạn phải nhập mã OTP được gửi từ ngân hàng nhằm đảm bảo là chính chủ của tài khoản đang thực hiện liên kết. Trong quá trình sử dụng, mọi giao dịch phát sinh trên TKSR hoặc tài khoản ngân hàng liên kết đều phải được bạn xác nhận. Ngoài ra, TKSR tuyệt đối không lưu thông tin tài khoản ngân hàng/ thẻ quốc tế của bạn.
+                            <div class="help__more">
+                                <a href="#" class="help__link">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__header">
+                        <span class="card__header-text">
+                            TKSR lấy những thông tin gì của tôi và sử dụng thông tin đó như thế nào?
+                        </span>
+                        <i class="fas fa-angle-down help__icon"></i>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__bug">
+                            TKSR sẽ yêu cầu tên, email và số điện thoại của bạn khi bạn đăng ký tài khoản. Tùy theo dịch vụ bạn sử dụng, TKSR cũng có thể thu thập một số thông tin khác như vị trí thiết bị hoặc thông tin danh bạ (chỉ sau khi được bạn đồng ý). Những thông tin này được sử dụng để cung cấp tính năng, dịch vụ và tăng cường bảo mật cho tài khoản, và để nghiên cứu cải tiến dịch vụ của TKSR.
+                            <div class="help__more">
+                                <a href="#" class="help__link">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__header">
+                        <span class="card__header-text">
+                            TKSR có những cơ chế gì để phòng chống lừa đảo và lấy cắp tài khoản?
+                        </span>
+                        <i class="fas fa-angle-down help__icon"></i>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__bug">
+                            TKSR sử dụng các công nghệ sau để phòng ngừa rủi ro kẻ gian lấy cắp tài khoản của bạn:
+
+                            <br> <br>
+                            1. Khi có người đăng nhập tài khoản TKSR của bạn trên một thiết bị di động khác, TKSR sẽ gửi Voice OTP kèm lời cảnh báo đến số điện thoại đăng ký tài khoản TKSR của bạn với nội dung: “Bạn đang đăng nhập Ví TKSR trên thiết bị khác. Tuyệt đối không chia sẻ mã xác thực OTP này với bất kỳ ai. Mã xác thực là: xxxxxx.”
+                            <br> <br>
+                            Ngoài ra, với một số giao dịch đầu tiên được thực hiện trên thiết bị mới và được TKSR đánh giá là đáng ngờ, TKSR cũng yêu cầu nhập mã xác thực OTP được gửi qua tin nhắn đến số điện thoại đăng ký TKSR.
+                            <br> <br>
+                            2. Công nghệ thông minh của TKSR tự động đánh giá và nhận biết các giao dịch bất thường, dựa trên việc phân tích các giao dịch trong quá khứ trên tài khoản TKSR của bạn. Khi phát hiện bất thường, TKSR lập tức chặn giao dịch, ngăn ngừa sự thất thoát tiền trong tài khoản của của bạn.
+                            <div class="help__more">
+                                <a href="#" class="help__link">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__header">
+                        <span class="card__header-text">
+                            TKSR hỗ trợ xử lý lừa đảo và lấy cắp tài khoản như thế nào?
+                        </span>
+                        <i class="fas fa-angle-down help__icon"></i>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__bug">
+                            Khi TKSR tiếp nhận báo cáo về hành vi lừa đảo, TKSR sẽ hỗ trợ bạn kiểm tra nguồn gốc giao dịch bất thường và khóa tài khoản Ví TKSR của bạn. Đồng thời, TKSR khuyến nghị bạn trình báo vấn đề của mình với công an PC50 - Phòng cảnh sát phòng chống tội phạm công nghệ cao để được hỗ trợ. TKSR sẽ phối hợp với đơn vị điều tra khi nhận được yêu cầu cung cấp các dữ liệu liên quan để phục vụ cho quá trình điều tra.
+                            <br>
+                            <br>
+                            Thông tin liên lạc của Phòng cảnh sát phòng chống tội phạm công nghệ cao. <br>
+                            Địa chỉ: <br>
+                            - Hà Nội: số 47 Phạm Văn Đồng, quận Cầu Giấy <br>
+                            - TP.HCM: số 258 Nguyễn Trãi, quận 1 <br>
+                            Số điện thoại: 069.232.1154 hoặc 069.232.1161 <br>
+                            Email: C50@canhsat.vn
+                            <div class="help__more">
+                                <a href="#" class="help__link">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__header">
+                        <span class="card__header-text">
+                            Tôi muốn báo cáo hành vi giả mạo TKSR
+                        </span>
+                        <i class="fas fa-angle-down help__icon"></i>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__bug">
+                            Vui lòng để lại lời nhắn bên dưới cho bộ phận CSKH và cung cấp các thông tin sau: <br> <br>
+
+                            - Nội dung: phát hiện hành vi giả mạo <br>
+                            - Mô tả chi tiết hành vi <br> <br>
+
+                            Hoặc bạn có thể liên hệ với bộ phận CSKH của TKSR qua các cách khác. Xem cách thức liên hệ https://tksr.vn/?questionId=13&name=tại_đây.
+                            Xem chi tiết
+                            <div class="help__more">
+                                <a href="#" class="help__link">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__header">
+                        <span class="card__header-text">
+                            Tôi bị mất điện thoại
+                        </span>
+                        <i class="fas fa-angle-down help__icon"></i>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__bug">
+                            Bạn có thể gặp 1 trong 2 trường hợp: <br> <br>
+
+                            * Trường hợp 1: Mất cả điện thoại kèm sim đăng ký tài khoản TKSR <br> <br>
+
+                            Kẻ gian không thể truy cập vào tài khoản TKSR trên điện thoại của bạn nếu không có mật khẩu đăng nhập. Tuy nhiên để đảm bảo an toàn tuyệt đối, bạn cần gọi ngay tổng đài TKSR 1900 54 54 41 hoặc 028.399.171.99 để được hỗ trợ khoá tài khoản TKSR. <br> <br>
+
+                            * Trường hợp 2: Mất điện thoại nhưng vẫn giữ sim đăng ký tài khoản TKSR <br> <br>
+
+                            Hãy lắp sim vào 1 thiết bị điện thoại khác và đăng nhập ngay vào tài khoản TKSR của mình. Bạn sẽ nhận được mã xác thực OTP được gửi qua tin nhắn SMS tới sim điện thoại của bạn. Đồng thời, tài khoản TKSR của bạn trên điện thoại cũ sẽ tự động đăng xuất. Kẻ gian sẽ không thể đăng nhập được vào tài khoản TKSR của bạn trên điện thoại cũ khi không có mã OTP cũng như mật khẩu của bạn.
+                            <div class="help__more">
+                                <a href="#" class="help__link">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__header">
+                        <span class="card__header-text">
+                            Tài khoản của tôi bị khóa
+                        </span>
+                        <i class="fas fa-angle-down help__icon"></i>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__bug">
+                            Nếu bạn đăng nhập vào ứng dụng nhưng nhận được thông báo tài khoản bị khóa, có thể do 1 trong 2 nguyên nhân sau:
+                            <br> <br>
+                            1. Bạn đã đăng nhập (thay đổi qua lại) quá 3 tài khoản (tương ứng với 3 số điện thoại khác nhau) trên cùng 1 thiết bị trong vòng 1 tháng. Vì lí do bảo mật, ứng dụng TKSR trên thiết bị đó sẽ tạm thời bị khóa.
+                            <br> <br>
+                            Hướng xử lý: <br>
+                            - Bạn tạm ngưng sử dụng, đợi đến tháng kế tiếp, hệ thống sẽ tự động mở lại ứng dụng TKSR trên thiết bị của bạn, và bạn có thể đăng nhập vào tài khoản TKSR. <br>
+                            - Bạn tải ứng dụng TKSR trên 1 thiết bị khác và đăng nhập vào tài khoản TKSR của bạn. <br> <br>
+
+                            2. Bạn đã nhập mật khẩu đăng nhập sai quá 3 lần nên tài khoản TKSR của bạn tạm thời bị khóa. Trong trường hợp này, bạn vui lòng dùng chính số điện thoại đăng ký tài khoản TKSR để liên hệ đến tổng đài TKSR. Nhân viên CSKH sẽ xác minh thông tin và hỗ trợ.
+                            <br> <br>
+                            Trong bất kỳ trường hợp nào khác, vui lòng liên hệ trực tiếp với tổng đài TKSR tại số 1900 54 54 41 hoặc 028 399 17 199.
+                            <div class="help__more">
+                                <a href="#" class="help__link">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__header">
+                        <span class="card__header-text">
+                            Các bước tạm khóa tài khoản tự động qua tổng đài
+                        </span>
+                        <i class="fas fa-angle-down help__icon"></i>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__bug">
+                            Trong trường hợp tài khoản TKSR của bạn phát sinh giao dịch mà bạn không thực hiện hoặc bạn đã cung cấp thông tin mật khẩu/ mã OTP cho người khác hoặc nghi ngờ có người khác biết được thông tin Ví TKSR của bạn, bạn cần thực hiện khóa ví ngay bằng cách:
+                            <div class="help__more">
+                                <a href="#" class="help__link">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__header">
+                        <span class="card__header-text">
+                            Hướng dẫn kiểm tra khi phát hiện giao dịch bất thường
+                        </span>
+                        <i class="fas fa-angle-down help__icon"></i>
+                    </div>
+                    <div class="card__content">
+                        <div class="card__bug">
+                            Trước hết, bạn vui lòng kiểm tra trong mục "Lịch Sử Giao Dịch" xem tài khoản TKSR của bạn có phát sinh giao dịch nào mà bạn không thực hiện hay không. Trong trường hợp tài khoản TKSR đã phát sinh giao dịch mà bạn không thực hiện hoặc bạn đã cung cấp thông tin mật khẩu/ mã OTP cho người khác hoặc nghi ngờ có người khác biết được thông tin Ví TKSR của bạn, hãy ngay lập tức đổi mật khẩu Ví TKSR và liên hệ tổng đài TKSR tại số 1900 54 54 41 để tạm khóa gấp tài khoản.
+                            <div class="help__more">
+                                <a href="#" class="help__link">
+                                    Xem chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h3 class="help__content-title">
+        Gửi phản hồi chúng tôi
+    </h3>
+    <div class="grid wide container help__container">
+        <div class="row">
+            <div class="col c-12">
+                <div class="feedback__content">
+                    <form action="" class="auth__form">
+                        <div class="form__group">
+                            <label for="">Tiêu đề phản hồi: </label>
+                            <svg class="Input_icon__3bJ0I" width="16" height="16" viewBox="0 0 16 16"><path d="M0 0h16v16H0V0z" fill="none"></path><path d="M15.2 13.1L8.6 1.6c-.2-.4-.9-.4-1.2 0L.8 13.1c-.1.2-.1.5 0 .7.1.2.3.3.6.3h13.3c.2 0 .5-.1.6-.3.1-.2.1-.5-.1-.7zM8.7 12H7.3v-1.3h1.3V12zm0-2.7H7.3v-4h1.3v4z" fill="currentColor"></path></svg>
+                            <input maxlength="50" type="text" class="title__feedback">
+                            <span class="form-message">
+                            </span>
+                        </div>
+                        <div class="form__group">
+                            <label for="">Nội dung phản hồi: </label>
+                            <svg class="Input_icon__3bJ0I" width="16" height="16" viewBox="0 0 16 16"><path d="M0 0h16v16H0V0z" fill="none"></path><path d="M15.2 13.1L8.6 1.6c-.2-.4-.9-.4-1.2 0L.8 13.1c-.1.2-.1.5 0 .7.1.2.3.3.6.3h13.3c.2 0 .5-.1.6-.3.1-.2.1-.5-.1-.7zM8.7 12H7.3v-1.3h1.3V12zm0-2.7H7.3v-4h1.3v4z" fill="currentColor"></path></svg>
+                            <textarea class="title__feedback" name="" id="" cols="30" rows="6"></textarea>
+                            <span class="form-message">
+                            </span>
+                        </div>
+                        <div class="form__group">
+                            <label for="">Hình ảnh: </label>
+                            <input id="files" accept=".jpg, .png" type="file">
+                            <img id="image" />
+                        </div>
+                        <button type="button" class="auth-form__submit auth-form__submit-suport">
+                            Gủi phản hồi
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="waning">
+        <i>
+            * Hãy liên hệ với chúng tôi khi cần thiết, hệ thống túc trực điện thoại trực tuyến của nhân viên luôn sẵn sàng tư vấn giải đáp thắc mắc cho bạn.
+        </i>
+    </div>
+</section>
+<script src="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/User/Support/active.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        /* Validate */
+        (function () {
+            const input = document.querySelectorAll('.title__feedback');
+            function remove_oninput(element) {
+                var message = element.querySelector('.form-message');
+                message.innerText = '';
+                element.classList.remove('invalid');
+            }
+            function add__blur(element, messages) {
+                var message = element.querySelector('.form-message');
+                message.innerText = messages;
+                element.classList.add('invalid');
+            }
+            var isFormValidCard = true;
+            input.forEach((blurs, index) => {
+                blurs.onblur = function () {
+                    if (index == 0) {
+                        function tests() {
+                            return input[0].value.length >= 5 ? undefined : `Nhập số và nhập tối thiểu 5 ký tự`;
+                        }
+                        if (tests() == null) {
+                        }
+                        else {
+                            var mess = tests();
+                            add__blur(input[0].parentElement, mess);
+                        }
+                    }
+                    else if (index == 1) {
+                        function tests() {
+                            return input[1].value.length >= 5 ? undefined : `Nhập số và nhập tối thiểu 5 ký tự`;
+                        }
+                        if (tests() == null) {
+                        }
+                        else {
+                            var mess = tests();
+                            add__blur(input[1].parentElement, mess);
+                        }
+                    }
+                }
+                blurs.oninput = function () {
+                    if (index == 0) {
+                        remove_oninput(input[0].parentElement);
+                        isFormValidCard = true;
+                    }
+                    if (index == 1) {
+                        remove_oninput(input[1].parentElement);
+                        isFormValidCard = true;
+                    }
+                }
+            })
+            const card = document.querySelector('.auth-form__submit-suport');
+            card.onclick = function () {
+                for (var i = 0; i < input.length; i++) {
+                    if (i == 0) {
+                        function tests() {
+                            return input[0].value.length >= 5 ? undefined : `Nhập số và nhập tối thiểu 5 ký tự`;
+                        }
+                        if (tests() == null) {
+                        }
+                        else {
+                            var mess = tests();
+                            add__blur(input[0].parentElement, mess);
+                            isFormValidCard = false;
+                        }
+                    }
+                    else if (i == 1) {
+                        function tests() {
+                            return input[1].value.length >= 5 ? undefined : `Nhập số và nhập tối thiểu 5 ký tự`;
+                        }
+                        if (tests() == null) {
+                        }
+                        else {
+                            var mess = tests();
+                            add__blur(input[1].parentElement, mess);
+                            isFormValidCard = false;
+                        }
+                    }
+                }
+                if (isFormValidCard == true) {
+                    AjaxRequest()
+                }
+            }
+            var isRunning = false;
+            function AjaxRequest() {
+                if (!isRunning) {
+                    isRunning = true;
+                    active__Loading(true);
+                    var form = new FormData();
+                    form.append("title", input[0].value)
+                    form.append("content", input[1].value)
+                    var xhr = new XMLHttpRequest();
+                    if (document.getElementById("image").offsetHeight != 0) {
+                        form.append("img", $("#image").attr("src").split(",")[1])
+                    }
+                    else {
+                        form.append("img", "NotValue")
+                    }
+                    xhr.open("POST", '/User/PostRequestSupport', true);
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState == 4 && xhr.status == 200) {
+                            active__Loading(false);
+                            var r = xhr.responseText;
+                            var j = JSON.parse(r);
+                            if (j.Data.status == "OK") {
+                                active__messageNotification('Đã tiếp nhận phản hồi', true);
+                                input[0].value = "";
+                                input[1].value = "";
+                                document.getElementById("image").src = "";
+                            }
+                            isRunning = false;
+                        }
+                    }
+                    xhr.send(form);
+                }
+            }
+        })();
+    }, false)
+</script>

@@ -1,0 +1,569 @@
+﻿
+@{
+    ViewBag.Title = "Nạp tiền vào tài khoản";
+    Layout = "~/Views/Shared/_LayoutLogOn.cshtml";
+}
+
+<nav class="oriented">
+    <div class="grid wide">
+        <ul class="oriented__list">
+            <li class="oriented-item">
+                <a href="@Request.Url.Scheme://@Request.Url.Authority" class="oriented-item oriented-item__link">Trang chủ</a>
+            </li>
+            <li class="oriented-item">Dịch vụ</li>
+            <li class="oriented-item">Nạp ví</li>
+            <li class="oriented-item">Thẻ cào</li>
+        </ul>
+    </div>
+</nav>
+<section class="rechargecard">
+    <div class="grid wide container__rechargecard">
+        <h3 class="rechargecard__title">
+            Nạp tiền vào ví
+        </h3>
+        <div class="grid">
+            <ul class="row list__card">
+                <li class="col l-2-4 m-4 c-6">
+                    <div class="card__item  card__item-active">
+                        <div class="card__item-logo">
+                            <img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo__tienich/icon4.svg" alt="">
+                        </div>
+                        <div class="card__item-text">
+                            Thẻ Cào
+                        </div>
+                    </div>
+                </li>
+                <li class="col l-2-4 m-4 c-6">
+                    <a href="" class="card__item">
+                        <div class="card__item-logo">
+                            <img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo__tienich/icon6.svg" alt="">
+                        </div>
+                        <div class="card__item-text">
+                            Thẻ atm
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="container__pay">
+                <form class="pay">
+                    <h3 class="rechargecard__content-title">
+                        Gạch thẻ
+                    </h3>
+                    <div class="row list__select">
+                        <div class="col l-3 m-12 c-12 list__input-items">
+                            <select class="select__input">
+                                <option>Viettel</option>
+                                <option>Vinaphone</option>
+                                <option>Mobifone</option>
+                                <option>VietnamMobile</option>
+                                <option>Gmobile</option>
+                            </select>
+                        </div>
+                        <div class="col l-3 m-12 c-12 list__input-items">
+                            <input class="select__input" placeholder="Mã thẻ">
+                            <span class="form-message mess__code">
+                            </span>
+                        </div>
+                        <div class="col l-3 m-12 c-12 list__input-items">
+                            <input class="select__input" placeholder="Serial">
+                            <span class="form-message mess__code">
+                            </span>
+                        </div>
+                        <div class="col l-3 m-12 c-12 list__input-items">
+                            <select class="select__input">
+                                <option>Mệnh giá</option>
+                                <option value="10000">10,000đ</option>
+                                <option value="20000">20,000đ</option>
+                                <option value="30000">30,000đ</option>
+                                <option value="50000">50,000đ</option>
+                                <option value="100000">100,000đ</option>
+                                <option value="200000">200,000đ</option>
+                                <option value="300000">300,000đ</option>
+                                <option value="500000">500,000đ</option>
+                                <option value="1000000">1,000,000đ</option>
+                            </select>
+                            <span class="form-message mess__code">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="buy">
+                        <button type="button" class="btn__card-buy">
+                            Nạp
+                        </button>
+                    </div>
+                    <h3 class="rechargecard__content-title">
+                        Bảng giá (Chiết khấu được cập nhật mới nhất)
+                    </h3>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="grid rechargecard__history-content">
+        <div class="row history-content">
+            <div class="col history-title__item">
+                Nhà mạng
+            </div>
+            <div class="col history-title__item">
+                10.000
+            </div>
+            <div class="col history-title__item">
+                20.000
+            </div>
+            <div class="col history-title__item">
+                30.000
+            </div>
+            <div class="col history-title__item">
+                50.000
+            </div>
+            <div class="col history-title__item">
+                100.000
+            </div>
+            <div class="col history-title__item">
+                200.000
+            </div>
+            <div class="col history-title__item">
+                300.000
+            </div>
+            <div class="col history-title__item">
+                500.000
+            </div>
+            <div class="col history-title__item">
+                1.000.000
+            </div>
+        </div>
+        <div class="row history-content">
+            <div class="col history-title__item">
+                Viettel
+            </div>
+            <div class="col history-title__item">
+                70
+            </div>
+            <div class="col history-title__item">
+                70
+            </div>
+            <div class="col history-title__item">
+                75
+            </div>
+            <div class="col history-title__item">
+                75
+            </div>
+            <div class="col history-title__item">
+                80
+            </div>
+            <div class="col history-title__item">
+                80
+            </div>
+            <div class="col history-title__item">
+                85
+            </div>
+            <div class="col history-title__item">
+                85
+            </div>
+            <div class="col history-title__item">
+                85
+            </div>
+        </div>
+        <div class="row history-content">
+            <div class="col history-title__item">
+                Vinaphone
+            </div>
+            <div class="col history-title__item">
+                70
+            </div>
+            <div class="col history-title__item">
+                70
+            </div>
+            <div class="col history-title__item">
+                75
+            </div>
+            <div class="col history-title__item">
+                75
+            </div>
+            <div class="col history-title__item">
+                80
+            </div>
+            <div class="col history-title__item">
+                80
+            </div>
+            <div class="col history-title__item">
+                85
+            </div>
+            <div class="col history-title__item">
+                85
+            </div>
+            <div class="col history-title__item">
+                85
+            </div>
+        </div>
+        <div class="row history-content">
+            <div class="col history-title__item">
+                Mobifone
+            </div>
+            <div class="col history-title__item">
+                70
+            </div>
+            <div class="col history-title__item">
+                70
+            </div>
+            <div class="col history-title__item">
+                75
+            </div>
+            <div class="col history-title__item">
+                75
+            </div>
+            <div class="col history-title__item">
+                80
+            </div>
+            <div class="col history-title__item">
+                80
+            </div>
+            <div class="col history-title__item">
+                85
+            </div>
+            <div class="col history-title__item">
+                85
+            </div>
+            <div class="col history-title__item">
+                85
+            </div>
+        </div>
+        <div class="row history-content">
+            <div class="col history-title__item">
+                VietnamMobile
+            </div>
+            <div class="col history-title__item">
+                70
+            </div>
+            <div class="col history-title__item">
+                70
+            </div>
+            <div class="col history-title__item">
+                75
+            </div>
+            <div class="col history-title__item">
+                75
+            </div>
+            <div class="col history-title__item">
+                80
+            </div>
+            <div class="col history-title__item">
+                80
+            </div>
+            <div class="col history-title__item">
+                85
+            </div>
+            <div class="col history-title__item">
+                85
+            </div>
+            <div class="col history-title__item">
+                85
+            </div>
+        </div>
+        <div class="row history-content">
+            <div class="col history-title__item">
+                Gmobile
+            </div>
+            <div class="col history-title__item">
+                70
+            </div>
+            <div class="col history-title__item">
+                70
+            </div>
+            <div class="col history-title__item">
+                75
+            </div>
+            <div class="col history-title__item">
+                75
+            </div>
+            <div class="col history-title__item">
+                80
+            </div>
+            <div class="col history-title__item">
+                80
+            </div>
+            <div class="col history-title__item">
+                85
+            </div>
+            <div class="col history-title__item">
+                85
+            </div>
+            <div class="col history-title__item">
+                85
+            </div>
+        </div>
+    </div>
+    <div class="grid wide">
+        <h3 class="rechargecard__history-title">
+            Thẻ đã nạp gần đây
+        </h3>
+    </div>
+    <div class="grid rechargecard__history-content history-Naptien">
+        <div class="row history-content">
+            <div class="history-title__item">
+                Loại thẻ
+            </div>
+            <div class="history-title__item">
+                Chiết khấu
+            </div>
+            <div class="history-title__item">
+                Mệnh giá
+            </div>
+            <div class="history-title__item">
+                Ngày nạp
+            </div>
+            <div class="history-title__item">
+                Trạng thái
+            </div>
+        </div>
+        <div class="card__content">
+            <div class="row history-content">
+                <div class="history-title__item">
+                    Viettel
+                </div>
+                <div class="history-title__item">
+                    25%
+                </div>
+                <div class="history-title__item">
+                    50.000 VNĐ
+                </div>
+                <div class="history-title__item">
+                    23/03/2021
+                </div>
+                <div class="history-title__item">
+                    Hoàn thành
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="security">
+    <div class="grid wide container container__security">
+        <div class="section__title">
+            <h1 class="section__title-text">
+                Thanh toán an toàn - Bảo mật tuyệt đối
+            </h1>
+        </div>
+        <div class="security__nav-header">
+            <ul class="security__nav">
+                <li class="security__nav-item security__active">
+                    <span class="security__nav-text">
+                        Bảo chứng ngân hàng
+                    </span>
+                </li>
+                <li class="security__nav-item">
+                    <span class="security__nav-text">
+                        Bảo mật đa tầng
+                    </span>
+                </li>
+                <li class="security__nav-item">
+                    <span class="security__nav-text">
+                        Đạt chuẩn quốc tế
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <div class="row security__content fade security__content-active">
+            <div class="col l-6 m-6 c-12 security__content-text">
+                <ul class="security__content-text__list">
+                    <li class="security__content-item">
+                        <div class="security__content-item-icon">
+                            <img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/check.svg" alt="">
+                        </div>
+                        <div class="security__content-item-text">
+                            Tiền của bạn trong Ví TKSR là TIỀN THẬT và được bảo chứng 100% bởi các NGÂN HÀNG đang hợp tác với Ví TKSR.
+                        </div>
+                    </li>
+                    <li class="security__content-item">
+                        <div class="security__content-item-icon">
+                            <img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/check.svg" alt="">
+                        </div>
+                        <div class="security__content-item-text">
+                            Người dùng TKSR có thể Nạp/Rút tiền từ ngân hàng liên kết bất kỳ lúc nào.
+                        </div>
+                    </li>
+                    <li class="security__content-item">
+                        <div class="security__content-item-icon">
+                            <img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/check.svg" alt="">
+                        </div>
+                        <div class="security__content-item-text">
+                            TKSR đã liên kết trực tiếp với 25 ngân hàng lớn và các tổ chức thẻ quốc tế Visa/Master/JCB.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col l-6 m-6 c-12 security__content-img">
+                <img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/BaoMat1.jpg" alt="" class="security__content-img-item">
+            </div>
+        </div>
+        <div class="row security__content">
+            <div class="col l-6 m-6 c-12 security__content-text">
+                <ul class="security__content-text__list">
+                    <li class="security__content-item">
+                        <div class="security__content-item-icon">
+                            <img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/check.svg" alt="">
+                        </div>
+                        <div class="security__content-item-text">
+                            Để đăng nhập, cần nhập mật khẩu 6 số và mã OTP được gửi đến điện thoại. Mỗi lần thanh toán đều cần nhập lại mật khẩu.
+                        </div>
+                    </li>
+                    <li class="security__content-item">
+                        <div class="security__content-item-icon">
+                            <img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/check.svg" alt="">
+                        </div>
+                        <div class="security__content-item-text">
+                            Ứng dụng tự khóa sau 5 phút nếu không sử dụng.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col l-6 m-6 c-12 security__content-img">
+                <img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/BaoMat2.jpg" alt="" class="security__content-img-item">
+            </div>
+        </div>
+        <div class="row security__content">
+            <div class="col l-6 m-6 c-12 security__content-text">
+                <ul class="security__content-text__list">
+                    <li class="security__content-item">
+                        <div class="security__content-item-icon">
+                            <img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/check.svg" alt="">
+                        </div>
+                        <div class="security__content-item-text">
+                            Công nghệ bảo mật của Ví TKSR đáp ứng các tiêu chuẩn quốc tế khắt khe nhất trong ngành tài chính ngân hàng, đạt chứng nhận bảo mật toàn cầu PCI DSS cấp độ cao nhất.
+                        </div>
+                    </li>
+                    <li class="security__content-item">
+                        <div class="security__content-item-icon">
+                            <img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/check.svg" alt="">
+                        </div>
+                        <div class="security__content-item-text">
+                            Công nghệ mã hóa đường truyền SSL/TLS đạt chứng nhận quốc tế GlobalSign.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col l-6 m-6 c-12 security__content-img">
+                <img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/BaoMat3.jpg" alt="" class="security__content-img-item">
+            </div>
+        </div>
+    </div>
+</section>
+<script src="@Request.Url.Scheme://@Request.Url.Authority/Assets/js/service.js"></script>
+<script src="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/User/NapThe/script.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        /* Validate */
+        (function () {
+            const input = document.querySelectorAll('.select__input');
+            function remove_oninput(element) {
+                var message = element.querySelector('.form-message');
+                message.innerText = '';
+                element.classList.remove('invalid');
+            }
+            function add__blur(element, messages) {
+                var message = element.querySelector('.form-message');
+                message.innerText = messages;
+                element.classList.add('invalid');
+            }
+            var isFormValidNumber = true;
+            input.forEach((blurs, index) => {
+                blurs.onblur = function () {
+                    if (index == 1) {
+                        function tests() {
+                            return isNumber(input[1].value) && input[1].value.length >= 11 ? undefined : `Nhập tối thiểu 11 ký tự`;
+                        }
+                        if (tests() == null) {
+                        }
+                        else {
+                            var mess = tests();
+                            add__blur(input[1].parentElement, mess);
+                        }
+                    }
+                    else if (index == 2) {
+                        function tests() {
+                            return input[2].value.length >= 6 ? undefined : `nhập tối thiểu 6 ký tự`;
+                        }
+                        if (tests() == null) {
+                        }
+                        else {
+                            var mess = tests();
+                            add__blur(input[2].parentElement, mess);
+                        }
+                    }
+                    else if (index == 3) {
+                        function tests() {
+                            return input[3].value != 'Mệnh giá' ? undefined : `Vui lòng chọn mệnh giá`;
+                        }
+                        if (tests() == null) {
+                        }
+                        else {
+                            var mess = tests();
+                            add__blur(input[3].parentElement, mess);
+                        }
+                    }
+                }
+                blurs.oninput = function () {
+                    if (index == 1) {
+                        remove_oninput(input[1].parentElement);
+                        isFormValidNumber = true;
+                    }
+                    if (index == 2) {
+                        remove_oninput(input[2].parentElement);
+                        isFormValidNumber = true;
+                    }
+                    if (index == 3) {
+                        remove_oninput(input[3].parentElement);
+                        isFormValidNumber = true;
+                    }
+                }
+            })
+            const number = document.querySelector('.btn__card-buy');
+            number.onclick = function () {
+                for (var i = 0; i < input.length; i++) {
+                    if (i == 1) {
+                        function tests() {
+                            return isNumber(input[1].value) && input[1].value.length >= 11 ? undefined : `Nhập tối thiểu 11 ký tự`;
+                        }
+                        if (tests() == null) {
+                        }
+                        else {
+                            var mess = tests();
+                            add__blur(input[1].parentElement, mess);
+                            isFormValidNumber = false;
+                        }
+                    }
+                    else if (i == 2) {
+                        function tests() {
+                            return input[2].value.length >= 6 ? undefined : `nhập tối thiểu 6 ký tự`;
+                        }
+                        if (tests() == null) {
+                        }
+                        else {
+                            var mess = tests();
+                            add__blur(input[2].parentElement, mess);
+                            isFormValidNumber = false;
+                        }
+                    }
+                    else if (i == 3) {
+                        function tests() {
+                            return input[3].value != 'Mệnh giá' ? undefined : `Vui lòng chọn mệnh giá`;
+                        }
+                        if (tests() == null) {
+                        }
+                        else {
+                            var mess = tests();
+                            add__blur(input[3].parentElement, mess);
+                            isFormValidNumber = false;
+                        }
+                    }
+                }
+                if (isFormValidNumber == true) {
+
+                }
+            }
+            function isNumber(numbers) {
+                var regex = new RegExp('^[0-9]+$');
+                return regex.test(numbers);
+            }
+        })();
+    }, false)
+</script>

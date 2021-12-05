@@ -1,0 +1,105 @@
+﻿@model List<DTO.PhanHoi>
+@{
+    ViewBag.Title = "Phản hồi của khách hàng";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="info__bug">
+    <div class="form">
+        <h3 class="bar__title title__info">
+            Danh sách khách hàng phản hồi
+        </h3>
+        <form action="" class="history__search">
+            <div class="row rechargecard__history-select container">
+                <div class="col l-4 m-12 c-12 rechargecard__history-item">
+                    <input type="text" placeholder="Tên tài khoản" class="select__input">
+                </div>
+                <div class="col l-4 m-12 c-12 rechargecard__history-item">
+                    <select class="select__input">
+                        <option value="">Tất cả</option>
+                        <option value="true">có ảnh</option>
+                        <option value="false">Không có ảnh</option>
+                    </select>
+                </div>
+                <div class="col l-4 m-12 c-12 rechargecard__history-item">
+                    <input type="date" class="select__input">
+                </div>
+            </div>
+        </form>
+        <div class="form__container container">
+            <div class="form__history">
+                <div class="table__history">
+                    <div class="table__history-item">
+                        <span>STT</span>
+                    </div>
+                    <div class="table__history-item">
+                        <span>Tên tài khoản</span>
+                    </div>
+                    <div style="width: 60%" class="table__history-item">
+                        <span>Nội dung</span>
+                    </div>
+                    <div class="table__history-item">
+                        <span>Hình ảnh</span>
+                    </div>
+                    <div class="table__history-item">
+                        <span>Ngày phản hồi</span>
+                    </div>
+                </div>
+                <div class="card__content">
+                    @{ 
+                        int i = 0;
+                        foreach (var item in Model) 
+                        {   i++;
+                            <div class="table__history">
+                                <div class="table__history-item">
+                                    <span>@i</span>
+                                </div>
+                                <div class="table__history-item" title="0977263104">
+                                    <span>@item.TaiKhoan: </span><br><br>
+                                    <span style="word-wrap: break-word;">@item.TieuDe</span>
+                                </div>
+                                <div style="width: 60%" class="table__history-item">
+                                    <span style="word-wrap: break-word;">@item.NoiDung</span>
+                                </div>
+                                <div class="table__history-item">
+                                    <span>
+                                        @{ 
+                                            if(item.Img != "NotValue") { 
+                                                <div class="phanhoi__img-content">
+                                                    <img class="img__phanhoi" src="@Request.Url.Scheme://@Request.Url.Authority/ImgSupport/@item.Img" alt="">
+                                                    <div class="content__chitiet">
+                                                        <div class="img__icon">
+                                                            <img class="img__chitiet" src="@Request.Url.Scheme://@Request.Url.Authority/ImgSupport/@item.Img" alt="">
+                                                            <i class="fas fa-times close__img"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            }
+                                        }
+                                    </span>
+                                </div>
+                                <div class="table__history-item">
+                                    <span>@item.NgayPhanHoi.ToString("dd/MM/yyyy HH:mm:ss")</span>
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+        <p class="message__notification"></p>
+        <form class="btn__n container">
+            <div class="btn__next">
+                <button type="button" class="btn__next-item btn__next-down"><i class="fas fa-chevron-left"></i></button>
+                <span class="slide__number">@ViewBag.Number</span>
+                <button type="button" class="btn__next-item btn__next-up"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </form>
+    </div>
+    <div class="waning">
+        <i>
+            * Nỗ lực tiêu chí tăng số lượng khách hàng trong năm tới mục tiêu trên 1000 lượt thanh toán mỗi tháng, bán được 100 thẻ nạp mỗi tuần
+        </i>
+    </div>
+</div>
+<script type="text/javascript" src="@Request.Url.Scheme://@Request.Url.Authority/Areas/Admin/Assets/js/active.js"></script>

@@ -1,0 +1,162 @@
+/* <= 380px  */
+@media (max-width: 23.75em) {
+}
+/* <= 739px */
+@media (max-width: 46.1875em) {
+    .form__info, .bar__title, .bar__list, .waning {
+        padding-left: 13px;
+    }
+
+    .side__bar {
+        padding-right: 13px !important;
+    }
+
+    .chat__user {
+        padding: 4px;
+    }
+
+    .btn__update {
+        flex-direction: column;
+    }
+
+    .btn__items {
+        margin-bottom: 8px;
+        margin-left: 0;
+    }
+
+    .user {
+        width: 0px;
+        transition: all ease 0.3s;
+    }
+
+        .user:last-child {
+            border-left: none;
+        }
+
+    .info__chat-items:first-child {
+        width: 0px;
+    }
+
+        .info__chat-items:first-child span {
+            display: none;
+        }
+
+    .taskbar {
+        display: block;
+        position: relative;
+    }
+
+        .taskbar i {
+            color: #ccc;
+            cursor: pointer;
+            position: absolute;
+            left: 10px;
+            top: -1px;
+        }
+
+            .taskbar i:hover {
+                color: var(--while_color);
+            }
+
+    .hidden__icon {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .user__bar-active {
+        width: 250px;
+        border-right: solid 1px #ccc !important;
+    }
+
+    .chat__content {
+        overflow: hidden;
+    }
+
+    .history__search {
+        padding-left: 13px;
+    }
+}
+/* >= 740px and < 1024px*/
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+}
+/* >= 1024px */
+@media (min-width: 64em) {
+    .chat__user {
+        min-height: 495px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1239px) {
+    .content__chitiet-active .img__chitiet {
+        width: 90%;
+    }
+}
+/* < 1024px */
+@media (max-width: 63.9375em) {
+    .info__container {
+        flex-direction: column-reverse;
+    }
+
+    .info__bug {
+        padding-left: 0;
+        width: 100%;
+    }
+
+    .form {
+    }
+
+    .side__bar {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .waning {
+        margin-bottom: 20px;
+    }
+
+    .rechargecard__history-item {
+        margin-bottom: 5px;
+    }
+
+    .info__thenap {
+        width: 100%;
+    }
+
+    .no__margin {
+        margin: 0;
+        padding: 0;
+    }
+
+    .margin__top {
+        margin-top: 20px;
+    }
+
+    .content__chitiet-active .img__chitiet {
+        width: 100%;
+    }
+
+    .img__icon {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .full__chat {
+        min-height: 450px;
+    }
+
+    .user__content-items span {
+        padding-left: 5px;
+    }
+
+    .full__chat {
+        max-height: 450px;
+    }
+
+    .form__chat {
+        margin-bottom: 130px;
+    }
+
+    .chat__content {
+        height: 450px;
+    }
+}

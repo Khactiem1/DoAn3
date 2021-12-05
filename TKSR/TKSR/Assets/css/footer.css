@@ -1,0 +1,72 @@
+
+/* footer */
+.footer{
+    background-color: var(--background__color-footer);
+    padding: 20px 0;
+}
+.footer__item{
+    margin-bottom: 1.8rem;
+}
+.logo__footer-img{
+    height: 42px;
+    border-radius: 5px;
+}
+.footer__text-head{
+    color: var(--background_color-menu);
+    font-size: 15px;
+    line-height: 19px;
+}
+.footer__text-care-txt{
+    font-size: 13px;
+    line-height: 17px;
+    color: var(--tutorial_btn);
+}
+.footer__text-head,.footer__text-care-txt{
+    margin-top: 0.5rem;
+}
+.footer__care-link{
+    display: block;
+    text-decoration: none;
+    color: var(--tutorial_btn);
+    transition: all 0.15s ease-in-out;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-top: 0.3rem;
+}
+.footer__care-link:hover{
+    color: var(--background_color-menu);
+}
+.footer__item-header{
+    color: var(--tutorial_btn);
+    font-size: 0.87rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.footer__item-content{
+    color: var(--tutorial_btn);
+}
+.footer__item-content span{
+    color: var(--background_color-menu);
+    font-size: 13px;
+    line-height: 17px;
+}
+.footer__item-content span a{
+    color: var(--background_color-menu);
+    text-decoration: none;
+}
+.footer__item-content + .footer__item-content{
+    margin-top: 0.3rem;
+}
+.footer__download{
+    align-items: center;
+    justify-content: center;
+}
+.footer__download-img{
+    width: 130px;
+}
+.footer__download-link{
+    display: block;
+}
+.app__download{
+    padding: 0 8px;
+}

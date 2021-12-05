@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link rel="icon" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/logo.jpg">
+    <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/grids.css">
+    <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/bases.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/nav.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/font.css">
+    <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/footer.css">
+    <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/responsive.css">
+    <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Areas/Admin/Assets/css/stylex.css">
+    <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Areas/Admin/Assets/css/responsive.css">
+</head>
+<body>
+    <div class="loader">
+        <span class="fas fa-spinner xoay__icon"></span>
+    </div>
+    <div class="content__notification">
+    </div>
+    <div class="app">
+        <header class="header">
+            <div class="grid wide container">
+                <a href="@Request.Url.Scheme://@Request.Url.Authority">
+                    <img src="@Request.Url.Scheme://@Request.Url.Authority/assets/img/logo/logo.jpg" alt="" class="navbar__logo">
+                </a>
+                <div class="header__title">
+                    Chào @ViewBag.Name bạn là nhà phát triển
+                </div>
+            </div>
+        </header>
+        <nav class="oriented">
+            <div class="grid wide">
+                <ul class="oriented__list">
+                    <li class="oriented-item">
+                        <a href="@Request.Url.Scheme://@Request.Url.Authority" class="oriented-item oriented-item__link">Trang chủ</a>
+                    </li>
+                    <li class="oriented-item">@ViewBag.Title</li>
+                </ul>
+            </div>
+        </nav>
+        <section class="info">
+            <div class="grid wide info__container">
+                <div class="side__bar">
+                    <div class="side__bar-content">
+                        <div class="side__bar-item">
+                            <h3 class="bar__title">
+                                Tuỳ chỉnh
+                            </h3>
+                            <ul class="bar__list">
+                                <li class="bar__list-item">
+                                    <a href="@Request.Url.Scheme://@Request.Url.Authority/Admin/HomeAdmin/Index" class="bar__list-text @ViewBag.Index">
+                                        <span>
+                                            Quản lý tài khoản
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="bar__list-item">
+                                    <a href="@Request.Url.Scheme://@Request.Url.Authority/Admin/HomeAdmin/QLDichVu" class="bar__list-text @ViewBag.QLDichVu">
+                                        <span>
+                                            Quản lý dịch vụ
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="bar__list-item">
+                                    <a href="@Request.Url.Scheme://@Request.Url.Authority/Admin/HomeAdmin/QLTheNap" class="bar__list-text @ViewBag.QLTheNap">
+                                        <span>
+                                            Quản lý thẻ nạp
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="bar__list-item">
+                                    <a href="./HoaDon.html" class="bar__list-text">
+                                        <span>
+                                            Quản lý hoá đơn
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="bar__list-item">
+                                    <a href="@Request.Url.Scheme://@Request.Url.Authority/Admin/HomeAdmin/PhanHoi" class="bar__list-text @ViewBag.QLPhanHoi">
+                                        <span>
+                                            Phản hồi khách hàng
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="bar__list-item">
+                                    <a href="./Chat.html" class="bar__list-text">
+                                        <span>
+                                            Chat với khách hàng
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="bar__list-item">
+                                    <a href="@Request.Url.Scheme://@Request.Url.Authority/Home/Logout" class="bar__list-text">
+                                        <span>
+                                            Đăng xuất
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                @RenderBody()
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="grid wide container footer__container">
+                <div class="row footer__list">
+                    <div class="col l-3 m-6 c-12 footer__item">
+                        <div class="logo__footer">
+                            <img src="@Request.Url.Scheme://@Request.Url.Authority/assets/img/logo/logo.jpg" alt="" class="logo__footer-img">
+                            <div class="footer__text-head">
+                                Công ty cổ phần dịch vụ trực tuyến Trường Đại Học Sư Phạm Kỹ Thuật Hưng Yên
+                            </div>
+                            <div class="footer__text-care-txt">
+                                Trường Đại Học Sư Phạm Kỹ Thuật Hưng Yên cơ sở 2 Mỹ hào
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-3 m-6 c-0 footer__item">
+                        <div class="footer__care">
+                            <a href="#" class="footer__care-link">
+                                Về chúng tôi
+                            </a>
+                        </div>
+                        <div class="footer__care">
+                            <a href="#" class="footer__care-link">
+                                Blog
+                            </a>
+                        </div>
+                        <div class="footer__care">
+                            <a href="#" class="footer__care-link">
+                                Liên hệ
+                            </a>
+                        </div>
+                        <div class="footer__care">
+                            <a href="#" class="footer__care-link">
+                                Tuyển dụng
+                            </a>
+                        </div>
+                        <div class="footer__care">
+                            <a href="#" class="footer__care-link">
+                                Điều khoản điều lệ
+                            </a>
+                        </div>
+                        <div class="footer__care">
+                            <a href="#" class="footer__care-link">
+                                Chính sách quyền riêng tư
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col l-3 m-6 c-12 footer__item">
+                        <div class="footer__item-header">
+                            chăm sóc khách hàng
+                        </div>
+                        <div class="footer__item-content">
+                            Hotline: <span><a href="tel:1900 5454 41" target="_self" title="Gọi">1900 5454 41</a> (1000 đ/phút)</span>
+                        </div>
+                        <div class="footer__item-content">
+                            Email: <span>KhacTiem@gmail.com</span>
+                        </div>
+                        <div class="footer__item-content">
+                            Chúng tôi gọi đi: <span>
+                                <a href="tel:036.233.5462" target="_self" title="Gọi">036.233.5462</a>
+                                -
+                                <a href="tel:012.345.6789" target="_self" title="Gọi">012.345.6789</a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col l-3 m-6 c-12 footer__item">
+                        <div class="footer__item-header">
+                            Hợp tác doanh nghiệp
+                        </div>
+                        <div class="footer__item-content">
+                            Hotline: <span>
+                                <a href="tel:(028) 710 22 222" target="_self" title="Gọi">(028) 710 22 222</a> (ext:5000)
+                            </span>
+                        </div>
+                        <div class="footer__item-content">
+                            Email: <span>hotro.sme@mservice.com.vn</span>
+                        </div>
+                        <div class="footer__item-content">
+                            Website: <span>business.tksr.vn</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row footer__download">
+                    <div class="app__download">
+                        <a href="#" class="footer__download-link">
+                            <img src="@Request.Url.Scheme://@Request.Url.Authority/assets/img/tai-appstore.jpg" alt="" class="footer__download-img">
+                        </a>
+                    </div>
+                    <div class="app__download">
+                        <a href="#" class="footer__download-link">
+                            <img src="@Request.Url.Scheme://@Request.Url.Authority/assets/img/tai-google-play.jpg" alt="" class="footer__download-img">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div class="scroll">
+        <a href="#">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </div>
+    <div class="modal">
+        <div class="modal__overlay"></div>
+        <div class="modal__body">
+            <div class="auth-form auth-form__register">
+                <div class="auth-form__header">
+                    <span>Xoá hoá đơn chờ thanh toán</span>
+                    <i class="fas fa-times auth-form__icon"></i>
+                </div>
+                <div class="auth-form__form">
+                    <p class="message__delete">
+                        Bạn có chắc muốn xoá
+                    </p>
+                    <p>
+                        Dữ liệu sẽ không thể khôi phục!
+                    </p>
+                    <button class="auth-form__submit">
+                        xoá
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/js/Jquery/Loading.js"></script>
+    <script type="text/javascript" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/js/Jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/js/Jquery/message.js"></script>
+</body>
+</html>

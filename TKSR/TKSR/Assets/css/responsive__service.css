@@ -1,0 +1,51 @@
+/* <= 380px  */
+@media (max-width:  23.75em){
+
+}
+
+/* <= 739px */
+@media (max-width: 46.1875em){
+    .list__select-text{
+        color: #555;
+        font-size: 16px;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+    .list__select-input{
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+    .btn__card-buy{
+        width: 100%;
+    }
+    .buy{
+        padding: 0 4px;
+    }
+    .list__select-text{
+        margin-bottom: 5px;
+    }
+    .list__select{
+        margin: 8px auto 0 auto !important;
+    }
+}
+/* >= 740px and < 1024px*/
+@media (min-width: 46.25em) and (max-width: 63.9375em){
+    
+}
+/* >= 1024px */
+@media (min-width: 64em){
+    .list__select-text{
+        flex: 0 0 35% !important;
+        max-width: 35% !important;
+    }
+    .list__select-input{
+        flex: 0 0 65% !important;
+        max-width: 65% !important;
+    }
+}
+/* <= 1024px */
+@media (max-width: 63.9375em){
+    .rechargecard__history-item + .rechargecard__history-item{
+        margin-top: 10px;
+    }
+}
