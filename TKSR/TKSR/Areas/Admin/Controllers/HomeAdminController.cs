@@ -12,6 +12,7 @@ namespace TKSR.Areas.Admin.Controllers
     {
         // GET: Admin/HomeAdmin
         DBIO db = new DBIO();
+        TheNapDBIO CardDB = new TheNapDBIO();
         public ActionResult Index()
         {
             if (Session["user"] == null)
@@ -75,6 +76,7 @@ namespace TKSR.Areas.Admin.Controllers
                 TaiKhoan user = (TaiKhoan)Session["user"];
                 if (user.LoaiTK == "admin")
                 {
+                    ViewBag.DSNhaMang = CardDB.GetAllNhaMang();
                     ViewBag.QLTheNap = "bar__list-text__active";
                     ViewBag.Name = user.tenTK;
                     ViewBag.Number = 1;
@@ -105,6 +107,31 @@ namespace TKSR.Areas.Admin.Controllers
                     ViewBag.Number = 1;
                     List<PhanHoi> DSPH = db.GetAllPhanHoiUser();
                     return View(DSPH);
+                }
+                else
+                {
+                    Response.Redirect(Request.Url.Scheme + "://" + Request.Url.Authority);
+                }
+            }
+            return View();
+        }
+        public ActionResult ChietKhau()
+        {
+            if (Session["user"] == null)
+            {
+                Session["user"] = null;
+                Response.Redirect(Request.Url.Scheme + "://" + Request.Url.Authority);
+            }
+            else
+            {
+                TaiKhoan user = (TaiKhoan)Session["user"];
+                if (user.LoaiTK == "admin")
+                {
+                    ViewBag.DSNhaMang = CardDB.GetAllNhaMang();
+                    ViewBag.DSChietKhau = CardDB.GetAllChietKhau();
+                    ViewBag.ChietKhau = "bar__list-text__active";
+                    ViewBag.Name = user.tenTK;
+                    return View();
                 }
                 else
                 {

@@ -41,11 +41,10 @@
                         <div class="col l-3 m-12 c-12 rechargecard__history-item">
                             <select class="select__input form__update-the">
                                 <option value="">Nhà mạng</option>
-                                <option>Viettel</option>
-                                <option>Vinaphone</option>
-                                <option>Mobifone</option>
-                                <option>vietnamobile</option>
-                                <option>Gmobile</option>
+                                @foreach (var item in ViewBag.DSNhaMang)
+                                {
+                                    <option>@item.TenNhaMang</option>
+                                }
                             </select>
                             <span class="form-message"></span>
                         </div>
@@ -90,11 +89,10 @@
                 <div class="col l-3 m-12 c-12 rechargecard__history-item">
                     <select class="select__input select__NhaMang">
                         <option value="">Nhà mạng</option>
-                        <option>Viettel</option>
-                        <option>Vinaphone</option>
-                        <option>Mobilefone</option>
-                        <option>vietnamobile</option>
-                        <option>Gmobile</option>
+                        @foreach (var item in ViewBag.DSNhaMang)
+                        {
+                            <option>@item.TenNhaMang</option>
+                        }
                     </select>
                 </div>
                 <div class="col l-4 m-12 c-12 rechargecard__history-item">
@@ -186,8 +184,12 @@
                                 <div class="table__history-item item-end">
                                     <select disabled="" class="input__update">
                                         @{
-                                            string[] arr = new string[] { "Viettel", "Vinaphone", "Mobifone", "vietnamobile", "Gmobile"};
-                                            for (int i = 0; i < 5; i++)
+                                            List<string> arr = new List<string>();
+                                            foreach (var items in ViewBag.DSNhaMang)
+                                            {
+                                                arr.Add(items.TenNhaMang);
+                                            }
+                                            for (int i = 0; i < arr.Count; i++)
                                             {
                                                 if (arr[i] != item.NhaMang)
                                                 {
@@ -530,7 +532,11 @@
                                 htmlMenhGia = htmlMenhGia + `<option value="${MenhGia[i]}" selected="selected">${str}</option>`
                             }
                         }
-                        var NhaMang = ["Viettel", "Vinaphone", "Mobifone", "vietnamobile", "Gmobile"];
+                        var dsNhaMang = document.querySelectorAll(".select__input.select__NhaMang option");
+                        var NhaMang = [];
+                        for (var i = 1; i < dsNhaMang.length; i++) {
+                            NhaMang.push(dsNhaMang[i].innerText)
+                        }
                         var htmlNhaMang = ``;
                         for (var i = 0; i < NhaMang.length; i++) {
                             if (NhaMang[i] != item.NhaMang) {

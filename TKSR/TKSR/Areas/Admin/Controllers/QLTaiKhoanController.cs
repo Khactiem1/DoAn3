@@ -192,7 +192,6 @@ namespace TKSR.Areas.Admin.Controllers
                 return false;
             }        
         }
-
         // PUT: api/QLTaiKhoan/5
         public void Put(int id, [FromBody]string value)
         {
@@ -311,5 +310,52 @@ namespace TKSR.Areas.Admin.Controllers
                 return false;
             }
         }
+        [Route("PostEditChietKhau")]
+        public bool PostEditChietKhau([FromBody] Customer value)
+        {
+            try
+            {
+                string[] DSNhaMang = value.NhaMang;
+                string[] DSChietKhauBan = value.Ban;
+                string[] DSChietKhauNhap = value.Nhap;
+                bool check = true;
+                foreach(string items in DSChietKhauBan)
+                {
+                    if(double.Parse(items) <= 0.3 && double.Parse(items) >= 2)
+                    {
+                        check = false;
+                        break;
+                    }
+                }
+                foreach (string items in DSChietKhauNhap)
+                {
+                    if (double.Parse(items) <= 0.3 && double.Parse(items) >= 2)
+                    {
+                        check = false;
+                        break;
+                    }
+                }
+                if(check == false)
+                {
+                    return false;
+                }
+                else
+                {
+
+
+                    return true;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
+    }
+    public class Customer
+    {
+        public string[] NhaMang { get; set; }
+        public string[] Ban { get; set; }
+        public string[] Nhap { get; set; }
     }
 }

@@ -18,10 +18,11 @@ namespace DTO
         public virtual DbSet<Register> Registers { get; set; }
         public virtual DbSet<DichVuThanhToan> DichVuThanhToans { get; set; }
         public virtual DbSet<HoaDon> HoaDons { get; set; }
-        public virtual DbSet<LoaiThe> LoaiThes { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
         public virtual DbSet<PhanHoi> PhanHois { get; set; }
+        public virtual DbSet<ChietKhau> ChietKhaus { get; set; }
+        public virtual DbSet<NhaMang> NhaMangs { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

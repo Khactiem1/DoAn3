@@ -1,4 +1,4 @@
-create database tksr
+﻿create database tksr
 use tksr
 
 create table DichVu(
@@ -8,14 +8,6 @@ create table DichVu(
 	TenDichVu nvarchar(50),
 	DoiTac nvarchar(50),
 	NgayThem DateTime
-)
-
-create table LoaiThe(
-	NhaMang nvarchar(50) primary key,
-	MenhGia int,
-	ChietKhauNap float,
-	ChietKhauBan float,
-
 )
 
 
@@ -29,6 +21,92 @@ create table TheNap(
 	NhaMang nvarchar(50),
 	NgayThem datetime
 )
+ALTER TABLE TheNap
+ADD MaChietKhau nvarchar(50) FOREIGN KEY REFERENCES dbo.ChietKhau
+
+
+create table ChietKhau(
+	MaChietKhau nvarchar(50) primary key,
+	NhaMang nvarchar(50),
+	MenhGia nvarchar(50),
+	ChietKhauNap float,
+	ChietKhauBan float,
+)
+CREATE TABLE NhaMang(
+	TenNhaMang nvarchar(50) primary key,
+	Logo nvarchar(50)
+)
+
+
+drop table ChietKhau
+
+
+
+ALTER TRIGGER tg__NhaMang ON dbo.NhaMang
+FOR INSERT
+AS
+BEGIN
+	DECLARE @NhaMang NVARCHAR(50)
+	SELECT @NhaMang = TenNhaMang FROM INSERTED
+	INSERT INTO ChietKhau
+	VALUES(@NhaMang + N'1', @NhaMang, N'10000',0.7,1)
+	INSERT INTO ChietKhau
+	VALUES(@NhaMang + N'2', @NhaMang, N'20000',0.7,1)
+	INSERT INTO ChietKhau
+	VALUES(@NhaMang + N'3', @NhaMang, N'30000',0.7,1)
+	INSERT INTO ChietKhau
+	VALUES(@NhaMang + N'4', @NhaMang, N'50000',0.7,1)
+	INSERT INTO ChietKhau
+	VALUES(@NhaMang + N'5', @NhaMang, N'100000',0.7,1)
+	INSERT INTO ChietKhau
+	VALUES(@NhaMang + N'6', @NhaMang, N'200000',0.7,1)
+	INSERT INTO ChietKhau
+	VALUES(@NhaMang + N'7', @NhaMang, N'300000',0.7,1)
+	INSERT INTO ChietKhau
+	VALUES(@NhaMang + N'8', @NhaMang, N'500000',0.7,1)
+	INSERT INTO ChietKhau
+	VALUES(@NhaMang + N'9', @NhaMang, N'1000000',0.7,1)
+END
+
+INSERT INTO NhaMang
+VALUES(N'Viettel', N'logo5.jpg')
+INSERT INTO NhaMang
+VALUES(N'Mobifone', N'logo1.jpg')
+INSERT INTO NhaMang
+VALUES(N'vietnamobile', N'logo4.jpg')
+INSERT INTO NhaMang
+VALUES(N'Vinaphone', N'logo2.jpg')
+INSERT INTO NhaMang
+VALUES(N'Gmobile', N'logo3.jpg')
+INSERT INTO NhaMang
+VALUES(N'Garena', N'Garena.png')
+
+
+delete MuaThe
+
+
+CREATE TRIGGER tg__01 ON dbo.TheNap
+FOR INSERT
+AS
+BEGIN
+	DECLARE @MaThe NVARCHAR(50)
+	DECLARE @MenhGia NVARCHAR(50)
+	DECLARE @NhaMang NVARCHAR(50)
+	DECLARE @MaChietKhau NVARCHAR(50)
+	SELECT @MaThe = MaThe FROM INSERTED
+	SELECT @MenhGia = MenhGia FROM INSERTED
+	SELECT @NhaMang = NhaMang FROM INSERTED
+	SELECT @MaChietKhau = MaChietKhau FROM dbo.ChietKhau AS CK WHERE CK.MenhGia = @MenhGia AND CK.NhaMang = @NhaMang
+	UPDATE dbo.TheNap SET MaChietKhau = @MaChietKhau WHERE MaThe = @MaThe;
+END
+
+
+
+
+
+
+
+
 
 create table MuaThe(
 	tenTK nvarchar(50),
@@ -64,6 +142,9 @@ create table TaiKhoan(
 	DacDiem nvarchar(100),
 	SoDu int
 )
+ALTER TABLE TaiKhoan
+ALTER COLUMN SoDu float;
+
 ALTER TABLE TaiKhoan
   add MatKhauC2 nvarchar(50)
 

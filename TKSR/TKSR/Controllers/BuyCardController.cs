@@ -12,6 +12,7 @@ namespace TKSR.Controllers
     public class BuyCardController : Controller
     {
         DBIO db = new DBIO();
+        TheNapDBIO CardDB = new TheNapDBIO();
         // GET: BuyCard
         public ActionResult Index()
         {
@@ -22,6 +23,11 @@ namespace TKSR.Controllers
             }
             else
             {
+                List<NhaMang> DSNhaMang = CardDB.GetAllNhaMang();
+                ViewBag.DSNhaMang = DSNhaMang;
+                ViewBag.ChietKhau = CardDB.GetAllChietKhau();
+                ChietKhau PriceScreen = CardDB.GetChietKhau(DSNhaMang[0].TenNhaMang, "10000");
+                ViewBag.PriceScreen = PriceScreen.ChietKhauBan * 10000;
                 ClassModels model = new ClassModels();
                 ViewBag.Message = "none";
                 ViewBag.Link = "TheNap";
@@ -31,6 +37,13 @@ namespace TKSR.Controllers
                 return View(model);
             }
             return View();
+        }
+        [Route("GetChietKhau")]
+        public string GetChietKhau(string id)
+        {
+            string[] str = id.Split('-');
+            ChietKhau PriceScreen = CardDB.GetChietKhau(str[0], str[1]);
+            return PriceScreen.ChietKhauBan + "";
         }
         public ActionResult NapTien()
         {
@@ -83,7 +96,8 @@ namespace TKSR.Controllers
                     }
                     else
                     {
-                        double Price = int.Parse(MenhGia) * int.Parse(SoLuong) * 0.96;
+                        string ChietKhau = GetChietKhau(NhaMang + "-" + MenhGia);
+                        double Price = int.Parse(MenhGia) * int.Parse(SoLuong) * float.Parse(ChietKhau);
                         if (Price > userEdit.SoDu)
                         {
                             jr.Data = new
@@ -118,8 +132,8 @@ namespace TKSR.Controllers
                                     db.DeleteTheNap(DSThe[i]);
                                 }
                                 string str = Price + "";
-                                user.SoDu -= int.Parse(str);
-                                userEdit.SoDu -= int.Parse(str);
+                                user.SoDu -= double.Parse(str);
+                                userEdit.SoDu -= double.Parse(str);
                                 db.Save();
                                 jr.Data = DSTheMua;
                             }

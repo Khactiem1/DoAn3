@@ -1,0 +1,253 @@
+﻿@{
+    ViewBag.Title = "Quản lý chiết khấu thẻ";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<style>
+    .table__history-item{
+        text-align: center;
+    }
+    .btn__card-buy {
+        color: var(--background_color-menu);
+        background-color: var(--primary_color);
+        border-radius: 5px;
+        text-decoration: none;
+        padding: 6px 12px;
+        font-size: 15px;
+        width: 200px;
+        display: block;
+        margin: 30px auto 0 auto;
+        text-align: center;
+        transition: all 0.2s ease-in-out;
+        border: none;
+        cursor: pointer;
+    }
+    .btn__card-buy:hover{
+        background-color: #95005a;
+    }
+</style>
+<div class="info__bug">
+    <div class="form">
+        <h3 class="bar__title title__info">
+            Giá Nhập vào
+        </h3>
+        <div class="form__container container">
+            <div class="form__history">
+                <div class="table__history">
+                    <div style="width: 25%" class="table__history-item">
+                        <span>Nhà mạng</span>
+                    </div>
+                    <div class="table__history-item">
+                        <span>10.000</span>
+                    </div>
+                    <div class="table__history-item">
+                        <span>20.000</span>
+                    </div>
+                    <div class="table__history-item">
+                        <span>30.000</span>
+                    </div>
+                    <div class="table__history-item">
+                        <span>50.000</span>
+                    </div>
+                    <div class="table__history-item">
+                        <span>100.000</span>
+                    </div>
+                    <div class="table__history-item">
+                        <span>200.000</span>
+                    </div>
+                    <div class="table__history-item">
+                        <span>300.000</span>
+                    </div>
+                    <div class="table__history-item">
+                        <span>500.000</span>
+                    </div>
+                    <div class="table__history-item">
+                        <span>1.000.000</span>
+                    </div>
+                </div>
+                <div class="form__content form-gianhap">
+                    @{
+                        foreach (var item in ViewBag.DSNhaMang)
+                        {
+                            <div class="table__history">
+                                <div style="width: 25%" class="table__history-item">
+                                    <span>@item.TenNhaMang</span>
+                                </div>
+                                @foreach (var items in ViewBag.DSChietKhau)
+                                {
+                                    if (items.NhaMang == item.TenNhaMang)
+                                    {
+                                        <div style="background-color: #fff" class="table__history-item">
+                                            <svg class="icon__update-invalid" width="16" height="16" viewBox="0 0 16 16"><path d="M0 0h16v16H0V0z" fill="none"></path><path d="M15.2 13.1L8.6 1.6c-.2-.4-.9-.4-1.2 0L.8 13.1c-.1.2-.1.5 0 .7.1.2.3.3.6.3h13.3c.2 0 .5-.1.6-.3.1-.2.1-.5-.1-.7zM8.7 12H7.3v-1.3h1.3V12zm0-2.7H7.3v-4h1.3v4z" fill="currentColor"></path></svg>
+                                            <input style="text-align: center; background-color: #fff" maxlength="6" value="@items.ChietKhauNap" class="input__update">
+                                        </div>
+                                    }
+                                }
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+        <h3 style="margin-top: 20px;" class="bar__title title__info">
+            Giá bán ra
+        </h3>
+        <div class="form__container container">
+            <div class="form__history">
+                <div class="table__history">
+                    <div style="width: 25%" class="table__history-item">
+                        <span>Nhà mạng</span>
+                    </div>
+                    <div class="table__history-item">
+                        <span>10.000</span>
+                    </div>
+                    <div class="table__history-item">
+                        <span>20.000</span>
+                    </div>
+                    <div class="table__history-item">
+                        <span>30.000</span>
+                    </div>
+                    <div class="table__history-item">
+                        <span>50.000</span>
+                    </div>
+                    <div class="table__history-item">
+                        <span>100.000</span>
+                    </div>
+                    <div class="table__history-item">
+                        <span>200.000</span>
+                    </div>
+                    <div class="table__history-item">
+                        <span>300.000</span>
+                    </div>
+                    <div class="table__history-item">
+                        <span>500.000</span>
+                    </div>
+                    <div class="table__history-item">
+                        <span>1.000.000</span>
+                    </div>
+                </div>
+                <div class="form__content form-giaban">
+                    @{
+                        foreach (var item in ViewBag.DSNhaMang)
+                        {
+                            <div class="table__history">
+                                <div style="width: 25%" class="table__history-item">
+                                    <span>@item.TenNhaMang</span>
+                                </div>
+                                @foreach (var items in ViewBag.DSChietKhau)
+                                {
+                                    if (items.NhaMang == item.TenNhaMang)
+                                    {
+                                        <div style="background-color: #fff" class="table__history-item">
+                                            <svg class="icon__update-invalid" width="16" height="16" viewBox="0 0 16 16"><path d="M0 0h16v16H0V0z" fill="none"></path><path d="M15.2 13.1L8.6 1.6c-.2-.4-.9-.4-1.2 0L.8 13.1c-.1.2-.1.5 0 .7.1.2.3.3.6.3h13.3c.2 0 .5-.1.6-.3.1-.2.1-.5-.1-.7zM8.7 12H7.3v-1.3h1.3V12zm0-2.7H7.3v-4h1.3v4z" fill="currentColor"></path></svg>
+                                            <input style="text-align: center; background-color: #fff" maxlength="6" value="@items.ChietKhauBan" class="input__update">
+                                        </div>
+                                    }
+                                }
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+            <button type="button" class="btn__card-buy">
+                Cập nhật
+            </button>
+        </div>
+    </div>
+    <div class="waning">
+        <i>
+            * Nỗ lực tiêu chí tăng số lượng khách hàng trong năm tới mục tiêu trên 1000 lượt thanh toán mỗi tháng, bán được 100 thẻ nạp mỗi tuần
+        </i>
+    </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const input = document.querySelectorAll('.input__update');
+        var check__update = true;
+        input.forEach((blurs, index) => {
+            setInputFilter(input[index], function (value) {
+                return /^-?\d*[.]?\d*$/.test(value) && (value === "" || parseInt(value) <= 1)
+            });
+            blurs.onblur = function () {
+                if (blurs.value <= 0.3) {
+                    add_oninputIcon(blurs.parentElement)
+                }
+            }
+            blurs.oninput = function () {
+                remove_oninputIcon(blurs.parentElement)
+                check__update = true;
+            }
+        })
+        const button__update = document.querySelector('.btn__card-buy');
+        button__update.onclick = function () {
+            input.forEach((blurs, index) => {
+                if (blurs.value <= 0.3) {
+                    add_oninputIcon(blurs.parentElement)
+                    check__update = false;
+                }
+            })
+            if (check__update == true) {
+                var CardImport = [];
+                var CardSell = [];
+                var DSNhaMang = [];
+                var inputImport = document.querySelectorAll('.form__content.form-gianhap .input__update');
+                var inputSell = document.querySelectorAll('.form__content.form-giaban .input__update');
+                var NhaMang = document.querySelectorAll('.form__content.form-gianhap .table__history .table__history-item span')
+                inputImport.forEach((items, index) => {
+                    CardImport.push(items.value);
+                })
+                inputSell.forEach((items, index) => {
+                    CardSell.push(items.value);
+                })
+                NhaMang.forEach((items, index) => {
+                    DSNhaMang.push(items.innerText);
+                })
+                var SP = {};
+                SP.Nhap = CardImport;
+                SP.Ban = CardSell;
+                SP.NhaMang = DSNhaMang;
+                active__Loading(true);
+                $.ajax({
+                    url: "/PostEditChietKhau",
+                    method: "POST",
+                    data: JSON.stringify(SP),
+                    contentType: "application/json",
+                    dataType: "json"
+                }).done(function (response) {
+                    active__Loading(false);
+                    if (response == true || response == "True") {
+                        active__messageNotification('Cập nhật thành công', true);
+                    }
+                    else if (response == false || response == "False") {
+                        active__messageNotification('Lỗi không đồng bộ máy chủ', false);
+                    }
+                }).fail(function (response) {
+                    active__Loading(false);
+                    active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+                })
+                //location.reload()
+            }
+        }
+    }, false)
+    function setInputFilter(textbox, inputFilter) {
+        ["input", "keydown", "keyup", "mousedown", "mouseup", "select", "contextmenu", "drop"].forEach(function (event) {
+            textbox.addEventListener(event, function () {
+                if (inputFilter(this.value)) {
+                    this.oldValue = this.value;
+                    this.oldSelectionStart = this.selectionStart;
+                    this.oldSelectionEnd = this.selectionEnd;
+                } else if (this.hasOwnProperty("oldValue")) {
+                    this.value = this.oldValue;
+                    this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+                }
+            });
+        });
+    }
+    function remove_oninputIcon(element) {
+        var icon = element.querySelector('.icon__update-invalid');
+        icon.classList.remove('icon__update-invalid__active');
+    }
+    function add_oninputIcon(element) {
+        var icon = element.querySelector('.icon__update-invalid');
+        icon.classList.add('icon__update-invalid__active');
+    }
+</script>
