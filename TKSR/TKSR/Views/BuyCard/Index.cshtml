@@ -4,6 +4,13 @@
     Layout = "~/Views/Shared/_LayoutLogOn.cshtml";
 }
 
+<style>
+    .item-chietkhau{
+        width: 10%;
+        display: flex;
+        justify-content: center;
+    }
+</style>
 <nav class="oriented">
     <div class="grid wide">
         <ul class="oriented__list">
@@ -21,61 +28,42 @@
             chọn dịch vụ
         </h3>
         <div class="grid">
-            <ul class="row list__card">
-                <li class="col l-2-4 m-4 c-6">
-                    <div class="card__item  card__item-active">
-                        <div class="card__item-logo">
-                            <img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo5.jpg" alt="">
-                        </div>
-                        <div class="card__item-text">
-                            viettel
-                        </div>
-                    </div>
-                </li>
-                <li class="col l-2-4 m-4 c-6">
-                    <div class="card__item">
-                        <div class="card__item-logo">
-                            <img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo2.jpg" alt="">
-                        </div>
-                        <div class="card__item-text">
-                            vinaphone
-                        </div>
-                    </div>
-                </li>
-                <li class="col l-2-4 m-4 c-6">
-                    <div class="card__item">
-                        <div class="card__item-logo">
-                            <img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo3.jpg" alt="">
-                        </div>
-                        <div class="card__item-text">
-                            gmobile
-                        </div>
-                    </div>
-                </li>
-                <li class="col l-2-4 m-4 c-6">
-                    <div class="card__item">
-                        <div class="card__item-logo">
-                            <img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo4.jpg" alt="">
-                        </div>
-                        <div class="card__item-text">
-                            vietnamobile
-                        </div>
-                    </div>
-                </li>
-                <li class="col l-2-4 m-4 c-6">
-                    <div class="card__item">
-                        <div class="card__item-logo">
-                            <img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo1.jpg" alt="">
-                        </div>
-                        <div class="card__item-text">
-                            mobifone
-                        </div>
-                    </div>
-                </li>
-            </ul>
-            <h3 class="rechargecard__content-title">
-                Thẻ điện thoại Viettel
-            </h3>
+            @{
+                <ul class="row list__card">
+                    @for (int i = 0; i < ViewBag.DSNhaMang.Count; i++)
+                    {
+                        if (i == 0)
+                        {
+                            <li class="col l-2-4 m-4 c-6">
+                                <div class="card__item card__item-active">
+                                    <div class="card__item-logo">
+                                        <img src="@Request.Url.Scheme://@Request.Url.Authority/ImgCard/@ViewBag.DSNhaMang[i].Logo" alt="">
+                                    </div>
+                                    <div class="card__item-text">
+                                        @ViewBag.DSNhaMang[i].TenNhaMang
+                                    </div>
+                                </div>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="col l-2-4 m-4 c-6">
+                                <div class="card__item">
+                                    <div class="card__item-logo">
+                                        <img src="@Request.Url.Scheme://@Request.Url.Authority/ImgCard/@ViewBag.DSNhaMang[i].Logo" alt="">
+                                    </div>
+                                    <div class="card__item-text">
+                                        @ViewBag.DSNhaMang[i].TenNhaMang
+                                    </div>
+                                </div>
+                            </li>
+                        }
+                    }
+                </ul>
+                <h3 class="rechargecard__content-title">
+                    Thẻ điện thoại @ViewBag.DSNhaMang[0].TenNhaMang
+                </h3>
+            }
             <form action="">
                 <div class="row list__select">
                     <div class="col l-6 m-6 c-12 list__select-text">
@@ -125,7 +113,7 @@
                         <span class="form-message">
                         </span>
                         <div class="row money">
-                            <i>Thành tiền: 9,600 VNĐ</i>
+                            <i>Thành tiền: @String.Format("{0:#,##0.##}", ViewBag.PriceScreen) VNĐ</i>
                         </div>
                     </div>
                 </div>
@@ -137,6 +125,9 @@
             </form>
         </div>
     </div>
+    <h3 class="rechargecard__content-title">
+        Thẻ mua gần đây
+    </h3>
     <div class="grid rechargecard__history-content">
         <div class="row history-content">
             <div class="history-title__item">
@@ -161,7 +152,8 @@
                 foreach (var item in Model.DSTheMua)
                 {
                     number++;
-                    if(number > 10) {
+                    if (number > 10)
+                    {
                         break;
                     }
                     <div class="row history-content">
@@ -175,7 +167,7 @@
                             @item.Seri
                         </div>
                         <div class="history-title__item">
-                            @String.Format("{0:#,##0.##}", item.MenhGia) VNĐ
+                            @String.Format("{0:#,##0.##}", int.Parse(item.MenhGia)) VNĐ
                         </div>
                         <div class="history-title__item">
                             @item.NgayMua.ToString("dd/MM/yyyy HH:mm:ss")
@@ -184,6 +176,62 @@
                 }
             }
         </div>
+    </div>
+    <h3 class="rechargecard__content-title">
+        Bảng giá thẻ hôm nay
+    </h3>
+    <div class="grid rechargecard__history-content">
+        <div class="row history-content">
+            <div class="col history-title__item item-chietkhau">
+                Nhà mạng
+            </div>
+            <div class="col history-title__item item-chietkhau">
+                10.000
+            </div>
+            <div class="col history-title__item item-chietkhau">
+                20.000
+            </div>
+            <div class="col history-title__item item-chietkhau">
+                30.000
+            </div>
+            <div class="col history-title__item item-chietkhau">
+                50.000
+            </div>
+            <div class="col history-title__item item-chietkhau">
+                100.000
+            </div>
+            <div class="col history-title__item item-chietkhau">
+                200.000
+            </div>
+            <div class="col history-title__item item-chietkhau">
+                300.000
+            </div>
+            <div class="col history-title__item item-chietkhau">
+                500.000
+            </div>
+            <div class="col history-title__item item-chietkhau">
+                1.000.000
+            </div>
+        </div>
+        @{
+            foreach (var item in ViewBag.DSNhaMang)
+            {
+                <div class="row history-content">
+                    <div class="col history-title__item item-chietkhau">
+                        @item.TenNhaMang
+                    </div>
+                    @foreach (var items in ViewBag.ChietKhau)
+                    {
+                        if (items.NhaMang == item.TenNhaMang)
+                        {
+                            <div class="col history-title__item item-chietkhau">
+                                @items.ChietKhauBan
+                            </div>
+                        }
+                    }
+                </div>
+            }
+        }
     </div>
 </section>
 <section class="security">
@@ -299,9 +347,23 @@
 </section>
 <script src="@Request.Url.Scheme://@Request.Url.Authority/Assets/js/service.js"></script>
 <script>
+    function CheckChietKhau(NhaMang, MenhGia, event) {
+        $.ajax({
+            url: "/BuyCard/GetChietKhau?id=" + NhaMang + "-" + MenhGia,
+            method: "GET",
+            data: "",
+            contentType: "application/json",
+            dataType: ""
+        }).done(function (response) {
+            event(response)
+        }).fail(function () {
+            active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+        })
+    }
     document.addEventListener("DOMContentLoaded", function () {
         const $ = document.querySelector.bind(document);
         const $$ = document.querySelectorAll.bind(document);
+        var PriceEnd = @ViewBag.PriceScreen;
         /* rechargecard */
         (function () {
             const rechargecard = $$('.card__item');
@@ -311,14 +373,37 @@
             const select__menhgia = $('.menhgia');
             const select__soluong = $('.soluong');
             select__menhgia.onclick = function () {
-                const coin = select__soluong.value * select__menhgia.value * 0.96;
-                money.innerHTML = `Thành tiền: ` + coin.toLocaleString("en") + ` VNĐ`;
+                var NhaMangActive = $('.card__item.card__item-active .card__item-text').innerText;
+                CheckChietKhau(NhaMangActive, select__menhgia.value, function (res) {
+                    if (res == null || res == "") {
+                        active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+                    }
+                    else {
+                        var coin = select__soluong.value * select__menhgia.value * res;
+                        money.innerHTML = `Thành tiền: ` + coin.toLocaleString("en") + ` VNĐ`;
+                        PriceEnd = coin;
+                    }
+                });
             }
             select__soluong.onclick = function () {
-                const coin = select__soluong.value * select__menhgia.value * 0.96;
-                money.innerHTML = `Thành tiền: ` + coin.toLocaleString("en") + ` VNĐ`;
+                var NhaMangActive = $('.card__item.card__item-active .card__item-text').innerText;
+                CheckChietKhau(NhaMangActive, select__menhgia.value, function (res) {
+                    if (res == null || res == "") {
+                        active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+                    }
+                    else {
+                        var coin = select__soluong.value * select__menhgia.value * res;
+                        money.innerHTML = `Thành tiền: ` + coin.toLocaleString("en") + ` VNĐ`;
+                        PriceEnd = coin;
+                    }
+                });
             }
-            const category = ['Viettel', 'Vinaphone', 'Gmobile', 'Vietnamobile', 'Mobifone'];
+            const dsNhaMang = $$(".card__item .card__item-text");
+            const category = [];
+            for (var i = 0; i < dsNhaMang.length; i++)
+            {
+                category.push(dsNhaMang[i].innerText)
+            }
             rechargecard.forEach((rechargecard__active, index) => {
                 rechargecard__active.onclick = function () {
                     if (this.classList.contains('card__item-active') == false) {
@@ -326,6 +411,17 @@
                         card__close.classList.remove('card__item-active');
                         this.classList.add('card__item-active');
                         content__title.innerHTML = str + category[index];
+                        var NhaMangActive = $('.card__item.card__item-active .card__item-text').innerText;
+                        CheckChietKhau(NhaMangActive, select__menhgia.value, function (res) {
+                            if (res == null || res == "") {
+                                active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+                            }
+                            else {
+                                var coin = select__soluong.value * select__menhgia.value * res;
+                                money.innerHTML = `Thành tiền: ` + coin.toLocaleString("en") + ` VNĐ`;
+                                PriceEnd = coin;
+                            }
+                        });
                     }
                 }
             })
@@ -431,7 +527,7 @@
                                 auth__text[1].innerText = "Nhà mạng: " + card__acvive;
                                 auth__text[2].innerText = "Mệnh giá: " + Number(input[0].value).toLocaleString("en") + " VNĐ";
                                 auth__text[3].innerText = "Số lượng: " + input[1].value;
-                                auth__text[4].innerText = "Thành tiền: " + (input[0].value * input[1].value * 0.96).toLocaleString("en") + " VNĐ";
+                                auth__text[4].innerText = "Thành tiền: " + PriceEnd.toLocaleString("en") + " VNĐ";
                                 buyCard.onclick = function () {
                                     if (!isRunningBuy) {
                                         isRunningBuy = true;
@@ -469,8 +565,7 @@
                                                     auth__form.classList.remove('auth-form__active');
                                                     var moneyText = $$('.info__content .info__item');
                                                     var money = moneyText[1].innerText.replace(/,/g, '').replace(/ /g, '').replace(/Đ/g, '');
-                                                    var price = (input[0].value * input[1].value * 0.96);
-                                                    var text = money - price;
+                                                    var text = money - PriceEnd;
                                                     moneyText[1].innerText = Number(text).toLocaleString("en") + " Đ";
                                                     moneyText[3].innerText = Number(text).toLocaleString("en") + " Đ";
                                                     var content = $('.card__content');

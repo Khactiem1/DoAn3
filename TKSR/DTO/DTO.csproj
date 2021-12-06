@@ -53,12 +53,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChietKhau.cs" />
     <Compile Include="DichVu.cs" />
     <Compile Include="DichVuThanhToan.cs" />
     <Compile Include="HoaDon.cs" />
-    <Compile Include="LoaiThe.cs" />
     <Compile Include="MuaThe.cs" />
     <Compile Include="mydb.cs" />
+    <Compile Include="NhaMang.cs" />
     <Compile Include="PhanHoi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.cs" />

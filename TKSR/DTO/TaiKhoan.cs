@@ -39,7 +39,7 @@ namespace DTO
         [StringLength(100)]
         public string Email { get; set; }
 
-        public int? SoDu { get; set; }
+        public double SoDu { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoaDon> HoaDons { get; set; }

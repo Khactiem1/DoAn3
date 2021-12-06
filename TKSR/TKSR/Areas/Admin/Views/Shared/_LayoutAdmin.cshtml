@@ -75,7 +75,14 @@
                                     </a>
                                 </li>
                                 <li class="bar__list-item">
-                                    <a href="./HoaDon.html" class="bar__list-text">
+                                    <a href="@Request.Url.Scheme://@Request.Url.Authority/Admin/HomeAdmin/ChietKhau" class="bar__list-text @ViewBag.ChietKhau">
+                                        <span>
+                                            Điều chỉnh chiết khấu thẻ
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="bar__list-item">
+                                    <a @*href="./HoaDon.html"*@ class="bar__list-text">
                                         <span>
                                             Quản lý hoá đơn
                                         </span>
@@ -85,13 +92,6 @@
                                     <a href="@Request.Url.Scheme://@Request.Url.Authority/Admin/HomeAdmin/PhanHoi" class="bar__list-text @ViewBag.QLPhanHoi">
                                         <span>
                                             Phản hồi khách hàng
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="bar__list-item">
-                                    <a href="./Chat.html" class="bar__list-text">
-                                        <span>
-                                            Chat với khách hàng
                                         </span>
                                     </a>
                                 </li>
