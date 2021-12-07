@@ -24,10 +24,78 @@
     .btn__card-buy:hover{
         background-color: #95005a;
     }
+    .lable__img {
+        display: block;
+        width: 79%;
+        flex-wrap: wrap;
+        border-radius: 5px;
+        border: solid 1px #ccc;
+        color: #555;
+        padding: 6px 12px;
+        outline: none;
+        font-size: 16px;
+        margin-right: 10px;
+    }
+    .lable__img span {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+    }
+    #image{
+        width: 35px;
+        height: 35px;
+    }
+    .screen-img{
+        display: flex;
+    }
+    .invalid .lable__img {
+        background-color: #fdebee;
+        border-color: #f33a58;
+    }
 </style>
 <div class="info__bug">
     <div class="form">
         <h3 class="bar__title title__info">
+            Quản lý nhà mạng
+        </h3>
+        <div class="form__container noauto">
+            <form class="form__info">
+                <div class="row rechargecard__history-select">
+                    <div class="col l-3 m-12 c-12 rechargecard__history-item">
+                        <svg class="Input_icon__3bJ0I" width="16" height="16" viewBox="0 0 16 16"><path d="M0 0h16v16H0V0z" fill="none"></path><path d="M15.2 13.1L8.6 1.6c-.2-.4-.9-.4-1.2 0L.8 13.1c-.1.2-.1.5 0 .7.1.2.3.3.6.3h13.3c.2 0 .5-.1.6-.3.1-.2.1-.5-.1-.7zM8.7 12H7.3v-1.3h1.3V12zm0-2.7H7.3v-4h1.3v4z" fill="currentColor"></path></svg>
+                        <input maxlength="20" type="text" placeholder="Nhập tên nhà mạng" class="select__input form__update-the">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="col l-3 m-12 c-12 rechargecard__history-item">
+                        <svg style="right: 55px;" class="Input_icon__3bJ0I" width="16" height="16" viewBox="0 0 16 16"><path d="M0 0h16v16H0V0z" fill="none"></path><path d="M15.2 13.1L8.6 1.6c-.2-.4-.9-.4-1.2 0L.8 13.1c-.1.2-.1.5 0 .7.1.2.3.3.6.3h13.3c.2 0 .5-.1.6-.3.1-.2.1-.5-.1-.7zM8.7 12H7.3v-1.3h1.3V12zm0-2.7H7.3v-4h1.3v4z" fill="currentColor"></path></svg>
+                        <div class="screen-img">
+                            <label title="Nên chọn ảnh vuông kích thước 35px x 35px" class="lable__img" for="files">
+                                <span>Chọn hình ảnh</span>
+                            </label>
+                            <img id="image" />
+                        </div>
+                        <input style="display: none" id="files" type="file" accept=".jpg, .png" class="select__input form__update-the">
+                        <span class="form-message"></span>
+                    </div>
+                    <div style="max-width: 115px;" class="col l-3 m-12 c-12 rechargecard__history-item">
+                        <div class="btn__items">
+                            <button type="button" class="btn__search-history btn__full themSanPham">
+                                Thêm
+                            </button>
+                        </div>
+                    </div>
+                    <div style="max-width: 115px;" class="col l-3 m-12 c-12 rechargecard__history-item">
+                        <div class="btn__items">
+                            <button type="button" class="btn__search-history btn__full xoaSanPham">
+                                Xoá
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <h3 style="margin-top: 8px;" class="bar__title title__info">
             Giá Nhập vào
         </h3>
         <div class="form__container container">
@@ -161,72 +229,256 @@
 </div>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        const input = document.querySelectorAll('.input__update');
-        var check__update = true;
-        input.forEach((blurs, index) => {
-            setInputFilter(input[index], function (value) {
-                return /^-?\d*[.]?\d*$/.test(value) && (value === "" || parseInt(value) <= 1)
-            });
-            blurs.onblur = function () {
-                if (blurs.value <= 0.3) {
-                    add_oninputIcon(blurs.parentElement)
+        function remove_oninput(element) {
+            var message = element.querySelector('.form-message');
+            message.innerText = '';
+            element.classList.remove('invalid');
+        }
+        function add__blur(element, messages) {
+            var message = element.querySelector('.form-message');
+            message.innerText = messages;
+            element.classList.add('invalid');
+        }
+        function CheckID(element, event) {
+            $.ajax({
+                url: "/SearchOneNhaMang?id=" + element.value.trim(),
+                method: "GET",
+                data: "",
+                contentType: "application/json",
+                dataType: ""
+            }).done(function (response) {
+                event(response)
+            }).fail(function (response) {
+                console.log("erro");
+            })
+        }
+        //Xoá nhà mạng
+        (function () {
+            const blurs = document.querySelector('.select__input');
+            const btnXoa = document.querySelector('.xoaSanPham');
+            btnXoa.onclick = function () {
+                function tests() {
+                    return blurs.value.trim().length >= 3 && blurs.value.trim().length <= 20 ? undefined : `Nhập từ 3 đến 20 ký tự`;
+                }
+                if (tests() == null) {
+                    CheckID(blurs, function (res) {
+                        var check = true;
+                        if (res == true || res == "True") {
+                            check = false;
+                            add__blur(blurs.parentElement, "Không tìm thấy nhà mạng cần xoá");
+                        }
+                        if (check == true) {
+                            const modal = document.querySelector('.modal');
+                            const form = document.querySelector('.modal .auth-form');
+                            modal.classList.add('modal__active');
+                            form.classList.add('auth-form__active');
+                            const close = document.querySelector('.modal__overlay');
+                            const closeIcon = document.querySelector('.auth-form__icon');
+                            close.onclick = function () {
+                                modal.classList.remove('modal__active');
+                                form.classList.remove('auth-form__active');
+                            }
+                            closeIcon.onclick = function () {
+                                modal.classList.remove('modal__active');
+                                form.classList.remove('auth-form__active');
+                            }
+                            const mess = document.querySelector('.message__delete');
+                            mess.innerText = 'Bạn có chắc muốn xoá nhà mạng "' + blurs.value.trim() + '" ?';
+                            const confirm = document.querySelector('.auth-form__submit');
+                            confirm.onclick = function () {
+                                var isRunning = false;
+                                if (!isRunning) {
+                                    isRunning = true;
+                                    modal.classList.remove('modal__active');
+                                    form.classList.remove('auth-form__active');
+                                    active__Loading(true);
+                                    $.ajax({
+                                        url: "/RemoveNhaMang?id=" + blurs.value.trim(),
+                                        method: "POST",
+                                        data: "",
+                                        contentType: "application/json",
+                                        dataType: ""
+                                    }).done(function (response) {
+                                        active__Loading(false);
+                                        if (response == true || response == "True") {
+                                            location.reload()
+                                        }
+                                        else {
+                                            active__messageNotification("Không thể xoá, kho thẻ vẫn còn loại thẻ này", false);
+                                        }
+                                    }).fail(function (response) {
+                                        active__Loading(false);
+                                        active__messageNotification("Có lỗi xảy ra, thử lại sau", false);
+                                    })
+                                }
+                            }
+                        }
+                    });
+                } else {
+                    var mess = tests();
+                    add__blur(blurs.parentElement, mess);
                 }
             }
-            blurs.oninput = function () {
-                remove_oninputIcon(blurs.parentElement)
-                check__update = true;
-            }
-        })
-        const button__update = document.querySelector('.btn__card-buy');
-        button__update.onclick = function () {
+        })();
+
+        //Thêm nhà mạng
+        (function () {
+            const input = document.querySelectorAll('.select__input');
+            document.getElementById("files").onchange = function (ev) {
+                var reader = new FileReader();
+                const files = ev.target.files;
+                var element = document.querySelector('.lable__img span');
+                element.innerText = `${files[0].name}`;
+                reader.onload = function (e) {
+                    // get loaded data and render thumbnail.
+                    document.getElementById("image").src = e.target.result;
+                };
+                // read the image file as a data URL.
+                reader.readAsDataURL(this.files[0]);
+                remove_oninput(input[1].parentElement)
+            };
             input.forEach((blurs, index) => {
-                if (blurs.value <= 0.3) {
-                    add_oninputIcon(blurs.parentElement)
-                    check__update = false;
+                if (index == 0) {
+                    blurs.onblur = function () {
+                        function tests() {
+                            return blurs.value.trim().length >= 3 && blurs.value.trim().length <= 20 ? undefined : `Nhập từ 3 đến 20 ký tự`;
+                        }
+                        if (tests() == null) {
+                        } else {
+                            var mess = tests();
+                            add__blur(blurs.parentElement, mess);
+                        }
+                    }
+                    blurs.oninput = function () {
+                        remove_oninput(blurs.parentElement)
+                    }
                 }
             })
-            if (check__update == true) {
-                var CardImport = [];
-                var CardSell = [];
-                var DSNhaMang = [];
-                var inputImport = document.querySelectorAll('.form__content.form-gianhap .input__update');
-                var inputSell = document.querySelectorAll('.form__content.form-giaban .input__update');
-                var NhaMang = document.querySelectorAll('.form__content.form-gianhap .table__history .table__history-item span')
-                inputImport.forEach((items, index) => {
-                    CardImport.push(items.value);
-                })
-                inputSell.forEach((items, index) => {
-                    CardSell.push(items.value);
-                })
-                NhaMang.forEach((items, index) => {
-                    DSNhaMang.push(items.innerText);
-                })
-                var SP = {};
-                SP.Nhap = CardImport;
-                SP.Ban = CardSell;
-                SP.NhaMang = DSNhaMang;
-                active__Loading(true);
-                $.ajax({
-                    url: "/PostEditChietKhau",
-                    method: "POST",
-                    data: JSON.stringify(SP),
-                    contentType: "application/json",
-                    dataType: "json"
-                }).done(function (response) {
-                    active__Loading(false);
-                    if (response == true || response == "True") {
-                        active__messageNotification('Cập nhật thành công', true);
+            const btnThem = document.querySelector('.themSanPham');
+            btnThem.onclick = function () {
+                input.forEach((blurs, index) => {
+                    if (index == 0) {
+                        function tests() {
+                            return blurs.value.trim().length >= 3 && blurs.value.trim().length <= 20 ? undefined : `Nhập từ 3 đến 20 ký tự`;
+                        }
+                        if (tests() == null) {
+                            CheckID(blurs, function (res) {
+                                var check = true;
+                                if (res == false || res == "False") {
+                                    check = false;
+                                    add__blur(blurs.parentElement, "Nhà mạng này đã tồn tại");
+                                }
+                                if (document.getElementById("image").src == "") {
+                                    check = false;
+                                    add__blur(input[1].parentElement, "Chọn logo đại diện nhà mạng");
+                                }
+                                if (check == true) {
+                                    var SP = {};
+                                    SP.TenNhaMang = input[0].value.trim();
+                                    SP.Logo = $("#image").attr("src").split(",")[1];
+                                    active__Loading(true);
+                                    $.ajax({
+                                        url: "/PostOneNhaMang",
+                                        method: "POST",
+                                        data: JSON.stringify(SP),
+                                        contentType: "application/json",
+                                        dataType: "json"
+                                    }).done(function (response) {
+                                        active__Loading(false);
+                                        if (response == true || response == "True") {
+                                            location.reload()
+                                        }
+                                        else {
+                                            active__messageNotification("Có lỗi xảy ra, thử lại sau", false);
+                                        }
+                                    }).fail(function (response) {
+                                        active__Loading(false);
+                                        active__messageNotification("Có lỗi xảy ra, thử lại sau", false);
+                                    })
+                                }
+                            });
+                        } else {
+                            var mess = tests();
+                            add__blur(blurs.parentElement, mess);
+                        }
+                        if (document.getElementById("image").src == "") {
+                            check = false;
+                            add__blur(input[1].parentElement, "Chọn logo đại diện nhà mạng");
+                        }
                     }
-                    else if (response == false || response == "False") {
-                        active__messageNotification('Lỗi không đồng bộ máy chủ', false);
-                    }
-                }).fail(function (response) {
-                    active__Loading(false);
-                    active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
                 })
-                //location.reload()
             }
-        }
+        })();
+
+        ///Update chiết khấu thẻ nạp
+        (function () {
+            const input = document.querySelectorAll('.input__update');
+            var check__update = true;
+            input.forEach((blurs, index) => {
+                setInputFilter(input[index], function (value) {
+                    return /^-?\d*[.]?\d*$/.test(value) && (value === "" || parseInt(value) <= 1)
+                });
+                blurs.onblur = function () {
+                    if (blurs.value <= 0.3) {
+                        add_oninputIcon(blurs.parentElement)
+                    }
+                }
+                blurs.oninput = function () {
+                    remove_oninputIcon(blurs.parentElement)
+                    check__update = true;
+                }
+            })
+            const button__update = document.querySelector('.btn__card-buy');
+            button__update.onclick = function () {
+                input.forEach((blurs, index) => {
+                    if (blurs.value <= 0.3) {
+                        active__messageNotification('Chiết khấu phải lớn hơn 0.3', false);
+                        add_oninputIcon(blurs.parentElement)
+                        check__update = false;
+                    }
+                })
+                if (check__update == true) {
+                    var CardImport = [];
+                    var CardSell = [];
+                    var DSNhaMang = [];
+                    var inputImport = document.querySelectorAll('.form__content.form-gianhap .input__update');
+                    var inputSell = document.querySelectorAll('.form__content.form-giaban .input__update');
+                    var NhaMang = document.querySelectorAll('.form__content.form-gianhap .table__history .table__history-item span')
+                    inputImport.forEach((items, index) => {
+                        CardImport.push(items.value);
+                    })
+                    inputSell.forEach((items, index) => {
+                        CardSell.push(items.value);
+                    })
+                    NhaMang.forEach((items, index) => {
+                        DSNhaMang.push(items.innerText);
+                    })
+                    var SP = {};
+                    SP.Nhap = CardImport;
+                    SP.Ban = CardSell;
+                    SP.NhaMang = DSNhaMang;
+                    active__Loading(true);
+                    $.ajax({
+                        url: "/PostEditChietKhau",
+                        method: "POST",
+                        data: JSON.stringify(SP),
+                        contentType: "application/json",
+                        dataType: "json"
+                    }).done(function (response) {
+                        active__Loading(false);
+                        if (response == true || response == "True") {
+                            active__messageNotification('Cập nhật thành công', true);
+                        }
+                        else if (response == false || response == "False") {
+                            active__messageNotification('Lỗi không đồng bộ máy chủ', false);
+                        }
+                    }).fail(function (response) {
+                        active__Loading(false);
+                        active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+                    })
+                }
+            }
+        })();
     }, false)
     function setInputFilter(textbox, inputFilter) {
         ["input", "keydown", "keyup", "mousedown", "mouseup", "select", "contextmenu", "drop"].forEach(function (event) {

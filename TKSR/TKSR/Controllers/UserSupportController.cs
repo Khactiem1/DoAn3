@@ -24,7 +24,7 @@ namespace TKSR.Controllers
         /// <param name="userProfile"></param>
         /// <returns>@Created by tungnt.net - 6/2015</returns>
         [Route("UploadImgSupport")]
-        public bool Post([FromBody] UserProfile userProfile)
+        public bool Post([FromBody] UserProfile userProfile,string url,string imageTail)
         {
             bool result = false;
             try
@@ -34,7 +34,7 @@ namespace TKSR.Controllers
                 {
                     using (Image image = Base64ToImage(userProfile.UserAvatarBase64String))
                     {
-                    string strFileName = "~/ImgSupport/" + userProfile.UserId + ".jpg";
+                    string strFileName = "~/"+url+"/" + userProfile.UserId + imageTail;
                     image.Save(HttpContext.Current.Server.MapPath(strFileName), ImageFormat.Jpeg);
                     result = true;
                     }

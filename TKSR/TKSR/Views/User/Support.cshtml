@@ -3,7 +3,23 @@
     ViewBag.Title = "Trung tâm hỏi đáp TKSR";
     Layout = "~/Views/Shared/_LayoutLogOn.cshtml";
 }
-
+<style>
+    .lable__img {
+        resize: none;
+        width: 100%;
+        outline: none;
+        border: solid 1px #ccc;
+        transition: all ease 0.2s;
+        padding: 0.4rem 1rem;
+        background-color: unset;
+        border-radius: 2px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        color: var(--text_color_medium);
+        font-size: 1rem;
+        box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%);
+    }
+</style>
 <nav class="oriented">
     <div class="grid wide">
         <ul class="oriented__list">
@@ -899,7 +915,10 @@
                         </div>
                         <div class="form__group">
                             <label for="">Hình ảnh: </label>
-                            <input id="files" accept=".jpg, .png" type="file">
+                            <label class="lable__img" for="files">
+                                <span>Chọn hình ảnh</span>
+                            </label>
+                            <input style="display: none;" id="files" accept=".jpg, .png" type="file">
                             <img id="image" />
                         </div>
                         <button type="button" class="auth-form__submit auth-form__submit-suport">
@@ -916,7 +935,7 @@
         </i>
     </div>
 </section>
-<script src="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/User/Support/active.js"></script>
+<script src="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/User/Support/actives.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         /* Validate */

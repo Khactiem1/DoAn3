@@ -12,6 +12,7 @@ namespace TKSR.Areas.Admin.Controllers
     public class QLTaiKhoanController : ApiController
     {
         DBIO db = new DBIO();
+        TheNapDBIO TheNapDB = new TheNapDBIO();
         [Route("Search")]
         public List<TaiKhoan> GetOneUser(string Name)
         {
@@ -77,6 +78,24 @@ namespace TKSR.Areas.Admin.Controllers
             try
             {
                 TheNap The = db.GetCheckMaThe(id);
+                if (The != null)
+                {
+                    return false;
+                }
+                return true;
+            }
+            catch
+            {
+                return true;
+            }
+        }
+
+        [Route("SearchOneNhaMang")]
+        public bool GetCheckNhaMang(string id)
+        {
+            try
+            {
+                NhaMang The = TheNapDB.GetNhaMang(id);
                 if (The != null)
                 {
                     return false;
@@ -341,8 +360,37 @@ namespace TKSR.Areas.Admin.Controllers
                 }
                 else
                 {
-
-
+                    string[] MenhGia = new string[] { "10000", "20000", "30000", "50000", "100000", "200000", "300000", "500000", "1000000"};
+                    int indexChietKhauBan = 0;
+                    int quantityChietKhauBan = 0;
+                    foreach (string items in DSNhaMang)
+                    {
+                        int indexNhaMang = -1;
+                        indexChietKhauBan += 1;
+                        for(int i = quantityChietKhauBan; i < indexChietKhauBan * 9; i++)
+                        {
+                            indexNhaMang++;
+                            ChietKhau updateChietKhau = TheNapDB.GetChietKhau(items,MenhGia[indexNhaMang]);
+                            quantityChietKhauBan++;
+                            updateChietKhau.ChietKhauBan = double.Parse(DSChietKhauBan[i]);
+                            TheNapDB.Save();
+                        }
+                    }
+                    int indexChietKhauNhap = 0;
+                    int quantityChietKhauNhap = 0;
+                    foreach (string items in DSNhaMang)
+                    {
+                        int indexNhaMang = -1;
+                        indexChietKhauNhap += 1;
+                        for (int i = quantityChietKhauNhap; i < indexChietKhauNhap * 9; i++)
+                        {
+                            indexNhaMang++;
+                            ChietKhau updateChietKhau = TheNapDB.GetChietKhau(items, MenhGia[indexNhaMang]);
+                            quantityChietKhauNhap++;
+                            updateChietKhau.ChietKhauNap = double.Parse(DSChietKhauNhap[i]);
+                            TheNapDB.Save();
+                        }
+                    }
                     return true;
                 }
             }

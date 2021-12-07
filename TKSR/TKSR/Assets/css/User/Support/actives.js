@@ -76,9 +76,11 @@ document.addEventListener("DOMContentLoaded",function(){
             }
         })
     })();
-    document.getElementById("files").onchange = function () {
+    document.getElementById("files").onchange = function (ev) {
         var reader = new FileReader();
-    
+        const files = ev.target.files;
+        var element = document.querySelector('.lable__img span');
+        element.innerText = `${files[0].name}`;
         reader.onload = function (e) {
             // get loaded data and render thumbnail.
             document.getElementById("image").src = e.target.result;

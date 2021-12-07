@@ -246,7 +246,7 @@ namespace TKSR.Controllers
                     UserProfile file = new UserProfile();
                     file.UserId = user.tenTK + src;
                     file.UserAvatarBase64String = img;
-                    Upload.Post(file);
+                    Upload.Post(file, "ImgSupport", ".jpg");
                 }
                 newPH.NgayPhanHoi = nowh;
                 db.PostPhanHoi(newPH);

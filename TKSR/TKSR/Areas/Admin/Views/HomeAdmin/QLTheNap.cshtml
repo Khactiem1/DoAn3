@@ -398,7 +398,7 @@
                                     dataType: "json"
                                 }).done(function (response) {
                                     active__Loading(false);
-                                    if (response == true) {
+                                    if (response == true || response == "True") {
                                         LoadData(0, '', '', '', '', true, recort.value);
                                         input[0].value = "";
                                         input[1].value = "";
