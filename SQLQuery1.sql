@@ -42,7 +42,7 @@ drop table ChietKhau
 
 
 
-ALTER TRIGGER tg__NhaMang ON dbo.NhaMang
+CREATE TRIGGER tg__NhaMang ON dbo.NhaMang
 FOR INSERT
 AS
 BEGIN
@@ -68,6 +68,18 @@ BEGIN
 	VALUES(@NhaMang + N'9', @NhaMang, N'1000000',0.7,1)
 END
 
+
+CREATE TRIGGER tg__DELETENhaMang ON dbo.NhaMang
+FOR DELETE
+AS
+BEGIN
+	DECLARE @NhaMang NVARCHAR(50)
+	SELECT @NhaMang = TenNhaMang FROM DELETED
+	DELETE dbo.ChietKhau WHERE NhaMang = @NhaMang
+END
+
+DELETE NhaMang where TenNhaMang = N'Garena'
+
 INSERT INTO NhaMang
 VALUES(N'Viettel', N'logo5.jpg')
 INSERT INTO NhaMang
@@ -78,8 +90,6 @@ INSERT INTO NhaMang
 VALUES(N'Vinaphone', N'logo2.jpg')
 INSERT INTO NhaMang
 VALUES(N'Gmobile', N'logo3.jpg')
-INSERT INTO NhaMang
-VALUES(N'Garena', N'Garena.png')
 
 
 delete MuaThe

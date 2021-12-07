@@ -142,6 +142,7 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\QLTaiKhoanController.cs" />
+    <Compile Include="Areas\Admin\Controllers\UpdateDataController.cs" />
     <Compile Include="Controllers\BuyCardController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UserController.cs" />
@@ -175,7 +176,7 @@
     <Content Include="Assets\css\User\NapThe\validateCard.js" />
     <Content Include="Assets\css\User\responsive.css" />
     <Content Include="Assets\css\User\styles.css" />
-    <Content Include="Assets\css\User\Support\active.js" />
+    <Content Include="Assets\css\User\Support\actives.js" />
     <Content Include="Assets\css\User\Support\img\hoidap-head-bg.jpg" />
     <Content Include="Assets\css\User\Support\responsive.css" />
     <Content Include="Assets\css\User\Support\style.css" />
