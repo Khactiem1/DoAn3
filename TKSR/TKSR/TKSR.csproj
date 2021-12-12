@@ -159,7 +159,7 @@
     <Content Include="Areas\Admin\Assets\js\active.js" />
     <Content Include="Areas\Admin\Assets\js\Chat.js" />
     <Content Include="Areas\Admin\Assets\js\validateDichVu.js" />
-    <Content Include="Assets\css\bases.css" />
+    <Content Include="Assets\css\base.css" />
     <Content Include="Assets\css\font.css" />
     <Content Include="Assets\css\footer.css" />
     <Content Include="Assets\css\grids.css" />
@@ -181,6 +181,14 @@
     <Content Include="Assets\css\User\Support\responsive.css" />
     <Content Include="Assets\css\User\Support\style.css" />
     <Content Include="Assets\css\User\Support\validate.js" />
+    <Content Include="Assets\favicons\android-chrome-96x96.png" />
+    <Content Include="Assets\favicons\apple-touch-icon.png" />
+    <Content Include="Assets\favicons\browserconfig.xml" />
+    <Content Include="Assets\favicons\favicon-16x16.png" />
+    <Content Include="Assets\favicons\favicon-32x32.png" />
+    <Content Include="Assets\favicons\favicon.ico" />
+    <Content Include="Assets\favicons\mstile-150x150.png" />
+    <Content Include="Assets\favicons\safari-pinned-tab.svg" />
     <Content Include="Assets\img\AnhMau.png" />
     <Content Include="Assets\img\AnhMau2.png" />
     <Content Include="Assets\img\BaoMat1.jpg" />
@@ -259,6 +267,7 @@
     <Content Include="Assets\js\Jquery\Loading.js" />
     <Content Include="Assets\js\Jquery\message.js" />
     <Content Include="Assets\js\service.js" />
+    <Content Include="Assets\js\updateAccount.js" />
     <Content Include="Assets\js\validators.js" />
     <Content Include="Assets\js\view__password.js" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -286,6 +295,8 @@
     <Content Include="Assets\webfonts\fa-solid-900.woff2" />
     <Content Include="Areas\Admin\Views\HomeAdmin\PhanHoi.cshtml" />
     <Content Include="Areas\Admin\Views\HomeAdmin\ChietKhau.cshtml" />
+    <Content Include="Assets\favicons\site.webmanifest" />
+    <Content Include="Areas\Admin\Views\HomeAdmin\GachThe.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -317,6 +328,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="ImgSupport\" />
+    <Folder Include="Views\Default\" />
     <Folder Include="Views\Support\" />
   </ItemGroup>
   <ItemGroup>

@@ -18,6 +18,44 @@ namespace TKSR.Areas.Admin.Controllers
     {
         DBIO db = new DBIO();
         TheNapDBIO TheNapDB = new TheNapDBIO();
+        [Route("GetLoadYeuCauGachThe")]
+        public List<YeuCauGachThe> GetLoadYeuCauGachThe(string sl) 
+        {
+            return TheNapDB.GetAllYeuCauGachThes(int.Parse(sl));
+        }
+        [Route("PostConfirmCardTrue")]
+        public bool PostConfirmCardTrue(string id)
+        {
+            try
+            {
+                YeuCauGachThe yeuCau = TheNapDB.GetYeuCau(id);
+                TaiKhoan editTK = db.GetOneTaiKhoan(yeuCau.TenTaiKhoan);
+                yeuCau.TrangThai = "Hoàn thành";
+                editTK.SoDu += double.Parse(yeuCau.TienThucNhan);
+                TheNapDB.Save();
+                db.Save();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        [Route("PostConfirmCardFalse")]
+        public bool PostConfirmCardFalse(string id)
+        {
+            try
+            {
+                YeuCauGachThe yeuCau = TheNapDB.GetYeuCau(id);
+                yeuCau.TrangThai = "Thẻ không đúng";
+                TheNapDB.Save();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
         [Route("PostOneNhaMang")]
         public bool PostOneNhaMang([FromBody] ImageCard value)
         {

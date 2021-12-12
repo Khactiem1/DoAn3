@@ -24,6 +24,31 @@ namespace DAL
                 "select * from ChietKhau"
                 ).ToList();
         }
+        public List<YeuCauGachThe> GetYeuCauGachThes(string TenTaiKhoan, int soluong)
+        {
+            return mdb.Database.SqlQuery<YeuCauGachThe>(
+                "select * from YeuCauGachThe where TenTaiKhoan = @uid order by(NgayNap) desc",
+                new SqlParameter("@uid", TenTaiKhoan)
+                ).Take(soluong).ToList();
+        }
+        public List<YeuCauGachThe> GetAllYeuCauGachThes(int soluong)
+        {
+            return mdb.Database.SqlQuery<YeuCauGachThe>(
+                "select * from YeuCauGachThe where TrangThai = N'Chờ duyệt' order by(NgayNap) asc"
+                ).Take(soluong).ToList();
+        }
+        public int GetSLYeuCauGachThes()
+        {
+            int sl = 0;
+            sl = mdb.Database.SqlQuery<YeuCauGachThe>(
+                "select * from YeuCauGachThe where TrangThai = N'Chờ duyệt'"
+                ).ToList().Count;
+            return sl;
+        }
+        public YeuCauGachThe GetYeuCau(string id)
+        {
+            return mdb.YeuCauGachThes.Where(c => c.MaHoaDon == id).FirstOrDefault();
+        }
         public ChietKhau GetChietKhau(string NhaMang, string MenhGia)
         {
             return mdb.ChietKhaus.Where(c => c.NhaMang == NhaMang && c.MenhGia == MenhGia).FirstOrDefault();
@@ -35,6 +60,10 @@ namespace DAL
         public void PostNhaMang<NhaMang>(NhaMang dichvu)
         {
             mdb.Set(dichvu.GetType()).Add(dichvu);
+        }
+        public void PostGachThe<YeuCauGachThe>(YeuCauGachThe SP)
+        {
+            mdb.Set(SP.GetType()).Add(SP);
         }
         public TheNap GetCheckNhaMangThe(string id)
         {

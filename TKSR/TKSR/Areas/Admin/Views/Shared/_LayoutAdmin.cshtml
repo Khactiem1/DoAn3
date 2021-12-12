@@ -5,9 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
-    <link rel="icon" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/logo.jpg">
+    <link rel="apple-touch-icon" sizes="76x76" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/favicons/favicon-16x16.png">
+    @*<link rel="manifest" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/favicons/site.webmanifest">*@
+    <link rel="mask-icon" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="@Request.Url.Scheme://@Request.Url.Authority/Assets/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    @*<link rel="icon" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/logo.jpg">*@
     <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/grids.css">
-    <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/bases.css">
+    <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/base.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/nav.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
@@ -82,9 +91,9 @@
                                     </a>
                                 </li>
                                 <li class="bar__list-item">
-                                    <a @*href="./HoaDon.html"*@ class="bar__list-text">
-                                        <span>
-                                            Quản lý hoá đơn
+                                    <a href="@Request.Url.Scheme://@Request.Url.Authority/Admin/HomeAdmin/GachThe" class="bar__list-text @ViewBag.GachThe">
+                                        <span class="load-yeucaugachthe">
+                                             Duyệt yêu cầu gạch thẻ (<span style="margin-left: 0px;">@ViewBag.SLYeuCauGachThe</span>)
                                         </span>
                                     </a>
                                 </li>

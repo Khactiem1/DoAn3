@@ -1,0 +1,239 @@
+﻿
+@{
+    ViewBag.Title = "Duyệt yêu cầu gạch thẻ";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<style>
+    .delete {
+        color: #f33a58;
+    }
+    .delete:hover {
+        color: #f33a58;
+    }
+    .item-end{
+        display: flex;
+        justify-content: space-between;
+    }
+</style>
+<div class="info__bug">
+    <div class="form">
+        <h3 class="bar__title title__info">
+            Danh sách yêu cầu gạch thẻ
+        </h3>
+        <form action="" class="history__search">
+            <div class="row rechargecard__history-select">
+                <div class="col l-3 m-12 c-12 rechargecard__history-item">
+                    <input type="text" placeholder="Tên tài khoản" class="select__input searchID">
+                </div>
+                <div class="col l-3 m-12 c-12 rechargecard__history-item">
+                    <input type="text" placeholder="Nhà mạng" class="select__input searchName">
+                </div>
+                <div class="col l-3 m-12 c-12 rechargecard__history-item">
+                    <input type="text" placeholder="Mã thẻ" class="select__input searchNCC">
+                </div>
+                <div class="col l-3 m-12 c-12 rechargecard__history-item">
+                    <select class="select__input searchDV">
+                        <option value="">Mệnh giá</option>
+                        <option value="10000">Thẻ 10k</option>
+                        <option value="20000">Thẻ 20k</option>
+                        <option value="30000">Thẻ 30k</option>
+                        <option value="50000">Thẻ 50k</option>
+                        <option value="100000">Thẻ 100k</option>
+                        <option value="200000">Thẻ 200k</option>
+                        <option value="300000">Thẻ 300k</option>
+                        <option value="500000">Thẻ 500k</option>
+                        <option value="1000000">Thẻ 1 triệu</option>
+                    </select>
+                </div>
+                <div class="col l-4 m-12 c-12 rechargecard__history-item">
+                    <select class="select__recort">
+                        <option>5</option>
+                        <option selected>10</option>
+                        <option>15</option>
+                        <option>20</option>
+                        <option>25</option>
+                        <option>30</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+        <h3 class="bar__title title__info">
+            Kích đúp các icon để duyệt thẻ hoặc từ chối thẻ
+        </h3>
+        <div class="form__container container">
+            <div class="form__history">
+                <div class="table__history">
+                    <div class="table__history-item">
+                        <span>STT</span>
+                    </div>
+                    <div class="table__history-item">
+                        <span>Tên tài khoản</span>
+                    </div>
+                    <div class="table__history-item">
+                        <span>Ngày yêu cầu</span>
+                    </div>
+                    <div class="table__history-item">
+                        <span>Mã thẻ</span>
+                    </div>
+                    <div class="table__history-item">
+                        <span>Seri</span>
+                    </div>
+                    <div class="table__history-item">
+                        <span>Mệnh giá</span>
+                    </div>
+                    <div class="table__history-item item-end">
+                        <span>Nhà mạng</span>
+                    </div>
+                </div>
+                <div class="card__content">
+                    @{
+                        int number = 1;
+                        foreach (var item in ViewBag.DSGachThe)
+                        {
+                            <div class="table__history table-@number">
+                                <div class="table__history-item">
+                                    <span>@number</span>
+                                </div>
+                                <div class="table__history-item">
+                                    <span>@item.TenTaiKhoan</span>
+                                </div>
+                                <div class="table__history-item">
+                                    <span>@item.NgayNap.ToString("dd/MM/yyyy HH:mm:ss")</span>
+                                </div>
+                                <div class="table__history-item">
+                                    <span>@item.MaThe</span>
+                                </div>
+                                <div class="table__history-item">
+                                    <span>@item.Seri</span>
+                                </div>
+                                <div class="table__history-item">
+                                    <span>@String.Format("{0:#,##0.##}", item.MenhGia)</span>
+                                </div>
+                                <div class="table__history-item item-end">
+                                    <span>@item.NhaMang</span>
+                                    <div>
+                                        <i title="Kích đúp để duyệt" ondblclick="DoneSP('@item.MaHoaDon','@item.TenTaiKhoan')" class="far fa-check-circle edit__info done"></i>
+                                        <span>/</span>
+                                        <i title="Kích đúp để từ chối" ondblclick="DeleteSP('@item.MaHoaDon','@item.TenTaiKhoan')" class="fas fa-times edit__info delete"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            number++;
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="waning">
+        <i>
+            * Nỗ lực tiêu chí tăng số lượng khách hàng trong năm tới mục tiêu trên 1000 lượt thanh toán mỗi tháng, bán được 100 thẻ nạp mỗi tuần
+        </i>
+    </div>
+</div>
+<script>
+    function DoneSP(MaHoaDon, TenTaiKhoan) {
+        active__Loading(true);
+        $.ajax({
+            url: "/PostConfirmCardTrue?id=" + MaHoaDon,
+            method: "POST",
+            data: "",
+            contentType: "application/json",
+            dataType: ""
+        }).done(function (response) {
+            active__Loading(false);
+            if (response == true || response == "True") {
+                active__messageNotification('Duyệt thành công cho ' + TenTaiKhoan, true);
+                var quantity = document.querySelector('.load-yeucaugachthe span');
+                var sl = Number(quantity.innerText) - 1;
+                quantity.innerText = sl;
+                LoadData();
+            }
+            else if (response == false || response == "False") {
+                active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+            }
+        }).fail(function (response) {
+            active__Loading(false);
+            active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+        })
+    }
+    function DeleteSP(MaHoaDon, TenTaiKhoan) {
+        active__Loading(true);
+        $.ajax({
+            url: "/PostConfirmCardFalse?id=" + MaHoaDon,
+            method: "POST",
+            data: "",
+            contentType: "application/json",
+            dataType: ""
+        }).done(function (response) {
+            active__Loading(false);
+            if (response == true || response == "True") {
+                active__messageNotification('Đã từ chối thẻ của ' + TenTaiKhoan, false);
+                var quantity = document.querySelector('.load-yeucaugachthe span');
+                var sl = Number(quantity.innerText) - 1;
+                quantity.innerText = sl;
+                LoadData();
+            }
+            else if (response == false || response == "False") {
+                active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+            }
+        }).fail(function (response) {
+            active__Loading(false);
+            active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+        })
+    }
+    function LoadData(){
+        var sl = document.querySelector('.select__recort').value;
+        $.ajax({
+            url: "/GetLoadYeuCauGachThe?sl=" + sl,
+            method: "GET",
+            data: "",
+            contentType: "application/json",
+            dataType: ""
+        }).done(function (response) {
+            $('.card__content').empty();
+            var number = 0;
+            $.each(response, function (index, item) {
+                number++;
+                var DateIN = new Date(item.NgayNap)
+                var month = DateIN.getMonth();
+                month++;
+                var strDate = DateIN.getDate() + "/" + month + "/" + DateIN.getFullYear() + " " + DateIN.getHours() + ":" + DateIN.getMinutes() + ":" + DateIN.getSeconds();
+                var html = $(`
+                                                <div class="table__history table-${number}">
+                                                    <div class="table__history-item">
+                                                        <span>${number}</span>
+                                                    </div>
+                                                    <div class="table__history-item">
+                                                        <span>${item.TenTaiKhoan}</span>
+                                                    </div>
+                                                    <div class="table__history-item">
+                                                        <span>${strDate}</span>
+                                                    </div>
+                                                    <div class="table__history-item">
+                                                        <span>${item.MaThe}</span>
+                                                    </div>
+                                                    <div class="table__history-item">
+                                                        <span>${item.Seri}</span>
+                                                    </div>
+                                                    <div class="table__history-item">
+                                                        <span>${item.MenhGia}</span>
+                                                    </div>
+                                                    <div class="table__history-item item-end">
+                                                        <span>${item.NhaMang}</span>
+                                                        <div>
+                                                            <i title="Kích đúp để duyệt" ondblclick="DoneSP('${item.MaHoaDon}','${item.TenTaiKhoan}')" class="far fa-check-circle edit__info done"></i>
+                                                            <span>/</span>
+                                                            <i title="Kích đúp để từ chối" ondblclick="DeleteSP('${item.MaHoaDon}','${item.TenTaiKhoan}')" class="fas fa-times edit__info delete"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            `)
+                $('.card__content').append(html);
+            })
+        }).fail(function (response) {
+            active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+        })
+    }
+</script>

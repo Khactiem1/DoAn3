@@ -6,9 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
-    <link rel="icon" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/logo.jpg">
+    <link rel="apple-touch-icon" sizes="76x76" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/favicons/favicon-16x16.png">
+    @*<link rel="manifest" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/favicons/site.webmanifest">*@
+    <link rel="mask-icon" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="@Request.Url.Scheme://@Request.Url.Authority/Assets/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    @*<link rel="icon" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/logo.jpg">*@
     <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/grids.css">
-    <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/bases.css">
+    <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/base.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/font.css">
@@ -22,7 +31,7 @@
             <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/User/styles.css">
             <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/User/responsive.css">
         }
-        if (ViewBag.Link == "TheNap")
+        if (ViewBag.Link == "TheNap" || ViewBag.Link == "NapTien")
         {
             <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/service.css">
             <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/responsive__service.css">
@@ -428,7 +437,7 @@
                                     @{
                                         if (Model.user.LoaiTK == "admin")
                                         {
-                                            <a href="@Request.Url.Scheme://@Request.Url.Authority/Admin/HomeAdmin/Index" class="logout">
+                                            <a target="_blank" href="@Request.Url.Scheme://@Request.Url.Authority/Admin/HomeAdmin/Index" class="logout">
                                                 <i class="fas fa-users-cog"></i>&nbsp;
                                                 <span>Quản trị</span>
                                             </a>
@@ -547,62 +556,57 @@
                 </div>
             </div>
         </footer>
-        @{
-            if (Model.user.LoaiTK != "admin")
-            {
-                <div class="chat">
-                    <div class="icon__chat">
-                        <i class="fab fa-facebook-messenger chat__icon"></i>
+        <div class="chat">
+            <div class="icon__chat">
+                <i class="fab fa-facebook-messenger chat__icon"></i>
+            </div>
+            <div class="chat__container">
+                <div class="chat__header">
+                    <div class="chat__header-title">
+                        <div class="chat__header-logo">
+                            <img src="@Request.Url.Scheme://@Request.Url.Authority/assets/img/logo/logo.jpg" alt="">
+                        </div>
+                        <div class="chat__title-text">
+                            <span>
+                                Thông báo dành cho bạn
+                            </span>
+                        </div>
                     </div>
-                    <div class="chat__container">
-                        <div class="chat__header">
-                            <div class="chat__header-title">
-                                <div class="chat__header-logo">
-                                    <img src="../assets/img/logo/logo.jpg" alt="">
-                                </div>
-                                <div class="chat__title-text">
-                                    <span>
-                                        Chat với TKSR
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="chat__close">
-                                <i class="far fa-window-minimize"></i>
-                            </div>
-                        </div>
-                        <div class="chat__content">
-                            <div class="chat__user">
-                                <div class="chat__time">
-                                </div>
-                                <div class="ad chat__history">
-                                    <div class="send__logo">
-                                        <img src="../assets/img/logo/logo.jpg" alt="">
-                                    </div>
-                                    <span class="messenger__send">
-                                        Ad có thể giúp được gì cho bạn?
-                                    </span>
-                                </div>
-                                <div class="user chat__history">
-                                    <div class="send__logo">
-                                        <i class="fas fa-user mess__icon"></i>
-                                    </div>
-                                    <span class="messenger__send">
-                                        Ở đây có bán thẻ điện thoại không?
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="chat__input">
-                                <input type="text" placeholder="Bạn hỏi gì đi?" class="chat__input-content">
-                                <button class="chat__send">
-                                    <i class="fas fa-paper-plane"></i>
-                                </button>
-                            </div>
-                        </div>
+                    <div class="chat__close">
+                        <i class="far fa-window-minimize"></i>
                     </div>
                 </div>
-                <script type="text/javascript" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/js/chatAdmins.js"></script>
-            }
-        }
+                <div class="chat__content">
+                    <div class="chat__user">
+                        <div class="chat__time">
+                        </div>
+                        <div class="ad chat__history">
+                            <div class="send__logo">
+                                <img src="@Request.Url.Scheme://@Request.Url.Authority/assets/img/logo/logo.jpg" alt="">
+                            </div>
+                            <span class="messenger__send">
+                                Đây là thông báo dành cho bạn
+                            </span>
+                        </div>
+                        @*<div class="user chat__history">
+                                <div class="send__logo">
+                                    <i class="fas fa-user mess__icon"></i>
+                                </div>
+                                <span class="messenger__send">
+                                    Ở đây có bán thẻ điện thoại không?
+                                </span>
+                            </div>*@
+                    </div>
+                    <div class="chat__input">
+                        <input type="text" placeholder="Chat gì thì qua fanpage nha?" class="chat__input-content">
+                        <button class="chat__send">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/js/chatAdmins.js"></script>
 
         <!-- Messenger Plugin chat Code -->
         <div id="fb-root"></div>
@@ -652,6 +656,28 @@
                             </div>
                             <button type="button" class="auth-form__submit auth-form__submit-buyCard">
                                 Thanh toán
+                            </button>
+                        </form>
+                    </div>
+                }
+                else if (ViewBag.Link == "NapTien")
+                {
+                    <div class="auth-form auth-form__forgotPass">
+                        <div class="auth-form__header">
+                            <span>Gạch thẻ nạp</span>
+                            <i class="fas fa-times auth-form__icon"></i>
+                        </div>
+                        <form class="auth-form__form">
+                            <div class="auth-form__rules">
+                                <p class="auth-form__rules-text">Sẽ mất chút thời gian chờ admin gạch thẻ: </p>
+                                <p class="auth-form__rules-text">Nhà mạng: </p>
+                                <p class="auth-form__rules-text">Mã thẻ:</p>
+                                <p class="auth-form__rules-text">Số seri:</p>
+                                <p class="auth-form__rules-text">Mệnh giá: </p>
+                                <p class="auth-form__rules-text">Số tiền thực nhận: </p>
+                            </div>
+                            <button type="button" class="auth-form__submit auth-form__submit-buyCard">
+                                NẠP TIỀN
                             </button>
                         </form>
                     </div>
@@ -887,5 +913,6 @@
     <script type="text/javascript" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/js/active.js"></script>
     <script type="text/javascript" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/js/Jquery/Loading.js"></script>
     <script type="text/javascript" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/js/Jquery/message.js"></script>
+    <script type="text/javascript" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/js/updateAccount.js"></script>
 </body>
 </html>

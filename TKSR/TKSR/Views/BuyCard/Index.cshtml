@@ -10,6 +10,9 @@
         display: flex;
         justify-content: center;
     }
+    .history-title__item{
+        text-align: center;
+    }
 </style>
 <nav class="oriented">
     <div class="grid wide">
@@ -349,7 +352,7 @@
 <script>
     function CheckChietKhau(NhaMang, MenhGia, event) {
         $.ajax({
-            url: "/BuyCard/GetChietKhau?id=" + NhaMang + "-" + MenhGia,
+            url: "/BuyCard/GetChietKhau?id=" + NhaMang + "-" + MenhGia + "-Ban",
             method: "GET",
             data: "",
             contentType: "application/json",

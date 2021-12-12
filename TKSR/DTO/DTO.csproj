@@ -55,8 +55,6 @@
   <ItemGroup>
     <Compile Include="ChietKhau.cs" />
     <Compile Include="DichVu.cs" />
-    <Compile Include="DichVuThanhToan.cs" />
-    <Compile Include="HoaDon.cs" />
     <Compile Include="MuaThe.cs" />
     <Compile Include="mydb.cs" />
     <Compile Include="NhaMang.cs" />
@@ -66,6 +64,7 @@
     <Compile Include="sysdiagram.cs" />
     <Compile Include="TaiKhoan.cs" />
     <Compile Include="TheNap.cs" />
+    <Compile Include="YeuCauGachThe.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
