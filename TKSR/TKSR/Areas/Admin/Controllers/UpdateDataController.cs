@@ -56,6 +56,92 @@ namespace TKSR.Areas.Admin.Controllers
                 return false;
             }
         }
+        [Route("GetLoadYeuCauNapATM")]
+        public List<YeuCauNapATM> GetLoadYeuCauNapATM(string sl)
+        {
+            return TheNapDB.GetAllYeuCauNapTienATM(int.Parse(sl));
+        }
+        [Route("PostConfirmATMTrue")]
+        public bool PostConfirmATMTrue(string id)
+        {
+            try
+            {
+                YeuCauNapATM yeuCau = TheNapDB.GetYeuCauATM(id);
+                TaiKhoan editTK = db.GetOneTaiKhoan(yeuCau.TenTaiKhoan);
+                yeuCau.TrangThai = "Hoàn thành";
+                editTK.SoDu += double.Parse(yeuCau.SoTien + "");
+                TheNapDB.Save();
+                db.Save();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        [Route("PostConfirmATMFalse")]
+        public bool PostConfirmATMFalse(string id)
+        {
+            try
+            {
+                YeuCauNapATM yeuCau = TheNapDB.GetYeuCauATM(id);
+                yeuCau.TrangThai = "AD không nhận được tiền";
+                TheNapDB.Save();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+
+
+
+        [Route("GetLoadYeuCauRutATM")]
+        public List<RutTienATM> GetLoadYeuCauRutATM(string sl)
+        {
+            return TheNapDB.GetAllYeuCauRutTienATM(int.Parse(sl));
+        }
+        [Route("PostConfirmRutATMTrue")]
+        public bool PostConfirmRutATMTrue(string id)
+        {
+            try
+            {
+                RutTienATM yeuCau = TheNapDB.GetYeuCauRutATM(id);
+                TaiKhoan editTK = db.GetOneTaiKhoan(yeuCau.TenTaiKhoan);
+                yeuCau.TrangThai = "Hoàn thành";
+                TheNapDB.Save();
+                db.Save();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        [Route("PostConfirmRutATMFalse")]
+        public bool PostConfirmRutATMFalse(string id)
+        {
+            try
+            {
+                RutTienATM yeuCau = TheNapDB.GetYeuCauRutATM(id);
+                TaiKhoan editTK = db.GetOneTaiKhoan(yeuCau.TenTaiKhoan);
+                editTK.SoDu += double.Parse(yeuCau.SoTien + "");
+                yeuCau.TrangThai = "Tài khoản gửi AD sai";
+                TheNapDB.Save();
+                db.Save();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+
+
+
         [Route("PostOneNhaMang")]
         public bool PostOneNhaMang([FromBody] ImageCard value)
         {

@@ -41,6 +41,10 @@ namespace TKSR.Controllers
                 ClassModels model = new ClassModels();
                 TaiKhoan user = (TaiKhoan)Session["user"];
                 model.user = db.GetOneTaiKhoan(user.tenTK);
+                if (model.user.TrangThai == "lock")
+                {
+                    Response.Redirect(Request.Url.Scheme + "://" + Request.Url.Authority);
+                }
                 return View(model);
             }
             return View();
@@ -59,6 +63,10 @@ namespace TKSR.Controllers
                 ClassModels model = new ClassModels();
                 TaiKhoan user = (TaiKhoan)Session["user"];
                 model.user = db.GetOneTaiKhoan(user.tenTK);
+                if (model.user.TrangThai == "lock")
+                {
+                    Response.Redirect(Request.Url.Scheme + "://" + Request.Url.Authority);
+                }
                 return View(model);
             }
             return View();

@@ -34,5 +34,13 @@ namespace DTO
         public string Email { get; set; }
 
         public double SoDu { get; set; }
+
+        [StringLength(50)]
+        public string TrangThai { get; set; }
+
+        public int NumberLock { get; set; }
+
+        [StringLength(250)]
+        public string IP { get; set; }
     }
 }

@@ -1,0 +1,594 @@
+﻿
+@{
+    ViewBag.Title = "Rút tiền về ATM";
+    Layout = "~/Views/Shared/_LayoutLogOn.cshtml";
+}
+
+<nav class="oriented">
+    <div class="grid wide">
+        <ul class="oriented__list">
+            <li class="oriented-item">
+                <a href="@Request.Url.Scheme://@Request.Url.Authority" class="oriented-item oriented-item__link">Trang chủ</a>
+            </li>
+            <li class="oriented-item">Dịch vụ</li>
+            <li class="oriented-item">Rút tiền</li>
+            <li class="oriented-item">ATM</li>
+        </ul>
+    </div>
+</nav>
+<section class="rechargecard">
+    <div class="grid wide container__rechargecard">
+        <h3 class="rechargecard__title">
+            Rút tiền từ ví
+        </h3>
+        <div class="grid over">
+            <ul class="row list__card">
+                <li class="col l-2-4 m-4 c-6">
+                    <div class="card__item card__item-active pay__atm">
+                        <div class="card__item-logo">
+                            <img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo__tienich/icon6.svg" alt="">
+                        </div>
+                        <div class="card__item-text">
+                            Thẻ atm
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="container__pay">
+                <form class="pay">
+                    <h3 class="rechargecard__content-title">
+                        Rút tiền về ATM
+                    </h3>
+                    <div class="row list__select">
+                        <div class="col l-6 m-6 c-12 list__select-text">
+                            Chọn ngân hàng:
+                        </div>
+                        <div class="col l-6 m-6 c-12 list__select-input">
+                            <select class="select__input">
+                                <option>Techcombank</option>
+                                <option>Vietcombank</option>
+                                <option>Agribank</option>
+                                <option>BIDV</option>
+                                <option>SHB</option>
+                                <option>ACB</option>
+                                <option>MBBank</option>
+                                <option>VietinBank</option>
+                                <option>Sacombank</option>
+                                <option>VPBank</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row list__select">
+                        <div class="col l-6 m-6 c-12 list__select-text">
+                            Số tài khoản:
+                        </div>
+                        <div class="col l-6 m-6 c-12 list__select-input">
+                            <svg class="Input_icon__3bJ0I" width="16" height="16" viewBox="0 0 16 16"><path d="M0 0h16v16H0V0z" fill="none"></path><path d="M15.2 13.1L8.6 1.6c-.2-.4-.9-.4-1.2 0L.8 13.1c-.1.2-.1.5 0 .7.1.2.3.3.6.3h13.3c.2 0 .5-.1.6-.3.1-.2.1-.5-.1-.7zM8.7 12H7.3v-1.3h1.3V12zm0-2.7H7.3v-4h1.3v4z" fill="currentColor"></path></svg>
+                            <input maxlength="25" class="select__input" placeholder="Số tài khoản">
+                            <span class="form-message">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row list__select">
+                        <div class="col l-6 m-6 c-12 list__select-text">
+                            Tên chủ tài khoản:
+                        </div>
+                        <div class="col l-6 m-6 c-12 list__select-input">
+                            <svg class="Input_icon__3bJ0I" width="16" height="16" viewBox="0 0 16 16"><path d="M0 0h16v16H0V0z" fill="none"></path><path d="M15.2 13.1L8.6 1.6c-.2-.4-.9-.4-1.2 0L.8 13.1c-.1.2-.1.5 0 .7.1.2.3.3.6.3h13.3c.2 0 .5-.1.6-.3.1-.2.1-.5-.1-.7zM8.7 12H7.3v-1.3h1.3V12zm0-2.7H7.3v-4h1.3v4z" fill="currentColor"></path></svg>
+                            <input maxlength="50" class="select__input" placeholder="Nhập tên chủ tài khoản">
+                            <span class="form-message">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row list__select">
+                        <div class="col l-6 m-6 c-12 list__select-text">
+                            Số tiền cần rút:
+                        </div>
+                        <div class="col l-6 m-6 c-12 list__select-input">
+                            <svg class="Input_icon__3bJ0I" width="16" height="16" viewBox="0 0 16 16"><path d="M0 0h16v16H0V0z" fill="none"></path><path d="M15.2 13.1L8.6 1.6c-.2-.4-.9-.4-1.2 0L.8 13.1c-.1.2-.1.5 0 .7.1.2.3.3.6.3h13.3c.2 0 .5-.1.6-.3.1-.2.1-.5-.1-.7zM8.7 12H7.3v-1.3h1.3V12zm0-2.7H7.3v-4h1.3v4z" fill="currentColor"></path></svg>
+                            <input maxlength="11" class="select__input" placeholder="Nhập số tiền cần rút">
+                            <span class="form-message">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row list__select">
+                        <div class="col l-6 m-6 c-12 list__select-text">
+                            Nhập mật khẩu thanh toán cấp 2:
+                        </div>
+                        <div class="col l-6 m-6 c-12 list__select-input">
+                            <svg class="Input_icon__3bJ0I" width="16" height="16" viewBox="0 0 16 16"><path d="M0 0h16v16H0V0z" fill="none"></path><path d="M15.2 13.1L8.6 1.6c-.2-.4-.9-.4-1.2 0L.8 13.1c-.1.2-.1.5 0 .7.1.2.3.3.6.3h13.3c.2 0 .5-.1.6-.3.1-.2.1-.5-.1-.7zM8.7 12H7.3v-1.3h1.3V12zm0-2.7H7.3v-4h1.3v4z" fill="currentColor"></path></svg>
+                            <input type="password" class="select__input" placeholder="Nhập mật khẩu thanh toán cấp 2">
+                            <span class="form-message">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="buy">
+                        <button type="button" class="btn__card-buy call__api-done">
+                            Rút
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="grid wide">
+        <h3 class="rechargecard__history-title">
+            Lịch sử nạp gần đây
+        </h3>
+    </div>
+    <div class="grid rechargecard__history-content history-Naptien">
+        <div style="display: flex; flex-wrap: wrap; border-bottom: solid 1px #ccc;" class="history-content">
+            <div class="history-title__item">
+                Ngân hàng rút về
+            </div>
+            <div class="history-title__item">
+                Số tài khoản
+            </div>
+            <div class="history-title__item">
+                Chủ tài khoản
+            </div>
+            <div class="history-title__item">
+                Số tiền
+            </div>
+            <div class="history-title__item">
+                Ngày rút
+            </div>
+            <div class="history-title__item">
+                Trạng thái
+            </div>
+        </div>
+        <div class="card__content">
+            @foreach (var item in ViewBag.RutTienATM)
+            {
+                <div style="display: flex; flex-wrap: wrap; border-bottom: solid 1px #ccc;" class="history-content">
+                    <div class="history-title__item">
+                        @item.NganHang
+                    </div>
+                    <div class="history-title__item">
+                        @item.STK
+                    </div>
+                    <div class="history-title__item">
+                        @item.ChuTK
+                    </div>
+                    <div class="history-title__item">
+                        @String.Format("{0:#,##0.##}", item.SoTien) VNĐ
+                    </div>
+                    <div class="history-title__item">
+                        @item.NgayRut.ToString("dd/MM/yyyy HH:mm:ss")
+                    </div>
+                    <div class="history-title__item">
+                        @item.TrangThai
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+<section class="security">
+    <div class="grid wide container container__security">
+        <div class="section__title">
+            <h1 class="section__title-text">
+                Thanh toán an toàn - Bảo mật tuyệt đối
+            </h1>
+        </div>
+        <div class="security__nav-header">
+            <ul class="security__nav">
+                <li class="security__nav-item security__active">
+                    <span class="security__nav-text">
+                        Bảo chứng ngân hàng
+                    </span>
+                </li>
+                <li class="security__nav-item">
+                    <span class="security__nav-text">
+                        Bảo mật đa tầng
+                    </span>
+                </li>
+                <li class="security__nav-item">
+                    <span class="security__nav-text">
+                        Đạt chuẩn quốc tế
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <div class="row security__content fade security__content-active">
+            <div class="col l-6 m-6 c-12 security__content-text">
+                <ul class="security__content-text__list">
+                    <li class="security__content-item">
+                        <div class="security__content-item-icon">
+                            <img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/check.svg" alt="">
+                        </div>
+                        <div class="security__content-item-text">
+                            Tiền của bạn trong Ví TKSR là TIỀN THẬT và được bảo chứng 100% bởi các NGÂN HÀNG đang hợp tác với Ví TKSR.
+                        </div>
+                    </li>
+                    <li class="security__content-item">
+                        <div class="security__content-item-icon">
+                            <img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/check.svg" alt="">
+                        </div>
+                        <div class="security__content-item-text">
+                            Người dùng TKSR có thể Nạp/Rút tiền từ ngân hàng liên kết bất kỳ lúc nào.
+                        </div>
+                    </li>
+                    <li class="security__content-item">
+                        <div class="security__content-item-icon">
+                            <img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/check.svg" alt="">
+                        </div>
+                        <div class="security__content-item-text">
+                            TKSR đã liên kết trực tiếp với 25 ngân hàng lớn và các tổ chức thẻ quốc tế Visa/Master/JCB.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col l-6 m-6 c-12 security__content-img">
+                <img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/BaoMat1.jpg" alt="" class="security__content-img-item">
+            </div>
+        </div>
+        <div class="row security__content">
+            <div class="col l-6 m-6 c-12 security__content-text">
+                <ul class="security__content-text__list">
+                    <li class="security__content-item">
+                        <div class="security__content-item-icon">
+                            <img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/check.svg" alt="">
+                        </div>
+                        <div class="security__content-item-text">
+                            Để đăng nhập, cần nhập mật khẩu 6 số và mã OTP được gửi đến điện thoại. Mỗi lần thanh toán đều cần nhập lại mật khẩu.
+                        </div>
+                    </li>
+                    <li class="security__content-item">
+                        <div class="security__content-item-icon">
+                            <img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/check.svg" alt="">
+                        </div>
+                        <div class="security__content-item-text">
+                            Ứng dụng tự khóa sau 5 phút nếu không sử dụng.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col l-6 m-6 c-12 security__content-img">
+                <img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/BaoMat2.jpg" alt="" class="security__content-img-item">
+            </div>
+        </div>
+        <div class="row security__content">
+            <div class="col l-6 m-6 c-12 security__content-text">
+                <ul class="security__content-text__list">
+                    <li class="security__content-item">
+                        <div class="security__content-item-icon">
+                            <img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/check.svg" alt="">
+                        </div>
+                        <div class="security__content-item-text">
+                            Công nghệ bảo mật của Ví TKSR đáp ứng các tiêu chuẩn quốc tế khắt khe nhất trong ngành tài chính ngân hàng, đạt chứng nhận bảo mật toàn cầu PCI DSS cấp độ cao nhất.
+                        </div>
+                    </li>
+                    <li class="security__content-item">
+                        <div class="security__content-item-icon">
+                            <img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/check.svg" alt="">
+                        </div>
+                        <div class="security__content-item-text">
+                            Công nghệ mã hóa đường truyền SSL/TLS đạt chứng nhận quốc tế GlobalSign.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col l-6 m-6 c-12 security__content-img">
+                <img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/BaoMat3.jpg" alt="" class="security__content-img-item">
+            </div>
+        </div>
+    </div>
+</section>
+<script src="@Request.Url.Scheme://@Request.Url.Authority/Assets/js/service.js"></script>
+<script src="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/User/NapThe/script.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        //Update ls rut
+        (function () {
+            setInterval(function () {
+                $.ajax({
+                    url: "/WithdrawAndTransferMoney/UpdateLSRut",
+                    method: "GET",
+                    data: "",
+                    contentType: "application/json",
+                    dataType: ""
+                }).done(function (response) {
+                    if (response.Data.status == "OK") {
+                        $('.card__content').empty();
+                        $.each(response.Data.YeuCauNapATM, function (index, item) {
+                            var DateIN = new Date(parseInt(item.NgayRut.replace("/Date(", "").replace(")/", ""), 10));
+                            var month = DateIN.getMonth();
+                            month++;
+                            var strDate = DateIN.getDate() + "/" + month + "/" + DateIN.getFullYear() + " " + DateIN.getHours() + ":" + DateIN.getMinutes() + ":" + DateIN.getSeconds();
+                            var html = `
+                                        <div style="display: flex; flex-wrap: wrap; border-bottom: solid 1px #ccc;" class="history-content">
+                                            <div class="history-title__item">
+                                                ${item.NganHang}
+                                            </div>
+                                            <div class="history-title__item">
+                                                ${item.STK}
+                                            </div>
+                                            <div class="history-title__item">
+                                                ${item.ChuTK}
+                                            </div>
+                                            <div class="history-title__item">
+                                                ${Number(item.SoTien).toLocaleString("en")} VNĐ
+                                            </div>
+                                            <div class="history-title__item">
+                                                ${strDate}
+                                            </div>
+                                            <div class="history-title__item">
+                                                ${item.TrangThai}
+                                            </div>
+                                       </div>
+                                        `;
+                            $('.card__content').append($(html));
+                        })
+                    }
+                }).fail(function () {
+                    active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+                })
+            }, 3000)
+        })()
+    }, false)
+    document.addEventListener("DOMContentLoaded", function () {
+        const $ = document.querySelector.bind(document);
+        const $$ = document.querySelectorAll.bind(document);
+        /* Validate */
+        (function () {
+            const modal = $('.modal');
+            const auth__form = $('.auth-form');
+            const icon__close = $('.auth-form__icon');
+            const modal__overlay = $('.modal__overlay');
+            const auth__text = $$('.auth-form__rules-text');
+            const buyCard = $('.auth-form__submit-buyCard');
+            modal__overlay.onclick = function () {
+                modal.classList.remove('modal__active');
+                const tab__close = $('.auth-form.auth-form__active');
+                tab__close.classList.remove('auth-form__active');
+            }
+            icon__close.onclick = function () {
+                modal.classList.remove('modal__active');
+                const tab__close = $('.auth-form.auth-form__active');
+                tab__close.classList.remove('auth-form__active');
+            }
+            const input = document.querySelectorAll('.select__input');
+            function remove_oninput(element) {
+                var message = element.querySelector('.form-message');
+                message.innerText = '';
+                element.classList.remove('invalid');
+            }
+            function add__blur(element, messages) {
+                var message = element.querySelector('.form-message');
+                message.innerText = messages;
+                element.classList.add('invalid');
+            }
+            setInputFilter(input[3], function (value) {
+                return /^\d*$/.test(value)
+            });
+            var isFormValid = true;
+            input.forEach((blurs, index) => {
+                blurs.onblur = function () {
+                    if (index == 1) {
+                        function tests() {
+                            return input[1].value.trim().length >= 3 ? undefined : `Nhâp tối thiểu 3 ký tự`;
+                        }
+                        if (tests() == null) {
+                        }
+                        else {
+                            var mess = tests();
+                            add__blur(input[1].parentElement, mess);
+                        }
+                    }
+                    if (index == 2) {
+                        function tests() {
+                            return input[2].value.trim().length >= 3 ? undefined : `Nhâp tối thiểu 3 ký tự`;
+                        }
+                        if (tests() == null) {
+                        }
+                        else {
+                            var mess = tests();
+                            add__blur(input[2].parentElement, mess);
+                        }
+                    }
+                    if (index == 3) {
+                        function tests() {
+                            return input[3].value.replace(/,/g, '') >= 10000 ? undefined : `Rút tối thiểu 10,000đ`;
+                        }
+                        if (tests() == null) {
+                        }
+                        else {
+                            var mess = tests();
+                            add__blur(input[3].parentElement, mess);
+                        }
+                    }
+                    if (index == 4) {
+                        function tests() {
+                            return input[4].value.length > 0 ? undefined : `Không thể bỏ trống trường này`;
+                        }
+                        if (tests() == null) {
+                        }
+                        else {
+                            var mess = tests();
+                            add__blur(input[4].parentElement, mess);
+                        }
+                    }
+                }
+                blurs.oninput = function () {
+                    if (index == 1) {
+                        remove_oninput(input[1].parentElement);
+                        isFormValid = true;
+                    }
+                    if (index == 2) {
+                        remove_oninput(input[2].parentElement);
+                        isFormValid = true;
+                    }
+                    if (index == 3) {
+                        remove_oninput(input[3].parentElement);
+                        isFormValid = true;
+                    }
+                    if (index == 4) {
+                        remove_oninput(input[4].parentElement);
+                        isFormValid = true;
+                    }
+                }
+            })
+            const number = document.querySelector('.btn__card-buy');
+            number.onclick = function () {
+                for (var i = 0; i < input.length; i++) {
+                    if (i == 1) {
+                        function tests() {
+                            return input[1].value.trim().length >= 3 ? undefined : `Nhâp tối thiểu 3 ký tự`;
+                        }
+                        if (tests() == null) {
+                        }
+                        else {
+                            var mess = tests();
+                            add__blur(input[1].parentElement, mess);
+                            isFormValid = false;
+                        }
+                    }
+                    if (i == 2) {
+                        function tests() {
+                            return input[2].value.trim().length >= 3 ? undefined : `Nhâp tối thiểu 3 ký tự`;
+                        }
+                        if (tests() == null) {
+                        }
+                        else {
+                            var mess = tests();
+                            add__blur(input[2].parentElement, mess);
+                            isFormValid = false;
+                        }
+                    }
+                    if (i == 3) {
+                        function tests() {
+                            return input[3].value.replace(/,/g, '') >= 10000 ? undefined : `Rút tối thiểu 10,000đ`;
+                        }
+                        if (tests() == null) {
+                        }
+                        else {
+                            var mess = tests();
+                            add__blur(input[3].parentElement, mess);
+                            isFormValid = false;
+                        }
+                    }
+                    if (i == 4) {
+                        function tests() {
+                            return input[4].value.length > 0 ? undefined : `Không thể bỏ trống trường này`;
+                        }
+                        if (tests() == null) {
+                        }
+                        else {
+                            var mess = tests();
+                            add__blur(input[4].parentElement, mess);
+                            isFormValid = false;
+                        }
+                    }
+                }
+                if (isFormValid == true) {
+                    active__Loading(true);
+                    var form = new FormData();
+                    form.append("NganHang", input[0].value)
+                    form.append("STK", input[1].value.trim())
+                    form.append("ChuTK", input[2].value.trim())
+                    form.append("SoTien", input[3].value.replace(/,/g, ''))
+                    form.append("Pass", input[4].value)
+                    form.append("Confirm", "false")
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("POST", '/WithdrawAndTransferMoney/GetRutTien', true);
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState == 4 && xhr.status == 200) {
+                            active__Loading(false);
+                            var r = xhr.responseText;
+                            var j = JSON.parse(r);
+                            if (j.Data.status == "F") {
+                                add__blur(input[4].parentElement, 'Mật khẩu C2 sai, quá 5 lần sẽ bị khoá, còn ' + j.Data.numberLock + ' lần');
+                            }
+                            else if (j.Data.status == "lock") {
+                                if (j.Data.numberLock == 0 || j.Data.numberLock == "0") {
+                                    add__blur(input[4].parentElement, 'Mật khẩu C2 sai, quá 5 lần sẽ bị khoá, còn ' + j.Data.numberLock + ' lần');
+                                }
+                                active__messageNotification('Tài khoản đang bị khoá! không thể giao dịch', false);
+                            }
+                            else if (j.Data.status == "ThieuTien") {
+                                active__messageNotification('Bạn không đủ số dư', false);
+                            }
+                            else if (j.Data.status == "ER") {
+                                active__messageNotification('Có lỗi xảy ra, thửu lại sau', false);
+                            }
+                            else if (j.Data.status == "OK") {
+                                modal.classList.add('modal__active');
+                                auth__form.classList.add('auth-form__active');
+                                auth__text[1].innerText = "Ngân hàng: " + input[0].value.trim();
+                                auth__text[2].innerText = "Số tài khoản: " + input[1].value.trim();
+                                auth__text[3].innerText = "Tên chủ tài khoản: " + input[2].value.trim();
+                                auth__text[4].innerText = "Số tiền: " + Number(input[3].value.replace(/,/g, '')).toLocaleString("en") + " VNĐ";
+                                buyCard.onclick = function () {
+                                    active__Loading(true);
+                                    var form = new FormData();
+                                    form.append("NganHang", input[0].value)
+                                    form.append("STK", input[1].value.trim())
+                                    form.append("ChuTK", input[2].value.trim())
+                                    form.append("SoTien", input[3].value.replace(/,/g, ''))
+                                    form.append("Pass", input[4].value)
+                                    form.append("Confirm", "true")
+                                    var xhr = new XMLHttpRequest();
+                                    xhr.open("POST", '/WithdrawAndTransferMoney/GetRutTien', true);
+                                    xhr.onreadystatechange = function () {
+                                        if (xhr.readyState == 4 && xhr.status == 200) {
+                                            active__Loading(false);
+                                            var r = xhr.responseText;
+                                            var j = JSON.parse(r);
+                                            if (j.Data.status == "F") {
+                                                add__blur(input[4].parentElement, 'Mật khẩu C2 sai, quá 5 lần sẽ bị khoá, còn ' + j.Data.numberLock + ' lần');
+                                            }
+                                            else if (j.Data.status == "lock") {
+                                                if (j.Data.numberLock == 0 || j.Data.numberLock == "0") {
+                                                    add__blur(input[4].parentElement, 'Mật khẩu C2 sai, quá 5 lần sẽ bị khoá, còn ' + j.Data.numberLock + ' lần');
+                                                }
+                                                active__messageNotification('Tài khoản đang bị khoá! không thể giao dịch', false);
+                                            }
+                                            else if (j.Data.status == "ThieuTien") {
+                                                active__messageNotification('Bạn không đủ số dư', false);
+                                            }
+                                            else if (j.Data.status == "ER") {
+                                                active__messageNotification('Có lỗi xảy ra, thửu lại sau', false);
+                                            }
+                                            else {
+                                                active__messageNotification('Thành công bạn sẽ sớm nhận được tiền', true);
+                                                input[1].value = "";
+                                                input[2].value = "";
+                                                input[3].value = "";
+                                                input[4].value = "";
+                                                modal.classList.remove('modal__active');
+                                                auth__form.classList.remove('auth-form__active');
+                                            }
+                                        }
+                                    }
+                                    xhr.send(form);
+                                }
+                            }
+                        }
+                    }
+                    xhr.send(form);
+                }
+            }
+        })();
+    }, false)
+    function setInputFilter(textbox, inputFilter) {
+        ["input", "keydown", "keyup", "mousedown", "mouseup", "select", "contextmenu", "drop"].forEach(function (event) {
+            textbox.addEventListener(event, function () {
+                textbox.value = textbox.value.replace(/,/g, '');
+                if (inputFilter(this.value)) {
+                    this.oldValue = this.value;
+                    this.oldSelectionStart = this.selectionStart;
+                    this.oldSelectionEnd = this.selectionEnd;
+                } else if (this.hasOwnProperty("oldValue")) {
+                    this.value = this.oldValue;
+                    this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+                }
+                var str = textbox.value;
+                str = str.replace(/,/g, '');
+                var number = Number(str).toLocaleString('en')
+                textbox.value = number;
+            });
+        });
+    }
+</script>
+

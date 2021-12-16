@@ -29,8 +29,33 @@ namespace TKSR.Controllers
                 ClassModels model = new ClassModels();
                 ViewBag.Message = "none";
                 TaiKhoan user = (TaiKhoan)Session["user"];
-                model.user = db.GetOneTaiKhoan(user.tenTK);
+                TaiKhoan UserEdit = db.GetOneTaiKhoan(user.tenTK);
+                string ip = Request.UserHostAddress;
+                UserEdit.DacDiem = ip;
+                db.Save();
+                model.user = UserEdit;
+                if (model.user.TrangThai == "lock")
+                {
+                    model.user = null;
+                    Session["user"] = null;
+                    ViewBag.Message = "active__login";
+                    return View(model);
+                }
                 return View(model);
+            }
+        }
+        [Route("GetTaiKhoan")]
+        public string GetTaiKhoan()
+        {
+            if (Session["user"] == null)
+            {
+                return "false";
+            }
+            else
+            {
+                TaiKhoan user = (TaiKhoan)Session["user"];
+                TaiKhoan userGet = db.GetOneTaiKhoan(user.tenTK);
+                return userGet.SoDu + ""; 
             }
         }
         public void Logout()
@@ -57,7 +82,14 @@ namespace TKSR.Controllers
                 }
                 else
                 {
-                    if (tk.MatKhau == pass && tk.tenTK == uid)
+                    if (tk.TrangThai == "lock")
+                    {
+                        jr.Data = new
+                        {
+                            status = "lock"
+                        };
+                    }
+                    else if (tk.MatKhau == pass && tk.tenTK == uid)
                     {
                         Session["user"] = tk;
                         Session.Timeout = 60;
@@ -229,16 +261,20 @@ namespace TKSR.Controllers
                             {
                                 string pass1 = RdPass("");
                                 string pass2 = RdPass(pass1);
+                                string ip = Request.UserHostAddress;
                                 TaiKhoan NewUser = new TaiKhoan();
                                 NewUser.tenTK = uid;
                                 NewUser.Email = email;
                                 NewUser.LoaiTK = "Thuong";
                                 NewUser.ngayLap = nowh;
-                                NewUser.sdt = "";
-                                NewUser.DacDiem = "no";
+                                NewUser.sdt = "Chưa cập nhật";
+                                NewUser.DacDiem = ip;
                                 NewUser.SoDu = 0;
                                 NewUser.MatKhau = pass1;
                                 NewUser.MatKhauC2 = pass2;
+                                NewUser.TrangThai = "active";
+                                NewUser.NumberLock = 0;
+                                NewUser.IP = ip;
                                 db.PostTaiKhoan(NewUser);
                                 db.Save();
                                 string title = "Thông báo đăng ký thành công TKSR";

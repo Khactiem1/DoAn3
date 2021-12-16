@@ -25,6 +25,11 @@
     <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/responsive.css">
     <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Areas/Admin/Assets/css/stylex.css">
     <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Areas/Admin/Assets/css/responsive.css">
+    <style>
+        .table__history-item span {
+            word-wrap: break-word;
+        }
+    </style>
 </head>
 <body>
     <div class="loader">
@@ -93,7 +98,21 @@
                                 <li class="bar__list-item">
                                     <a href="@Request.Url.Scheme://@Request.Url.Authority/Admin/HomeAdmin/GachThe" class="bar__list-text @ViewBag.GachThe">
                                         <span class="load-yeucaugachthe">
-                                             Duyệt yêu cầu gạch thẻ (<span style="margin-left: 0px;">@ViewBag.SLYeuCauGachThe</span>)
+                                            Duyệt yêu cầu gạch thẻ (<span style="margin-left: 0px;">@ViewBag.SLYeuCauGachThe</span>)
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="bar__list-item">
+                                    <a href="@Request.Url.Scheme://@Request.Url.Authority/Admin/HomeAdmin/NapATM" class="bar__list-text @ViewBag.NapATM">
+                                        <span class="load-yeucaunapATM">
+                                            Duyệt yêu nạp ATM (<span style="margin-left: 0px;">@ViewBag.SLYeuCauNapATM</span>)
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="bar__list-item">
+                                    <a href="@Request.Url.Scheme://@Request.Url.Authority/Admin/HomeAdmin/RutATM" class="bar__list-text @ViewBag.RutATM">
+                                        <span class="load-yeucaurutATM">
+                                            Duyệt yêu cầu rút tiền về ATM (<span style="margin-left: 0px;">@ViewBag.SLYeuCauRutATM</span>)
                                         </span>
                                     </a>
                                 </li>
@@ -123,7 +142,7 @@
                 <div class="row footer__list">
                     <div class="col l-3 m-6 c-12 footer__item">
                         <div class="logo__footer">
-                            <img src="@Request.Url.Scheme://@Request.Url.Authority/assets/img/logo/logo.jpg" alt="" class="logo__footer-img">
+                            <img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/logo.jpg" alt="" class="logo__footer-img">
                             <div class="footer__text-head">
                                 Công ty cổ phần dịch vụ trực tuyến Trường Đại Học Sư Phạm Kỹ Thuật Hưng Yên
                             </div>
@@ -134,32 +153,32 @@
                     </div>
                     <div class="col l-3 m-6 c-0 footer__item">
                         <div class="footer__care">
-                            <a href="#" class="footer__care-link">
+                            <a class="footer__care-link">
                                 Về chúng tôi
                             </a>
                         </div>
                         <div class="footer__care">
-                            <a href="#" class="footer__care-link">
+                            <a class="footer__care-link">
                                 Blog
                             </a>
                         </div>
                         <div class="footer__care">
-                            <a href="#" class="footer__care-link">
+                            <a class="footer__care-link">
                                 Liên hệ
                             </a>
                         </div>
                         <div class="footer__care">
-                            <a href="#" class="footer__care-link">
+                            <a class="footer__care-link">
                                 Tuyển dụng
                             </a>
                         </div>
                         <div class="footer__care">
-                            <a href="#" class="footer__care-link">
+                            <a class="footer__care-link">
                                 Điều khoản điều lệ
                             </a>
                         </div>
                         <div class="footer__care">
-                            <a href="#" class="footer__care-link">
+                            <a class="footer__care-link">
                                 Chính sách quyền riêng tư
                             </a>
                         </div>
@@ -169,16 +188,14 @@
                             chăm sóc khách hàng
                         </div>
                         <div class="footer__item-content">
-                            Hotline: <span><a href="tel:1900 5454 41" target="_self" title="Gọi">1900 5454 41</a> (1000 đ/phút)</span>
+                            Hotline: <span><a href="tel:0362335462" target="_self" title="Gọi">0362335462</a> (1000 đ/phút)</span>
                         </div>
                         <div class="footer__item-content">
-                            Email: <span>KhacTiem@gmail.com</span>
+                            Email: <span>nguyenkhactiem2k1@gmail.com</span>
                         </div>
                         <div class="footer__item-content">
                             Chúng tôi gọi đi: <span>
-                                <a href="tel:036.233.5462" target="_self" title="Gọi">036.233.5462</a>
-                                -
-                                <a href="tel:012.345.6789" target="_self" title="Gọi">012.345.6789</a>
+                                <a href="tel:0362335462" target="_self" title="Gọi">0362335462</a>
                             </span>
                         </div>
                     </div>
@@ -188,14 +205,14 @@
                         </div>
                         <div class="footer__item-content">
                             Hotline: <span>
-                                <a href="tel:(028) 710 22 222" target="_self" title="Gọi">(028) 710 22 222</a> (ext:5000)
+                                <a href="tel:0362335462" target="_self" title="Gọi">0362335462</a> (ext:5000)
                             </span>
                         </div>
                         <div class="footer__item-content">
-                            Email: <span>hotro.sme@mservice.com.vn</span>
+                            Email: <span>nguyenkhactiem2k1@gmail.com</span>
                         </div>
                         <div class="footer__item-content">
-                            Website: <span>business.tksr.vn</span>
+                            Website: <a href="https://thecaosieure.xyz"><span>https://thecaosieure.xyz</span></a>
                         </div>
                     </div>
                 </div>
@@ -224,18 +241,18 @@
         <div class="modal__body">
             <div class="auth-form auth-form__register">
                 <div class="auth-form__header">
-                    <span>Thao tác này sẽ xoá dữ liệu</span>
+                    <span>Thông báo</span>
                     <i class="fas fa-times auth-form__icon"></i>
                 </div>
                 <div class="auth-form__form">
                     <p class="message__delete">
-                        Bạn có chắc muốn xoá
+                        Bạn có chắc chắn thao tác này
                     </p>
                     <p>
-                        Dữ liệu sẽ không thể khôi phục!
+                        Chọn xác nhận để hoàn thành thao tác
                     </p>
-                    <button class="auth-form__submit">
-                        xoá
+                    <button style="width: 200px !important;" class="auth-form__submit">
+                        Xác nhận
                     </button>
                 </div>
             </div>

@@ -34,7 +34,7 @@
                     </div>
                 </li>
                 <li class="col l-2-4 m-4 c-6">
-                    <a href="" class="card__item">
+                    <a href="@Request.Url.Scheme://@Request.Url.Authority/BuyCard/NapTienBangATM" class="card__item">
                         <div class="card__item-logo">
                             <img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo__tienich/icon6.svg" alt="">
                         </div>
@@ -131,39 +131,33 @@
                 1.000.000
             </div>
         </div>
-        @{
-            foreach (var item in ViewBag.DSNhaMang)
-            {
-                <div style="display: flex; flex-wrap: wrap;" class="history-content">
-                    <div class="history-title__item item-chietkhau">
-                        @item.TenNhaMang
-                    </div>
-                    @foreach (var items in ViewBag.ChietKhau)
-                    {
-                        if (items.NhaMang == item.TenNhaMang)
+        <div class="card__ChietKhau">
+            @{
+                foreach (var item in ViewBag.DSNhaMang)
+                {
+                    <div style="display: flex; flex-wrap: wrap;" class="history-content">
+                        <div class="history-title__item item-chietkhau">
+                            @item.TenNhaMang
+                        </div>
+                        @foreach (var items in ViewBag.ChietKhau)
                         {
-                            <div class="history-title__item item-chietkhau">
-                                @items.ChietKhauNap
-                            </div>
+                            if (items.NhaMang == item.TenNhaMang)
+                            {
+                                <div class="history-title__item item-chietkhau">
+                                    @items.ChietKhauNap
+                                </div>
+                            }
                         }
-                    }
-                </div>
+                    </div>
+                }
             }
-        }
+        </div>
     </div>
     <div class="grid wide">
         <h3 class="rechargecard__history-title">
             Thẻ đã nạp gần đây
         </h3>
     </div>
-    <style>
-        .history-Naptien .history-title__item{
-            width: 16.666%;
-        }
-        .card__content .history-content:first-child{
-            border-top: none;
-        }
-    </style>
     <div class="grid rechargecard__history-content history-Naptien">
         <div style="display: flex; flex-wrap: wrap; border-bottom: solid 1px #ccc;" class="history-content">
             <div class="history-title__item">
@@ -327,6 +321,84 @@
 <script src="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/User/NapThe/script.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
+        //UpdateCard
+        (function () {
+            setInterval(function () {
+                $.ajax({
+                    url: "/BuyCard/UpdateTheNap",
+                    method: "GET",
+                    data: "",
+                    contentType: "application/json",
+                    dataType: ""
+                }).done(function (response) {
+                    if (response.Data.status == "OK") {
+                        $('.card__content').empty();
+                        $.each(response.Data.YeuCauGachThe, function (index, item) {
+                            var DateIN = new Date(parseInt(item.NgayNap.replace("/Date(", "").replace(")/", ""), 10));
+                            var month = DateIN.getMonth();
+                            month++;
+                            var strDate = DateIN.getDate() + "/" + month + "/" + DateIN.getFullYear() + " " + DateIN.getHours() + ":" + DateIN.getMinutes() + ":" + DateIN.getSeconds();
+                            var html = `<div style="display: flex; flex-wrap: wrap;" class="history-content">
+                                            <div class="history-title__item">
+                                                ${item.NhaMang}
+                                            </div>
+                                            <div class="history-title__item">
+                                                ${item.MaThe}
+                                            </div>
+                                            <div class="history-title__item">
+                                                ${Number(item.MenhGia).toLocaleString("en")}
+                                            </div>
+                                            <div class="history-title__item">
+                                                ${Number(item.TienThucNhan).toLocaleString("en")} VNĐ
+                                            </div>
+                                            <div class="history-title__item">
+                                                ${strDate}
+                                            </div>
+                                            <div class="history-title__item">
+                                                ${item.TrangThai}
+                                            </div>
+                                        </div>
+                                        `;
+                            $('.card__content').append($(html));
+                        })
+                    }
+                }).fail(function () {
+                    active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+                })
+                $.ajax({
+                    url: "/BuyCard/UpdateChietKhau",
+                    method: "GET",
+                    data: "",
+                    contentType: "application/json",
+                    dataType: ""
+                }).done(function (response) {
+                    if (response.Data.status == "OK") {
+                        $('.card__ChietKhau').empty();
+                        $.each(response.Data.DSNhaMang, function (index, item) {
+                            var html = `<div style="display: flex; flex-wrap: wrap;" class="history-content">
+                                            <div class="history-title__item item-chietkhau">
+                                                ${item.TenNhaMang}
+                                            </div>`;
+                            $.each(response.Data.DSChietKhau, function (index, items) {
+                                if (item.TenNhaMang == items.NhaMang) {
+                                    html += `
+                                                <div class="history-title__item item-chietkhau">
+                                                    ${items.ChietKhauNap}
+                                                </div>
+                                            `
+                                }
+                            })
+                            html += `</div>`
+                            $('.card__ChietKhau').append($(html));
+                        })
+                    }
+                }).fail(function () {
+                    active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+                })
+            }, 3000)
+        })()
+    }, false)
+    document.addEventListener("DOMContentLoaded", function () {
         const $ = document.querySelector.bind(document);
         const $$ = document.querySelectorAll.bind(document);
         /* Validate */
@@ -457,11 +529,6 @@
                     }
                 }
                 if (isFormValidNumber == true) {
-
-
-
-
-
                     active__Loading(true);
                     var form = new FormData();
                     form.append("NhaMang", input[0].value)
@@ -478,6 +545,9 @@
                             var j = JSON.parse(r);
                             if (j.Data.status == "ER") {
                                 active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+                            }
+                            else if (j.Data.status == "lock") {
+                                active__messageNotification('Tài khoản đang bị khoá! không thể giao dịch', false);
                             }
                             else {
                                 modal.classList.add('modal__active');
@@ -505,62 +575,24 @@
                                             if (j.Data.status == "ER") {
                                                 active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
                                             }
+                                            else if (j.Data.status == "lock") {
+                                                active__messageNotification('Tài khoản đang bị khoá! không thể giao dịch', false);
+                                            }
                                             else {
                                                 active__messageNotification('Thẻ của bạn sẽ sớm được duyệt', true);
-                                                var arrayStrig = j.Data.status.split("-");
-                                                var txt1 = input[0].value;
-                                                var txt2 = input[1].value;
-                                                var txt3 = input[3].value;
-                                                var txt4 = arrayStrig[0];
-                                                var txt5 = arrayStrig[1];
-                                                var txt6 = "Chờ duyệt";
                                                 input[2].value = "";
                                                 input[1].value = "";
                                                 modal.classList.remove('modal__active');
                                                 auth__form.classList.remove('auth-form__active');
-                                                var content = $('.card__content');
-                                                var html = `
-                                                                        <div style="display: flex; flex-wrap: wrap;" class="history-content">
-                                                                            <div class="history-title__item">
-                                                                                ${txt1}
-                                                                            </div>
-                                                                            <div class="history-title__item">
-                                                                                ${txt2}
-                                                                            </div>
-                                                                            <div class="history-title__item">
-                                                                                ${Number(txt3).toLocaleString("en")}
-                                                                            </div>
-                                                                            <div class="history-title__item">
-                                                                                ${Number(txt4).toLocaleString("en")}
-                                                                            </div>
-                                                                            <div class="history-title__item">
-                                                                                ${txt5}
-                                                                            </div>
-                                                                            <div class="history-title__item">
-                                                                                ${txt6}
-                                                                            </div>
-                                                                        </div>`;
-                                                content.innerHTML = content.innerHTML + html;
                                             }
                                         }
                                     }
                                     xhr.send(form);
                                 }
                             }
-
-
-
-
-
                         }
                     }
                     xhr.send(form);
-
-
-
-
-
-
                 }
             }
         })();

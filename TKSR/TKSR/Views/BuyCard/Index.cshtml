@@ -216,25 +216,27 @@
                 1.000.000
             </div>
         </div>
-        @{
-            foreach (var item in ViewBag.DSNhaMang)
-            {
-                <div class="row history-content">
-                    <div class="col history-title__item item-chietkhau">
-                        @item.TenNhaMang
-                    </div>
-                    @foreach (var items in ViewBag.ChietKhau)
-                    {
-                        if (items.NhaMang == item.TenNhaMang)
+        <div class="card__ChietKhau">
+            @{
+                foreach (var item in ViewBag.DSNhaMang)
+                {
+                    <div class="row history-content">
+                        <div class="col history-title__item item-chietkhau">
+                            @item.TenNhaMang
+                        </div>
+                        @foreach (var items in ViewBag.ChietKhau)
                         {
-                            <div class="col history-title__item item-chietkhau">
-                                @items.ChietKhauBan
-                            </div>
+                            if (items.NhaMang == item.TenNhaMang)
+                            {
+                                <div class="col history-title__item item-chietkhau">
+                                    @items.ChietKhauBan
+                                </div>
+                            }
                         }
-                    }
-                </div>
+                    </div>
+                }
             }
-        }
+        </div>
     </div>
 </section>
 <section class="security">
@@ -350,6 +352,43 @@
 </section>
 <script src="@Request.Url.Scheme://@Request.Url.Authority/Assets/js/service.js"></script>
 <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        //UpdateCard
+        (function () {
+            setInterval(function () {
+                $.ajax({
+                    url: "/BuyCard/UpdateChietKhau",
+                    method: "GET",
+                    data: "",
+                    contentType: "application/json",
+                    dataType: ""
+                }).done(function (response) {
+                    if (response.Data.status == "OK") {
+                        $('.card__ChietKhau').empty();
+                        $.each(response.Data.DSNhaMang, function (index, item) {
+                            var html = `<div class="row history-content">
+                                            <div class="col history-title__item item-chietkhau">
+                                                ${item.TenNhaMang}
+                                            </div>`;
+                            $.each(response.Data.DSChietKhau, function (index, items) {
+                                if (item.TenNhaMang == items.NhaMang) {
+                                    html += `
+                                                <div class="col history-title__item item-chietkhau">
+                                                    ${items.ChietKhauBan}
+                                                </div>
+                                            `
+                                }
+                            })
+                            html += `</div>`
+                            $('.card__ChietKhau').append($(html));
+                        })
+                    }
+                }).fail(function () {
+                    active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+                })
+            }, 3000)
+        })()
+    }, false)
     function CheckChietKhau(NhaMang, MenhGia, event) {
         $.ajax({
             url: "/BuyCard/GetChietKhau?id=" + NhaMang + "-" + MenhGia + "-Ban",
@@ -513,7 +552,13 @@
                             var r = xhr.responseText;
                             var j = JSON.parse(r);
                             if (j.Data.status == "F"){
-                                add__blur(input[2].parentElement, 'Mật khẩu thanh toán không đúng');
+                                add__blur(input[2].parentElement, 'Mật khẩu C2 sai, quá 5 lần sẽ bị khoá, còn ' + j.Data.numberLock +' lần');
+                            }
+                            else if (j.Data.status == "lock") {
+                                if (j.Data.numberLock == 0 || j.Data.numberLock == "0") {
+                                    add__blur(input[2].parentElement, 'Mật khẩu C2 sai, quá 5 lần sẽ bị khoá, còn ' + j.Data.numberLock + ' lần');
+                                }
+                                active__messageNotification('Tài khoản đang bị khoá! không thể giao dịch', false);
                             }
                             else if (j.Data.status == "KhongDu") {
                                 active__messageNotification('Kho thẻ tạm thời không đủ số lượng thẻ này', false);
@@ -551,6 +596,9 @@
                                                 var j = JSON.parse(r);
                                                 if (j.Data.status == "F") {
                                                     add__blur(input[2].parentElement, 'Mật khẩu thanh toán không đúng');
+                                                }
+                                                else if (j.Data.status == "lock") {
+                                                    active__messageNotification('Tài khoản đang bị khoá! không thể giao dịch', false);
                                                 }
                                                 else if (j.Data.status == "KhongDu") {
                                                     active__messageNotification('Kho thẻ tạm thời không đủ số lượng thẻ này', false);

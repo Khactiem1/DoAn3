@@ -22,5 +22,8 @@ namespace DTO
         public virtual DbSet<ChietKhau> ChietKhaus { get; set; }
         public virtual DbSet<NhaMang> NhaMangs { get; set; }
         public virtual DbSet<YeuCauGachThe> YeuCauGachThes { get; set; }
+        public virtual DbSet<YeuCauNapATM> YeuCauNapATMs { get; set; }
+        public virtual DbSet<RutTienATM> RutTienATMs { get; set; }
+        public virtual DbSet<ChuyenTien> ChuyenTiens { get; set; }
     }
 }

@@ -31,6 +31,46 @@ namespace DAL
                 new SqlParameter("@uid", TenTaiKhoan)
                 ).Take(soluong).ToList();
         }
+        public List<YeuCauNapATM> GetYeuCauNapTienATM(string TenTaiKhoan, int soluong)
+        {
+            return mdb.Database.SqlQuery<YeuCauNapATM>(
+                "select * from YeuCauNapATM where TenTaiKhoan = @uid order by(NgayNap) desc",
+                new SqlParameter("@uid", TenTaiKhoan)
+                ).Take(soluong).ToList();
+        }
+        public List<RutTienATM> GetYeuCauRutTienATM(string TenTaiKhoan, int soluong)
+        {
+            return mdb.Database.SqlQuery<RutTienATM>(
+                "select * from RutTienATM where TenTaiKhoan = @uid order by(NgayRut) desc",
+                new SqlParameter("@uid", TenTaiKhoan)
+                ).Take(soluong).ToList();
+        }
+        public List<ChuyenTien> GetYeuCauChuyenTien(string TenTaiKhoan, int soluong)
+        {
+            return mdb.Database.SqlQuery<ChuyenTien>(
+                "select * from ChuyenTien where TenTaiKhoanChuyen = @uid order by(NgayChuyen) desc",
+                new SqlParameter("@uid", TenTaiKhoan)
+                ).Take(soluong).ToList();
+        }
+        public List<ChuyenTien> GetYeuCauNhanTien(string TenTaiKhoan, int soluong)
+        {
+            return mdb.Database.SqlQuery<ChuyenTien>(
+                "select * from ChuyenTien where TenTaiKhoanNhan = @uid order by(NgayChuyen) desc",
+                new SqlParameter("@uid", TenTaiKhoan)
+                ).Take(soluong).ToList();
+        }
+        public List<YeuCauNapATM> GetAllYeuCauNapTienATM(int soluong)
+        {
+            return mdb.Database.SqlQuery<YeuCauNapATM>(
+                "select * from YeuCauNapATM where TrangThai = N'Chờ duyệt' order by(NgayNap) asc"
+                ).Take(soluong).ToList();
+        }
+        public List<RutTienATM> GetAllYeuCauRutTienATM(int soluong)
+        {
+            return mdb.Database.SqlQuery<RutTienATM>(
+                "select * from RutTienATM where TrangThai = N'Chờ duyệt' order by(NgayRut) asc"
+                ).Take(soluong).ToList();
+        }
         public List<YeuCauGachThe> GetAllYeuCauGachThes(int soluong)
         {
             return mdb.Database.SqlQuery<YeuCauGachThe>(
@@ -45,9 +85,33 @@ namespace DAL
                 ).ToList().Count;
             return sl;
         }
+        public int GetSLYeuCauNapATM()
+        {
+            int sl = 0;
+            sl = mdb.Database.SqlQuery<YeuCauNapATM>(
+                "select * from YeuCauNapATM where TrangThai = N'Chờ duyệt'"
+                ).ToList().Count;
+            return sl;
+        }
+        public int GetSLYeuCauRutATM()
+        {
+            int sl = 0;
+            sl = mdb.Database.SqlQuery<RutTienATM>(
+                "select * from RutTienATM where TrangThai = N'Chờ duyệt'"
+                ).ToList().Count;
+            return sl;
+        }
         public YeuCauGachThe GetYeuCau(string id)
         {
             return mdb.YeuCauGachThes.Where(c => c.MaHoaDon == id).FirstOrDefault();
+        }
+        public YeuCauNapATM GetYeuCauATM(string id)
+        {
+            return mdb.YeuCauNapATMs.Where(c => c.MaHoaDon == id).FirstOrDefault();
+        }
+        public RutTienATM GetYeuCauRutATM(string id)
+        {
+            return mdb.RutTienATMs.Where(c => c.MaHoaDon == id).FirstOrDefault();
         }
         public ChietKhau GetChietKhau(string NhaMang, string MenhGia)
         {
@@ -62,6 +126,18 @@ namespace DAL
             mdb.Set(dichvu.GetType()).Add(dichvu);
         }
         public void PostGachThe<YeuCauGachThe>(YeuCauGachThe SP)
+        {
+            mdb.Set(SP.GetType()).Add(SP);
+        }
+        public void PostNapATM<YeuCauNapATM>(YeuCauNapATM SP)
+        {
+            mdb.Set(SP.GetType()).Add(SP);
+        }
+        public void PostRutATM<RutTienATM>(RutTienATM SP)
+        {
+            mdb.Set(SP.GetType()).Add(SP);
+        }
+        public void PostChuyenTien<ChuyenTien>(ChuyenTien SP)
         {
             mdb.Set(SP.GetType()).Add(SP);
         }

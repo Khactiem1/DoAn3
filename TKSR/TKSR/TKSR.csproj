@@ -147,6 +147,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\UserSupportController.cs" />
+    <Compile Include="Controllers\WithdrawAndTransferMoneyController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -267,7 +268,7 @@
     <Content Include="Assets\js\Jquery\Loading.js" />
     <Content Include="Assets\js\Jquery\message.js" />
     <Content Include="Assets\js\service.js" />
-    <Content Include="Assets\js\updateAccount.js" />
+    <Content Include="Assets\js\updateAcc.js" />
     <Content Include="Assets\js\validators.js" />
     <Content Include="Assets\js\view__password.js" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -297,6 +298,8 @@
     <Content Include="Areas\Admin\Views\HomeAdmin\ChietKhau.cshtml" />
     <Content Include="Assets\favicons\site.webmanifest" />
     <Content Include="Areas\Admin\Views\HomeAdmin\GachThe.cshtml" />
+    <Content Include="Areas\Admin\Views\HomeAdmin\NapATM.cshtml" />
+    <Content Include="Areas\Admin\Views\HomeAdmin\RutATM.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -323,13 +326,14 @@
     <Content Include="Views\BuyCard\Index.cshtml" />
     <Content Include="Views\User\Support.cshtml" />
     <Content Include="Views\BuyCard\NapTien.cshtml" />
+    <Content Include="Views\BuyCard\NapTienBangATM.cshtml" />
+    <Content Include="Views\WithdrawAndTransferMoney\RutTien.cshtml" />
+    <Content Include="Views\WithdrawAndTransferMoney\ChuyenTien.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="ImgSupport\" />
-    <Folder Include="Views\Default\" />
-    <Folder Include="Views\Support\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
