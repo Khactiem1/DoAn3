@@ -34,7 +34,7 @@
                     </div>
                 </li>
                 <li class="col l-2-4 m-4 c-6">
-                    <a href="" class="card__item">
+                    <a href="@Request.Url.Scheme://@Request.Url.Authority/BuyCard/NapTienBangATM" class="card__item">
                         <div class="card__item-logo">
                             <img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo__tienich/icon6.svg" alt="">
                         </div>
@@ -52,20 +52,20 @@
                     <div class="row list__select">
                         <div class="col l-3 m-12 c-12 list__input-items">
                             <select class="select__input">
-                                <option>Viettel</option>
-                                <option>Vinaphone</option>
-                                <option>Mobifone</option>
-                                <option>VietnamMobile</option>
-                                <option>Gmobile</option>
+
+                                @for (int i = 0; i < ViewBag.DSNhaMang.Count; i++)
+                                {
+                                    <option>@ViewBag.DSNhaMang[i].TenNhaMang</option>
+                                }
                             </select>
                         </div>
                         <div class="col l-3 m-12 c-12 list__input-items">
-                            <input class="select__input" placeholder="Mã thẻ">
+                            <input maxlength="13" class="select__input" placeholder="Mã thẻ">
                             <span class="form-message mess__code">
                             </span>
                         </div>
                         <div class="col l-3 m-12 c-12 list__input-items">
-                            <input class="select__input" placeholder="Serial">
+                            <input maxlength="13" class="select__input" placeholder="Serial">
                             <span class="form-message mess__code">
                             </span>
                         </div>
@@ -99,197 +99,58 @@
         </div>
     </div>
     <div class="grid rechargecard__history-content">
-        <div class="row history-content">
-            <div class="col history-title__item">
+        <div style="display: flex; flex-wrap: wrap;" class="history-content">
+            <div class="history-title__item">
                 Nhà mạng
             </div>
-            <div class="col history-title__item">
+            <div class="history-title__item">
                 10.000
             </div>
-            <div class="col history-title__item">
+            <div class="history-title__item">
                 20.000
             </div>
-            <div class="col history-title__item">
+            <div class="history-title__item">
                 30.000
             </div>
-            <div class="col history-title__item">
+            <div class="history-title__item">
                 50.000
             </div>
-            <div class="col history-title__item">
+            <div class="history-title__item">
                 100.000
             </div>
-            <div class="col history-title__item">
+            <div class="history-title__item">
                 200.000
             </div>
-            <div class="col history-title__item">
+            <div class="history-title__item">
                 300.000
             </div>
-            <div class="col history-title__item">
+            <div class="history-title__item">
                 500.000
             </div>
-            <div class="col history-title__item">
+            <div class="history-title__item">
                 1.000.000
             </div>
         </div>
-        <div class="row history-content">
-            <div class="col history-title__item">
-                Viettel
-            </div>
-            <div class="col history-title__item">
-                70
-            </div>
-            <div class="col history-title__item">
-                70
-            </div>
-            <div class="col history-title__item">
-                75
-            </div>
-            <div class="col history-title__item">
-                75
-            </div>
-            <div class="col history-title__item">
-                80
-            </div>
-            <div class="col history-title__item">
-                80
-            </div>
-            <div class="col history-title__item">
-                85
-            </div>
-            <div class="col history-title__item">
-                85
-            </div>
-            <div class="col history-title__item">
-                85
-            </div>
-        </div>
-        <div class="row history-content">
-            <div class="col history-title__item">
-                Vinaphone
-            </div>
-            <div class="col history-title__item">
-                70
-            </div>
-            <div class="col history-title__item">
-                70
-            </div>
-            <div class="col history-title__item">
-                75
-            </div>
-            <div class="col history-title__item">
-                75
-            </div>
-            <div class="col history-title__item">
-                80
-            </div>
-            <div class="col history-title__item">
-                80
-            </div>
-            <div class="col history-title__item">
-                85
-            </div>
-            <div class="col history-title__item">
-                85
-            </div>
-            <div class="col history-title__item">
-                85
-            </div>
-        </div>
-        <div class="row history-content">
-            <div class="col history-title__item">
-                Mobifone
-            </div>
-            <div class="col history-title__item">
-                70
-            </div>
-            <div class="col history-title__item">
-                70
-            </div>
-            <div class="col history-title__item">
-                75
-            </div>
-            <div class="col history-title__item">
-                75
-            </div>
-            <div class="col history-title__item">
-                80
-            </div>
-            <div class="col history-title__item">
-                80
-            </div>
-            <div class="col history-title__item">
-                85
-            </div>
-            <div class="col history-title__item">
-                85
-            </div>
-            <div class="col history-title__item">
-                85
-            </div>
-        </div>
-        <div class="row history-content">
-            <div class="col history-title__item">
-                VietnamMobile
-            </div>
-            <div class="col history-title__item">
-                70
-            </div>
-            <div class="col history-title__item">
-                70
-            </div>
-            <div class="col history-title__item">
-                75
-            </div>
-            <div class="col history-title__item">
-                75
-            </div>
-            <div class="col history-title__item">
-                80
-            </div>
-            <div class="col history-title__item">
-                80
-            </div>
-            <div class="col history-title__item">
-                85
-            </div>
-            <div class="col history-title__item">
-                85
-            </div>
-            <div class="col history-title__item">
-                85
-            </div>
-        </div>
-        <div class="row history-content">
-            <div class="col history-title__item">
-                Gmobile
-            </div>
-            <div class="col history-title__item">
-                70
-            </div>
-            <div class="col history-title__item">
-                70
-            </div>
-            <div class="col history-title__item">
-                75
-            </div>
-            <div class="col history-title__item">
-                75
-            </div>
-            <div class="col history-title__item">
-                80
-            </div>
-            <div class="col history-title__item">
-                80
-            </div>
-            <div class="col history-title__item">
-                85
-            </div>
-            <div class="col history-title__item">
-                85
-            </div>
-            <div class="col history-title__item">
-                85
-            </div>
+        <div class="card__ChietKhau">
+            @{
+                foreach (var item in ViewBag.DSNhaMang)
+                {
+                    <div style="display: flex; flex-wrap: wrap;" class="history-content">
+                        <div class="history-title__item item-chietkhau">
+                            @item.TenNhaMang
+                        </div>
+                        @foreach (var items in ViewBag.ChietKhau)
+                        {
+                            if (items.NhaMang == item.TenNhaMang)
+                            {
+                                <div class="history-title__item item-chietkhau">
+                                    @items.ChietKhauNap
+                                </div>
+                            }
+                        }
+                    </div>
+                }
+            }
         </div>
     </div>
     <div class="grid wide">
@@ -298,15 +159,18 @@
         </h3>
     </div>
     <div class="grid rechargecard__history-content history-Naptien">
-        <div class="row history-content">
+        <div style="display: flex; flex-wrap: wrap; border-bottom: solid 1px #ccc;" class="history-content">
             <div class="history-title__item">
-                Loại thẻ
+                Nhà mạng
             </div>
             <div class="history-title__item">
-                Chiết khấu
+                Mã thẻ
             </div>
             <div class="history-title__item">
                 Mệnh giá
+            </div>
+            <div class="history-title__item">
+                Số tiền thực nhận
             </div>
             <div class="history-title__item">
                 Ngày nạp
@@ -316,23 +180,29 @@
             </div>
         </div>
         <div class="card__content">
-            <div class="row history-content">
-                <div class="history-title__item">
-                    Viettel
+            @foreach (var item in ViewBag.DSTheNap)
+            {
+                <div style="display: flex; flex-wrap: wrap;" class="history-content">
+                    <div class="history-title__item">
+                        @item.NhaMang
+                    </div>
+                    <div class="history-title__item">
+                        @item.MaThe
+                    </div>
+                    <div class="history-title__item">
+                        @String.Format("{0:#,##0.##}", item.MenhGia)
+                    </div>
+                    <div class="history-title__item">
+                        @String.Format("{0:#,##0.##}", double.Parse(item.TienThucNhan)) VNĐ
+                    </div>
+                    <div class="history-title__item">
+                        @item.NgayNap.ToString("dd/MM/yyyy HH:mm:ss")
+                    </div>
+                    <div class="history-title__item">
+                        @item.TrangThai
+                    </div>
                 </div>
-                <div class="history-title__item">
-                    25%
-                </div>
-                <div class="history-title__item">
-                    50.000 VNĐ
-                </div>
-                <div class="history-title__item">
-                    23/03/2021
-                </div>
-                <div class="history-title__item">
-                    Hoàn thành
-                </div>
-            </div>
+            }
         </div>
     </div>
 </section>
@@ -451,8 +321,104 @@
 <script src="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/User/NapThe/script.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
+        //UpdateCard
+        (function () {
+            setInterval(function () {
+                $.ajax({
+                    url: "/BuyCard/UpdateTheNap",
+                    method: "GET",
+                    data: "",
+                    contentType: "application/json",
+                    dataType: ""
+                }).done(function (response) {
+                    if (response.Data.status == "OK") {
+                        $('.card__content').empty();
+                        $.each(response.Data.YeuCauGachThe, function (index, item) {
+                            var DateIN = new Date(parseInt(item.NgayNap.replace("/Date(", "").replace(")/", ""), 10));
+                            var month = DateIN.getMonth();
+                            month++;
+                            var strDate = DateIN.getDate() + "/" + month + "/" + DateIN.getFullYear() + " " + DateIN.getHours() + ":" + DateIN.getMinutes() + ":" + DateIN.getSeconds();
+                            var html = `<div style="display: flex; flex-wrap: wrap;" class="history-content">
+                                            <div class="history-title__item">
+                                                ${item.NhaMang}
+                                            </div>
+                                            <div class="history-title__item">
+                                                ${item.MaThe}
+                                            </div>
+                                            <div class="history-title__item">
+                                                ${Number(item.MenhGia).toLocaleString("en")}
+                                            </div>
+                                            <div class="history-title__item">
+                                                ${Number(item.TienThucNhan).toLocaleString("en")} VNĐ
+                                            </div>
+                                            <div class="history-title__item">
+                                                ${strDate}
+                                            </div>
+                                            <div class="history-title__item">
+                                                ${item.TrangThai}
+                                            </div>
+                                        </div>
+                                        `;
+                            $('.card__content').append($(html));
+                        })
+                    }
+                }).fail(function () {
+                    active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+                })
+                $.ajax({
+                    url: "/BuyCard/UpdateChietKhau",
+                    method: "GET",
+                    data: "",
+                    contentType: "application/json",
+                    dataType: ""
+                }).done(function (response) {
+                    if (response.Data.status == "OK") {
+                        $('.card__ChietKhau').empty();
+                        $.each(response.Data.DSNhaMang, function (index, item) {
+                            var html = `<div style="display: flex; flex-wrap: wrap;" class="history-content">
+                                            <div class="history-title__item item-chietkhau">
+                                                ${item.TenNhaMang}
+                                            </div>`;
+                            $.each(response.Data.DSChietKhau, function (index, items) {
+                                if (item.TenNhaMang == items.NhaMang) {
+                                    html += `
+                                                <div class="history-title__item item-chietkhau">
+                                                    ${items.ChietKhauNap}
+                                                </div>
+                                            `
+                                }
+                            })
+                            html += `</div>`
+                            $('.card__ChietKhau').append($(html));
+                        })
+                    }
+                }).fail(function () {
+                    active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+                })
+            }, 3000)
+        })()
+    }, false)
+    document.addEventListener("DOMContentLoaded", function () {
+        const $ = document.querySelector.bind(document);
+        const $$ = document.querySelectorAll.bind(document);
         /* Validate */
         (function () {
+            const modal = $('.modal');
+            const auth__form = $('.auth-form');
+            const icon__close = $('.auth-form__icon');
+            const modal__overlay = $('.modal__overlay');
+            const auth__text = $$('.auth-form__rules-text');
+            const buyCard = $('.auth-form__submit-buyCard');
+            modal__overlay.onclick = function () {
+                modal.classList.remove('modal__active');
+                const tab__close = $('.auth-form.auth-form__active');
+                tab__close.classList.remove('auth-form__active');
+            }
+            icon__close.onclick = function () {
+                modal.classList.remove('modal__active');
+                const tab__close = $('.auth-form.auth-form__active');
+                tab__close.classList.remove('auth-form__active');
+            }
             const input = document.querySelectorAll('.select__input');
             function remove_oninput(element) {
                 var message = element.querySelector('.form-message');
@@ -464,12 +430,18 @@
                 message.innerText = messages;
                 element.classList.add('invalid');
             }
+            setInputFilter(input[1], function (value) {
+                return /^\d*$/.test(value)
+            });
+            setInputFilter(input[2], function (value) {
+                return /^\d*$/.test(value)
+            });
             var isFormValidNumber = true;
             input.forEach((blurs, index) => {
                 blurs.onblur = function () {
                     if (index == 1) {
                         function tests() {
-                            return isNumber(input[1].value) && input[1].value.length >= 11 ? undefined : `Nhập tối thiểu 11 ký tự`;
+                            return input[1].value.trim().length == 13 ? undefined : `Nhập 13 ký tự`;
                         }
                         if (tests() == null) {
                         }
@@ -480,7 +452,7 @@
                     }
                     else if (index == 2) {
                         function tests() {
-                            return input[2].value.length >= 6 ? undefined : `nhập tối thiểu 6 ký tự`;
+                            return input[2].value.trim().length >= 10 ? undefined : `Nhập 10 - 13 ký tự`;
                         }
                         if (tests() == null) {
                         }
@@ -521,7 +493,7 @@
                 for (var i = 0; i < input.length; i++) {
                     if (i == 1) {
                         function tests() {
-                            return isNumber(input[1].value) && input[1].value.length >= 11 ? undefined : `Nhập tối thiểu 11 ký tự`;
+                            return input[1].value.trim().length == 13 ? undefined : `Nhập 13 ký tự`;
                         }
                         if (tests() == null) {
                         }
@@ -533,7 +505,7 @@
                     }
                     else if (i == 2) {
                         function tests() {
-                            return input[2].value.length >= 6 ? undefined : `nhập tối thiểu 6 ký tự`;
+                            return input[2].value.trim().length >= 10 ? undefined : `Nhập 10 - 13 ký tự`;
                         }
                         if (tests() == null) {
                         }
@@ -557,13 +529,86 @@
                     }
                 }
                 if (isFormValidNumber == true) {
-
+                    active__Loading(true);
+                    var form = new FormData();
+                    form.append("NhaMang", input[0].value)
+                    form.append("MaThe", input[1].value)
+                    form.append("Seri", input[2].value)
+                    form.append("MenhGia", input[3].value)
+                    form.append("Confirm", "false")
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("POST", '/BuyCard/GetRechargeCard', true);
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState == 4 && xhr.status == 200) {
+                            active__Loading(false);
+                            var r = xhr.responseText;
+                            var j = JSON.parse(r);
+                            if (j.Data.status == "ER") {
+                                active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+                            }
+                            else if (j.Data.status == "lock") {
+                                active__messageNotification('Tài khoản đang bị khoá! không thể giao dịch', false);
+                            }
+                            else {
+                                modal.classList.add('modal__active');
+                                auth__form.classList.add('auth-form__active');
+                                auth__text[1].innerText = "Nhà mạng: " + input[0].value;
+                                auth__text[2].innerText = "Mã thẻ: " + input[1].value;
+                                auth__text[3].innerText = "Số seri: " + input[2].value;
+                                auth__text[4].innerText = "Mệnh giá: " + Number(input[3].value).toLocaleString("en");
+                                auth__text[5].innerText = "Số tiền thực nhận: " + Number(j.Data.status).toLocaleString("en") + " VNĐ";
+                                buyCard.onclick = function () {
+                                    active__Loading(true);
+                                    var form = new FormData();
+                                    form.append("NhaMang", input[0].value)
+                                    form.append("MaThe", input[1].value)
+                                    form.append("Seri", input[2].value)
+                                    form.append("MenhGia", input[3].value)
+                                    form.append("Confirm", "true")
+                                    var xhr = new XMLHttpRequest();
+                                    xhr.open("POST", '/BuyCard/GetRechargeCard', true);
+                                    xhr.onreadystatechange = function () {
+                                        if (xhr.readyState == 4 && xhr.status == 200) {
+                                            active__Loading(false);
+                                            var r = xhr.responseText;
+                                            var j = JSON.parse(r);
+                                            if (j.Data.status == "ER") {
+                                                active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+                                            }
+                                            else if (j.Data.status == "lock") {
+                                                active__messageNotification('Tài khoản đang bị khoá! không thể giao dịch', false);
+                                            }
+                                            else {
+                                                active__messageNotification('Thẻ của bạn sẽ sớm được duyệt', true);
+                                                input[2].value = "";
+                                                input[1].value = "";
+                                                modal.classList.remove('modal__active');
+                                                auth__form.classList.remove('auth-form__active');
+                                            }
+                                        }
+                                    }
+                                    xhr.send(form);
+                                }
+                            }
+                        }
+                    }
+                    xhr.send(form);
                 }
-            }
-            function isNumber(numbers) {
-                var regex = new RegExp('^[0-9]+$');
-                return regex.test(numbers);
             }
         })();
     }, false)
+    function setInputFilter(textbox, inputFilter) {
+        ["input", "keydown", "keyup", "mousedown", "mouseup", "select", "contextmenu", "drop"].forEach(function (event) {
+            textbox.addEventListener(event, function () {
+                if (inputFilter(this.value)) {
+                    this.oldValue = this.value;
+                    this.oldSelectionStart = this.selectionStart;
+                    this.oldSelectionEnd = this.selectionEnd;
+                } else if (this.hasOwnProperty("oldValue")) {
+                    this.value = this.oldValue;
+                    this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+                }
+            });
+        });
+    }
 </script>

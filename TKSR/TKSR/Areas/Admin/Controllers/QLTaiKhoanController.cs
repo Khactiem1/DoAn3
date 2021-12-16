@@ -38,6 +38,41 @@ namespace TKSR.Areas.Admin.Controllers
                 return true;
             }
         }
+
+
+        [Route("OpenAccount")]
+        public bool PostOpenAccount(string id)
+        {
+            try
+            {
+                TaiKhoan DV = db.GetOneTaiKhoan(id);
+                DV.TrangThai = "active";
+                DV.NumberLock = 0;
+                db.Save();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        [Route("LockAccount")]
+        public bool PostLockAccount(string id)
+        {
+            try
+            {
+                TaiKhoan DV = db.GetOneTaiKhoan(id);
+                DV.TrangThai = "lock";
+                db.Save();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+
         [Route("GetCheckEmail")]
         public bool GetCheckEmail(string id)
         {

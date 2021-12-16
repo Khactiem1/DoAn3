@@ -229,6 +229,7 @@
 </div>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
+        ActiveUpdate();
         function remove_oninput(element) {
             var message = element.querySelector('.form-message');
             message.innerText = '';
@@ -250,6 +251,53 @@
                 event(response)
             }).fail(function (response) {
                 console.log("erro");
+            })
+        }
+        function LoadChietKhau() {
+            $.ajax({
+                url: "/BuyCard/UpdateChietKhau",
+                method: "GET",
+                data: "",
+                contentType: "application/json",
+                dataType: ""
+            }).done(function (response) {
+                if (response.Data.status == "OK") {
+                    $('.form-giaban').empty();
+                    $('.form-gianhap').empty();
+                    $.each(response.Data.DSNhaMang, function (index, item) {
+                        var htmlBan = `<div class="table__history">
+                                        <div style="width: 25%" class="table__history-item">
+                                            <span>${item.TenNhaMang}</span>
+                                        </div>`;
+                        var htmlNhap = `<div class="table__history">
+                                            <div style="width: 25%" class="table__history-item">
+                                                <span>${item.TenNhaMang}</span>
+                                            </div>`;
+                        $.each(response.Data.DSChietKhau, function (index, items) {
+                            if (item.TenNhaMang == items.NhaMang) {
+                                htmlBan += `
+                                                <div style="background-color: #fff" class="table__history-item">
+                                                    <svg class="icon__update-invalid" width="16" height="16" viewBox="0 0 16 16"><path d="M0 0h16v16H0V0z" fill="none"></path><path d="M15.2 13.1L8.6 1.6c-.2-.4-.9-.4-1.2 0L.8 13.1c-.1.2-.1.5 0 .7.1.2.3.3.6.3h13.3c.2 0 .5-.1.6-.3.1-.2.1-.5-.1-.7zM8.7 12H7.3v-1.3h1.3V12zm0-2.7H7.3v-4h1.3v4z" fill="currentColor"></path></svg>
+                                                    <input style="text-align: center; background-color: #fff" maxlength="6" value="${items.ChietKhauBan}" class="input__update">
+                                                </div>
+                                            `;
+                                htmlNhap += `
+                                                <div style="background-color: #fff" class="table__history-item">
+                                                    <svg class="icon__update-invalid" width="16" height="16" viewBox="0 0 16 16"><path d="M0 0h16v16H0V0z" fill="none"></path><path d="M15.2 13.1L8.6 1.6c-.2-.4-.9-.4-1.2 0L.8 13.1c-.1.2-.1.5 0 .7.1.2.3.3.6.3h13.3c.2 0 .5-.1.6-.3.1-.2.1-.5-.1-.7zM8.7 12H7.3v-1.3h1.3V12zm0-2.7H7.3v-4h1.3v4z" fill="currentColor"></path></svg>
+                                                    <input style="text-align: center; background-color: #fff" maxlength="6" value="${items.ChietKhauNap}" class="input__update">
+                                                </div>
+                                            `;
+                            }
+                        })
+                        htmlBan += `</div>`;
+                        htmlNhap += `</div>`;
+                        $('.form-giaban').append($(htmlBan));
+                        $('.form-gianhap').append($(htmlNhap));
+                    })
+                    ActiveUpdate();
+                }
+            }).fail(function () {
+                active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
             })
         }
         //Xoá nhà mạng
@@ -301,7 +349,9 @@
                                     }).done(function (response) {
                                         active__Loading(false);
                                         if (response == true || response == "True") {
-                                            location.reload()
+                                            LoadChietKhau();
+                                            active__messageNotification("Đã xoá nhà mạng " + blurs.value.trim(), true);
+                                            blurs.value = "";
                                         }
                                         else {
                                             active__messageNotification("Không thể xoá, kho thẻ vẫn còn loại thẻ này", false);
@@ -386,7 +436,9 @@
                                     }).done(function (response) {
                                         active__Loading(false);
                                         if (response == true || response == "True") {
-                                            location.reload()
+                                            LoadChietKhau()
+                                            active__messageNotification("Thêm thành công nhà mạng " + input[0].value.trim(), true);
+                                            blurs.value = "";
                                         }
                                         else {
                                             active__messageNotification("Có lỗi xảy ra, thử lại sau", false);
@@ -409,76 +461,77 @@
                 })
             }
         })();
-
         ///Update chiết khấu thẻ nạp
-        (function () {
-            const input = document.querySelectorAll('.input__update');
-            var check__update = true;
-            input.forEach((blurs, index) => {
-                setInputFilter(input[index], function (value) {
-                    return /^-?\d*[.]?\d*$/.test(value) && (value === "" || parseInt(value) <= 1)
-                });
-                blurs.onblur = function () {
-                    if (blurs.value <= 0.3) {
-                        add_oninputIcon(blurs.parentElement)
-                    }
-                }
-                blurs.oninput = function () {
-                    remove_oninputIcon(blurs.parentElement)
-                    check__update = true;
-                }
-            })
-            const button__update = document.querySelector('.btn__card-buy');
-            button__update.onclick = function () {
+        function ActiveUpdate() {
+            (function () {
+                const input = document.querySelectorAll('.input__update');
+                var check__update = true;
                 input.forEach((blurs, index) => {
-                    if (blurs.value <= 0.3) {
-                        active__messageNotification('Chiết khấu phải lớn hơn 0.3', false);
-                        add_oninputIcon(blurs.parentElement)
-                        check__update = false;
+                    setInputFilter(input[index], function (value) {
+                        return /^-?\d*[.]?\d*$/.test(value) && (value === "" || parseInt(value) <= 1)
+                    });
+                    blurs.onblur = function () {
+                        if (blurs.value <= 0.3) {
+                            add_oninputIcon(blurs.parentElement)
+                        }
+                    }
+                    blurs.oninput = function () {
+                        remove_oninputIcon(blurs.parentElement)
+                        check__update = true;
                     }
                 })
-                if (check__update == true) {
-                    var CardImport = [];
-                    var CardSell = [];
-                    var DSNhaMang = [];
-                    var inputImport = document.querySelectorAll('.form__content.form-gianhap .input__update');
-                    var inputSell = document.querySelectorAll('.form__content.form-giaban .input__update');
-                    var NhaMang = document.querySelectorAll('.form__content.form-gianhap .table__history .table__history-item span')
-                    inputImport.forEach((items, index) => {
-                        CardImport.push(items.value);
-                    })
-                    inputSell.forEach((items, index) => {
-                        CardSell.push(items.value);
-                    })
-                    NhaMang.forEach((items, index) => {
-                        DSNhaMang.push(items.innerText);
-                    })
-                    var SP = {};
-                    SP.Nhap = CardImport;
-                    SP.Ban = CardSell;
-                    SP.NhaMang = DSNhaMang;
-                    active__Loading(true);
-                    $.ajax({
-                        url: "/PostEditChietKhau",
-                        method: "POST",
-                        data: JSON.stringify(SP),
-                        contentType: "application/json",
-                        dataType: "json"
-                    }).done(function (response) {
-                        active__Loading(false);
-                        if (response == true || response == "True") {
-                            active__messageNotification('Cập nhật thành công', true);
+                const button__update = document.querySelector('.btn__card-buy');
+                button__update.onclick = function () {
+                    input.forEach((blurs, index) => {
+                        if (blurs.value <= 0.3) {
+                            active__messageNotification('Chiết khấu phải lớn hơn 0.3', false);
+                            add_oninputIcon(blurs.parentElement)
+                            check__update = false;
                         }
-                        else if (response == false || response == "False") {
-                            active__messageNotification('Lỗi không đồng bộ máy chủ', false);
-                        }
-                    }).fail(function (response) {
-                        active__Loading(false);
-                        active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
                     })
+                    if (check__update == true) {
+                        var CardImport = [];
+                        var CardSell = [];
+                        var DSNhaMang = [];
+                        var inputImport = document.querySelectorAll('.form__content.form-gianhap .input__update');
+                        var inputSell = document.querySelectorAll('.form__content.form-giaban .input__update');
+                        var NhaMang = document.querySelectorAll('.form__content.form-gianhap .table__history .table__history-item span')
+                        inputImport.forEach((items, index) => {
+                            CardImport.push(items.value);
+                        })
+                        inputSell.forEach((items, index) => {
+                            CardSell.push(items.value);
+                        })
+                        NhaMang.forEach((items, index) => {
+                            DSNhaMang.push(items.innerText);
+                        })
+                        var SP = {};
+                        SP.Nhap = CardImport;
+                        SP.Ban = CardSell;
+                        SP.NhaMang = DSNhaMang;
+                        active__Loading(true);
+                        $.ajax({
+                            url: "/PostEditChietKhau",
+                            method: "POST",
+                            data: JSON.stringify(SP),
+                            contentType: "application/json",
+                            dataType: "json"
+                        }).done(function (response) {
+                            active__Loading(false);
+                            if (response == true || response == "True") {
+                                active__messageNotification('Cập nhật thành công', true);
+                            }
+                            else if (response == false || response == "False") {
+                                active__messageNotification('Lỗi không đồng bộ máy chủ', false);
+                            }
+                        }).fail(function (response) {
+                            active__Loading(false);
+                            active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+                        })
+                    }
                 }
-            }
-        })();
+            })();
+        }
     }, false)
     function setInputFilter(textbox, inputFilter) {
         ["input", "keydown", "keyup", "mousedown", "mouseup", "select", "contextmenu", "drop"].forEach(function (event) {

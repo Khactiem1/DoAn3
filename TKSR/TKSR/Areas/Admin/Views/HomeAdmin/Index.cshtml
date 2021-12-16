@@ -68,7 +68,7 @@
                                 <div class="table__history-item table__index">
                                     <span>@number</span>
                                 </div>
-                                <div class="table__history-item" @*title="0977263104"*@>
+                                <div class="table__history-item" title="Địa chỉ ip đăng nhập gần đây nhất @item.DacDiem">
                                     <span>@item.tenTK</span>
                                 </div>
                                 <div class="table__history-item">
@@ -80,8 +80,23 @@
                                 <div class="table__history-item">
                                     <span>@String.Format("{0:#,##0.##}", item.SoDu) Đ</span>
                                 </div>
-                                <div class="table__history-item">
+                                <div style="display: flex; justify-content: space-between;" class="table__history-item" title="Địa chỉ ip đăng ký tài khoản @item.IP">
                                     <span>@item.ngayLap.ToString("dd/MM/yyyy HH:mm:ss")</span>
+                                    @{
+                                        string element = "Element-"+@item.tenTK;
+                                        <span class="@element">
+                                            @{
+                                                if (item.TrangThai != "lock")
+                                                {
+                                                    <i onclick="LockAccount('@item.tenTK')" class="fas fa-lock edit__info"></i>
+                                                }
+                                                else
+                                                {
+                                                    <i onclick="OpenAccount('@item.tenTK')" class="fas fa-key edit__info"></i>
+                                                }
+                                            }
+                                        </span>
+                                    }
                                 </div>
                             </div>
                             number++;
@@ -155,12 +170,23 @@
                                 var month = DateIN.getMonth();
                                 month++;
                                 var strDate = DateIN.getDate() + "/" + month + "/" + DateIN.getFullYear() + " " + DateIN.getHours() + ":" + DateIN.getMinutes() + ":" + DateIN.getSeconds();
+                                var lock;
+                                if (item.TrangThai != "lock") {
+                                    lock = `<span class = "Element-${item.tenTK}">
+                                                <i onclick="LockAccount('${item.tenTK}')" class="fas fa-lock edit__info"></i>
+                                            </span>`;
+                                }
+                                else {
+                                    lock = `<span class = "Element-${item.tenTK}">
+                                                <i onclick="OpenAccount('${item.tenTK}')" class="fas fa-key edit__info"></i>
+                                            </span>`;
+                                }
                                 var html = $(`
                                                 <div class="table__history">
                                                 <div class="table__history-item table__index">
                                                     <span>${number}</span>
                                                 </div>
-                                                <div class="table__history-item">
+                                                <div class="table__history-item" title="Địa chỉ ip đăng nhập gần đây nhất ${item.DacDiem}">
                                                     <span>${item.tenTK}</span>
                                                 </div>
                                                 <div class="table__history-item">
@@ -172,8 +198,9 @@
                                                 <div class="table__history-item">
                                                     <span>${item.SoDu.toLocaleString("en")} Đ</span>
                                                 </div>
-                                                <div class="table__history-item">
+                                                <div style="display: flex; justify-content: space-between;" class="table__history-item" title="Địa chỉ ip đăng ký tài khoản ${item.IP}">
                                                     <span>${strDate}</span>
+                                                    ${lock}
                                                 </div>
                                             </div>
                                             `)
@@ -257,6 +284,94 @@
                     }
                 });
             }, false)
+            function LockAccount(Account) {
+                const modal = document.querySelector('.modal');
+                const form = document.querySelector('.modal .auth-form');
+                modal.classList.add('modal__active');
+                form.classList.add('auth-form__active');
+                const close = document.querySelector('.modal__overlay');
+                const closeIcon = document.querySelector('.auth-form__icon');
+                close.onclick = function () {
+                    modal.classList.remove('modal__active');
+                    form.classList.remove('auth-form__active');
+                }
+                closeIcon.onclick = function () {
+                    modal.classList.remove('modal__active');
+                    form.classList.remove('auth-form__active');
+                }
+                const mess = document.querySelector('.message__delete');
+                mess.innerText = 'Khoá tài khoản "' + Account + '" ?';
+                const button = document.querySelector('.auth-form__submit');
+                button.onclick = function () {
+                    modal.classList.remove('modal__active');
+                    form.classList.remove('auth-form__active');
+                    active__Loading(true);
+                    $.ajax({
+                        url: "/LockAccount?id=" + Account,
+                        method: "POST",
+                        data: "",
+                        contentType: "application/json",
+                        dataType: ""
+                    }).done(function (response) {
+                        active__Loading(false);
+                        if (response == true || response == "True") {
+                            active__messageNotification('Đã khoá tài khoản ' + Account, true);
+                            var element = document.querySelector('.Element-' + Account);
+                            element.innerHTML = `<i onclick="OpenAccount('${Account}')" class="fas fa-key edit__info"></i>`;
+                        }
+                        else if (response == false || response == "False") {
+                            active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+                        }
+                    }).fail(function (response) {
+                        active__Loading(false);
+                        active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+                    })
+                }
+            }
+            function OpenAccount(Account) {
+                const modal = document.querySelector('.modal');
+                const form = document.querySelector('.modal .auth-form');
+                modal.classList.add('modal__active');
+                form.classList.add('auth-form__active');
+                const close = document.querySelector('.modal__overlay');
+                const closeIcon = document.querySelector('.auth-form__icon');
+                close.onclick = function () {
+                    modal.classList.remove('modal__active');
+                    form.classList.remove('auth-form__active');
+                }
+                closeIcon.onclick = function () {
+                    modal.classList.remove('modal__active');
+                    form.classList.remove('auth-form__active');
+                }
+                const mess = document.querySelector('.message__delete');
+                mess.innerText = 'Mở khoá tài khoản "' + Account + '" ?';
+                const button = document.querySelector('.auth-form__submit');
+                button.onclick = function () {
+                    modal.classList.remove('modal__active');
+                    form.classList.remove('auth-form__active');
+                    active__Loading(true);
+                    $.ajax({
+                        url: "/OpenAccount?id=" + Account,
+                        method: "POST",
+                        data: "",
+                        contentType: "application/json",
+                        dataType: ""
+                    }).done(function (response) {
+                        active__Loading(false);
+                        if (response == true || response == "True") {
+                            active__messageNotification('Mở khoá thành công tài khoản ' + Account, true);
+                            var element = document.querySelector('.Element-' + Account);
+                            element.innerHTML = `<i onclick="LockAccount('${Account}')" class="fas fa-lock edit__info"></i>`;
+                        }
+                        else if (response == false || response == "False") {
+                            active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+                        }
+                    }).fail(function (response) {
+                        active__Loading(false);
+                        active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+                    })
+                }
+            }
         </script>
     </div>
     <div class="waning">

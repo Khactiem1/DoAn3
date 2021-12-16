@@ -16,20 +16,14 @@ namespace DTO
         public virtual DbSet<TheNap> TheNaps { get; set; }
         public virtual DbSet<MuaThe> MuaThes { get; set; }
         public virtual DbSet<Register> Registers { get; set; }
-        public virtual DbSet<DichVuThanhToan> DichVuThanhToans { get; set; }
-        public virtual DbSet<HoaDon> HoaDons { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
         public virtual DbSet<PhanHoi> PhanHois { get; set; }
         public virtual DbSet<ChietKhau> ChietKhaus { get; set; }
         public virtual DbSet<NhaMang> NhaMangs { get; set; }
-
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<TaiKhoan>()
-                .HasMany(e => e.HoaDons)
-                .WithOptional(e => e.TaiKhoan1)
-                .HasForeignKey(e => e.TaiKhoan);
-        }
+        public virtual DbSet<YeuCauGachThe> YeuCauGachThes { get; set; }
+        public virtual DbSet<YeuCauNapATM> YeuCauNapATMs { get; set; }
+        public virtual DbSet<RutTienATM> RutTienATMs { get; set; }
+        public virtual DbSet<ChuyenTien> ChuyenTiens { get; set; }
     }
 }

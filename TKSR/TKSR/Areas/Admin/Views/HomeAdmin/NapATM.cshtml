@@ -1,0 +1,206 @@
+﻿
+@{
+    ViewBag.Title = "Duyệt yêu cầu nạp thẻ ATM";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+<style>
+    .delete {
+        color: #f33a58;
+    }
+
+        .delete:hover {
+            color: #f33a58;
+        }
+
+    .item-end {
+        display: flex;
+        justify-content: space-between;
+    }
+</style>
+<div class="info__bug">
+    <div class="form">
+        <h3 class="bar__title title__info">
+            Danh sách yêu nạp ATM
+        </h3>
+        <form action="" class="history__search">
+            <div class="row rechargecard__history-select">
+                <div class="col l-3 m-12 c-12 rechargecard__history-item">
+                    <input type="text" placeholder="Tên tài khoản" class="select__input searchID">
+                </div>
+                <div class="col l-4 m-12 c-12 rechargecard__history-item">
+                    <select class="select__recort">
+                        <option>5</option>
+                        <option selected>10</option>
+                        <option>15</option>
+                        <option>20</option>
+                        <option>25</option>
+                        <option>30</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+        <h3 class="bar__title title__info">
+            Kích đúp các icon để duyệt thẻ hoặc từ chối yêu cầu
+        </h3>
+        <div class="form__container container">
+            <div class="form__history">
+                <div class="table__history">
+                    <div class="table__history-item">
+                        <span>STT</span>
+                    </div>
+                    <div class="table__history-item">
+                        <span>Tên tài khoản</span>
+                    </div>
+                    <div class="table__history-item">
+                        <span>Ngày yêu cầu</span>
+                    </div>
+                    <div class="table__history-item">
+                        <span>Ngân hàng</span>
+                    </div>
+                    <div class="table__history-item item-end">
+                        <span>Số tiền</span>
+                    </div>
+                </div>
+                <div class="card__content">
+                    @{
+                        int number = 1;
+                        foreach (var item in ViewBag.DSNapATM)
+                        {
+                            <div class="table__history table-@number">
+                                <div class="table__history-item">
+                                    <span>@number</span>
+                                </div>
+                                <div class="table__history-item">
+                                    <span>@item.TenTaiKhoan</span>
+                                </div>
+                                <div class="table__history-item">
+                                    <span>@item.NgayNap.ToString("dd/MM/yyyy HH:mm:ss")</span>
+                                </div>
+                                <div class="table__history-item">
+                                    <span>@item.NganHang</span>
+                                </div>
+                                <div class="table__history-item item-end">
+                                    <span>@String.Format("{0:#,##0.##}", item.SoTien) VNĐ</span>
+                                    <div>
+                                        <i title="Kích đúp để duyệt" ondblclick="DoneSP('@item.MaHoaDon','@item.TenTaiKhoan')" class="far fa-check-circle edit__info done"></i>
+                                        <span>/</span>
+                                        <i title="Kích đúp để từ chối" ondblclick="DeleteSP('@item.MaHoaDon','@item.TenTaiKhoan')" class="fas fa-times edit__info delete"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            number++;
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="waning">
+        <i>
+            * Nỗ lực tiêu chí tăng số lượng khách hàng trong năm tới mục tiêu trên 1000 lượt thanh toán mỗi tháng, bán được 100 thẻ nạp mỗi tuần
+        </i>
+    </div>
+</div>
+<script>
+    function DoneSP(MaHoaDon, TenTaiKhoan) {
+        active__Loading(true);
+        $.ajax({
+            url: "/PostConfirmATMTrue?id=" + MaHoaDon,
+            method: "POST",
+            data: "",
+            contentType: "application/json",
+            dataType: ""
+        }).done(function (response) {
+            active__Loading(false);
+            if (response == true || response == "True") {
+                active__messageNotification('Duyệt thành công cho ' + TenTaiKhoan, true);
+                var quantity = document.querySelector('.load-yeucaunapATM span');
+                var sl = Number(quantity.innerText) - 1;
+                quantity.innerText = sl;
+                LoadData();
+            }
+            else if (response == false || response == "False") {
+                active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+            }
+        }).fail(function (response) {
+            active__Loading(false);
+            active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+        })
+    }
+    function DeleteSP(MaHoaDon, TenTaiKhoan) {
+        active__Loading(true);
+        $.ajax({
+            url: "/PostConfirmATMFalse?id=" + MaHoaDon,
+            method: "POST",
+            data: "",
+            contentType: "application/json",
+            dataType: ""
+        }).done(function (response) {
+            active__Loading(false);
+            if (response == true || response == "True") {
+                active__messageNotification('Đã từ yêu cầu của ' + TenTaiKhoan, false);
+                var quantity = document.querySelector('.load-yeucaunapATM span');
+                var sl = Number(quantity.innerText) - 1;
+                quantity.innerText = sl;
+                LoadData();
+            }
+            else if (response == false || response == "False") {
+                active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+            }
+        }).fail(function (response) {
+            active__Loading(false);
+            active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+        })
+    }
+    function LoadData(){
+        var sl = document.querySelector('.select__recort').value;
+        $.ajax({
+            url: "/GetLoadYeuCauNapATM?sl=" + sl,
+            method: "GET",
+            data: "",
+            contentType: "application/json",
+            dataType: ""
+        }).done(function (response) {
+            $('.card__content').empty();
+            var number = 0;
+            $.each(response, function (index, item) {
+                number++;
+                var DateIN = new Date(item.NgayNap)
+                var month = DateIN.getMonth();
+                month++;
+                var strDate = DateIN.getDate() + "/" + month + "/" + DateIN.getFullYear() + " " + DateIN.getHours() + ":" + DateIN.getMinutes() + ":" + DateIN.getSeconds();
+                var html = $(`
+                                                <div class="table__history table-${number}">
+                                                    <div class="table__history-item">
+                                                        <span>${number}</span>
+                                                    </div>
+                                                    <div class="table__history-item">
+                                                        <span>${item.TenTaiKhoan}</span>
+                                                    </div>
+                                                    <div class="table__history-item">
+                                                        <span>${strDate}</span>
+                                                    </div>
+                                                    <div class="table__history-item">
+                                                        <span>${item.NganHang}</span>
+                                                    </div>
+                                                    <div class="table__history-item item-end">
+                                                        <span>${Number(item.SoTien).toLocaleString("en")} VNĐ</span>
+                                                        <div>
+                                                            <i title="Kích đúp để duyệt" ondblclick="DoneSP('${item.MaHoaDon}','${item.TenTaiKhoan}')" class="far fa-check-circle edit__info done"></i>
+                                                            <span>/</span>
+                                                            <i title="Kích đúp để từ chối" ondblclick="DeleteSP('${item.MaHoaDon}','${item.TenTaiKhoan}')" class="fas fa-times edit__info delete"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            `)
+                $('.card__content').append(html);
+            })
+        }).fail(function (response) {
+            active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+        })
+    }
+</script>
+
+

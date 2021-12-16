@@ -5,9 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ví Điện Tử TKSR - Siêu ví Thanh Toán số 1 Việt Nam</title>
-    <link rel="icon" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/logo.jpg">
+    <link rel="apple-touch-icon" sizes="76x76" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/favicons/favicon-16x16.png">
+    @*<link rel="manifest" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/favicons/site.webmanifest">*@
+    <link rel="mask-icon" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="@Request.Url.Scheme://@Request.Url.Authority/Assets/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    @*<link rel="icon" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/logo.jpg">*@
     <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/grids.css">
-    <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/bases.css">
+    <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/base.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/font.css">
@@ -60,7 +69,18 @@
                                             <a class="navbar__list-link @ViewBag.Message">
                                                 <div class="navbar__list-menu-icon"><img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo__tienich/icon7.svg" alt=""></div>
                                                 <div class="navbar__list-menu-text">
-                                                    <span class="nav__menu-text-up">Nạp tiền vào ví</span>
+                                                    <span class="nav__menu-text-up">Nạp tiền vào ví - Gạch thẻ</span>
+                                                    <span class="nav__menu-text-down">
+                                                        Nạp tiền thẻ cào - thẻ ATM
+                                                    </span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="col l-4 list-nav__item">
+                                            <a class="navbar__list-link @ViewBag.Message">
+                                                <div class="navbar__list-menu-icon"><img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo__tienich/icon7.svg" alt=""></div>
+                                                <div class="navbar__list-menu-text">
+                                                    <span class="nav__menu-text-up">Nạp tiền vào ví - ATM</span>
                                                     <span class="nav__menu-text-down">
                                                         Nạp tiền thẻ cào - thẻ ATM
                                                     </span>
@@ -78,17 +98,6 @@
                                         </li>
                                         <li class="col l-4 list-nav__item">
                                             <a class="navbar__list-link @ViewBag.Message">
-                                                <div class="navbar__list-menu-icon"><img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo__tienich/icon10.svg" alt=""></div>
-                                                <div class="navbar__list-menu-text">
-                                                    <span class="nav__menu-text-up">Liên kết thẻ ATM</span>
-                                                    <span class="nav__menu-text-down">
-                                                        Liên kết để giao dịch mọi nơi
-                                                    </span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="col l-4 list-nav__item">
-                                            <a class="navbar__list-link @ViewBag.Message">
                                                 <div class="navbar__list-menu-icon"><img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo__tienich/icon4.svg" alt=""></div>
                                                 <div class="navbar__list-menu-text">
                                                     <span class="nav__menu-text-up">Chuyển tiền cá nhân</span>
@@ -98,44 +107,11 @@
                                         </li>
                                         <li class="col l-4 list-nav__item">
                                             <a class="navbar__list-link @ViewBag.Message">
-                                                <div class="navbar__list-menu-icon"><img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo__tienich/icon3.svg" alt=""></div>
-                                                <div class="navbar__list-menu-text">
-                                                    <span class="nav__menu-text-up">Du lịch - Đi lại</span>
-                                                    <span class="nav__menu-text-down">
-                                                        Vé máy bay - Tàu/Xe - Đặt khách sạn
-                                                    </span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="col l-4 list-nav__item">
-                                            <a class="navbar__list-link @ViewBag.Message">
-                                                <div class="navbar__list-menu-icon"><img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo__tienich/icon1.svg" alt=""></div>
-                                                <div class="navbar__list-menu-text">
-                                                    <span class="nav__menu-text-up">Giải trí</span>
-                                                    <span class="nav__menu-text-down">
-                                                        Mua vé xem phim - Vé số - Karaoke
-                                                    </span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="col l-4 list-nav__item">
-                                            <a class="navbar__list-link @ViewBag.Message">
                                                 <div class="navbar__list-menu-icon"><img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo__tienich/icon8.svg" alt=""></div>
                                                 <div class="navbar__list-menu-text">
                                                     <span class="nav__menu-text-up">Mua sắm trực tuyến</span>
                                                     <span class="nav__menu-text-down">
-                                                        Thương mại điện tử - Đi chợ online
-                                                    </span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="col l-4 list-nav__item">
-                                            <a class="navbar__list-link @ViewBag.Message">
-                                                <div class="navbar__list-menu-icon"><img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo__tienich/icon2.svg" alt=""></div>
-                                                <div class="navbar__list-menu-text">
-                                                    <span class="nav__menu-text-up">Hoạt động cộng đồng</span>
-                                                    <span class="nav__menu-text-down">
-                                                        Trái Tim TKSR - Heo Đất TKSR
+                                                        Chức năng đang được xây dựng
                                                     </span>
                                                 </div>
                                             </a>
@@ -195,7 +171,7 @@
                                                 <div class="navbar__list-menu-text">
                                                     <span class="nav__menu-text-up">Tin tức</span>
                                                     <span class="nav__menu-text-down">
-                                                        Chuyên trang cập nhật thông tin mới nhất
+                                                        Chức năng đang được xây dựng
                                                     </span>
                                                 </div>
                                             </a>
@@ -206,7 +182,7 @@
                                                 <div class="navbar__list-menu-text">
                                                     <span class="nav__menu-text-up">Khuyến mại</span>
                                                     <span class="nav__menu-text-down">
-                                                        Cung cấp thông tin hữu ích đa dạng mọi lĩnh vực mà bạn cần tìm
+                                                        Chức năng đang được xây dựng
                                                     </span>
                                                 </div>
                                             </a>
@@ -225,7 +201,7 @@
                                                 <div class="navbar__list-menu-text">
                                                     <span class="nav__menu-text-up">Hỏi đáp</span>
                                                     <span class="nav__menu-text-down">
-                                                        Giải đáp cụ thể những thắc mắc của người dùng
+                                                        Giải đáp cụ thể những thắc mắc của người dùng, gửi phản hồi
                                                     </span>
                                                 </div>
                                             </a>
@@ -236,7 +212,7 @@
                                                 <div class="navbar__list-menu-text">
                                                     <span class="nav__menu-text-up">Hướng dẫn</span>
                                                     <span class="nav__menu-text-down">
-                                                        Các bước sử dụng Ví TKSR được minh họa chi tiết, rõ ràng
+                                                        Chức năng đang được xây dựng
                                                     </span>
                                                 </div>
                                             </a>
@@ -254,7 +230,7 @@
                                                 <div class="navbar__list-menu-icon"><img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/diadiem.jpg" alt=""></div>
                                                 <div class="navbar__list-menu-text">
                                                     <span class="nav__menu-text-up">Địa điểm thanh toán</span>
-                                                    <span class="nav__menu-text-down">Cửa hàng chấp nhận thanh toán TKSR</span>
+                                                    <span class="nav__menu-text-down">Chức năng đang được xây dựng</span>
                                                 </div>
                                             </a>
                                         </li>
@@ -263,7 +239,7 @@
                                                 <div class="navbar__list-menu-icon"><img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/diadiem2.svg" alt=""></div>
                                                 <div class="navbar__list-menu-text">
                                                     <span class="nav__menu-text-up">Địa điểm nạp rút</span>
-                                                    <span class="nav__menu-text-down">Các địa điểm giao dịch Nạp/Rút TKSR</span>
+                                                    <span class="nav__menu-text-down">Chức năng đang được xây dựng</span>
                                                 </div>
                                             </a>
                                         </li>
@@ -372,32 +348,32 @@
                     </div>
                     <div class="col l-3 m-6 c-0 footer__item">
                         <div class="footer__care">
-                            <a href="#" class="footer__care-link">
+                            <a class="footer__care-link">
                                 Về chúng tôi
                             </a>
                         </div>
                         <div class="footer__care">
-                            <a href="#" class="footer__care-link">
+                            <a class="footer__care-link">
                                 Blog
                             </a>
                         </div>
                         <div class="footer__care">
-                            <a href="#" class="footer__care-link">
+                            <a class="footer__care-link">
                                 Liên hệ
                             </a>
                         </div>
                         <div class="footer__care">
-                            <a href="#" class="footer__care-link">
+                            <a class="footer__care-link">
                                 Tuyển dụng
                             </a>
                         </div>
                         <div class="footer__care">
-                            <a href="#" class="footer__care-link">
+                            <a class="footer__care-link">
                                 Điều khoản điều lệ
                             </a>
                         </div>
                         <div class="footer__care">
-                            <a href="#" class="footer__care-link">
+                            <a class="footer__care-link">
                                 Chính sách quyền riêng tư
                             </a>
                         </div>
@@ -407,16 +383,14 @@
                             chăm sóc khách hàng
                         </div>
                         <div class="footer__item-content">
-                            Hotline: <span><a href="tel:1900 5454 41" target="_self" title="Gọi">1900 5454 41</a> (1000 đ/phút)</span>
+                            Hotline: <span><a href="tel:0362335462" target="_self" title="Gọi">0362335462</a> (1000 đ/phút)</span>
                         </div>
                         <div class="footer__item-content">
-                            Email: <span>KhacTiem@gmail.com</span>
+                            Email: <span>nguyenkhactiem2k1@gmail.com</span>
                         </div>
                         <div class="footer__item-content">
                             Chúng tôi gọi đi: <span>
-                                <a href="tel:036.233.5462" target="_self" title="Gọi">036.233.5462</a>
-                                -
-                                <a href="tel:012.345.6789" target="_self" title="Gọi">012.345.6789</a>
+                                <a href="tel:0362335462" target="_self" title="Gọi">0362335462</a>
                             </span>
                         </div>
                     </div>
@@ -426,25 +400,25 @@
                         </div>
                         <div class="footer__item-content">
                             Hotline: <span>
-                                <a href="tel:(028) 710 22 222" target="_self" title="Gọi">(028) 710 22 222</a> (ext:5000)
+                                <a href="tel:0362335462" target="_self" title="Gọi">0362335462</a> (ext:5000)
                             </span>
                         </div>
                         <div class="footer__item-content">
-                            Email: <span>hotro.sme@mservice.com.vn</span>
+                            Email: <span>nguyenkhactiem2k1@gmail.com</span>
                         </div>
                         <div class="footer__item-content">
-                            Website: <span>business.tksr.vn</span>
+                            Website: <a href="https://thecaosieure.xyz"><span>https://thecaosieure.xyz</span></a>
                         </div>
                     </div>
                 </div>
                 <div class="row footer__download">
                     <div class="app__download">
-                        <a href="#" class="footer__download-link">
+                        <a class="footer__download-link">
                             <img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/tai-appstore.jpg" alt="" class="footer__download-img">
                         </a>
                     </div>
                     <div class="app__download">
-                        <a href="#" class="footer__download-link">
+                        <a class="footer__download-link">
                             <img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/tai-google-play.jpg" alt="" class="footer__download-img">
                         </a>
                     </div>
@@ -1194,7 +1168,7 @@
                     xhr.timeout = 30000;
                     xhr.ontimeout = function () {
                         active__Loading(false);
-                        messLogin.innerHTML = "Có lỗi xảy ra thử lại sau vài phút"
+                        active__messageNotification('Có lỗi xảy ra thử lại sau vài phút', false);
                         isRunning = false;
                     }
                     xhr.onreadystatechange = function () {
@@ -1204,6 +1178,9 @@
                             var j = JSON.parse(r);
                             if (j.Data.status == "OK") {
                                 window.location = '';
+                            }
+                            else if (j.Data.status == "lock") {
+                                active__messageNotification('Tài khoản này đã bị khoá!', false);
                             }
                             else {
                                 messLogin.innerHTML = "thông tin tài khoản hoặc mật khẩu không chính xác"

@@ -46,3 +46,27 @@ C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\DTO\obj\Debug\
 C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\DTO\obj\Debug\DTO.csproj.CopyComplete
 C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\DTO\obj\Debug\DTO.dll
 C:\Users\Admin\Desktop\isRunning DoAn3\isRunning DoAn3\DoAn3\TKSR\DTO\obj\Debug\DTO.pdb
+F:\isRunning DoAn3\DoAn3\TKSR\DTO\bin\Debug\DTO.dll.config
+F:\isRunning DoAn3\DoAn3\TKSR\DTO\bin\Debug\DTO.dll
+F:\isRunning DoAn3\DoAn3\TKSR\DTO\bin\Debug\DTO.pdb
+F:\isRunning DoAn3\DoAn3\TKSR\DTO\bin\Debug\EntityFramework.dll
+F:\isRunning DoAn3\DoAn3\TKSR\DTO\bin\Debug\EntityFramework.SqlServer.dll
+F:\isRunning DoAn3\DoAn3\TKSR\DTO\bin\Debug\EntityFramework.xml
+F:\isRunning DoAn3\DoAn3\TKSR\DTO\bin\Debug\EntityFramework.SqlServer.xml
+F:\isRunning DoAn3\DoAn3\TKSR\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+F:\isRunning DoAn3\DoAn3\TKSR\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+F:\isRunning DoAn3\DoAn3\TKSR\DTO\obj\Debug\DTO.csproj.CopyComplete
+F:\isRunning DoAn3\DoAn3\TKSR\DTO\obj\Debug\DTO.dll
+F:\isRunning DoAn3\DoAn3\TKSR\DTO\obj\Debug\DTO.pdb
+G:\isRunning DoAn3\DoAn3\TKSR\DTO\bin\Debug\DTO.dll.config
+G:\isRunning DoAn3\DoAn3\TKSR\DTO\bin\Debug\DTO.dll
+G:\isRunning DoAn3\DoAn3\TKSR\DTO\bin\Debug\DTO.pdb
+G:\isRunning DoAn3\DoAn3\TKSR\DTO\bin\Debug\EntityFramework.dll
+G:\isRunning DoAn3\DoAn3\TKSR\DTO\bin\Debug\EntityFramework.SqlServer.dll
+G:\isRunning DoAn3\DoAn3\TKSR\DTO\bin\Debug\EntityFramework.xml
+G:\isRunning DoAn3\DoAn3\TKSR\DTO\bin\Debug\EntityFramework.SqlServer.xml
+G:\isRunning DoAn3\DoAn3\TKSR\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+G:\isRunning DoAn3\DoAn3\TKSR\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+G:\isRunning DoAn3\DoAn3\TKSR\DTO\obj\Debug\DTO.csproj.CopyComplete
+G:\isRunning DoAn3\DoAn3\TKSR\DTO\obj\Debug\DTO.dll
+G:\isRunning DoAn3\DoAn3\TKSR\DTO\obj\Debug\DTO.pdb

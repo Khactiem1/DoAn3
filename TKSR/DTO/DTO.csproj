@@ -54,18 +54,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChietKhau.cs" />
+    <Compile Include="ChuyenTien.cs" />
     <Compile Include="DichVu.cs" />
-    <Compile Include="DichVuThanhToan.cs" />
-    <Compile Include="HoaDon.cs" />
     <Compile Include="MuaThe.cs" />
     <Compile Include="mydb.cs" />
     <Compile Include="NhaMang.cs" />
     <Compile Include="PhanHoi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.cs" />
+    <Compile Include="RutTienATM.cs" />
     <Compile Include="sysdiagram.cs" />
     <Compile Include="TaiKhoan.cs" />
     <Compile Include="TheNap.cs" />
+    <Compile Include="YeuCauGachThe.cs" />
+    <Compile Include="YeuCauNapATM.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
