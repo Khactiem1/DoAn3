@@ -187,7 +187,7 @@ html {
     z-index: 4;
     transition: all 0.3s ease;
 }
-.icon__chat{
+.icon__chat {
     cursor: pointer;
     background-color: var(--primary_color);
     border-radius: 50%;
@@ -196,6 +196,18 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+}
+.messquantily {
+    position: absolute;
+    right: -20px;
+    top: -12px;
+    background-color: #f33a58;
+    color: #fff;
+    padding: 3px 5px;
+    border-radius: 50%;
+    width: 30px;
+    text-align: center;
 }
 .chat__icon{
     font-size: 40px;
@@ -270,6 +282,14 @@ html {
     overflow-y: scroll;
     max-height: var(--height);
     padding: 8px 12px 12px 12px;
+}
+.chat__user::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat__user::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
 }
 .chat__time{
     color: var(--text_color_medium);

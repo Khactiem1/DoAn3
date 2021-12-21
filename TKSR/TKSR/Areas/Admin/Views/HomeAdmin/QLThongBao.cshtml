@@ -101,70 +101,78 @@
         const mess = document.querySelector('.message__delete');
         mess.innerText = 'Bạn có chắc muốn xoá thông báo này?';
         const button = document.querySelector('.auth-form__submit');
+        var chat = $.connection.chat;
         button.onclick = function () {
             var isRunning = false;
             if (!isRunning) {
                 isRunning = true;
-                modal.classList.remove('modal__active');
-                form.classList.remove('auth-form__active');
-                active__Loading(true);
-                $.ajax({
-                    url: "/PostRemoveThongBao?id=" + id,
-                    method: "POST",
-                    data: "",
-                    contentType: "application/json",
-                    dataType: ""
-                }).done(function (response) {
-                    active__Loading(false);
-                    if (response == true || response == "True") {
-                        active__messageNotification('Xoá thành công', true);
-                        LoadThongBao();
-                    }
-                    else if (response == false || response == "False") {
-                        active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
-                    }
-                }).fail(function (response) {
-                    active__Loading(false);
-                    active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
-                })
-            }
-        }
-    }
-    document.addEventListener("DOMContentLoaded", function () {
-        LoadThongBao();
-        (function () {
-            const btn = document.querySelector('.btn__search-history');
-            btn.onclick = function () {
-                var element = document.querySelector('#details').innerHTML;
-                if (element != '<p><br data-cke-filler="true"></p>') {
-                    var SP = {};
-                    SP.NoiDung = element;
+                $.connection.hub.start().done(function () {
+                    modal.classList.remove('modal__active');
+                    form.classList.remove('auth-form__active');
                     active__Loading(true);
                     $.ajax({
-                        url: "/PostAddThongBao",
+                        url: "/PostRemoveThongBao?id=" + id,
                         method: "POST",
-                        data: JSON.stringify(SP),
+                        data: "",
                         contentType: "application/json",
-                        dataType: "json"
+                        dataType: ""
                     }).done(function (response) {
                         active__Loading(false);
-                        if (response == false || response == "False") {
-                            active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
-                        }
-                        else {
-                            active__messageNotification('Thêm thành công', true);
+                        if (response == true || response == "True") {
+                            active__messageNotification('Xoá thành công', true);
                             LoadThongBao();
+                            chat.server.message();
+                        }
+                        else if (response == false || response == "False") {
+                            active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
                         }
                     }).fail(function (response) {
                         active__Loading(false);
                         active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
                     })
-                }
-                else {
-                    active__messageNotification('Hãy điền thông báo ', false);
-                }
+                });
             }
-        })()
+        }
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+        var chat = $.connection.chat;
+        $.connection.hub.start().done(function () {
+            (function () {
+                const btn = document.querySelector('.btn__search-history');
+                btn.onclick = function () {
+                    var element = document.querySelector('#details').innerHTML;
+                    if (element != '<p><br data-cke-filler="true"></p>') {
+                        var SP = {};
+                        SP.NoiDung = element;
+                        active__Loading(true);
+                        $.ajax({
+                            url: "/PostAddThongBao",
+                            method: "POST",
+                            data: JSON.stringify(SP),
+                            contentType: "application/json",
+                            dataType: "json"
+                        }).done(function (response) {
+                            active__Loading(false);
+                            if (response == false || response == "False") {
+                                active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+                            }
+                            else {
+                                active__messageNotification('Thêm thành công', true);
+                                LoadThongBao();
+                                chat.server.message();
+                            }
+                        }).fail(function (response) {
+                            active__Loading(false);
+                            active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+                        })
+                    }
+                    else {
+                        active__messageNotification('Hãy điền thông báo ', false);
+                    }
+                }
+            })()
+        });
+        LoadThongBao();
         DecoupledEditor
             .create(document.querySelector('#details'))
             .then(editor => {

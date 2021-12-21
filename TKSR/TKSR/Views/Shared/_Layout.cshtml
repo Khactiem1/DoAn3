@@ -16,7 +16,7 @@
     <meta name="theme-color" content="#ffffff">
     @*<link rel="icon" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/logo.jpg">*@
     <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/grids.css">
-    <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/base.css">
+    <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/basess.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/font.css">
@@ -415,6 +415,60 @@
                 </div>
             </div>
         </footer>
+        <div class="chat">
+            <div class="icon__chat">
+                <i class="fab fa-facebook-messenger chat__icon"></i>
+                <div class="messquantily">
+                    <span></span>
+                </div>
+            </div>
+            <div class="chat__container">
+                <div class="chat__header">
+                    <div class="chat__header-title">
+                        <div class="chat__header-logo">
+                            <img src="@Request.Url.Scheme://@Request.Url.Authority/assets/img/logo/logo.jpg" alt="">
+                        </div>
+                        <div class="chat__title-text">
+                            <span>
+                                Thông báo dành cho bạn
+                            </span>
+                        </div>
+                    </div>
+                    <div class="chat__close">
+                        <i class="far fa-window-minimize"></i>
+                    </div>
+                </div>
+                <div class="chat__content">
+                    <div class="chat__user">
+                        <div style="margin-top: 6px;" class="chat__time">
+                        </div>
+                        <div class="ad chat__history">
+                            <div class="send__logo">
+                                <img src="@Request.Url.Scheme://@Request.Url.Authority/assets/img/logo/logo.jpg" alt="">
+                            </div>
+                            <span class="messenger__send">
+                                Đây là thông báo dành cho bạn
+                            </span>
+                        </div>
+                        <div class="user chat__history">
+                            <div class="send__logo">
+                                <i class="fas fa-user mess__icon"></i>
+                            </div>
+                            <span class="messenger__send">
+                                Ở đây có bán thẻ điện thoại không?
+                            </span>
+                        </div>
+                    </div>
+                    <div class="chat__input">
+                        <input type="text" placeholder="Chat gì thì qua fanpage nha?" class="chat__input-content">
+                        <button class="chat__send">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/js/chatAdmins.js"></script>
         <!-- Messenger Plugin chat Code -->
         <div id="fb-root"></div>
 
@@ -746,6 +800,8 @@
     @*<script type="text/javascript" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/js/validators.js"></script>*@
     <script type="text/javascript" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/js/Jquery/Loading.js"></script>
     <script type="text/javascript" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/js/Jquery/message.js"></script>
+    <script src="@Request.Url.Scheme://@Request.Url.Authority/Scripts/jquery.signalR-2.4.2.min.js"></script>
+    <script src="@Request.Url.Scheme://@Request.Url.Authority/signalr/hubs"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const forgotPass = document.querySelector('.auth-form__forgot-link');
@@ -754,6 +810,78 @@
                 const tab__close = document.querySelector('.auth-form.auth-form__active');
                 tab__close.classList.remove('auth-form__active');
                 form__forgotPass.classList.add('auth-form__active');
+            }
+            function LoadThongBao() {
+                $.ajax({
+                    url: "/GetLoadThongBao",
+                    method: "GET",
+                    data: "",
+                    contentType: "application/json",
+                    dataType: ""
+                }).done(function (response) {
+                    var messquantily = document.querySelector('.messquantily span');
+                    messquantily.innerText = response.length;
+                    if (response.length == 0) {
+                        $('.chat__user').empty();
+                        var DateIN = new Date();
+                            var month = DateIN.getMonth();
+                            month++;
+                            var strDate = DateIN.getDate() + "/" + month + "/" + DateIN.getFullYear() + " " + DateIN.getHours() + ":" + DateIN.getMinutes() + ":" + DateIN.getSeconds();
+                            var html = `
+                                        <div style="margin-top: 6px;" class="chat__time">
+                                            ${strDate}
+                                        </div>
+                                        <div class="ad chat__history">
+                                            <div class="send__logo">
+                                                <img src="@Request.Url.Scheme://@Request.Url.Authority/assets/img/logo/logo.jpg" alt="">
+                                            </div>
+                                            <span class="messenger__send">
+                                                Chưa có thông báo nào dành cho bạn
+                                            </span>
+                                        </div>
+                                        `;
+                            $('.chat__user').append($(html));
+                    }
+                    else {
+                        $('.chat__user').empty();
+                        $.each(response, function (index, item) {
+                            var DateIN = new Date(item.NgayThem);
+                            var month = DateIN.getMonth();
+                            month++;
+                            var strDate = DateIN.getDate() + "/" + month + "/" + DateIN.getFullYear() + " " + DateIN.getHours() + ":" + DateIN.getMinutes() + ":" + DateIN.getSeconds();
+                            var html = `
+                                        <div style="margin-top: 6px;" class="chat__time">
+                                            ${strDate}
+                                        </div>
+                                        <div class="ad chat__history">
+                                            <div class="send__logo">
+                                                <img src="@Request.Url.Scheme://@Request.Url.Authority/assets/img/logo/logo.jpg" alt="">
+                                            </div>
+                                            <span class="messenger__send">
+                                                ${item.NoiDung}
+                                            </span>
+                                        </div>
+                                        `;
+                            $('.chat__user').append($(html));
+                        })
+                        chatWindow = document.querySelector('.chat__user');
+                        let xH = chatWindow.scrollHeight;
+                        chatWindow.scrollTo(0, xH);
+                    }
+                }).fail(function () {
+                    active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+                })
+            }
+            LoadThongBao();
+            var chat = $.connection.chat;
+            loadClient(chat);
+            $.connection.hub.start().done(function () {
+
+            });
+            function loadClient(chat) {
+                chat.client.message = function () {
+                    LoadThongBao();
+                }
             }
         }, false)
     </script>

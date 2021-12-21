@@ -17,7 +17,7 @@
     <meta name="theme-color" content="#ffffff">
     @*<link rel="icon" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/logo.jpg">*@
     <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/grids.css">
-    <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/base.css">
+    <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/basess.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/font.css">
@@ -527,6 +527,9 @@
         <div class="chat">
             <div class="icon__chat">
                 <i class="fab fa-facebook-messenger chat__icon"></i>
+                <div class="messquantily">
+                    <span></span>
+                </div>
             </div>
             <div class="chat__container">
                 <div class="chat__header">
@@ -557,13 +560,13 @@
                             </span>
                         </div>
                         <div class="user chat__history">
-                                <div class="send__logo">
-                                    <i class="fas fa-user mess__icon"></i>
-                                </div>
-                                <span class="messenger__send">
-                                    Ở đây có bán thẻ điện thoại không?
-                                </span>
+                            <div class="send__logo">
+                                <i class="fas fa-user mess__icon"></i>
                             </div>
+                            <span class="messenger__send">
+                                Ở đây có bán thẻ điện thoại không?
+                            </span>
+                        </div>
                     </div>
                     <div class="chat__input">
                         <input type="text" placeholder="Chat gì thì qua fanpage nha?" class="chat__input-content">
@@ -920,6 +923,8 @@
     <script type="text/javascript" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/js/Jquery/Loading.js"></script>
     <script type="text/javascript" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/js/Jquery/message.js"></script>
     <script type="text/javascript" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/js/updateAcc.js"></script>
+    <script src="@Request.Url.Scheme://@Request.Url.Authority/Scripts/jquery.signalR-2.4.2.min.js"></script>
+    <script src="@Request.Url.Scheme://@Request.Url.Authority/signalr/hubs"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             function LoadThongBao() {
@@ -930,6 +935,8 @@
                     contentType: "application/json",
                     dataType: ""
                 }).done(function (response) {
+                    var messquantily = document.querySelector('.messquantily span');
+                    messquantily.innerText = response.length;
                     if (response.length == 0) {
                         $('.chat__user').empty();
                         var DateIN = new Date();
@@ -973,12 +980,25 @@
                                         `;
                             $('.chat__user').append($(html));
                         })
+                        chatWindow = document.querySelector('.chat__user');
+                        let xH = chatWindow.scrollHeight;
+                        chatWindow.scrollTo(0, xH);
                     }
                 }).fail(function () {
                     active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
                 })
             }
             LoadThongBao();
+            var chat = $.connection.chat;
+            loadClient(chat);
+            $.connection.hub.start().done(function () {
+
+            });
+            function loadClient(chat) {
+                chat.client.message = function () {
+                    LoadThongBao();
+                }
+            }
         }, false)
     </script>
 </body>
