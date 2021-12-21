@@ -16,7 +16,7 @@
     <meta name="theme-color" content="#ffffff">
     @*<link rel="icon" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/logo.jpg">*@
     <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/grids.css">
-    <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/base.css">
+    <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/basess.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/navs.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
@@ -268,5 +268,12 @@
     <script type="text/javascript" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/js/Jquery/Loading.js"></script>
     <script type="text/javascript" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/js/Jquery/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/js/Jquery/message.js"></script>
+    @{
+        if (ViewBag.QLThongBao == "bar__list-text__active")
+        {
+            <script src="@Request.Url.Scheme://@Request.Url.Authority/Scripts/jquery.signalR-2.4.2.min.js"></script>
+            <script src="@Request.Url.Scheme://@Request.Url.Authority/signalr/hubs"></script>
+        }
+    }
 </body>
 </html>

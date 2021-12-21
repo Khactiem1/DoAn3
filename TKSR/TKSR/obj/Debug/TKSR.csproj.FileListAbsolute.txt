@@ -758,3 +758,16 @@ G:\isRunning DoAn3\DoAn3\TKSR\TKSR\obj\Debug\TKSR.csproj.CoreCompileInputs.cache
 G:\isRunning DoAn3\DoAn3\TKSR\TKSR\obj\Debug\TKSR.csproj.CopyComplete
 G:\isRunning DoAn3\DoAn3\TKSR\TKSR\obj\Debug\TKSR.dll
 G:\isRunning DoAn3\DoAn3\TKSR\TKSR\obj\Debug\TKSR.pdb
+G:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\Microsoft.AspNet.SignalR.Core.dll
+G:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+G:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\Microsoft.Owin.dll
+G:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\Microsoft.Owin.Host.SystemWeb.dll
+G:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\Microsoft.Owin.Security.dll
+G:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\Owin.dll
+G:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\Microsoft.AspNet.SignalR.Core.pdb
+G:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\Microsoft.AspNet.SignalR.Core.xml
+G:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+G:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+G:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\Microsoft.Owin.xml
+G:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\Microsoft.Owin.Host.SystemWeb.xml
+G:\isRunning DoAn3\DoAn3\TKSR\TKSR\bin\Microsoft.Owin.Security.xml
