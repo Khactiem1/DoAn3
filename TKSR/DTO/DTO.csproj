@@ -66,6 +66,7 @@
     <Compile Include="sysdiagram.cs" />
     <Compile Include="TaiKhoan.cs" />
     <Compile Include="TheNap.cs" />
+    <Compile Include="ThongBao.cs" />
     <Compile Include="YeuCauGachThe.cs" />
     <Compile Include="YeuCauNapATM.cs" />
   </ItemGroup>

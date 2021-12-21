@@ -116,6 +116,11 @@
     </div>
 </div>
 <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        $('.select__recort').change(function () {
+            LoadData();
+        })
+    }, false)
     function DoneSP(MaHoaDon, TenTaiKhoan) {
         active__Loading(true);
         $.ajax({
@@ -166,10 +171,24 @@
             active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
         })
     }
+    var InputNameSearch = document.querySelector('.searchID');
+    InputNameSearch.oninput = function () {
+        setTimeout(function () {
+            LoadData();
+        }, 100)
+    }
     function LoadData(){
         var sl = document.querySelector('.select__recort').value;
+        var url = "";
+        var NameSearch = document.querySelector('.searchID');
+        if (NameSearch.value.trim() == "") {
+            url = "/GetLoadYeuCauRutATM?sl=" + sl;
+        }
+        else {
+            url = "/GetLoadYeuCauRutATMTheoUID?id=" + NameSearch.value.trim();
+        }
         $.ajax({
-            url: "/GetLoadYeuCauRutATM?sl=" + sl,
+            url: url,
             method: "GET",
             data: "",
             contentType: "application/json",

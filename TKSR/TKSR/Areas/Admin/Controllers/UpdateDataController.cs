@@ -23,6 +23,11 @@ namespace TKSR.Areas.Admin.Controllers
         {
             return TheNapDB.GetAllYeuCauGachThes(int.Parse(sl));
         }
+        [Route("GetLoadYeuCauGachTheTheoIUD")]
+        public List<YeuCauGachThe> GetLoadYeuCauGachTheTheoIUD(string id)
+        {
+            return TheNapDB.GetLoadYeuCauGachTheTheoIUD(id);
+        }
         [Route("PostConfirmCardTrue")]
         public bool PostConfirmCardTrue(string id)
         {
@@ -61,6 +66,13 @@ namespace TKSR.Areas.Admin.Controllers
         {
             return TheNapDB.GetAllYeuCauNapTienATM(int.Parse(sl));
         }
+
+        [Route("GetLoadYeuCauNapATMTheoIUD")]
+        public List<YeuCauNapATM> GetLoadYeuCauNapATMTheoIUD(string id)
+        {
+            return TheNapDB.GetAllYeuCauNapTienATMTheoIUD(id);
+        }
+
         [Route("PostConfirmATMTrue")]
         public bool PostConfirmATMTrue(string id)
         {
@@ -95,13 +107,70 @@ namespace TKSR.Areas.Admin.Controllers
             }
         }
 
+        [Route("PostAddThongBao")]
+        public string PostAddThongBao([FromBody] ThongBao value)
+        {
+            try
+            {
+                ThongBao itemThongBao = new ThongBao();
+                itemThongBao.MaThongBao = Guid.NewGuid().ToString();
+                itemThongBao.NoiDung = value.NoiDung;
+                itemThongBao.NgayThem = DateTime.Now;
+                TheNapDB.PostThongBao(itemThongBao);
+                TheNapDB.Save();
+                return itemThongBao.MaThongBao + "*" + itemThongBao.NgayThem.ToString();
+            }
+            catch
+            {
+                return "false";
+            }
+        }
 
-
-
+        [Route("GetLoadThongBao")]
+        public List<ThongBao> GetLoadThongBao()
+        {
+            List<ThongBao> DSThongBao = new List<ThongBao>();
+            try
+            {
+                DSThongBao = TheNapDB.GetAllDSThongBao();
+                return DSThongBao;
+            }
+            catch
+            {
+                return DSThongBao;
+            }
+        }
+        [Route("PostRemoveThongBao")]
+        public bool PostRemoveThongBao(string id)
+        {
+            try
+            {
+                ThongBao DV = TheNapDB.GetThongBao(id);
+                if (DV == null)
+                {
+                    return false;
+                }
+                else
+                {
+                    TheNapDB.DeleteThongBao(DV);
+                    TheNapDB.Save();
+                    return true;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
         [Route("GetLoadYeuCauRutATM")]
         public List<RutTienATM> GetLoadYeuCauRutATM(string sl)
         {
             return TheNapDB.GetAllYeuCauRutTienATM(int.Parse(sl));
+        }
+        [Route("GetLoadYeuCauRutATMTheoUID")]
+        public List<RutTienATM> GetLoadYeuCauRutATMTheoUID(string id)
+        {
+            return TheNapDB.GetAllYeuCauRutTienATMTheoIUD(id);
         }
         [Route("PostConfirmRutATMTrue")]
         public bool PostConfirmRutATMTrue(string id)

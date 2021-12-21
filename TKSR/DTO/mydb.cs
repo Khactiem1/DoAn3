@@ -25,5 +25,6 @@ namespace DTO
         public virtual DbSet<YeuCauNapATM> YeuCauNapATMs { get; set; }
         public virtual DbSet<RutTienATM> RutTienATMs { get; set; }
         public virtual DbSet<ChuyenTien> ChuyenTiens { get; set; }
+        public virtual DbSet<ThongBao> ThongBaos { get; set; }
     }
 }

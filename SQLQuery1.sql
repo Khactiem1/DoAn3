@@ -10,7 +10,47 @@ create table DichVu(
 	NgayThem DateTime
 )
 
+create table YeuCauGachThe(
+	MaHoaDon nvarchar(200) primary key,
+	TenTaiKhoan nvarchar(50),
+	NhaMang nvarchar(50),
+	MaThe nvarchar(50),
+	Seri nvarchar(50),
+	MenhGia int,
+	TienThucNhan nvarchar(50),
+	NgayNap DateTime,
+	TrangThai nvarchar(50)
+)
 
+create table YeuCauNapATM(
+	MaHoaDon nvarchar(200) primary key,
+	TenTaiKhoan nvarchar(50),
+	NganHang nvarchar(50),
+	SoTien int,
+	NgayNap DateTime,
+	TrangThai nvarchar(50)
+)
+
+create table RutTienATM(
+	MaHoaDon nvarchar(200) primary key,
+	TenTaiKhoan nvarchar(50),
+	NganHang nvarchar(50),
+	STK nvarchar(50),
+	ChuTK nvarchar(50),
+	SoTien int,
+	NgayRut DateTime,
+	TrangThai nvarchar(50)
+)
+
+
+create table ChuyenTien(
+	MaHoaDon nvarchar(200) primary key,
+	TenTaiKhoanChuyen nvarchar(50),
+	TenTaiKhoanNhan nvarchar(50),
+	SoTien int,
+	LoiNhan nvarchar(250),
+	NgayChuyen DateTime,
+)
 
 
 
@@ -130,7 +170,6 @@ delete MuaThe
 select * from MuaThe order by(NgayMua) desc
 
 drop table TheNap
-drop table LoaiThe
 drop table ChiTietHoaDon
 drop table DichVuThanhToan
 drop table DichVu
@@ -152,6 +191,15 @@ create table TaiKhoan(
 	DacDiem nvarchar(100),
 	SoDu int
 )
+
+ALTER TABLE TaiKhoan
+  ADD NumberLock int;
+ALTER TABLE TaiKhoan
+  ADD IP nvarchar(250);
+
+ALTER TABLE TaiKhoan
+  ADD TrangThai Nvarchar(50);
+
 ALTER TABLE TaiKhoan
 ALTER COLUMN SoDu float;
 
@@ -206,3 +254,9 @@ create table PhanHoi(
 )
 ALTER TABLE PhanHoi
   add NgayPhanHoi datetime
+
+Create table ThongBao(
+	MaThongBao nvarchar(250) primary key,
+	NoiDung nvarchar(max),
+	NgayThem DateTime
+)
