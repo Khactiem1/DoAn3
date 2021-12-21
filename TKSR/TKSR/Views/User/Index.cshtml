@@ -104,30 +104,51 @@
                                 <span>@Model.user.ngayLap.ToString("dd/MM/yyyy HH:mm:ss")</span>
                             </li>
                             <li class="table__category-item table__Update">
-                                <input value="@Model.user.sdt" maxlength="20" type="text" class="change" placeholder="Nhập số điện thoại">
+                                @{
+                                    if (Model.user.sdt == "Chưa cập nhật")
+                                    {
+                                        <input value="" maxlength="20" type="text" class="change" placeholder="Nhập số điện thoại">
+                                    }
+                                    else
+                                    {
+                                        <input value="@Model.user.sdt" maxlength="20" type="text" class="change" placeholder="Nhập số điện thoại">
+                                    }
+                                }
                                 <span class="none">Nhập đúng số điện thoại</span>
                             </li>
                             <li class="table__category-item table__Update">
+                                <svg class="PasswordField_iconButton__1LFBr view__active" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M6.629 12.957c.346.056.692.112 1.067.112h.517c3.579 0 5.812-2.426 7.181-4.251a1.128 1.128 0 0 0 0-1.357 12.035 12.035 0 0 0-1.662-1.784L11.25 8.222l.002.019c0 1.866-1.476 3.379-3.297 3.379l-.018-.003-1.308 1.339zm3.619-7.138l-1.17 1.199a1.613 1.613 0 0 0-1.124-.466c-.909 0-1.649.758-1.649 1.69 0 .447.178.849.456 1.151l-1.17 1.199a3.405 3.405 0 0 1-.935-2.35c0-1.866 1.476-3.379 3.297-3.379.893 0 1.701.367 2.294.957zm5.231-3.995c.184-.188.184-.494 0-.683s-.482-.188-.666 0l-3.056 3.132a7.743 7.743 0 0 0-3.543-.859h-.517c-2.804 0-5.219 1.324-7.181 3.938a1.098 1.098 0 0 0 0 1.372c.115.154.246.316.373.476v.007h.005c.81 1.019 1.874 2.121 3.229 2.891l-2.027 2.078a.492.492 0 0 0 0 .683.462.462 0 0 0 .667 0l2.269-2.325.011.004 1.323-1.355-.011-.005 1.282-1.313a.05.05 0 0 1 .012.002l1.895-1.942-.003-.013 1.281-1.313.005.011 1.789-1.834-.008-.007 2.874-2.946z"></path></svg>
+                                <svg class="PasswordField_iconButton__1LFBr" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M11.448 8A3.449 3.449 0 1 1 4.55 8a3.449 3.449 0 0 1 6.898 0zm4.333-.796c-2.108-2.742-4.635-4.131-7.511-4.131h-.541c-2.932 0-5.46 1.352-7.511 4.019-.29.394-.29 1.009 0 1.401.121.157.257.322.391.486v.007h.005c1.482 1.82 3.744 3.942 7.115 3.942h.541c3.744 0 6.079-2.477 7.511-4.339a1.201 1.201 0 0 0 0-1.385z"></path><path fill="currentColor" d="M9.724 8c0-.951-.774-1.725-1.725-1.725S6.275 7.049 6.275 8c0 .951.773 1.725 1.724 1.725S9.724 8.951 9.724 8z"></path></svg>
                                 <input maxlength="20" type="password" class="change" placeholder="Nhập mật khẩu cũ">
                                 <span class="none">Mật khẩu sai</span>
                             </li>
                             <li class="table__category-item table__Update">
+                                <svg class="PasswordField_iconButton__1LFBr view__active" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M6.629 12.957c.346.056.692.112 1.067.112h.517c3.579 0 5.812-2.426 7.181-4.251a1.128 1.128 0 0 0 0-1.357 12.035 12.035 0 0 0-1.662-1.784L11.25 8.222l.002.019c0 1.866-1.476 3.379-3.297 3.379l-.018-.003-1.308 1.339zm3.619-7.138l-1.17 1.199a1.613 1.613 0 0 0-1.124-.466c-.909 0-1.649.758-1.649 1.69 0 .447.178.849.456 1.151l-1.17 1.199a3.405 3.405 0 0 1-.935-2.35c0-1.866 1.476-3.379 3.297-3.379.893 0 1.701.367 2.294.957zm5.231-3.995c.184-.188.184-.494 0-.683s-.482-.188-.666 0l-3.056 3.132a7.743 7.743 0 0 0-3.543-.859h-.517c-2.804 0-5.219 1.324-7.181 3.938a1.098 1.098 0 0 0 0 1.372c.115.154.246.316.373.476v.007h.005c.81 1.019 1.874 2.121 3.229 2.891l-2.027 2.078a.492.492 0 0 0 0 .683.462.462 0 0 0 .667 0l2.269-2.325.011.004 1.323-1.355-.011-.005 1.282-1.313a.05.05 0 0 1 .012.002l1.895-1.942-.003-.013 1.281-1.313.005.011 1.789-1.834-.008-.007 2.874-2.946z"></path></svg>
+                                <svg class="PasswordField_iconButton__1LFBr" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M11.448 8A3.449 3.449 0 1 1 4.55 8a3.449 3.449 0 0 1 6.898 0zm4.333-.796c-2.108-2.742-4.635-4.131-7.511-4.131h-.541c-2.932 0-5.46 1.352-7.511 4.019-.29.394-.29 1.009 0 1.401.121.157.257.322.391.486v.007h.005c1.482 1.82 3.744 3.942 7.115 3.942h.541c3.744 0 6.079-2.477 7.511-4.339a1.201 1.201 0 0 0 0-1.385z"></path><path fill="currentColor" d="M9.724 8c0-.951-.774-1.725-1.725-1.725S6.275 7.049 6.275 8c0 .951.773 1.725 1.724 1.725S9.724 8.951 9.724 8z"></path></svg>
                                 <input maxlength="20" type="password" class="change" placeholder="Nhập mật khẩu mới">
                                 <span class="none">Cần có chữ hoa, thường ,số</span>
                             </li>
                             <li class="table__category-item table__Update">
+                                <svg class="PasswordField_iconButton__1LFBr view__active" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M6.629 12.957c.346.056.692.112 1.067.112h.517c3.579 0 5.812-2.426 7.181-4.251a1.128 1.128 0 0 0 0-1.357 12.035 12.035 0 0 0-1.662-1.784L11.25 8.222l.002.019c0 1.866-1.476 3.379-3.297 3.379l-.018-.003-1.308 1.339zm3.619-7.138l-1.17 1.199a1.613 1.613 0 0 0-1.124-.466c-.909 0-1.649.758-1.649 1.69 0 .447.178.849.456 1.151l-1.17 1.199a3.405 3.405 0 0 1-.935-2.35c0-1.866 1.476-3.379 3.297-3.379.893 0 1.701.367 2.294.957zm5.231-3.995c.184-.188.184-.494 0-.683s-.482-.188-.666 0l-3.056 3.132a7.743 7.743 0 0 0-3.543-.859h-.517c-2.804 0-5.219 1.324-7.181 3.938a1.098 1.098 0 0 0 0 1.372c.115.154.246.316.373.476v.007h.005c.81 1.019 1.874 2.121 3.229 2.891l-2.027 2.078a.492.492 0 0 0 0 .683.462.462 0 0 0 .667 0l2.269-2.325.011.004 1.323-1.355-.011-.005 1.282-1.313a.05.05 0 0 1 .012.002l1.895-1.942-.003-.013 1.281-1.313.005.011 1.789-1.834-.008-.007 2.874-2.946z"></path></svg>
+                                <svg class="PasswordField_iconButton__1LFBr" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M11.448 8A3.449 3.449 0 1 1 4.55 8a3.449 3.449 0 0 1 6.898 0zm4.333-.796c-2.108-2.742-4.635-4.131-7.511-4.131h-.541c-2.932 0-5.46 1.352-7.511 4.019-.29.394-.29 1.009 0 1.401.121.157.257.322.391.486v.007h.005c1.482 1.82 3.744 3.942 7.115 3.942h.541c3.744 0 6.079-2.477 7.511-4.339a1.201 1.201 0 0 0 0-1.385z"></path><path fill="currentColor" d="M9.724 8c0-.951-.774-1.725-1.725-1.725S6.275 7.049 6.275 8c0 .951.773 1.725 1.724 1.725S9.724 8.951 9.724 8z"></path></svg>
                                 <input maxlength="20" type="password" class="change" placeholder="Nhập lại mật khẩu mới">
                                 <span class="none">Mật khẩu không khớp</span>
                             </li>
                             <li class="table__category-item table__Update">
+                                <svg class="PasswordField_iconButton__1LFBr view__active" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M6.629 12.957c.346.056.692.112 1.067.112h.517c3.579 0 5.812-2.426 7.181-4.251a1.128 1.128 0 0 0 0-1.357 12.035 12.035 0 0 0-1.662-1.784L11.25 8.222l.002.019c0 1.866-1.476 3.379-3.297 3.379l-.018-.003-1.308 1.339zm3.619-7.138l-1.17 1.199a1.613 1.613 0 0 0-1.124-.466c-.909 0-1.649.758-1.649 1.69 0 .447.178.849.456 1.151l-1.17 1.199a3.405 3.405 0 0 1-.935-2.35c0-1.866 1.476-3.379 3.297-3.379.893 0 1.701.367 2.294.957zm5.231-3.995c.184-.188.184-.494 0-.683s-.482-.188-.666 0l-3.056 3.132a7.743 7.743 0 0 0-3.543-.859h-.517c-2.804 0-5.219 1.324-7.181 3.938a1.098 1.098 0 0 0 0 1.372c.115.154.246.316.373.476v.007h.005c.81 1.019 1.874 2.121 3.229 2.891l-2.027 2.078a.492.492 0 0 0 0 .683.462.462 0 0 0 .667 0l2.269-2.325.011.004 1.323-1.355-.011-.005 1.282-1.313a.05.05 0 0 1 .012.002l1.895-1.942-.003-.013 1.281-1.313.005.011 1.789-1.834-.008-.007 2.874-2.946z"></path></svg>
+                                <svg class="PasswordField_iconButton__1LFBr" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M11.448 8A3.449 3.449 0 1 1 4.55 8a3.449 3.449 0 0 1 6.898 0zm4.333-.796c-2.108-2.742-4.635-4.131-7.511-4.131h-.541c-2.932 0-5.46 1.352-7.511 4.019-.29.394-.29 1.009 0 1.401.121.157.257.322.391.486v.007h.005c1.482 1.82 3.744 3.942 7.115 3.942h.541c3.744 0 6.079-2.477 7.511-4.339a1.201 1.201 0 0 0 0-1.385z"></path><path fill="currentColor" d="M9.724 8c0-.951-.774-1.725-1.725-1.725S6.275 7.049 6.275 8c0 .951.773 1.725 1.724 1.725S9.724 8.951 9.724 8z"></path></svg>
                                 <input maxlength="20" type="password" class="change" placeholder="Nhập mật khẩu 2 cũ">
                                 <span class="none">Mật khẩu sai</span>
                             </li>
                             <li class="table__category-item table__Update">
+                                <svg class="PasswordField_iconButton__1LFBr view__active" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M6.629 12.957c.346.056.692.112 1.067.112h.517c3.579 0 5.812-2.426 7.181-4.251a1.128 1.128 0 0 0 0-1.357 12.035 12.035 0 0 0-1.662-1.784L11.25 8.222l.002.019c0 1.866-1.476 3.379-3.297 3.379l-.018-.003-1.308 1.339zm3.619-7.138l-1.17 1.199a1.613 1.613 0 0 0-1.124-.466c-.909 0-1.649.758-1.649 1.69 0 .447.178.849.456 1.151l-1.17 1.199a3.405 3.405 0 0 1-.935-2.35c0-1.866 1.476-3.379 3.297-3.379.893 0 1.701.367 2.294.957zm5.231-3.995c.184-.188.184-.494 0-.683s-.482-.188-.666 0l-3.056 3.132a7.743 7.743 0 0 0-3.543-.859h-.517c-2.804 0-5.219 1.324-7.181 3.938a1.098 1.098 0 0 0 0 1.372c.115.154.246.316.373.476v.007h.005c.81 1.019 1.874 2.121 3.229 2.891l-2.027 2.078a.492.492 0 0 0 0 .683.462.462 0 0 0 .667 0l2.269-2.325.011.004 1.323-1.355-.011-.005 1.282-1.313a.05.05 0 0 1 .012.002l1.895-1.942-.003-.013 1.281-1.313.005.011 1.789-1.834-.008-.007 2.874-2.946z"></path></svg>
+                                <svg class="PasswordField_iconButton__1LFBr" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M11.448 8A3.449 3.449 0 1 1 4.55 8a3.449 3.449 0 0 1 6.898 0zm4.333-.796c-2.108-2.742-4.635-4.131-7.511-4.131h-.541c-2.932 0-5.46 1.352-7.511 4.019-.29.394-.29 1.009 0 1.401.121.157.257.322.391.486v.007h.005c1.482 1.82 3.744 3.942 7.115 3.942h.541c3.744 0 6.079-2.477 7.511-4.339a1.201 1.201 0 0 0 0-1.385z"></path><path fill="currentColor" d="M9.724 8c0-.951-.774-1.725-1.725-1.725S6.275 7.049 6.275 8c0 .951.773 1.725 1.724 1.725S9.724 8.951 9.724 8z"></path></svg>
                                 <input maxlength="20" type="password" class="change" placeholder="Nhập mật khẩu 2 mới">
                                 <span class="none">Cần có chữ hoa, thường, số</span>
                             </li>
                             <li class="table__category-item table__Update">
+                                <svg class="PasswordField_iconButton__1LFBr view__active" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M6.629 12.957c.346.056.692.112 1.067.112h.517c3.579 0 5.812-2.426 7.181-4.251a1.128 1.128 0 0 0 0-1.357 12.035 12.035 0 0 0-1.662-1.784L11.25 8.222l.002.019c0 1.866-1.476 3.379-3.297 3.379l-.018-.003-1.308 1.339zm3.619-7.138l-1.17 1.199a1.613 1.613 0 0 0-1.124-.466c-.909 0-1.649.758-1.649 1.69 0 .447.178.849.456 1.151l-1.17 1.199a3.405 3.405 0 0 1-.935-2.35c0-1.866 1.476-3.379 3.297-3.379.893 0 1.701.367 2.294.957zm5.231-3.995c.184-.188.184-.494 0-.683s-.482-.188-.666 0l-3.056 3.132a7.743 7.743 0 0 0-3.543-.859h-.517c-2.804 0-5.219 1.324-7.181 3.938a1.098 1.098 0 0 0 0 1.372c.115.154.246.316.373.476v.007h.005c.81 1.019 1.874 2.121 3.229 2.891l-2.027 2.078a.492.492 0 0 0 0 .683.462.462 0 0 0 .667 0l2.269-2.325.011.004 1.323-1.355-.011-.005 1.282-1.313a.05.05 0 0 1 .012.002l1.895-1.942-.003-.013 1.281-1.313.005.011 1.789-1.834-.008-.007 2.874-2.946z"></path></svg>
+                                <svg class="PasswordField_iconButton__1LFBr" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M11.448 8A3.449 3.449 0 1 1 4.55 8a3.449 3.449 0 0 1 6.898 0zm4.333-.796c-2.108-2.742-4.635-4.131-7.511-4.131h-.541c-2.932 0-5.46 1.352-7.511 4.019-.29.394-.29 1.009 0 1.401.121.157.257.322.391.486v.007h.005c1.482 1.82 3.744 3.942 7.115 3.942h.541c3.744 0 6.079-2.477 7.511-4.339a1.201 1.201 0 0 0 0-1.385z"></path><path fill="currentColor" d="M9.724 8c0-.951-.774-1.725-1.725-1.725S6.275 7.049 6.275 8c0 .951.773 1.725 1.724 1.725S9.724 8.951 9.724 8z"></path></svg>
                                 <input maxlength="20" type="password" class="change" placeholder="Nhập lại mật khẩu 2 mới">
                                 <span class="none">Mật khẩu không khớp</span>
                             </li>
@@ -148,6 +169,25 @@
 </section>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
+        const view__pass = document.querySelectorAll('.PasswordField_iconButton__1LFBr');
+        view__pass.forEach((items, index) => {
+            if (index % 2 == 0) {
+                view__pass[index].onclick = function () {
+                    const element__parent = view__pass[index].parentElement.querySelector('.change');
+                    view__pass[index].classList.remove('view__active');
+                    view__pass[index + 1].classList.add('view__active');
+                    element__parent.type = "text";
+                }
+            }
+            else {
+                view__pass[index].onclick = function () {
+                    const element__parent = view__pass[index].parentElement.querySelector('.change');
+                    view__pass[index].classList.remove('view__active');
+                    view__pass[index - 1].classList.add('view__active');
+                    element__parent.type = "password";
+                }
+            }
+        })
         function remove_oninput(element) {
             var message = element.querySelector('span');
             message.classList.add('none');
@@ -208,7 +248,7 @@
                         add__blur(input[0].parentElement);
                     }
                 }
-                else if (index == 1) {///sssssssssssssssssssssssssssss
+                else if (index == 1) {
                     function tests() {
                         return input[1].value.length > 0 ? undefined : `gg`;
                     }
@@ -251,7 +291,7 @@
                         add__blur(input[3].parentElement);
                     }
                 }
-                else if (index == 4) {///ssssssssssssssssssssssssssss
+                else if (index == 4) {
                     function tests() {
                         return input[4].value.length > 0 ? undefined : `gg`;
                     }

@@ -276,5 +276,37 @@ namespace TKSR.Areas.Admin.Controllers
             }
             return View();
         }
+        public ActionResult QLThongBao()
+        {
+            if (Session["user"] == null)
+            {
+                Session["user"] = null;
+                Response.Redirect(Request.Url.Scheme + "://" + Request.Url.Authority);
+            }
+            else
+            {
+                TaiKhoan userClient = (TaiKhoan)Session["user"];
+                TaiKhoan user = db.GetOneTaiKhoan(userClient.tenTK);
+                if (user.TrangThai == "lock")
+                {
+                    Response.Redirect(Request.Url.Scheme + "://" + Request.Url.Authority);
+                }
+                else if (user.LoaiTK == "admin")
+                {
+                    ViewBag.QLThongBao = "bar__list-text__active";
+                    ViewBag.Name = user.tenTK;
+                    //ViewBag.DSThongBao = CardDB.GetAllDSThongBao();
+                    ViewBag.SLYeuCauGachThe = CardDB.GetSLYeuCauGachThes();
+                    ViewBag.SLYeuCauNapATM = CardDB.GetSLYeuCauNapATM();
+                    ViewBag.SLYeuCauRutATM = CardDB.GetSLYeuCauRutATM();
+                    return View();
+                }
+                else
+                {
+                    Response.Redirect(Request.Url.Scheme + "://" + Request.Url.Authority);
+                }
+            }
+            return View();
+        }
     }
 }

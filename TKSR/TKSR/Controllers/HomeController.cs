@@ -55,6 +55,7 @@ namespace TKSR.Controllers
             {
                 TaiKhoan user = (TaiKhoan)Session["user"];
                 TaiKhoan userGet = db.GetOneTaiKhoan(user.tenTK);
+                Session["user"] = userGet;
                 return userGet.SoDu + ""; 
             }
         }

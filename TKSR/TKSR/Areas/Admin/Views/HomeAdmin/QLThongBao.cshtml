@@ -1,0 +1,181 @@
+﻿
+@{
+    ViewBag.Title = "Quản lý thông báo";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="info__bug">
+    <div class="form">
+        <h3 class="bar__title title__info">
+            Quản lý thông báo
+        </h3>
+        <div id="toolbar-container" style="width: 100%; margin: 0 6px;"></div>
+        <div style="border-radius: 3px; border: solid 1px #ccc; border-top: none; width: 100%; margin: 0 6px;">
+            <div id="details">
+                <p></p>
+            </div>
+        </div>
+        <button style="margin: 12px 0 0 6px;" type="button" class="btn__search-history">
+            Thêm thông báo
+        </button>
+        <h3 class="bar__title title__info">
+            Danh sách thông báo
+        </h3>
+        <div class="form__container container">
+            <div class="form__history">
+                <div class="table__history">
+                    <div class="table__history-item">
+                        <span>STT</span>
+                    </div>
+                    <div style="width: 100%;" class="table__history-item">
+                        <span>Nội dung</span>
+                    </div>
+                    <div class="table__history-item item-end">
+                        <span>Ngày thêm</span>
+                    </div>
+                </div>
+                <div class="card__content">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="waning">
+        <i>
+            * Nỗ lực tiêu chí tăng số lượng khách hàng trong năm tới mục tiêu trên 1000 lượt thanh toán mỗi tháng, bán được 100 thẻ nạp mỗi tuần
+        </i>
+    </div>
+</div>
+<script src="https://cdn.ckeditor.com/ckeditor5/19.1.1/decoupled-document/ckeditor.js"></script>
+<script>
+    function LoadThongBao() {
+        $.ajax({
+            url: "/GetLoadThongBao",
+            method: "GET",
+            data: "",
+            contentType: "application/json",
+            dataType: ""
+        }).done(function (response) {
+            var number = 0;
+            $('.card__content').empty();
+            $.each(response, function (index, item) {
+                number++;
+                var DateIN = new Date(item.NgayThem);
+                var month = DateIN.getMonth();
+                month++;
+                var strDate = DateIN.getDate() + "/" + month + "/" + DateIN.getFullYear() + " " + DateIN.getHours() + ":" + DateIN.getMinutes() + ":" + DateIN.getSeconds();
+                var html = `<div class="table__history table-${number}">
+                                        <div class="table__history-item">
+                                            <span>${number}</span>
+                                        </div>
+                                        <div style="width: 100%;" class="table__history-item">
+                                            ${item.NoiDung}
+                                        </div>
+                                        <div style="justify-content: space-between;" class="table__history-item item-end">
+                                            <span>${strDate}</span>
+                                            <div>
+                                                <i title="Xoá thông báo này" onclick="DeleteSP('${item.MaThongBao}')" class="far fa-trash-alt edit__info delete"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                        `;
+                $('.card__content').append($(html));
+            })
+        }).fail(function () {
+            active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+        })
+    }
+    function DeleteSP(id) {
+        const modal = document.querySelector('.modal');
+        const form = document.querySelector('.modal .auth-form');
+        modal.classList.add('modal__active');
+        form.classList.add('auth-form__active');
+        const close = document.querySelector('.modal__overlay');
+        const closeIcon = document.querySelector('.auth-form__icon');
+        close.onclick = function () {
+            modal.classList.remove('modal__active');
+            form.classList.remove('auth-form__active');
+        }
+        closeIcon.onclick = function () {
+            modal.classList.remove('modal__active');
+            form.classList.remove('auth-form__active');
+        }
+        const mess = document.querySelector('.message__delete');
+        mess.innerText = 'Bạn có chắc muốn xoá thông báo này?';
+        const button = document.querySelector('.auth-form__submit');
+        button.onclick = function () {
+            var isRunning = false;
+            if (!isRunning) {
+                isRunning = true;
+                modal.classList.remove('modal__active');
+                form.classList.remove('auth-form__active');
+                active__Loading(true);
+                $.ajax({
+                    url: "/PostRemoveThongBao?id=" + id,
+                    method: "POST",
+                    data: "",
+                    contentType: "application/json",
+                    dataType: ""
+                }).done(function (response) {
+                    active__Loading(false);
+                    if (response == true || response == "True") {
+                        active__messageNotification('Xoá thành công', true);
+                        LoadThongBao();
+                    }
+                    else if (response == false || response == "False") {
+                        active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+                    }
+                }).fail(function (response) {
+                    active__Loading(false);
+                    active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+                })
+            }
+        }
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+        LoadThongBao();
+        (function () {
+            const btn = document.querySelector('.btn__search-history');
+            btn.onclick = function () {
+                var element = document.querySelector('#details').innerHTML;
+                if (element != '<p><br data-cke-filler="true"></p>') {
+                    var SP = {};
+                    SP.NoiDung = element;
+                    active__Loading(true);
+                    $.ajax({
+                        url: "/PostAddThongBao",
+                        method: "POST",
+                        data: JSON.stringify(SP),
+                        contentType: "application/json",
+                        dataType: "json"
+                    }).done(function (response) {
+                        active__Loading(false);
+                        if (response == false || response == "False") {
+                            active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+                        }
+                        else {
+                            active__messageNotification('Thêm thành công', true);
+                            LoadThongBao();
+                        }
+                    }).fail(function (response) {
+                        active__Loading(false);
+                        active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+                    })
+                }
+                else {
+                    active__messageNotification('Hãy điền thông báo ', false);
+                }
+            }
+        })()
+        DecoupledEditor
+            .create(document.querySelector('#details'))
+            .then(editor => {
+                const toolbarContainer = document.querySelector(
+                    '#toolbar-container');
+                toolbarContainer.appendChild(
+                    editor.ui.view.toolbar.element);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    }, false)
+</script>
+

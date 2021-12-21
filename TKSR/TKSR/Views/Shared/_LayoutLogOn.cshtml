@@ -21,14 +21,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/font.css">
-    <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/nav.css">
+    <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/navs.css">
     <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/footer.css">
     <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/style.css">
     <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/responsive.css">
     @{
         if (ViewBag.Link == "User")
         {
-            <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/User/styles.css">
+            <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/User/style.css">
             <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/User/responsive.css">
         }
         if (ViewBag.Link == "TheNap" || ViewBag.Link == "NapTien" || ViewBag.Link == "NapTienATM" || ViewBag.Link == "RutTien" || ViewBag.Link == "ChuyenTien")
@@ -215,23 +215,13 @@
                                             </a>
                                         </li>
                                         <li class="col l-12 list-nav__item">
-                                            <a class="navbar__list-link">
+                                            <a href="tel:0362335462" target="_self" title="Gọi" class="navbar__list-link">
                                                 <div class="navbar__list-menu-icon"><img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/hotro.jpg" alt=""></div>
                                                 <div class="navbar__list-menu-text">
                                                     <span class="nav__menu-text-up">Hỗ trợ</span>
                                                     <span class="nav__menu-text-down">
-                                                        Luôn hỗ trợ bạn giải quyết mọi vấn đề
-                                                    </span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="col l-12 list-nav__item">
-                                            <a class="navbar__list-link">
-                                                <div class="navbar__list-menu-icon"><img src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/lienhe.jpg" alt=""></div>
-                                                <div class="navbar__list-menu-text">
-                                                    <span class="nav__menu-text-up">Liên hệ</span>
-                                                    <span class="nav__menu-text-down">
-                                                        Hãy liên hệ với chúng tôi khi bạn cần
+                                                        Luôn hỗ trợ bạn giải quyết mọi vấn đề <br />
+                                                        Hotline: 0362335462
                                                     </span>
                                                 </div>
                                             </a>
@@ -492,7 +482,7 @@
                             chăm sóc khách hàng
                         </div>
                         <div class="footer__item-content">
-                            Hotline: <span><a href="tel:0362335462" target="_self" title="Gọi">0362335462</a> (1000 đ/phút)</span>
+                            Hotline: <span><a href="tel:0362335462" target="_self" title="Gọi">0362335462</a></span>
                         </div>
                         <div class="footer__item-content">
                             Email: <span>nguyenkhactiem2k1@gmail.com</span>
@@ -556,7 +546,7 @@
                 </div>
                 <div class="chat__content">
                     <div class="chat__user">
-                        <div class="chat__time">
+                        <div style="margin-top: 6px;" class="chat__time">
                         </div>
                         <div class="ad chat__history">
                             <div class="send__logo">
@@ -566,14 +556,14 @@
                                 Đây là thông báo dành cho bạn
                             </span>
                         </div>
-                        @*<div class="user chat__history">
+                        <div class="user chat__history">
                                 <div class="send__logo">
                                     <i class="fas fa-user mess__icon"></i>
                                 </div>
                                 <span class="messenger__send">
                                     Ở đây có bán thẻ điện thoại không?
                                 </span>
-                            </div>*@
+                            </div>
                     </div>
                     <div class="chat__input">
                         <input type="text" placeholder="Chat gì thì qua fanpage nha?" class="chat__input-content">
@@ -832,15 +822,9 @@
                                     </a>
                                 </li>
                                 <li class="clo l-6 m-6 c-6 m-item__menu-item">
-                                    <a class="m-item__menu-link">
+                                    <a href="tel:0362335462" target="_self" title="Gọi" class="m-item__menu-link">
                                         <img class="m-item__menu-logo" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/hotro.jpg" alt="">
                                         <span class="nav__mobile-menu-text">Hỗ trợ</span>
-                                    </a>
-                                </li>
-                                <li class="clo l-6 m-6 c-6 m-item__menu-item">
-                                    <a class="m-item__menu-link">
-                                        <img class="m-item__menu-logo" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/img/logo/lienhe.jpg" alt="">
-                                        <span class="nav__mobile-menu-text">Liên hệ</span>
                                     </a>
                                 </li>
                             </ul>
@@ -936,5 +920,66 @@
     <script type="text/javascript" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/js/Jquery/Loading.js"></script>
     <script type="text/javascript" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/js/Jquery/message.js"></script>
     <script type="text/javascript" src="@Request.Url.Scheme://@Request.Url.Authority/Assets/js/updateAcc.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function LoadThongBao() {
+                $.ajax({
+                    url: "/GetLoadThongBao",
+                    method: "GET",
+                    data: "",
+                    contentType: "application/json",
+                    dataType: ""
+                }).done(function (response) {
+                    if (response.length == 0) {
+                        $('.chat__user').empty();
+                        var DateIN = new Date();
+                            var month = DateIN.getMonth();
+                            month++;
+                            var strDate = DateIN.getDate() + "/" + month + "/" + DateIN.getFullYear() + " " + DateIN.getHours() + ":" + DateIN.getMinutes() + ":" + DateIN.getSeconds();
+                            var html = `
+                                        <div style="margin-top: 6px;" class="chat__time">
+                                            ${strDate}
+                                        </div>
+                                        <div class="ad chat__history">
+                                            <div class="send__logo">
+                                                <img src="@Request.Url.Scheme://@Request.Url.Authority/assets/img/logo/logo.jpg" alt="">
+                                            </div>
+                                            <span class="messenger__send">
+                                                Chưa có thông báo nào dành cho bạn
+                                            </span>
+                                        </div>
+                                        `;
+                            $('.chat__user').append($(html));
+                    }
+                    else {
+                        $('.chat__user').empty();
+                        $.each(response, function (index, item) {
+                            var DateIN = new Date(item.NgayThem);
+                            var month = DateIN.getMonth();
+                            month++;
+                            var strDate = DateIN.getDate() + "/" + month + "/" + DateIN.getFullYear() + " " + DateIN.getHours() + ":" + DateIN.getMinutes() + ":" + DateIN.getSeconds();
+                            var html = `
+                                        <div style="margin-top: 6px;" class="chat__time">
+                                            ${strDate}
+                                        </div>
+                                        <div class="ad chat__history">
+                                            <div class="send__logo">
+                                                <img src="@Request.Url.Scheme://@Request.Url.Authority/assets/img/logo/logo.jpg" alt="">
+                                            </div>
+                                            <span class="messenger__send">
+                                                ${item.NoiDung}
+                                            </span>
+                                        </div>
+                                        `;
+                            $('.chat__user').append($(html));
+                        })
+                    }
+                }).fail(function () {
+                    active__messageNotification('Có lỗi xảy ra, thử lại sau', false);
+                })
+            }
+            LoadThongBao();
+        }, false)
+    </script>
 </body>
 </html>

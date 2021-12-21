@@ -164,7 +164,7 @@
     <Content Include="Assets\css\font.css" />
     <Content Include="Assets\css\footer.css" />
     <Content Include="Assets\css\grids.css" />
-    <Content Include="Assets\css\nav.css" />
+    <Content Include="Assets\css\navs.css" />
     <Content Include="Assets\css\responsive.css" />
     <Content Include="Assets\css\responsive__service.css" />
     <Content Include="Assets\css\service.css" />
@@ -176,7 +176,7 @@
     <Content Include="Assets\css\User\NapThe\validateATM.js" />
     <Content Include="Assets\css\User\NapThe\validateCard.js" />
     <Content Include="Assets\css\User\responsive.css" />
-    <Content Include="Assets\css\User\styles.css" />
+    <Content Include="Assets\css\User\style.css" />
     <Content Include="Assets\css\User\Support\actives.js" />
     <Content Include="Assets\css\User\Support\img\hoidap-head-bg.jpg" />
     <Content Include="Assets\css\User\Support\responsive.css" />
@@ -300,6 +300,7 @@
     <Content Include="Areas\Admin\Views\HomeAdmin\GachThe.cshtml" />
     <Content Include="Areas\Admin\Views\HomeAdmin\NapATM.cshtml" />
     <Content Include="Areas\Admin\Views\HomeAdmin\RutATM.cshtml" />
+    <Content Include="Areas\Admin\Views\HomeAdmin\QLThongBao.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

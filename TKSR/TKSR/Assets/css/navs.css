@@ -57,7 +57,7 @@
     transform: rotate(180deg);
 }
 .navbar__list-item:hover{
-    color: var(--text_color);
+    color: var(--primary_color);
 }
 .navbar__list-item:hover .navbar__list-menu{
     visibility: visible;

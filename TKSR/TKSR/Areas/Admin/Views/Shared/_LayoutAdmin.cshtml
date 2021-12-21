@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/grids.css">
     <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/base.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/nav.css">
+    <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/navs.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/font.css">
     <link rel="stylesheet" href="@Request.Url.Scheme://@Request.Url.Authority/Assets/css/footer.css">
@@ -89,6 +89,13 @@
                                     </a>
                                 </li>
                                 <li class="bar__list-item">
+                                    <a href="@Request.Url.Scheme://@Request.Url.Authority/Admin/HomeAdmin/QLThongBao" class="bar__list-text @ViewBag.QLThongBao">
+                                        <span>
+                                            Quản lý thông báo
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="bar__list-item">
                                     <a href="@Request.Url.Scheme://@Request.Url.Authority/Admin/HomeAdmin/ChietKhau" class="bar__list-text @ViewBag.ChietKhau">
                                         <span>
                                             Điều chỉnh chiết khấu thẻ
@@ -105,14 +112,14 @@
                                 <li class="bar__list-item">
                                     <a href="@Request.Url.Scheme://@Request.Url.Authority/Admin/HomeAdmin/NapATM" class="bar__list-text @ViewBag.NapATM">
                                         <span class="load-yeucaunapATM">
-                                            Duyệt yêu nạp ATM (<span style="margin-left: 0px;">@ViewBag.SLYeuCauNapATM</span>)
+                                            Duyệt nạp ATM (<span style="margin-left: 0px;">@ViewBag.SLYeuCauNapATM</span>)
                                         </span>
                                     </a>
                                 </li>
                                 <li class="bar__list-item">
                                     <a href="@Request.Url.Scheme://@Request.Url.Authority/Admin/HomeAdmin/RutATM" class="bar__list-text @ViewBag.RutATM">
                                         <span class="load-yeucaurutATM">
-                                            Duyệt yêu cầu rút tiền về ATM (<span style="margin-left: 0px;">@ViewBag.SLYeuCauRutATM</span>)
+                                            Duyệt rút tiền về ATM (<span style="margin-left: 0px;">@ViewBag.SLYeuCauRutATM</span>)
                                         </span>
                                     </a>
                                 </li>
@@ -188,7 +195,7 @@
                             chăm sóc khách hàng
                         </div>
                         <div class="footer__item-content">
-                            Hotline: <span><a href="tel:0362335462" target="_self" title="Gọi">0362335462</a> (1000 đ/phút)</span>
+                            Hotline: <span><a href="tel:0362335462" target="_self" title="Gọi">0362335462</a></span>
                         </div>
                         <div class="footer__item-content">
                             Email: <span>nguyenkhactiem2k1@gmail.com</span>
